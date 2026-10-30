@@ -95,15 +95,20 @@ const SHAKE_PX = 22;
 
 const lerpCam = (a: Camera, b: Camera, u: number): Camera => ({ scale: a.scale * (b.scale / a.scale) ** u, cx: a.cx + (b.cx - a.cx) * u, cy: a.cy + (b.cy - a.cy) * u });
 
-/** The shot camera moved by figure focus keys: each eases from the last key's target to its own. */
+/**
+ * The shot camera moved by figure focus keys: each eases from wherever the camera is when it
+ * starts (mid-move if the last key hasn't landed) to its own target, so overlapping keys never jump.
+ */
 export const focusAt = (keys: readonly FocusKey[], frame: number, base: Camera): Camera => {
+  const ease = (from: Camera, k: FocusKey, f: number) => lerpCam(from, k.camera ?? base, easeInOutSine(clamp((f - k.frame) / Math.max(1, k.durationFrames), 0, 1)));
   let from = base;
   let cam = base;
+  let prev: { key: FocusKey; from: Camera } | undefined;
   for (const k of keys) {
     if (k.frame > frame) break;
-    const to = k.camera ?? base;
-    cam = lerpCam(from, to, easeInOutSine(clamp((frame - k.frame) / Math.max(1, k.durationFrames), 0, 1)));
-    from = to;
+    if (prev) from = ease(prev.from, prev.key, k.frame);
+    cam = ease(from, k, frame);
+    prev = { key: k, from };
   }
   return cam;
 };

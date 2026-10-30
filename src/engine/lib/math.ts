@@ -42,3 +42,5 @@ export const normal = (a: Vec2, b: Vec2): Vec2 => {
 };
 
 export const f2 = (n: number): string => (Math.round(n * 100) / 100).toString();
+/** Four decimals: for camera scales, where a 0.01 step is a visible jump across a full HD frame. */
+export const f4 = (n: number): string => (Math.round(n * 10000) / 10000).toString();

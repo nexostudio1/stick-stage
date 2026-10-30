@@ -8,7 +8,7 @@ import { checkSkit, compileSkit, planSegments, postText, SkitError, type SkitInp
 import { binSegments } from "../lambda/fanout";
 import { bindData, parseSpoken, spokenMatches } from "../src/engine/director/data";
 import { stamp } from "../src/engine/director/explainer";
-import { cameraAt } from "../src/engine/director/camera";
+import { cameraAt, focusAt } from "../src/engine/director/camera";
 import { BarChart, Counter, LineChart } from "../src/engine/viz/draw/data";
 import { MapFig } from "../src/engine/viz/draw/map";
 import { viewOf } from "../src/engine/viz/map";
@@ -97,6 +97,20 @@ describe("explainer documents", () => {
     const rect = tl.figures!.find((f) => f.id === "price")!.rect;
     expect((rect.y + rect.h - zoomed.cy) * zoomed.scale + 540).toBeLessThanOrEqual(0.72 * 1080 + 1);
     expect(cameraAt(tl, outKey!.frame + outKey!.durationFrames).scale).toBeCloseTo(1);
+  });
+
+  it("starts a focus move from where the last one is mid-ease, so overlapping keys never jump", () => {
+    const base = { scale: 1, cx: 960, cy: 540 };
+    const keys = [
+      { frame: 0, durationFrames: 30, camera: { scale: 2, cx: 600, cy: 400 } },
+      { frame: 10, durationFrames: 30, camera: { scale: 1.5, cx: 1200, cy: 600 } },
+    ];
+    const before = focusAt(keys, 9, base);
+    const at = focusAt(keys, 10, base);
+    expect(at.scale).toBeCloseTo(focusAt(keys.slice(0, 1), 10, base).scale, 5);
+    expect(Math.abs(at.scale - before.scale)).toBeLessThan(0.1);
+    expect(Math.abs(at.cx - before.cx)).toBeLessThan(40);
+    expect(focusAt(keys, 40, base)).toEqual(keys[1]!.camera);
   });
 
   it("resolves map zoom to a numeric view so set cues fly between places", () => {

@@ -278,11 +278,33 @@
       "h": 0.42
      },
      "layer": "front",
-     "hidden": true,
+     "hidden": false,
      "reveal": "none",
      "params": {
       "expr": "shh",
       "pose": "shh",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "peek",
+     "kind": "nickel",
+     "at": {
+      "x": 0.9,
+      "y": 0.8,
+      "w": 0.2,
+      "h": 0.5
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "sly",
+      "pose": "stand",
       "rise": 0,
       "talk": 0,
       "lamp": 1,
@@ -423,6 +445,17 @@
        "at": {
         "word": "So"
        }
+      },
+      {
+       "do": "set",
+       "id": "peek",
+       "params": {
+        "rise": 0.72
+       },
+       "at": {
+        "word": "all"
+       },
+       "durationMs": 500
       }
      ],
      "sfx": [
@@ -453,6 +486,18 @@
        "at": {
         "word": "Not"
        }
+      },
+      {
+       "do": "set",
+       "id": "peek",
+       "params": {
+        "rise": 0,
+        "talk": 0
+       },
+       "at": {
+        "word": "grandma."
+       },
+       "durationMs": 400
       }
      ]
     },
@@ -781,6 +826,28 @@
      }
     },
     {
+     "id": "peek",
+     "kind": "nickel",
+     "at": {
+      "x": 0.89,
+      "y": 0.8,
+      "w": 0.2,
+      "h": 0.5
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "shock",
+      "pose": "stand",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
      "id": "casetag",
      "kind": "phrase",
      "at": {
@@ -937,6 +1004,17 @@
         "word": "about"
        },
        "durationMs": 1200
+      },
+      {
+       "do": "set",
+       "id": "peek",
+       "params": {
+        "rise": 0.72
+       },
+       "at": {
+        "word": "about"
+       },
+       "durationMs": 450
       }
      ],
      "sfx": [
@@ -972,6 +1050,18 @@
        "at": {
         "word": "drawers,"
        }
+      },
+      {
+       "do": "set",
+       "id": "peek",
+       "params": {
+        "rise": 0,
+        "talk": 0
+       },
+       "at": {
+        "word": "wallets,"
+       },
+       "durationMs": 400
       }
      ]
     },
@@ -1220,7 +1310,7 @@
       "h": 0.6
      },
      "layer": "front",
-     "hidden": true,
+     "hidden": false,
      "reveal": "none",
      "params": {
       "expr": "sly",
@@ -1370,6 +1460,18 @@
        "at": {
         "word": "debt."
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72,
+        "expr": "shock"
+       },
+       "at": {
+        "word": "They"
+       },
+       "durationMs": 450
       }
      ],
      "sfx": [
@@ -1434,6 +1536,18 @@
         "word": "IOU."
        },
        "durationMs": 500
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0,
+        "talk": 0
+       },
+       "at": {
+        "word": "It's"
+       },
+       "durationMs": 400
       }
      ],
      "sfx": [
@@ -1465,6 +1579,18 @@
        "at": {
         "word": "sits"
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72,
+        "expr": "grin"
+       },
+       "at": {
+        "word": "sits"
+       },
+       "durationMs": 500
       }
      ],
      "sfx": [
@@ -1720,6 +1846,28 @@
      }
     },
     {
+     "id": "peek",
+     "kind": "nickel",
+     "at": {
+      "x": 0.9,
+      "y": 0.8,
+      "w": 0.18,
+      "h": 0.46
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "shock",
+      "pose": "stand",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
      "id": "casetag",
      "kind": "phrase",
      "at": {
@@ -1850,6 +1998,17 @@
        "at": {
         "word": "billion."
        }
+      },
+      {
+       "do": "set",
+       "id": "peek",
+       "params": {
+        "rise": 0.72
+       },
+       "at": {
+        "word": "pile"
+       },
+       "durationMs": 450
       }
      ],
      "sfx": [
@@ -1888,6 +2047,18 @@
        "at": {
         "word": "spent."
        }
+      },
+      {
+       "do": "set",
+       "id": "peek",
+       "params": {
+        "rise": 0,
+        "talk": 0
+       },
+       "at": {
+        "word": "spent."
+       },
+       "durationMs": 400
       }
      ]
     },
@@ -2230,6 +2401,28 @@
      }
     },
     {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.9,
+      "y": 0.8,
+      "w": 0.2,
+      "h": 0.5
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "sly",
+      "pose": "stand",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
      "id": "casetag",
      "kind": "phrase",
      "at": {
@@ -2322,6 +2515,17 @@
        "at": {
         "word": "breakage."
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72
+       },
+       "at": {
+        "word": "word"
+       },
+       "durationMs": 500
       }
      ],
      "sfx": [
@@ -2345,6 +2549,18 @@
        "at": {
         "word": "They"
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0,
+        "talk": 0
+       },
+       "at": {
+        "word": "history"
+       },
+       "durationMs": 400
       },
       {
        "do": "set",
@@ -2404,6 +2620,18 @@
        "at": {
         "word": "revenue."
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72,
+        "expr": "shock"
+       },
+       "at": {
+        "word": "count"
+       },
+       "durationMs": 450
       }
      ],
      "sfx": [
@@ -2744,6 +2972,28 @@
      }
     },
     {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.82,
+      "y": 0.66,
+      "w": 0.24,
+      "h": 0.6
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "shh",
+      "pose": "shh",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
      "id": "casetag",
      "kind": "phrase",
      "at": {
@@ -2873,6 +3123,17 @@
         "word": "drawer."
        },
        "durationMs": 700
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72
+       },
+       "at": {
+        "word": "ends"
+       },
+       "durationMs": 600
       }
      ],
      "sfx": [
@@ -2979,18 +3240,18 @@
      "id": "nickel",
      "kind": "nickel",
      "at": {
-      "x": 0.82,
-      "y": 0.64,
-      "w": 0.24,
+      "x": 0.84,
+      "y": 0.66,
+      "w": 0.22,
       "h": 0.6
      },
      "layer": "front",
-     "hidden": true,
-     "reveal": "pop",
+     "hidden": false,
+     "reveal": "none",
      "params": {
       "expr": "gotcha",
       "pose": "hold",
-      "rise": 1,
+      "rise": 0,
       "talk": 0,
       "lamp": 1,
       "beam": 20,
@@ -3114,6 +3375,17 @@
         "word": "store."
        },
        "durationMs": 1000
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72
+       },
+       "at": {
+        "word": "store."
+       },
+       "durationMs": 450
       }
      ],
      "sfx": [
@@ -3209,21 +3481,16 @@
        "durationMs": 700
       },
       {
-       "do": "show",
-       "id": "nickel",
-       "at": {
-        "word": "Case"
-       }
-      },
-      {
        "do": "set",
        "id": "nickel",
        "params": {
+        "rise": 1,
         "talk": 1
        },
        "at": {
         "word": "Case"
-       }
+       },
+       "durationMs": 500
       },
       {
        "do": "set",
@@ -3338,6 +3605,29 @@
      }
     },
     {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.91,
+      "y": 0.76,
+      "w": 0.16,
+      "h": 0.42
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "grin",
+      "pose": "point",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0,
+      "facing": "left"
+     }
+    },
+    {
      "id": "casetag",
      "kind": "phrase",
      "at": {
@@ -3420,6 +3710,17 @@
        "at": {
         "word": "Maya's"
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72
+       },
+       "at": {
+        "word": "Still"
+       },
+       "durationMs": 450
       }
      ]
     },
@@ -3434,6 +3735,18 @@
        "at": {
         "word": "And"
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0,
+        "talk": 0
+       },
+       "at": {
+        "word": "And"
+       },
+       "durationMs": 400
       },
       {
        "do": "set",
@@ -3501,6 +3814,18 @@
        "at": {
         "word": "ask"
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 0.72,
+        "expr": "gotcha"
+       },
+       "at": {
+        "word": "California,"
+       },
+       "durationMs": 450
       }
      ],
      "sfx": [
@@ -3547,6 +3872,29 @@
      }
     },
     {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.83,
+      "y": 0.66,
+      "w": 0.24,
+      "h": 0.6
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "grin",
+      "pose": "point",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0,
+      "facing": "left"
+     }
+    },
+    {
      "id": "casetag",
      "kind": "phrase",
      "at": {
@@ -3582,6 +3930,17 @@
        "at": {
         "word": "Three"
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 1
+       },
+       "at": {
+        "word": "tonight."
+       },
+       "durationMs": 600
       }
      ]
     },
@@ -3647,6 +4006,17 @@
        "at": {
         "word": "lose."
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "expr": "sly",
+        "pose": "stand"
+       },
+       "at": {
+        "word": "lose."
+       }
       }
      ],
      "sfx": [
@@ -3680,6 +4050,16 @@
        "id": "phone",
        "params": {
         "done": 3
+       },
+       "at": {
+        "word": "week."
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "expr": "smirk"
        },
        "at": {
         "word": "week."

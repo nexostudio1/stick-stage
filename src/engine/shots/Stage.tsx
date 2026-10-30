@@ -1,7 +1,7 @@
 import React, { useId } from "react";
 import { Actor } from "../rig/Actor";
 import type { ActorState } from "../rig/actorState";
-import { f2 } from "../lib/math";
+import { f2, f4 } from "../lib/math";
 import { SetLayers } from "../set/Set";
 import type { PartLabel, SetDef } from "../set/schema";
 import { getPalette } from "../set/palettes";
@@ -63,7 +63,7 @@ export const Stage: React.FC<StageProps> = ({ set, actors, width, height, frame,
   const finishId = "fin" + uid;
   const unit = set.figureHeightPx / 640;
   const illustrated = finish === "illustrated";
-  const t = `translate(${f2(width / 2)} ${f2(height / 2)}) scale(${f2(cam.scale)}) translate(${f2(-cam.cx)} ${f2(-cam.cy)})`;
+  const t = `translate(${f2(width / 2)} ${f2(height / 2)}) scale(${f4(cam.scale)}) translate(${f2(-cam.cx)} ${f2(-cam.cy)})`;
   const stage = (
     <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} style={{ display: "block" }}>
       <g transform={t}>
