@@ -39,7 +39,7 @@ export const AudioSourceSchema = z.discriminatedUnion("source", [
   }),
 ]);
 
-export const TRANSITIONS = ["cut", "fade", "slide", "wipe", "clock-wipe"] as const;
+export const TRANSITIONS = ["cut", "fade", "slide", "wipe", "clock-wipe", "whip"] as const;
 export const TransitionSchema = z.strictObject({
   type: z.enum(TRANSITIONS).default("fade"),
   /** Ignored for "cut". */

@@ -121,7 +121,16 @@
               "line",
               "bars",
               "counter",
-              "map"
+              "map",
+              "flap",
+              "crowd",
+              "stamp",
+              "phrase",
+              "prop",
+              "nickel",
+              "maya",
+              "evidence",
+              "phone"
             ]
           },
           "at": {
@@ -829,7 +838,16 @@
                     "line",
                     "bars",
                     "counter",
-                    "map"
+                    "map",
+                    "flap",
+                    "crowd",
+                    "stamp",
+                    "phrase",
+                    "prop",
+                    "nickel",
+                    "maya",
+                    "evidence",
+                    "phone"
                   ]
                 },
                 "at": {

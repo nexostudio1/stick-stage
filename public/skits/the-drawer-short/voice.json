@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "h1",
+      "speaker": "narrator",
+      "text": "This is fifty dollars.",
+      "audio": "voice/h1.wav",
+      "durationMs": 1299
+    },
+    {
+      "id": "h2",
+      "speaker": "narrator",
+      "text": "Four years in a kitchen drawer.",
+      "audio": "voice/h2.wav",
+      "durationMs": 1520
+    },
+    {
+      "id": "h3",
+      "speaker": "narrator",
+      "text": "So who's had it all this time?",
+      "audio": "voice/h3.wav",
+      "durationMs": 1650
+    },
+    {
+      "id": "h4",
+      "speaker": "narrator",
+      "text": "Not her. The store.",
+      "audio": "voice/h4.wav",
+      "durationMs": 1455
+    },
+    {
+      "id": "h5",
+      "speaker": "narrator",
+      "text": "Americans are sitting on about $27 billion in unused gift cards.",
+      "spoken": "Americans are sitting on about twenty-seven billion dollars in unused gift cards.",
+      "audio": "voice/h5.wav",
+      "durationMs": 4230
+    },
+    {
+      "id": "h6",
+      "speaker": "narrator",
+      "text": "And stores get to keep the part we forget.",
+      "audio": "voice/h6.wav",
+      "durationMs": 2163
+    },
+    {
+      "id": "h7",
+      "speaker": "narrator",
+      "text": "Starbucks booked $188 million of it in one year.",
+      "spoken": "Starbucks booked a hundred and eighty-eight million dollars of it in one year.",
+      "audio": "voice/h7.wav",
+      "durationMs": 3403
+    },
+    {
+      "id": "h8",
+      "speaker": "nickel",
+      "text": "Coffee. Nobody. Drank.",
+      "audio": "voice/h8.wav",
+      "durationMs": 3132
+    },
+    {
+      "id": "h9",
+      "speaker": "narrator",
+      "text": "But the rules are on your side. Full case, linked below.",
+      "audio": "voice/h9.wav",
+      "durationMs": 3474
+    }
+  ]
+}

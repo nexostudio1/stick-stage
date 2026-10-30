@@ -13,6 +13,8 @@ import type { Finding } from "./types";
 export const VARIETY_CHECKS = ["variety-kinds", "variety-run", "variety-change", "variety-hook", "sameness"];
 
 export const MAX_STILL_S = 8;
+/** The night-shift look (The Catch) changes the picture at least every 4 s. */
+export const MAX_STILL_NIGHT_S = 4;
 export const HOOK_S = 3;
 export const MAX_RUN = 3;
 /** Six distinct kinds per eight minutes (pro rata, at least two). */
@@ -68,10 +70,11 @@ export const varietyChecks = (p: Program): Finding[] => {
       out.push({ check: "variety-run", level: "error", frame: b.end, message: `"${lead}" leads ${run} beats in a row (to "${b.id}"); switch kind every ${MAX_RUN} beats at most` });
   }
 
+  const still = p.finish === "night" ? MAX_STILL_NIGHT_S : MAX_STILL_S;
   const marks = [0, ...events.map((e) => e.frame), p.durationInFrames];
   for (let i = 1; i < marks.length; i++)
-    if ((marks[i]! - marks[i - 1]!) / fps > MAX_STILL_S)
-      out.push({ check: "variety-change", level: "error", frame: marks[i - 1], message: `${((marks[i]! - marks[i - 1]!) / fps).toFixed(1)} s with nothing new on screen (max ${MAX_STILL_S} s): show, change or focus a figure` });
+    if ((marks[i]! - marks[i - 1]!) / fps > still)
+      out.push({ check: "variety-change", level: "error", frame: marks[i - 1], message: `${((marks[i]! - marks[i - 1]!) / fps).toFixed(1)} s with nothing new on screen (max ${still} s): show, change or focus a figure` });
 
   if (!events.some((e) => e.what !== "cut" && !e.what.startsWith("scene ") && e.frame <= HOOK_S * fps))
     out.push({ check: "variety-hook", level: "error", frame: 0, message: `nothing moves in the first ${HOOK_S} s; open on a figure, a card or a slam` });

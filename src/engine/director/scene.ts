@@ -60,7 +60,7 @@ const checkIds = (skit: Skit, input: CompileInput, diags: Diagnostic[]) => {
   };
   need("set", skit.set, ids(sets), ["set"]);
   const setDef = sets[skit.set];
-  if (setDef && setDef.aspect !== skit.meta.aspect)
+  if (setDef && setDef.aspect !== skit.meta.aspect && !setDef.anyAspect)
     diags.push({
       level: "error",
       code: "aspect-set",
@@ -88,7 +88,7 @@ const checkIds = (skit: Skit, input: CompileInput, diags: Diagnostic[]) => {
     need("prop", c.holding?.prop, ids(lib.props), ["cast", i, "holding", "prop"]);
   });
   const sounds = sfx.sounds.map((s) => s.id);
-  const speakers = skit.narrator ? [...castIds, skit.narrator.id] : castIds;
+  const speakers = [...castIds, ...(skit.narrator ? [skit.narrator.id] : []), ...(skit.voices ?? []).map((v) => v.id)];
   skit.beats.forEach((b, i) => {
     const p = (...rest: (string | number)[]) => ["beats", i, ...rest];
     if (b.speaker !== undefined && !speakers.includes(b.speaker)) {
@@ -253,6 +253,7 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
   if (fail()) throw new SkitError(diags);
   const nextCut = (f: number) => shots.find((c) => c.frame > f)?.frame ?? durationInFrames;
   const spoken = layout.beats.filter((b) => b.kind === "line" && b.line);
+  const captionPages = buildCaptionPages(spoken.map((b) => ({ startMs: (msToFrame(b.zeroMs, fps) / fps) * 1000, words: b.line!.words, narrator: b.narrator || b.thought, speaker: b.beat.speaker })));
   const timeline: Timeline = {
     schemaVersion: 1,
     title: skit.meta.title,
@@ -294,9 +295,9 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
     lists: lists.map((l) => ({ ...l, to: nextCut(l.at[0]!) })),
     ...(card ? { card } : {}),
     ...(verdict ? { verdict } : {}),
-    pages: skit.overlay.subtitles
-      ? buildCaptionPages(spoken.map((b) => ({ startMs: (msToFrame(b.zeroMs, fps) / fps) * 1000, words: b.line!.words, narrator: b.narrator || b.thought })))
-      : [],
+    pages: skit.overlay.subtitles ? captionPages : [],
+    // Subtitles off (key-phrase cards on screen): the full captions still go to the `.srt`.
+    ...(skit.overlay.subtitles ? {} : { srtPages: captionPages }),
     ...(skit.narrator ? { narratorCaption: skit.narrator.captionStyle } : {}),
     ...(figs.tracks.length ? { figures: figs.tracks } : {}),
     ...(figs.credits.length ? { credits: figs.credits.map((c) => ({ ...c, to: Math.min(c.to, durationInFrames) })) } : {}),

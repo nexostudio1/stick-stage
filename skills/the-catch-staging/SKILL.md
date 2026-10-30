@@ -21,19 +21,24 @@ Renders run on **local Tamtree** (no Lambda 15 min limit), so long cases are fin
 
 | Need | Object | Kind |
 |---|---|---|
-| One big number | Split-flap board that clacks to the value | `flap` (planned) / `counter` today |
-| Compare 3–6 values | Line-up: coin stacks / pallets / cups against a height wall | `stacks` (planned) / `bars` today |
+| One big number | Split-flap board that clacks to the value | `flap` |
+| Compare 3–6 values | Line-up: coin stacks / pallets / cups against a height wall | `stacks` (planned) / `prop` `cups` today |
 | Growth over time | Neon tube on a wall drawing on | `line` variant `neon` (planned) |
-| Share of people | Crowd of 100 silhouettes, some lit | `crowd` (planned) / `progress` today |
-| A rule / verdict | Rubber stamp slam | `stamp` (planned) |
-| Where | Evidence board: pins + red string | `map` + `evidence` (planned) |
-| A thing in the story | Hero prop under a light cone (card, envelope, cup) | `prop-hero` (planned) / `image` today |
+| Share of people | Crowd of 100 silhouettes, some lit | `crowd` |
+| A rule / verdict | Rubber stamp slam | `stamp` |
+| Where / a list of rules | Evidence board: pinned cards + red string | `evidence` (on set `evidence-board`) |
+| A thing in the story | Hero prop under a light cone | `prop` (`drawer`, `envelope`, `giftcard`, `till`, `ledger`, `jar`, `cups`, `coins`, `vault`, `cup`, `lostbox`, `book`) |
+| Words on screen | Key-phrase card, 2–6 words | `phrase` on `layer: "screen"` |
+| Advice to act on | A phone note typed and ticked | `phone` |
 
-Mark planned kinds in the storyboard so the build list stays honest.
+Engine reference for all of these: `docs/explainer.md` § The night-shift look. Mark kinds that
+don't exist yet as planned in the storyboard so the build list stays honest.
 
 ## Nickel
 
 - Night Shift design (`frames/nickel-01.png` B): ember hoodie, ears through the hood, headlamp.
+  In the engine he is the `nickel` figure kind and speaks as an off-screen voice (`voices`);
+  `rise` peeks him up over a counter, `beam` / `beamLength` aim the headlamp.
 - On screen in ~30% of shots; the headlamp beam is how reveals are lit (the beam lands, the number flips).
 - Expressions: `smirk`, `sly`, `shock`, `grin`, `gotcha`, `shh`. One reaction per reveal, never
   two in a row with the same face.
@@ -52,6 +57,15 @@ Mark planned kinds in the storyboard so the build list stays honest.
   money reveal `register`, drawer `slide`. Music: `mystery` (open, clues), `build` (last clue),
   `drop` on the catch line, `resolve` (verdict). Duck under the voice.
 - Voice pace: `fast` (~190 wpm). Narrator lines `pace: "fast"`; Nickel a separate, short, dry voice.
+
+## The 30 s short (every case)
+
+Every 16:9 case also ships a ≤ 30 s 9:16 cut for the **Thin Lines Theory** channel that sends
+viewers to the long video: the hook, one clue with its best number, Nickel's reaction, then
+"Full case, linked below." Never give away the catch. Same sets and kinds (the night sets fit
+9:16). `meta.links` first item `{ "label": "▶ Full case (<title>)", "url": "{{LONG_URL}}" }`;
+after upload also set the Short's YouTube "related video" to the long one and pin a comment with
+the link. Worked example: `public/skits/the-drawer-short/`.
 
 ## storyboard.md format
 

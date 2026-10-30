@@ -8,6 +8,8 @@ export type CaptionLine = {
   words: readonly WordTiming[];
   /** A voice-over line: its pages are styled apart from dialog. */
   narrator?: boolean;
+  /** Who says it (the `.srt` names off-screen voices on a line's first page). */
+  speaker?: string;
 };
 
 export type CaptionOptions = {
@@ -25,6 +27,8 @@ export type CaptionPage = TikTokPage & {
   narrator?: boolean;
   /** The first page of its line (the `.srt` names the narrator there). */
   lineStart?: boolean;
+  /** The line's speaker id, on voice-over pages. */
+  speaker?: string;
 };
 
 /**
@@ -69,6 +73,7 @@ export const buildCaptionPages = (lines: readonly CaptionLine[], opts: CaptionOp
     token += p.tokens.length;
     const page: CaptionPage = { ...p, endMs: Math.min(nextStart, lastWord + linger) };
     if (lines[n]?.narrator) page.narrator = true;
+    if (lines[n]?.narrator && lines[n]?.speaker) page.speaker = lines[n]!.speaker;
     if (n !== prevLine) page.lineStart = true;
     prevLine = n;
     return page;

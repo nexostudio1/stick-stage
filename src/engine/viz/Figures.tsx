@@ -11,6 +11,12 @@ import { Vectors, Wave } from "./draw/vectorWave";
 import { Burst, FinePrint, GalaxyFig, Progress } from "./draw/cosmos";
 import { BarChart, Counter, LineChart } from "./draw/data";
 import { MapFig } from "./draw/map";
+import { Crowd, Flap, Phrase, Stamp } from "./draw/night/board";
+import { Evidence, Phone } from "./draw/night/evidence";
+import { Maya } from "./draw/night/maya";
+import { Nickel } from "./draw/night/nickel";
+import { Prop } from "./draw/night/props";
+import type { CrowdP, EvidenceP, FlapP, MayaP, NickelP, PhoneP, PhraseP, PropP, StampP } from "./paramsNight";
 import type { BarsP, CounterP, LineP, MapP } from "./paramsData";
 import type {
   AxesP,
@@ -106,6 +112,24 @@ const Body: React.FC<{
       return <Counter {...as<CounterP>()} />;
     case "map":
       return <MapFig {...as<MapP>()} fs={fs} id={f.id} />;
+    case "flap":
+      return <Flap {...as<FlapP>()} />;
+    case "crowd":
+      return <Crowd {...as<CrowdP>()} />;
+    case "stamp":
+      return <Stamp {...as<StampP>()} />;
+    case "phrase":
+      return <Phrase {...as<PhraseP>()} />;
+    case "prop":
+      return <Prop {...as<PropP>()} />;
+    case "nickel":
+      return <Nickel {...as<NickelP>()} />;
+    case "maya":
+      return <Maya {...as<MayaP>()} />;
+    case "evidence":
+      return <Evidence {...as<EvidenceP>()} />;
+    case "phone":
+      return <Phone {...as<PhoneP>()} />;
     case "equation":
       return <Equation {...as<EquationP>()} typeset={f.typeset} />;
     case "image": {

@@ -15,3 +15,8 @@ const load = (family: string, file: string, weight?: string) =>
 load(TEXT_FAMILY, "fonts/Montserrat-Variable.ttf", "100 900");
 for (const font of SYMBOL_FALLBACKS) load(font.family, font.file, font.weight);
 for (const font of FONT_STACK) load(font.family, font.file);
+
+// The Catch's night-shift fonts (OFL, `public/fonts/`), named by `CATCH_FONTS`.
+load("Catch Display", "fonts/BricolageGrotesque-Variable.ttf", "200 800");
+load("Catch Numbers", "fonts/BigShouldersDisplay-Variable.ttf", "100 900");
+load("Catch Mono", "fonts/IBMPlexMono-SemiBold.ttf", "600");

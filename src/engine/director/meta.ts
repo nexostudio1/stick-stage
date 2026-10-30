@@ -19,6 +19,11 @@ export const MetaSchema = z
     syntheticVoices: z.boolean().default(true),
     /** Season and episode for the post manifest. Does not post. */
     series: SeriesRefSchema.optional(),
+    /**
+     * Links printed first in the post text: a short's backlink to its full video ("Full case",
+     * `{{LONG_URL}}` until the long one is up), a playlist, the sources page.
+     */
+    links: z.array(z.strictObject({ label: z.string().min(1).max(40), url: z.string().min(1).max(300) })).max(4).default([]),
     /** BCP 47. Tokenizing, timing and the font follow it. Default English. */
     language: z.string().min(2).max(16).optional(),
   })

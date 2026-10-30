@@ -23,7 +23,8 @@ import { images, library, safeArea, sets } from "../../data";
 import { TEXT_FONT } from "../fonts";
 import { Label } from "./Label";
 import { PAGE_FRAMES, PAGES as SHORT_PAGES } from "./vizPages";
-import { DATA_PAGES } from "./vizPagesData";
+import { DATA_PAGES as DATA_ONLY } from "./vizPagesData";
+import { NIGHT_PAGES } from "./vizPagesNight";
 
 export const vizLabSchema = z.object({
   showLabels: z.boolean(),
@@ -37,6 +38,7 @@ export const vizLabSchema = z.object({
 });
 type Props = z.infer<typeof vizLabSchema>;
 
+const DATA_PAGES = [...DATA_ONLY, ...NIGHT_PAGES];
 const PAGES = [...SHORT_PAGES, ...DATA_PAGES];
 const pagesOf = (wide: boolean) => (wide ? DATA_PAGES : PAGES);
 export const VIZ_LAB_FRAMES = PAGE_FRAMES * PAGES.length;
@@ -59,7 +61,7 @@ export const VizLab: React.FC<Props> = ({ showLabels, set: setOverride, cast: ca
   const page = pages[index]!;
   const local = frame - index * PAGE_FRAMES;
   const fallback = wide ? "explainer-paper" : "plain-1";
-  const set = sets[setOverride ?? fallback] ?? sets[fallback]!;
+  const set = sets[setOverride ?? page.set ?? fallback] ?? sets[fallback]!;
   const diags: Diagnostic[] = [];
   const { tracks, credits } = compileFigures({
     figures: page.figures.map((f) => FigureSchema.parse(f)),

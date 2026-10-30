@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ledger-room",
+  "aspect": "16:9",
+  "anyAspect": true,
+  "kit": "night",
+  "palette": "night-shift",
+  "description": "Top-down onto a back-office desk: wood boards, a lamp pool for a ledger or a till.",
+  "tags": [
+    "the-catch",
+    "widescreen",
+    "office",
+    "desk",
+    "night"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "ledger-desk"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

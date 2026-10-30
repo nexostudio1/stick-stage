@@ -94,6 +94,13 @@ import wideCafe from "./sets/wide-cafe.json";
 import wideClassroom from "./sets/wide-classroom.json";
 import explainerPaper from "./sets/explainer-paper.json";
 import explainerNight from "./sets/explainer-night.json";
+import kitchenNight from "./sets/kitchen-night.json";
+import cardVault from "./sets/card-vault.json";
+import ledgerRoom from "./sets/ledger-room.json";
+import cafeNight from "./sets/cafe-night.json";
+import lostAndFound from "./sets/lost-and-found.json";
+import evidenceBoard from "./sets/evidence-board.json";
+import bookshopMorning from "./sets/bookshop-morning.json";
 import explainerGrid from "./sets/explainer-grid.json";
 import void1 from "./sets/void-1.json";
 import blueprint1 from "./sets/blueprint-1.json";
@@ -138,6 +145,7 @@ export const sets: Record<string, SetDef> = createSets([
   plain1, living1, lounge1, office1, park1, street1, kitchen1, bedroom1, cafe1, classroom1, meeting1, living2, park2, streetNight1, beach1, stage1,
   widePlain, wideLiving, wideLounge, wideOffice, widePark, wideStreet, wideCafe, wideClassroom,
   explainerPaper, explainerNight, explainerGrid,
+  kitchenNight, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
   void1, blueprint1, space1, space2, lab1,
   ...STORY_SETS,
 ]);

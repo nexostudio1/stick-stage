@@ -80,6 +80,31 @@
           ],
           "additionalProperties": false
         },
+        "links": {
+          "default": [],
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              }
+            },
+            "required": [
+              "label",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        },
         "language": {
           "type": "string",
           "minLength": 2,
@@ -203,7 +228,8 @@
       "type": "string",
       "enum": [
         "flat",
-        "illustrated"
+        "illustrated",
+        "night"
       ]
     },
     "format": {
@@ -408,6 +434,58 @@
         }
       },
       "additionalProperties": false
+    },
+    "voices": {
+      "maxItems": 4,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "default": "narrator",
+            "type": "string",
+            "minLength": 1
+          },
+          "voice": {
+            "type": "object",
+            "properties": {
+              "provider": {
+                "type": "string"
+              },
+              "voiceId": {
+                "type": "string"
+              },
+              "settings": {
+                "default": {},
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {}
+              },
+              "say": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "captionStyle": {
+            "default": "italic",
+            "type": "string",
+            "enum": [
+              "italic",
+              "boxed"
+            ]
+          },
+          "name": {
+            "default": "Narrator",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 24
+          }
+        },
+        "additionalProperties": false
+      }
     },
     "overlay": {
       "default": {
@@ -2844,7 +2922,16 @@
               "line",
               "bars",
               "counter",
-              "map"
+              "map",
+              "flap",
+              "crowd",
+              "stamp",
+              "phrase",
+              "prop",
+              "nickel",
+              "maya",
+              "evidence",
+              "phone"
             ]
           },
           "at": {
@@ -3085,6 +3172,15 @@
               "why-it-felt-true",
               "takeaway",
               "loop"
+            ]
+          },
+          "tag": {
+            "type": "string",
+            "enum": [
+              "hook",
+              "promise",
+              "rehook",
+              "reveal"
             ]
           },
           "silent": {
@@ -5665,7 +5761,8 @@
                   "fade",
                   "slide",
                   "wipe",
-                  "clock-wipe"
+                  "clock-wipe",
+                  "whip"
                 ]
               },
               "durationMs": {
@@ -5869,7 +5966,16 @@
                     "line",
                     "bars",
                     "counter",
-                    "map"
+                    "map",
+                    "flap",
+                    "crowd",
+                    "stamp",
+                    "phrase",
+                    "prop",
+                    "nickel",
+                    "maya",
+                    "evidence",
+                    "phone"
                   ]
                 },
                 "at": {
@@ -5991,6 +6097,10 @@
               "additionalProperties": false
             }
           },
+          "music": {
+            "type": "string",
+            "minLength": 1
+          },
           "chapter": {
             "type": "string",
             "minLength": 1,
@@ -6032,6 +6142,15 @@
                     "why-it-felt-true",
                     "takeaway",
                     "loop"
+                  ]
+                },
+                "tag": {
+                  "type": "string",
+                  "enum": [
+                    "hook",
+                    "promise",
+                    "rehook",
+                    "reveal"
                   ]
                 },
                 "silent": {

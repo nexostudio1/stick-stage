@@ -295,6 +295,161 @@
         "particle",
         "science"
       ]
+    },
+    {
+      "id": "clack",
+      "file": "sfx/clack.wav",
+      "durationMs": 420,
+      "gain": 0.7,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "flap",
+        "counter",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "coins",
+      "file": "sfx/coins.wav",
+      "durationMs": 800,
+      "gain": 0.6,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "money",
+        "clink",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "coin-avalanche",
+      "file": "sfx/coin-avalanche.wav",
+      "durationMs": 1800,
+      "gain": 0.6,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "money",
+        "pile",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "register",
+      "file": "sfx/register.wav",
+      "durationMs": 1100,
+      "gain": 0.7,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "money",
+        "sale",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "stamp",
+      "file": "sfx/stamp.wav",
+      "durationMs": 500,
+      "gain": 0.9,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "verdict",
+        "slam",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "drawer",
+      "file": "sfx/drawer.wav",
+      "durationMs": 600,
+      "gain": 0.6,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "slide",
+        "wood",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "rustle",
+      "file": "sfx/rustle.wav",
+      "durationMs": 450,
+      "gain": 0.5,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "paper",
+        "note",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "clock-tick",
+      "file": "sfx/clock-tick.wav",
+      "durationMs": 2050,
+      "gain": 0.5,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "time",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "neon-on",
+      "file": "sfx/neon-on.wav",
+      "durationMs": 1200,
+      "gain": 0.45,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "light",
+        "neon",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "pin",
+      "file": "sfx/pin.wav",
+      "durationMs": 200,
+      "gain": 0.6,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "board",
+        "tap",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "click",
+      "file": "sfx/click.wav",
+      "durationMs": 120,
+      "gain": 0.6,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "switch",
+        "lamp",
+        "the-catch"
+      ]
+    },
+    {
+      "id": "riser-hit",
+      "file": "sfx/riser-hit.wav",
+      "durationMs": 2200,
+      "gain": 0.8,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "reveal",
+        "drop",
+        "the-catch"
+      ]
     }
   ]
 }

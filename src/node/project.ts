@@ -1,7 +1,7 @@
 /** A project: a workspace plus its registries. Loads, compiles, checks and summarizes skits. */
 import fs from "node:fs";
 import path from "node:path";
-import { applyLanguage, checkSkit, compileSkit, parseSkit, placeholderVoice, PreparedVoiceSchema, skitLines, type CheckReport, type CompileResult, type Fingerprint, type Library, type Program, type ReactionTable, type SafeArea, type SeriesStyle, type SetDef, type SfxManifest, type Timeline, type ImageDef, type Pronunciation } from "../engine/core";
+import { applyLanguage, checkSkit, compileSkit, parseSkit, placeholderVoice, PreparedVoiceSchema, skitLines, type CheckReport, type CompileResult, type Fingerprint, type Library, type MusicManifest, type Program, type ReactionTable, type SafeArea, type SeriesStyle, type SetDef, type SfxManifest, type Timeline, type ImageDef, type Pronunciation } from "../engine/core";
 import type { Workspace } from "./workspace";
 import { prepEquations } from "./figures";
 
@@ -10,6 +10,8 @@ export type Project = {
   lib: Library;
   sets: Readonly<Record<string, SetDef>>;
   sfx: SfxManifest;
+  /** Music beds a skit or scene names (`music.json`). */
+  music?: MusicManifest;
   reactions: ReactionTable;
   safeArea: SafeArea;
   /** Series documents, so a skit can inherit style and cold open. */
@@ -35,7 +37,7 @@ export const compileSkitIn = (p: Project, id: string, extra?: { lang?: string; c
       : undefined;
   // Equations are typeset here too (hash-cached), so a compile never waits on a separate prep.
   const { equations } = prepEquations(dir, skit);
-  const r = compileSkit({ skit, voice, lib: p.lib, sets: p.sets, sfx: p.sfx, reactions: p.reactions, safeArea: p.safeArea, series: p.series, lang: extra?.lang, figures: { equations, images: p.images } });
+  const r = compileSkit({ skit, voice, lib: p.lib, sets: p.sets, sfx: p.sfx, music: p.music, reactions: p.reactions, safeArea: p.safeArea, series: p.series, lang: extra?.lang, figures: { equations, images: p.images } });
   fs.mkdirSync(path.join(dir, "generated"), { recursive: true });
   fs.writeFileSync(path.join(dir, "generated/timeline.json"), JSON.stringify(r.program));
   return r;

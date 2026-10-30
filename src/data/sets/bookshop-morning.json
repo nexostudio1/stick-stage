@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bookshop-morning",
+  "aspect": "16:9",
+  "anyAspect": true,
+  "kit": "night",
+  "palette": "morning",
+  "description": "A small bookshop in morning sun: shelves of spines, a window of daylight. The Catch's first daylight (the callback).",
+  "tags": [
+    "the-catch",
+    "widescreen",
+    "shop",
+    "books",
+    "day"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "day-bookshop"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

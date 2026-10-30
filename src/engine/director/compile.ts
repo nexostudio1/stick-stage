@@ -158,6 +158,12 @@ export const compileSkit = (input: CompileInput): CompileResult => {
   const bed = doc.music ? input.music?.beds.find((b) => b.id === doc.music) : undefined;
   if (doc.music && !bed)
     diags.push({ level: "error", code: "unknown-music", path: "music", message: `unknown music bed "${doc.music}"`, expected: input.music?.beds.map((b) => b.id).join(", ") || "pass a music manifest" });
+  const sceneBeds = (doc.scenes ?? []).map((sc, i) => {
+    if (!sc.music) return undefined;
+    const b = input.music?.beds.find((x) => x.id === sc.music);
+    if (!b) diags.push({ level: "error", code: "unknown-music", path: `scenes[${i}].music`, message: `unknown music bed "${sc.music}"`, expected: input.music?.beds.map((x) => x.id).join(", ") || "pass a music manifest" });
+    return b;
+  });
   diags.push(...explainerChecks(doc));
   if (diags.some((d) => d.level === "error")) throw new SkitError(diags);
   diags.push(...scienceChecks(doc, input.skit));
@@ -169,6 +175,7 @@ export const compileSkit = (input: CompileInput): CompileResult => {
     if (i > 0) from += scenes[i - 1]!.timeline.durationInFrames - (t?.durationFrames ?? 0);
     return { id: sc.id, from, transitionIn: t, timeline: sc.timeline };
   });
+  const musicCues = sceneBeds.flatMap((b, i) => (b && programScenes[i] ? [{ frame: programScenes[i]!.from, src: b.file, gain: b.gain, ducked: b.ducked }] : []));
   const lastScene = programScenes[programScenes.length - 1]!;
   const durationInFrames = lastScene.from + lastScene.timeline.durationInFrames;
   const chapters = chaptersOf(doc, { scenes: programScenes, fps: doc.meta.fps, durationInFrames }, diags);
@@ -183,6 +190,7 @@ export const compileSkit = (input: CompileInput): CompileResult => {
     ...(doc.format === "explainer" ? { format: "explainer" as const } : {}),
     ...(chapters.length ? { chapters } : {}),
     ...(music ? { music } : {}),
+    ...(musicCues.length ? { musicCues } : {}),
     ...(doc.finish && doc.finish !== "flat" ? { finish: doc.finish } : {}),
     ...(Object.keys(placed.sets).length ? { sets: placed.sets } : {}),
     // Workspace characters and props ride along too, so the renderer draws them without the catalog.

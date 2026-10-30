@@ -12,6 +12,7 @@ import { report, type CheckReport, type Finding } from "./types";
 import { visualChecks, VISUAL_CHECKS } from "./visual";
 import { PACE_CHECKS, paceChecks, wordingChecks } from "./pace";
 import { fingerprint, samenessChecks, VARIETY_CHECKS, varietyChecks, type Fingerprint } from "./variety";
+import { ACT_CHECKS, actChecks } from "./acts";
 
 export * from "./types";
 export { sampleFrames, contrastChecks } from "./visual";
@@ -34,7 +35,7 @@ export const checkSkit = ({ result, lib: catalogLib, sets: catalogSets, safeArea
   const multi = result.scenes.length > 1;
   const beats = result.scenes.flatMap((sc) => sc.skit.beats);
   const fast = result.program.scenes[0]?.timeline.directing?.pace === "fast";
-  const findings: Finding[] = [...programChecks(result.program), ...paceChecks(result.program, beats), ...wordingChecks(beats, fast), ...distinctFindings(result, lib), ...varietyChecks(result.program)];
+  const findings: Finding[] = [...programChecks(result.program), ...paceChecks(result.program, beats), ...wordingChecks(beats, fast), ...distinctFindings(result, lib), ...varietyChecks(result.program), ...actChecks(result)];
   const fp = result.program.format === "explainer" ? fingerprint(result.program) : undefined;
   if (fp) findings.push(...samenessChecks(fp, history));
   result.program.scenes.forEach((ps, i) => {
@@ -50,7 +51,7 @@ export const checkSkit = ({ result, lib: catalogLib, sets: catalogSets, safeArea
     findings.push(...scene.map((f) => ({ ...f, frame: f.frame === undefined ? undefined : f.frame + ps.from, scene: multi ? ps.id : undefined })));
   });
   findings.sort((a, b) => (a.frame ?? -1) - (b.frame ?? -1));
-  const r = report(findings, [...STORY_CHECKS, ...VISUAL_CHECKS, ...PACE_CHECKS, "distinct", ...(fp ? VARIETY_CHECKS : [])]);
+  const r = report(findings, [...STORY_CHECKS, ...VISUAL_CHECKS, ...PACE_CHECKS, "distinct", ...(fp ? VARIETY_CHECKS : []), ...(beats.some((b) => b.tag) ? ACT_CHECKS : [])]);
   return fp ? { ...r, fingerprint: fp } : r;
 };
 

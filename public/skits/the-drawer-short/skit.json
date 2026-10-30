@@ -1,0 +1,639 @@
+{
+ "$schema": "../../../schemas/skit.schema.json",
+ "schemaVersion": 2,
+ "format": "explainer",
+ "finish": "night",
+ "meta": {
+  "title": "Who had your gift card money for 4 years?",
+  "aspect": "9:16",
+  "description": "Americans are sitting on about $27 billion in unused gift cards. Here's who gets to keep the part we forget. Full case (and the rules on your side) in the long video.",
+  "links": [
+   {
+    "label": "▶ Full case (The Drawer)",
+    "url": "{{LONG_URL}}"
+   },
+   {
+    "label": "More cases",
+    "url": "{{CATCH_PLAYLIST_URL}}"
+   }
+  ],
+  "hashtags": [
+   "shorts",
+   "giftcards",
+   "money",
+   "thecatch"
+  ]
+ },
+ "narrator": {
+  "id": "narrator",
+  "name": "Narrator",
+  "voice": {
+   "say": "Daniel"
+  },
+  "captionStyle": "italic"
+ },
+ "voices": [
+  {
+   "id": "nickel",
+   "name": "Nickel",
+   "voice": {
+    "say": "Ralph"
+   }
+  },
+  {
+   "id": "maya",
+   "name": "Maya",
+   "voice": {
+    "say": "Samantha"
+   }
+  }
+ ],
+ "datasets": {
+  "survey": {
+   "columns": [
+    "metric",
+    "value"
+   ],
+   "rows": [
+    [
+     "share_pct",
+     43
+    ],
+    [
+     "avg_usd",
+     244
+    ],
+    [
+     "total_usd",
+     27000000000
+    ]
+   ],
+   "source": {
+    "name": "Bankrate gift card survey 2024 (YouGov, 2,373 US adults)",
+    "url": "https://www.bankrate.com/finance/credit-cards/gift-cards-survey/",
+    "retrieved": "2026-10-30"
+   }
+  },
+  "sbux": {
+   "columns": [
+    "metric",
+    "usd"
+   ],
+   "rows": [
+    [
+     "float",
+     2200000000
+    ],
+    [
+     "breakage",
+     187600000
+    ]
+   ],
+   "source": {
+    "name": "Starbucks 10-Q Q1 FY2024 and 10-K FY2024 (Note 1)",
+    "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
+    "retrieved": "2026-10-30"
+   }
+  }
+ },
+ "overlay": {
+  "subtitles": false
+ },
+ "timing": {
+  "leadInMs": 100,
+  "gapMs": 120,
+  "tailMs": 900
+ },
+ "scenes": [
+  {
+   "id": "open",
+   "set": "kitchen-night",
+   "music": "mystery",
+   "figures": [
+    {
+     "id": "drawer",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.62,
+      "w": 0.92,
+      "h": 0.3
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "drawer",
+      "open": 0
+     }
+    },
+    {
+     "id": "fifty",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.3,
+      "w": 0.8,
+      "h": 0.1
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": 50,
+      "unit": {
+       "prefix": "$",
+       "decimals": 2
+      }
+     }
+    },
+    {
+     "id": "q",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.17,
+      "w": 0.86,
+      "h": 0.1
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Who's had it",
+        "color": "paper"
+       },
+       {
+        "text": "all this time?",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.78,
+      "y": 0.78,
+      "w": 0.42,
+      "h": 0.22
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "none",
+     "params": {
+      "expr": "shh",
+      "pose": "shh",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "h1",
+     "speaker": "narrator",
+     "line": "This is fifty dollars.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "drawer",
+       "params": {
+        "open": 1
+       },
+       "durationMs": 800
+      },
+      {
+       "do": "show",
+       "id": "fifty",
+       "at": {
+        "word": "fifty"
+       },
+       "durationMs": 800
+      }
+     ],
+     "sfx": [
+      {
+       "id": "drawer"
+      },
+      {
+       "id": "clack",
+       "at": {
+        "word": "fifty"
+       }
+      }
+     ]
+    },
+    {
+     "id": "h2",
+     "speaker": "narrator",
+     "line": "Four years in a kitchen drawer.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "drawer",
+       "zoom": 1.3,
+       "at": {
+        "word": "drawer."
+       }
+      }
+     ]
+    },
+    {
+     "id": "h3",
+     "speaker": "narrator",
+     "line": "So who's had it all this time?",
+     "tag": "hook",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "So"
+       }
+      },
+      {
+       "do": "show",
+       "id": "q",
+       "at": {
+        "word": "who's"
+       }
+      }
+     ]
+    },
+    {
+     "id": "h4",
+     "speaker": "narrator",
+     "line": "Not her. The store.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "q",
+       "at": {
+        "word": "Not"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 1
+       },
+       "at": {
+        "word": "store."
+       },
+       "durationMs": 600
+      }
+     ],
+     "sfx": [
+      {
+       "id": "swish",
+       "at": {
+        "word": "store."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "money",
+   "set": "card-vault",
+   "music": "build",
+   "transition": {
+    "type": "whip",
+    "durationMs": 260
+   },
+   "figures": [
+    {
+     "id": "pile",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.6,
+      "w": 0.94,
+      "h": 0.32
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "pop",
+     "params": {
+      "prop": "coins",
+      "open": 0
+     }
+    },
+    {
+     "id": "total",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.28,
+      "w": 0.94,
+      "h": 0.07
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": "@survey.value[total_usd]",
+      "unit": {
+       "prefix": "$"
+      }
+     }
+    },
+    {
+     "id": "cold",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.62,
+      "w": 0.94,
+      "h": 0.24
+     },
+     "layer": "back",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "prop": "cups",
+      "count": 5,
+      "strike": 1,
+      "cone": false
+     }
+    },
+    {
+     "id": "brk",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.3,
+      "w": 0.8,
+      "h": 0.09
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": 187.6,
+      "unit": {
+       "prefix": "$",
+       "suffix": "M",
+       "decimals": 1
+      }
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.5,
+      "y": 0.8,
+      "w": 0.5,
+      "h": 0.26
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "expr": "gotcha",
+      "pose": "stand",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "cta",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.15,
+      "w": 0.86,
+      "h": 0.1
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Full case ↓",
+        "color": "sodium"
+       },
+       {
+        "text": "linked below",
+        "color": "paper"
+       }
+      ],
+      "align": "middle"
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "h5",
+     "speaker": "narrator",
+     "line": "Americans are sitting on about $27 billion in unused gift cards.",
+     "spoken": "Americans are sitting on about twenty-seven billion dollars in unused gift cards.",
+     "numbers": [
+      {
+       "text": "27 billion",
+       "data": "@survey.value[total_usd]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "set",
+       "id": "pile",
+       "params": {
+        "open": 1
+       },
+       "at": {
+        "word": "sitting"
+       },
+       "durationMs": 1800
+      },
+      {
+       "do": "show",
+       "id": "total",
+       "at": {
+        "word": "billion"
+       },
+       "durationMs": 1000
+      }
+     ],
+     "sfx": [
+      {
+       "id": "coin-avalanche",
+       "at": {
+        "word": "sitting"
+       }
+      },
+      {
+       "id": "clack",
+       "at": {
+        "word": "billion"
+       }
+      }
+     ]
+    },
+    {
+     "id": "h6",
+     "speaker": "narrator",
+     "line": "And stores get to keep the part we forget.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "pile",
+       "zoom": 1.2,
+       "at": {
+        "word": "keep"
+       }
+      }
+     ]
+    },
+    {
+     "id": "h7",
+     "speaker": "narrator",
+     "line": "Starbucks booked $188 million of it in one year.",
+     "spoken": "Starbucks booked a hundred and eighty-eight million dollars of it in one year.",
+     "numbers": [
+      {
+       "text": "188 million",
+       "data": "@sbux.usd[breakage]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "Starbucks"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "pile",
+       "at": {
+        "word": "Starbucks"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "total",
+       "at": {
+        "word": "Starbucks"
+       }
+      },
+      {
+       "do": "show",
+       "id": "cold",
+       "at": {
+        "word": "Starbucks"
+       }
+      },
+      {
+       "do": "show",
+       "id": "brk",
+       "at": {
+        "word": "booked"
+       },
+       "durationMs": 900
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clack",
+       "at": {
+        "word": "million"
+       }
+      }
+     ]
+    },
+    {
+     "id": "h8",
+     "speaker": "nickel",
+     "line": "Coffee. Nobody. Drank.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "cold",
+       "params": {
+        "strike": 0
+       },
+       "at": {
+        "word": "Coffee."
+       },
+       "durationMs": 1500
+      },
+      {
+       "do": "show",
+       "id": "nickel",
+       "at": {
+        "word": "Coffee."
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "Coffee."
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ]
+    },
+    {
+     "id": "h9",
+     "speaker": "narrator",
+     "line": "But the rules are on your side. Full case, linked below.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "brk",
+       "at": {
+        "word": "But"
+       }
+      },
+      {
+       "do": "show",
+       "id": "cta",
+       "at": {
+        "word": "Full"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "ding",
+       "at": {
+        "word": "Full"
+       },
+       "volume": 0.5
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,7 @@
 import type { Library } from "../rig/actorState";
-import { docBeats, type SkitDoc } from "./schema";
+import { docBeats, voiceOf, type SkitDoc } from "./schema";
 import type { Program } from "./timeline";
+import type { CaptionPage } from "../text/captions";
 import { sourceLines } from "./data";
 import { stamp } from "./explainer";
 
@@ -22,7 +23,8 @@ const tag = (h: string) => (h.startsWith("#") ? h : `#${h}`);
 /** Caption text for the platform post: description, chapters, sources, hashtags, disclosure, then the script. */
 export const postText = (doc: SkitDoc, lib: Library, program?: Pick<Program, "chapters" | "fps">): string => {
   const name = (castId: string) => {
-    if (doc.narrator && castId === doc.narrator.id) return doc.narrator.name;
+    const off = voiceOf(doc, castId);
+    if (off) return off.name;
     const c = doc.cast.find((x) => x.id === castId);
     return (c && lib.characters[c.character]?.displayName) ?? castId;
   };
@@ -30,6 +32,8 @@ export const postText = (doc: SkitDoc, lib: Library, program?: Pick<Program, "ch
     .filter((b) => !b.silent && b.line && b.speaker)
     .map((b) => `${name(b.speaker!)}: ${b.line}`);
   const parts = [doc.meta.description ?? doc.meta.title];
+  // Backlinks first, so a short's viewers see where the full video is before "more".
+  if (doc.meta.links.length) parts.push(doc.meta.links.map((l) => `${l.label}: ${l.url}`).join("\n"));
   if (program?.chapters?.length) parts.push(program.chapters.map((c) => `${stamp(c.frame, program.fps)} ${c.title}`).join("\n"));
   const sources = sourceLines(doc.datasets);
   if (sources.length) parts.push(`Sources\n${sources.join("\n")}`);
@@ -48,10 +52,11 @@ const srtTime = (ms: number) => {
  * SubRip captions from the compiled pages (script text exactly, skit-absolute times). A voice-over
  * line's first cue is labelled with the narrator's name.
  */
-export const programSrt = (p: Program, narratorName = "Narrator"): string => {
+export const programSrt = (p: Program, narratorName = "Narrator", voiceNames: Readonly<Record<string, string>> = {}): string => {
   const cues = p.scenes.flatMap((sc) => {
     const offset = (sc.from / p.fps) * 1000;
-    return sc.timeline.pages.map((pg) => ({ from: pg.startMs + offset, to: pg.endMs + offset, text: `${pg.narrator && pg.lineStart ? `${narratorName}: ` : ""}${pg.text.trim()}` }));
+    const who = (pg: CaptionPage) => (pg.speaker && voiceNames[pg.speaker]) ?? narratorName;
+    return (sc.timeline.srtPages ?? sc.timeline.pages).map((pg) => ({ from: pg.startMs + offset, to: pg.endMs + offset, text: `${pg.narrator && pg.lineStart ? `${who(pg)}: ` : ""}${pg.text.trim()}` }));
   });
   return cues.map((c, i) => `${i + 1}\n${srtTime(c.from)} --> ${srtTime(c.to)}\n${c.text}\n`).join("\n");
 };

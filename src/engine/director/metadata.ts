@@ -6,6 +6,7 @@ import type { ReactionTable, SfxManifest } from "./schema";
 import type { Program } from "./timeline";
 import type { Library } from "../rig/actorState";
 import type { SetDef } from "../set/schema";
+import type { MusicManifest } from "../audio/music";
 import type { SafeArea } from "../text/safeArea";
 import { PreparedVoiceSchema } from "../voice/schema";
 import { EquationCacheSchema } from "../viz/typeset";
@@ -29,6 +30,8 @@ export type StickStageContext = {
   lib: Library;
   sets: Readonly<Record<string, SetDef>>;
   sfx: SfxManifest;
+  /** Music beds (`music.json`). */
+  music?: MusicManifest;
   reactions: ReactionTable;
   /** The platform safe area face shots keep faces inside. */
   safeArea?: SafeArea;
@@ -54,7 +57,7 @@ export const calculateStickStageMetadata =
     const voice = voiceJson === undefined ? undefined : PreparedVoiceSchema.parse(voiceJson);
     const eqJson = await ctx.load(`${base}/generated/equations.json`);
     const equations = eqJson === undefined ? {} : EquationCacheSchema.parse(eqJson).equations;
-    const compiled = compileSkit({ skit, voice, lib: ctx.lib, sets: ctx.sets, sfx: ctx.sfx, reactions: ctx.reactions, safeArea: ctx.safeArea, series: ctx.series, lang: props.lang, figures: { equations, images: ctx.images } });
+    const compiled = compileSkit({ skit, voice, lib: ctx.lib, sets: ctx.sets, sfx: ctx.sfx, music: ctx.music, reactions: ctx.reactions, safeArea: ctx.safeArea, series: ctx.series, lang: props.lang, figures: { equations, images: ctx.images } });
     if (compiled.warnings.length) console.warn(formatDiagnostics(compiled.warnings));
     const hook = compiled.program.hook;
     const program = props.omitHook && hook ? { ...compiled.program, hook: undefined, durationInFrames: compiled.program.durationInFrames - hook.prefixFrames + hook.transitionFrames } : compiled.program;

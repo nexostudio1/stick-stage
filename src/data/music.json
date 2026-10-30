@@ -9,6 +9,42 @@
       "ducked": 0.05,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
+    },
+    {
+      "id": "mystery",
+      "file": "music/mystery.wav",
+      "durationMs": 10000,
+      "gain": 0.22,
+      "ducked": 0.08,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
+    },
+    {
+      "id": "build",
+      "file": "music/build.wav",
+      "durationMs": 10000,
+      "gain": 0.24,
+      "ducked": 0.09,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
+    },
+    {
+      "id": "drop",
+      "file": "music/drop.wav",
+      "durationMs": 10000,
+      "gain": 0.3,
+      "ducked": 0.1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
+    },
+    {
+      "id": "resolve",
+      "file": "music/resolve.wav",
+      "durationMs": 10000,
+      "gain": 0.22,
+      "ducked": 0.08,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
     }
   ]
 }

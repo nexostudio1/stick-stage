@@ -79,6 +79,16 @@ orbit adds `star`, `perihelion`, `aphelion`; a plot `origin`; an equation each t
 | `counter` | Explainers. A big number: `value` (a `set` cue ticks it), `from` (where the reveal ticks from), `unit`, `caption`, `delta: { value, unit, good: up / down }`, `color`, `variant` |
 | `map` | Explainers. A world map (Natural Earth, baked in): `data` by ISO alpha-3 (`[["USA", 3.2]]` or `"@dataset.column"`) for a choropleth, `highlight: [codes]`, `points: [{ lon, lat, label }]`, `routes: [{ from, to }]` + `draw`, `zoom`: `"world"`, a code, codes or `[lon0, lat0, lon1, lat1]` (a `set` cue on `zoom` flies there), `legend`, `unit`, `variant` |
 
+| `flap` | The Catch (night look). A split-flap board: `value` + `unit` (a `set` cue riffles the digits) or `text`, `group` (thousands commas; off for years), `tiles` (min), `color` (`sodium` / `paper` / `ember` / `neon`), `caption` |
+| `crowd` | The Catch. `count` people on `rows`; `lit` of them (seeded order, tween it) hold a lit card; `caption` |
+| `stamp` | The Catch. A rubber stamp that slams in on `show`: `text`, `sub`, `color` (default `ember`), `angle` |
+| `phrase` | The Catch's key-phrase card (replaces boxed captions): `lines: [{ text, color }]` (1–3), `align`, `size`, `plate` (dark backing on a day set). Put it on `layer: "screen"` |
+| `prop` | The Catch. A hero object under a light cone: `prop` (`drawer`, `envelope`, `giftcard`, `till`, `ledger`, `jar`, `cups`, `coins`, `vault`, `cup`, `lostbox`, `book`, `lamp`), `open` (its motion), `strike` (ledger strike / card split / steam left), `flip` (card back / tags to `$`), `text`, `count`, `cone`, `dim` |
+| `nickel` | The Catch's host (raccoon, ember hoodie, headlamp): `expr` (`smirk`, `sly`, `shock`, `grin`, `gotcha`, `shh`), `pose` (`stand`, `shh`, `point`, `sip`, `hold`, `close`), `rise` (peek up from the box bottom), `talk` (0/1, cue it with the line), `lamp`, `beam` (°), `beamLength`, `facing` |
+| `maya` | Case 001's lead: `outfit` (`pyjamas`, `day`), `expr`, `pose` (`stand`, `hold`, `reach`), `talk`, `facing` |
+| `evidence` | Cards pinned on the evidence wall: `items: [{ text, sub }]` (≤ 4), `lit` (tween it: pins glow, red string runs card to card) |
+| `phone` | A phone note: `title`, `items` (≤ 5), `typed` (fractional = mid-typing), `done` (ticked) |
+
 **Expressions** (`fn`, marker `x`/`y`) are a small safe language: numbers, variables (`x` and the
 plot's `vars`), `+ - * / ^`, `pi`, `e`, and `sin cos tan exp ln log sqrt abs min max floor pow …`.
 No `eval`. Animate a variable with a `set` cue on `vars`.

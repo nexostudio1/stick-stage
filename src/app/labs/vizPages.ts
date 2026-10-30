@@ -5,6 +5,8 @@ export type VizPage = {
   note: string;
   figures: FigureInput[];
   cues: { at: number; cue: FigureCue }[];
+  /** The set this page is shown on (default: the lab's). */
+  set?: string;
 };
 
 export const PAGE_FRAMES = 150;

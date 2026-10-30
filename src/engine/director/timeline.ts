@@ -144,6 +144,8 @@ export type Timeline = {
   card?: CardEvent;
   verdict?: VerdictEvent;
   pages: CaptionPage[];
+  /** Caption pages for the `.srt` only, when on-screen subtitles are off. */
+  srtPages?: CaptionPage[];
   /** Diagrams on the stage (absent when the scene has none). */
   figures?: FigureTrack[];
   /** Image credits burned in while a NASA / ESA image is up. */
@@ -158,7 +160,7 @@ export type Timeline = {
 };
 
 /** How a scene comes in (`cut` has no overlap). */
-export type SceneTransition = { type: "cut" | "fade" | "slide" | "wipe" | "clock-wipe"; durationFrames: number };
+export type SceneTransition = { type: "cut" | "fade" | "slide" | "wipe" | "clock-wipe" | "whip"; durationFrames: number };
 
 export type ProgramScene = {
   id: string;
@@ -179,6 +181,8 @@ export type Program = {
   scenes: ProgramScene[];
   /** Original bed. Absent when the skit names none. */
   music?: { src: string; gain: number; ducked: number };
+  /** Bed changes from a scene's `music` on (act cues: mystery → build → drop → resolve), skit frames. */
+  musicCues?: { frame: number; src: string; gain: number; ducked: number }[];
   /** A flash of a later frame, then a slide into beat one. */
   hook?: { kind: "teaser" | "slam"; scene: number; frame: number; prefixFrames: number; transitionFrames: number };
   /** The still the cover and thumbnail are framed from. */

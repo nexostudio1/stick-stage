@@ -9,6 +9,7 @@ import { Figures } from "../viz/Figures";
 import { themeFor } from "../viz/theme";
 import type { FigureTrack } from "../viz/track";
 import { FigureFinishFilter, FinishContext, FinishLight, FinishOverlay, type Finish } from "./finish";
+import { nightDrift, NightOverlay } from "./nightFinish";
 
 export type StageActor = {
   id: string;
@@ -52,7 +53,8 @@ export type StageProps = {
 
 /** Set background → actors → set foreground, under one camera transform. */
 export const Stage: React.FC<StageProps> = ({ set, actors, width, height, frame, camera, fontFamily, labels, figures, fps = 30, finish = "flat" }) => {
-  const cam = camera ?? FULL_FRAME(width, height);
+  const night = finish === "night";
+  const cam = night ? nightDrift(camera ?? FULL_FRAME(width, height), frame, width, height) : (camera ?? FULL_FRAME(width, height));
   const palette = getPalette(set.palette);
   const figs = figures?.length ? { figures, frame, fps, width, height, theme: themeFor(palette), fontFamily } : undefined;
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "");
@@ -84,9 +86,21 @@ export const Stage: React.FC<StageProps> = ({ set, actors, width, height, frame,
         {figs ? <Figures {...figs} layer="front" /> : null}
         <SetLayers set={set} width={width} height={height} layer="foreground" labels={labels} fontFamily={fontFamily} frame={frame} />
       </g>
-      {figs && !illustrated ? <Figures {...figs} layer="screen" /> : null}
+      {figs && !illustrated && !night ? <Figures {...figs} layer="screen" /> : null}
     </svg>
   );
+  if (night)
+    return (
+      <div style={{ position: "relative", width, height }}>
+        {stage}
+        <NightOverlay width={width} height={height} />
+        {figs ? (
+          <svg viewBox={`0 0 ${width} ${height}`} width={width} height={height} style={{ position: "absolute", left: 0, top: 0 }}>
+            <Figures {...figs} layer="screen" />
+          </svg>
+        ) : null}
+      </div>
+    );
   if (!illustrated) return stage;
   // The finish overlay sits on its own layer (cached between frames), with screen figures above it.
   return (

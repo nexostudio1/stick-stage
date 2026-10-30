@@ -50,7 +50,7 @@ export const writePostFiles = (
     fs.writeFileSync(files.sources, sources);
   }
   fs.writeFileSync(files.txt, postText(o.doc, o.lib, o.program));
-  fs.writeFileSync(files.srt, programSrt(o.program, o.doc.narrator?.name));
+  fs.writeFileSync(files.srt, programSrt(o.program, o.doc.narrator?.name, Object.fromEntries((o.doc.voices ?? []).map((v) => [v.id, v.name]))));
   fs.writeFileSync(files.json, JSON.stringify(postManifest(o), null, 2) + "\n");
   return files;
 };

@@ -147,7 +147,7 @@ export const layoutBeats = (
     if (!r) return;
     const others = skit.cast.map((c) => c.id).filter((id) => id !== beat.speaker && id !== r.reactor);
     const reactors = [r.reactor, ...others.slice(0, Math.max(0, style.reactors - 1))];
-    const synthetic: Beat = { ...beat, id: `${beat.id}-reaction`, speaker: undefined, focus: undefined, line: undefined, silent: true, durationMs: style.reactionMs, pauseBeforeMs: 0, holdAfterMs: 0, shot: undefined, actions: [], sfx: [], text: [], figures: [], punchline: false };
+    const synthetic: Beat = { ...beat, id: `${beat.id}-reaction`, tag: undefined, speaker: undefined, focus: undefined, line: undefined, silent: true, durationMs: style.reactionMs, pauseBeforeMs: 0, holdAfterMs: 0, shot: undefined, actions: [], sfx: [], text: [], figures: [], punchline: false };
     push(synthetic, path, "reaction", true, false, { reactor: r.reactor, reactors, reactionExpression: r.expression });
   });
   return { beats: out, totalMs: cursor + skit.timing.tailMs };

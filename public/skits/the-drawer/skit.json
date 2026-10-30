@@ -1,0 +1,4127 @@
+{
+ "$schema": "../../../schemas/skit.schema.json",
+ "schemaVersion": 2,
+ "format": "explainer",
+ "finish": "night",
+ "meta": {
+  "title": "The Drawer: who keeps your gift card money?",
+  "aspect": "16:9",
+  "description": "Maya's grandma gave her a $50 gift card. It sat in a kitchen drawer for four years. So who had that fifty dollars all that time? The Catch, Case 001.",
+  "hashtags": [
+   "giftcards",
+   "money",
+   "personalfinance",
+   "thecatch"
+  ]
+ },
+ "narrator": {
+  "id": "narrator",
+  "name": "Narrator",
+  "voice": {
+   "say": "Daniel"
+  },
+  "captionStyle": "italic"
+ },
+ "voices": [
+  {
+   "id": "nickel",
+   "name": "Nickel",
+   "voice": {
+    "say": "Ralph"
+   }
+  },
+  {
+   "id": "maya",
+   "name": "Maya",
+   "voice": {
+    "say": "Samantha"
+   }
+  }
+ ],
+ "datasets": {
+  "survey": {
+   "columns": [
+    "metric",
+    "value"
+   ],
+   "rows": [
+    [
+     "share_pct",
+     43
+    ],
+    [
+     "avg_usd",
+     244
+    ],
+    [
+     "total_usd",
+     27000000000
+    ]
+   ],
+   "source": {
+    "name": "Bankrate gift card survey 2024 (YouGov, 2,373 US adults)",
+    "url": "https://www.bankrate.com/finance/credit-cards/gift-cards-survey/",
+    "retrieved": "2026-10-30"
+   }
+  },
+  "sbux": {
+   "columns": [
+    "metric",
+    "usd"
+   ],
+   "rows": [
+    [
+     "float",
+     2200000000
+    ],
+    [
+     "breakage",
+     187600000
+    ]
+   ],
+   "source": {
+    "name": "Starbucks 10-Q Q1 FY2024 and 10-K FY2024 (Note 1)",
+    "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
+    "retrieved": "2026-10-30"
+   }
+  },
+  "rules": {
+   "columns": [
+    "rule",
+    "value"
+   ],
+   "rows": [
+    [
+     "expiry_years",
+     5
+    ],
+    [
+     "dormancy_months",
+     12
+    ],
+    [
+     "ca_cash_usd",
+     15
+    ]
+   ],
+   "source": {
+    "name": "Credit CARD Act 2009, 12 CFR 1005.20; Cal. Civ. Code 1749.5",
+    "url": "https://www.consumerfinance.gov/rules-policy/regulations/1005/20/",
+    "retrieved": "2026-10-30"
+   }
+  }
+ },
+ "overlay": {
+  "subtitles": false
+ },
+ "timing": {
+  "leadInMs": 200,
+  "gapMs": 180,
+  "tailMs": 1200
+ },
+ "scenes": [
+  {
+   "id": "drawer",
+   "set": "kitchen-night",
+   "chapter": "The drawer",
+   "music": "mystery",
+   "figures": [
+    {
+     "id": "drawer",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.66,
+      "w": 0.56,
+      "h": 0.52
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "drawer",
+      "open": 0
+     }
+    },
+    {
+     "id": "fifty",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.17,
+      "w": 0.36,
+      "h": 0.2
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": 50,
+      "unit": {
+       "prefix": "$",
+       "decimals": 2
+      }
+     }
+    },
+    {
+     "id": "years",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.17,
+      "w": 0.3,
+      "h": 0.2
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": 2021,
+      "group": false,
+      "caption": "in the drawer since"
+     }
+    },
+    {
+     "id": "env",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.6,
+      "w": 0.42,
+      "h": 0.5
+     },
+     "layer": "back",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "prop": "envelope",
+      "open": 0
+     }
+    },
+    {
+     "id": "maya",
+     "kind": "maya",
+     "at": {
+      "x": 0.27,
+      "y": 0.62,
+      "w": 0.26,
+      "h": 0.74
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "outfit": "pyjamas",
+      "expr": "guilty",
+      "pose": "hold"
+     }
+    },
+    {
+     "id": "q1",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "So who's had it",
+        "color": "paper"
+       },
+       {
+        "text": "all this time?",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "q2",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Not Maya.",
+        "color": "paper"
+       },
+       {
+        "text": "Not Grandma.",
+        "color": "paper"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.8,
+      "y": 0.5,
+      "w": 0.26,
+      "h": 0.42
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "none",
+     "params": {
+      "expr": "shh",
+      "pose": "shh",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "c1",
+     "speaker": "narrator",
+     "line": "This is fifty dollars.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "drawer",
+       "params": {
+        "open": 1
+       },
+       "durationMs": 900
+      },
+      {
+       "do": "show",
+       "id": "fifty",
+       "at": {
+        "word": "fifty"
+       },
+       "durationMs": 900
+      }
+     ],
+     "sfx": [
+      {
+       "id": "drawer"
+      },
+      {
+       "id": "clack",
+       "at": {
+        "word": "fifty"
+       }
+      }
+     ]
+    },
+    {
+     "id": "c2",
+     "speaker": "narrator",
+     "line": "Four years in a kitchen drawer.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "fifty",
+       "at": {
+        "word": "Four"
+       }
+      },
+      {
+       "do": "show",
+       "id": "years",
+       "at": {
+        "word": "Four"
+       },
+       "durationMs": 600
+      },
+      {
+       "do": "set",
+       "id": "years",
+       "params": {
+        "value": 2025
+       },
+       "at": {
+        "word": "kitchen"
+       },
+       "durationMs": 1400
+      },
+      {
+       "do": "focus",
+       "id": "drawer",
+       "zoom": 1.35,
+       "at": {
+        "word": "drawer"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clack",
+       "at": {
+        "word": "kitchen"
+       }
+      }
+     ]
+    },
+    {
+     "id": "c3",
+     "speaker": "narrator",
+     "line": "So who's had it all this time?",
+     "tag": "hook",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "years",
+       "at": {
+        "word": "So"
+       }
+      },
+      {
+       "do": "show",
+       "id": "q1",
+       "at": {
+        "word": "who's"
+       }
+      },
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "So"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "stamp",
+       "at": {
+        "word": "time?"
+       },
+       "volume": 0.5
+      }
+     ]
+    },
+    {
+     "id": "c4",
+     "speaker": "narrator",
+     "line": "Not Maya. Not her grandma.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "q1",
+       "at": {
+        "word": "Not"
+       }
+      },
+      {
+       "do": "show",
+       "id": "q2",
+       "at": {
+        "word": "Not"
+       }
+      }
+     ]
+    },
+    {
+     "id": "c5",
+     "speaker": "narrator",
+     "line": "Birthday card. Little heart on the envelope.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "q2",
+       "at": {
+        "word": "Birthday"
+       }
+      },
+      {
+       "do": "set",
+       "id": "drawer",
+       "params": {
+        "dim": 1
+       },
+       "at": {
+        "word": "Birthday"
+       }
+      },
+      {
+       "do": "show",
+       "id": "env",
+       "at": {
+        "word": "card."
+       }
+      },
+      {
+       "do": "focus",
+       "id": "env",
+       "zoom": 1.3,
+       "at": {
+        "word": "heart"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "rustle",
+       "at": {
+        "word": "card."
+       }
+      }
+     ]
+    },
+    {
+     "id": "c6",
+     "speaker": "maya",
+     "line": "I was saving it for something special.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "I"
+       }
+      },
+      {
+       "do": "set",
+       "id": "env",
+       "params": {
+        "dim": 1,
+        "cone": false
+       },
+       "at": {
+        "word": "I"
+       }
+      },
+      {
+       "do": "show",
+       "id": "maya",
+       "at": {
+        "word": "I"
+       }
+      },
+      {
+       "do": "set",
+       "id": "maya",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "I"
+       }
+      },
+      {
+       "do": "set",
+       "id": "maya",
+       "params": {
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "pop",
+       "at": {
+        "word": "I"
+       },
+       "volume": 0.4
+      }
+     ]
+    },
+    {
+     "id": "c7",
+     "speaker": "nickel",
+     "line": "Shh. Follow the money.",
+     "tag": "promise",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "maya",
+       "at": {
+        "word": "Shh."
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 1
+       },
+       "at": {
+        "word": "Shh."
+       },
+       "durationMs": 700
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "Shh."
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 0,
+        "expr": "sly"
+       },
+       "at": {
+        "word": "money."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "swish",
+       "at": {
+        "word": "Shh."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vault",
+   "set": "card-vault",
+   "chapter": "Case file",
+   "transition": {
+    "type": "whip",
+    "durationMs": 300
+   },
+   "figures": [
+    {
+     "id": "crowd",
+     "kind": "crowd",
+     "at": {
+      "x": 0.5,
+      "y": 0.55,
+      "w": 0.86,
+      "h": 0.42
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "draw",
+     "params": {
+      "count": 100,
+      "lit": 0,
+      "rows": 4,
+      "caption": "US adults with an unused gift card"
+     }
+    },
+    {
+     "id": "avg",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.17,
+      "w": 0.3,
+      "h": 0.2
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": "@survey.value[avg_usd]",
+      "unit": {
+       "prefix": "$"
+      },
+      "caption": "unused, per person"
+     }
+    },
+    {
+     "id": "pile",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.62,
+      "w": 0.7,
+      "h": 0.6
+     },
+     "layer": "back",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "prop": "coins",
+      "open": 0,
+      "cone": true
+     }
+    },
+    {
+     "id": "total",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.15,
+      "w": 0.8,
+      "h": 0.16
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": "@survey.value[total_usd]",
+      "unit": {
+       "prefix": "$"
+      }
+     }
+    },
+    {
+     "id": "where",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Drawers. Wallets.",
+        "color": "paper"
+       },
+       {
+        "text": "Old phone apps.",
+        "color": "paper"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "job",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Doing a job.",
+        "color": "paper"
+       },
+       {
+        "text": "Just not for us.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.5,
+      "y": 0.34,
+      "w": 0.12,
+      "h": 0.16
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "expr": "smirk",
+      "pose": "stand",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 30,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "v1",
+     "speaker": "narrator",
+     "line": "Maya's not careless. She's normal.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "crowd",
+       "params": {
+        "lit": 1
+       },
+       "at": {
+        "word": "normal."
+       },
+       "durationMs": 400
+      }
+     ]
+    },
+    {
+     "id": "v2",
+     "speaker": "narrator",
+     "line": "More than four in ten American adults have a gift card they haven't used.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "crowd",
+       "params": {
+        "lit": 43
+       },
+       "at": {
+        "word": "four"
+       },
+       "durationMs": 2200
+      },
+      {
+       "do": "focus",
+       "id": "crowd",
+       "zoom": 1.15,
+       "at": {
+        "word": "adults"
+       }
+      }
+     ]
+    },
+    {
+     "id": "v3",
+     "speaker": "narrator",
+     "line": "The average? $244 each.",
+     "spoken": "The average? Two hundred and forty-four dollars each.",
+     "numbers": [
+      {
+       "text": "244",
+       "data": "@survey.value[avg_usd]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "show",
+       "id": "avg",
+       "at": {
+        "word": "average?"
+       },
+       "durationMs": 900
+      },
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "average?"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clack",
+       "at": {
+        "word": "each."
+       }
+      }
+     ]
+    },
+    {
+     "id": "v4",
+     "speaker": "narrator",
+     "line": "Add it up and it's about $27 billion.",
+     "spoken": "Add it up and it's about twenty-seven billion dollars.",
+     "numbers": [
+      {
+       "text": "27 billion",
+       "data": "@survey.value[total_usd]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "hide",
+       "id": "avg",
+       "at": {
+        "word": "Add"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "crowd",
+       "at": {
+        "word": "Add"
+       }
+      },
+      {
+       "do": "show",
+       "id": "pile",
+       "at": {
+        "word": "Add"
+       },
+       "durationMs": 600
+      },
+      {
+       "do": "set",
+       "id": "pile",
+       "params": {
+        "open": 1
+       },
+       "at": {
+        "word": "up"
+       },
+       "durationMs": 2000
+      },
+      {
+       "do": "show",
+       "id": "total",
+       "at": {
+        "word": "about"
+       },
+       "durationMs": 1200
+      }
+     ],
+     "sfx": [
+      {
+       "id": "coin-avalanche",
+       "at": {
+        "word": "up"
+       }
+      },
+      {
+       "id": "clack",
+       "at": {
+        "word": "billion."
+       }
+      }
+     ]
+    },
+    {
+     "id": "v5",
+     "speaker": "narrator",
+     "line": "In drawers, wallets, old phone apps.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "total",
+       "at": {
+        "word": "In"
+       }
+      },
+      {
+       "do": "show",
+       "id": "where",
+       "at": {
+        "word": "drawers,"
+       }
+      }
+     ]
+    },
+    {
+     "id": "v6",
+     "speaker": "narrator",
+     "line": "Doing a job. Just not for us.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "where",
+       "at": {
+        "word": "Doing"
+       }
+      },
+      {
+       "do": "show",
+       "id": "job",
+       "at": {
+        "word": "Doing"
+       }
+      }
+     ]
+    },
+    {
+     "id": "v7",
+     "speaker": "nickel",
+     "line": "Then for who?",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "job",
+       "at": {
+        "word": "Then"
+       }
+      },
+      {
+       "do": "show",
+       "id": "nickel",
+       "at": {
+        "word": "Then"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "beamLength": 0.7,
+        "beam": -10,
+        "talk": 1
+       },
+       "at": {
+        "word": "Then"
+       },
+       "durationMs": 500
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "beam": 50,
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.9
+       },
+       "durationMs": 1200
+      }
+     ],
+     "sfx": [
+      {
+       "id": "click",
+       "at": {
+        "word": "Then"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iou",
+   "set": "ledger-room",
+   "chapter": "Clue 1: the IOU",
+   "transition": {
+    "type": "whip",
+    "durationMs": 300
+   },
+   "figures": [
+    {
+     "id": "till",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.58,
+      "w": 0.6,
+      "h": 0.66
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "till",
+      "open": 0,
+      "cone": false
+     }
+    },
+    {
+     "id": "ledger",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.56,
+      "w": 0.62,
+      "h": 0.66
+     },
+     "layer": "back",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "prop": "ledger",
+      "text": "SALE",
+      "cone": false
+     }
+    },
+    {
+     "id": "debt",
+     "kind": "stamp",
+     "at": {
+      "x": 0.68,
+      "y": 0.36,
+      "w": 0.34,
+      "h": 0.2
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "text": "DEBT",
+      "angle": -10
+     }
+    },
+    {
+     "id": "nothing",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "No sweater. No book.",
+        "color": "paper"
+       },
+       {
+        "text": "Nothing.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "owes",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "The store owes you",
+        "color": "paper"
+       },
+       {
+        "text": "$50 of stuff.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "jar",
+     "kind": "prop",
+     "at": {
+      "x": 0.45,
+      "y": 0.58,
+      "w": 0.56,
+      "h": 0.62
+     },
+     "layer": "back",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "prop": "jar",
+      "text": "STORE",
+      "cone": true
+     }
+    },
+    {
+     "id": "free",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "No interest. No rent.",
+        "color": "paper"
+       },
+       {
+        "text": "No questions.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.82,
+      "y": 0.62,
+      "w": 0.24,
+      "h": 0.6
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "none",
+     "params": {
+      "expr": "sly",
+      "pose": "stand",
+      "rise": 0,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "i1",
+     "speaker": "narrator",
+     "line": "When Maya's grandma bought that card, the store got fifty dollars. Cash. That day.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "till",
+       "params": {
+        "open": 1
+       },
+       "at": {
+        "word": "bought"
+       },
+       "durationMs": 2400
+      },
+      {
+       "do": "focus",
+       "id": "till",
+       "zoom": 1.25,
+       "at": {
+        "word": "Cash."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "register",
+       "at": {
+        "word": "Cash."
+       }
+      }
+     ]
+    },
+    {
+     "id": "i2",
+     "speaker": "narrator",
+     "line": "But the store didn't sell anything.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "But"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "till",
+       "at": {
+        "word": "But"
+       }
+      },
+      {
+       "do": "show",
+       "id": "ledger",
+       "at": {
+        "word": "store"
+       },
+       "durationMs": 500
+      }
+     ],
+     "sfx": [
+      {
+       "id": "rustle",
+       "at": {
+        "word": "store"
+       }
+      }
+     ]
+    },
+    {
+     "id": "i3",
+     "speaker": "narrator",
+     "line": "No sweater left the shelf. No book. Nothing.",
+     "figures": [
+      {
+       "do": "show",
+       "id": "nothing",
+       "at": {
+        "word": "No"
+       }
+      }
+     ]
+    },
+    {
+     "id": "i4",
+     "speaker": "narrator",
+     "line": "So accountants don't call it a sale. They call it a debt.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "nothing",
+       "at": {
+        "word": "So"
+       }
+      },
+      {
+       "do": "set",
+       "id": "ledger",
+       "params": {
+        "strike": 1
+       },
+       "at": {
+        "word": "sale."
+       },
+       "durationMs": 500
+      },
+      {
+       "do": "show",
+       "id": "debt",
+       "at": {
+        "word": "debt."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "swish",
+       "at": {
+        "word": "sale."
+       }
+      },
+      {
+       "id": "stamp",
+       "at": {
+        "word": "debt."
+       }
+      }
+     ]
+    },
+    {
+     "id": "i5",
+     "speaker": "narrator",
+     "line": "The store owes whoever holds the card fifty dollars of stuff.",
+     "figures": [
+      {
+       "do": "show",
+       "id": "owes",
+       "at": {
+        "word": "owes"
+       }
+      }
+     ]
+    },
+    {
+     "id": "i6",
+     "speaker": "narrator",
+     "line": "It's an IOU. And IOUs have a funny feature.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "owes",
+       "at": {
+        "word": "It's"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "debt",
+       "at": {
+        "word": "It's"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "ledger",
+       "at": {
+        "word": "It's"
+       }
+      },
+      {
+       "do": "show",
+       "id": "jar",
+       "at": {
+        "word": "IOU."
+       },
+       "durationMs": 500
+      }
+     ],
+     "sfx": [
+      {
+       "id": "rustle",
+       "at": {
+        "word": "IOU."
+       }
+      }
+     ]
+    },
+    {
+     "id": "i7",
+     "speaker": "narrator",
+     "line": "Until you show up, the money just sits with the store.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "jar",
+       "zoom": 1.15,
+       "at": {
+        "word": "Until"
+       }
+      },
+      {
+       "do": "focus",
+       "id": "jar",
+       "zoom": 1.35,
+       "at": {
+        "word": "sits"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clock-tick",
+       "at": {
+        "word": "money"
+       }
+      }
+     ]
+    },
+    {
+     "id": "i8",
+     "speaker": "narrator",
+     "line": "No interest. No rent. No questions.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "No"
+       }
+      },
+      {
+       "do": "show",
+       "id": "free",
+       "at": {
+        "word": "No"
+       }
+      }
+     ]
+    },
+    {
+     "id": "i9",
+     "speaker": "nickel",
+     "line": "Free money. Until you come back.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "free",
+       "at": {
+        "word": "Free"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "rise": 1,
+        "talk": 1
+       },
+       "at": {
+        "word": "Free"
+       },
+       "durationMs": 600
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ]
+    },
+    {
+     "id": "i10",
+     "speaker": "narrator",
+     "line": "Now picture that at the size of a coffee chain.",
+     "tag": "rehook",
+     "figures": [
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "expr": "grin"
+       },
+       "at": {
+        "word": "picture"
+       }
+      },
+      {
+       "do": "set",
+       "id": "jar",
+       "params": {
+        "dim": 1
+       },
+       "at": {
+        "word": "coffee"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coffee",
+   "set": "cafe-night",
+   "chapter": "Clue 2: the coffee bank",
+   "transition": {
+    "type": "whip",
+    "durationMs": 300
+   },
+   "figures": [
+    {
+     "id": "cups",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.64,
+      "w": 0.74,
+      "h": 0.46
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "cups",
+      "count": 5,
+      "open": 0,
+      "cone": false
+     }
+    },
+    {
+     "id": "reload",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Auto-reload.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "float",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.17,
+      "w": 0.4,
+      "h": 0.2
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": 2.2,
+      "unit": {
+       "prefix": "$",
+       "suffix": "B",
+       "decimals": 1
+      },
+      "caption": "paid in, not yet spent"
+     }
+    },
+    {
+     "id": "bank",
+     "kind": "prop",
+     "at": {
+      "x": 0.27,
+      "y": 0.58,
+      "w": 0.42,
+      "h": 0.6
+     },
+     "layer": "back",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "prop": "vault",
+      "open": 0,
+      "cone": true
+     }
+    },
+    {
+     "id": "cup",
+     "kind": "prop",
+     "at": {
+      "x": 0.73,
+      "y": 0.58,
+      "w": 0.42,
+      "h": 0.6
+     },
+     "layer": "back",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "prop": "cup",
+      "text": "coffee. later.",
+      "cone": true
+     }
+    },
+    {
+     "id": "joke",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.2,
+      "w": 0.6,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "“A bank that",
+        "color": "paper"
+       },
+       {
+        "text": "sells coffee.”",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.5,
+      "y": 0.6,
+      "w": 0.3,
+      "h": 0.66
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "fade",
+     "params": {
+      "expr": "sly",
+      "pose": "sip",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "k1",
+     "speaker": "narrator",
+     "line": "Starbucks customers load money onto cards and the app before they order.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "cups",
+       "params": {
+        "open": 0.6
+       },
+       "at": {
+        "word": "load"
+       },
+       "durationMs": 2600
+      }
+     ],
+     "sfx": [
+      {
+       "id": "coins",
+       "at": {
+        "word": "load"
+       }
+      },
+      {
+       "id": "coins",
+       "at": {
+        "word": "app"
+       },
+       "volume": 0.6
+      }
+     ]
+    },
+    {
+     "id": "k2",
+     "speaker": "narrator",
+     "line": "Auto-reload, ten here, twenty-five there.",
+     "figures": [
+      {
+       "do": "show",
+       "id": "reload",
+       "at": {
+        "word": "Auto-reload,"
+       }
+      },
+      {
+       "do": "set",
+       "id": "cups",
+       "params": {
+        "open": 1
+       },
+       "at": {
+        "word": "ten"
+       },
+       "durationMs": 1400
+      }
+     ],
+     "sfx": [
+      {
+       "id": "coins",
+       "at": {
+        "word": "ten"
+       }
+      },
+      {
+       "id": "coins",
+       "at": {
+        "word": "twenty-five"
+       },
+       "volume": 0.7
+      }
+     ]
+    },
+    {
+     "id": "k3",
+     "speaker": "narrator",
+     "line": "In early 2024, that pile was about $2.2 billion.",
+     "spoken": "In early twenty twenty-four, that pile was about two point two billion dollars.",
+     "numbers": [
+      {
+       "text": "2.2 billion",
+       "data": "@sbux.usd[float]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "hide",
+       "id": "reload",
+       "at": {
+        "word": "In"
+       }
+      },
+      {
+       "do": "show",
+       "id": "float",
+       "at": {
+        "word": "pile"
+       },
+       "durationMs": 900
+      },
+      {
+       "do": "focus",
+       "id": "float",
+       "zoom": 1.2,
+       "at": {
+        "word": "billion."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "neon-on",
+       "at": {
+        "word": "pile"
+       }
+      },
+      {
+       "id": "clack",
+       "at": {
+        "word": "billion."
+       }
+      }
+     ]
+    },
+    {
+     "id": "k4",
+     "speaker": "narrator",
+     "line": "Money that's paid, but not yet spent.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "Money"
+       }
+      },
+      {
+       "do": "set",
+       "id": "cups",
+       "params": {
+        "dim": 0.5
+       },
+       "at": {
+        "word": "spent."
+       }
+      }
+     ]
+    },
+    {
+     "id": "k5",
+     "speaker": "narrator",
+     "line": "If you lent a bank two billion dollars, it would pay you interest.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "If"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "float",
+       "at": {
+        "word": "If"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "cups",
+       "at": {
+        "word": "If"
+       }
+      },
+      {
+       "do": "show",
+       "id": "bank",
+       "at": {
+        "word": "bank"
+       }
+      },
+      {
+       "do": "set",
+       "id": "bank",
+       "params": {
+        "open": 1
+       },
+       "at": {
+        "word": "interest."
+       },
+       "durationMs": 1600
+      }
+     ],
+     "sfx": [
+      {
+       "id": "blip",
+       "at": {
+        "word": "interest."
+       }
+      }
+     ]
+    },
+    {
+     "id": "k6",
+     "speaker": "narrator",
+     "line": "Lend it to a coffee shop and you get… coffee. Later. Maybe.",
+     "holdAfterMs": 500,
+     "figures": [
+      {
+       "do": "show",
+       "id": "cup",
+       "at": {
+        "word": "coffee"
+       }
+      },
+      {
+       "do": "set",
+       "id": "bank",
+       "params": {
+        "dim": 0.6
+       },
+       "at": {
+        "word": "coffee"
+       }
+      },
+      {
+       "do": "focus",
+       "id": "cup",
+       "zoom": 1.2,
+       "at": {
+        "word": "Maybe."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "pop",
+       "at": {
+        "word": "Later."
+       },
+       "volume": 0.5
+      }
+     ]
+    },
+    {
+     "id": "k7",
+     "speaker": "narrator",
+     "line": "That's why people joke that Starbucks is a bank that sells coffee.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "That's"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "bank",
+       "at": {
+        "word": "That's"
+       }
+      },
+      {
+       "do": "show",
+       "id": "joke",
+       "at": {
+        "word": "joke"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k8",
+     "speaker": "narrator",
+     "line": "It isn't a bank. But for that money, it gets the best part of being one.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "joke",
+       "at": {
+        "word": "It"
+       }
+      },
+      {
+       "do": "focus",
+       "id": "cup",
+       "zoom": 1.3,
+       "at": {
+        "word": "best"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k9",
+     "speaker": "nickel",
+     "line": "Cheap money. Very cheap.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "Cheap"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "bank",
+       "at": {
+        "word": "Cheap"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "cup",
+       "at": {
+        "word": "Cheap"
+       }
+      },
+      {
+       "do": "show",
+       "id": "nickel",
+       "at": {
+        "word": "Cheap"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "Cheap"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "swish",
+       "at": {
+        "word": "Cheap"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k10",
+     "speaker": "narrator",
+     "line": "But that's not the strange part.",
+     "tag": "rehook",
+     "figures": [
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "expr": "shock",
+        "pose": "stand"
+       },
+       "at": {
+        "word": "strange"
+       }
+      }
+     ]
+    },
+    {
+     "id": "k11",
+     "speaker": "narrator",
+     "line": "The strange part is the money nobody ever comes back for.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "lamp": 0
+       },
+       "at": {
+        "word": "nobody"
+       }
+      },
+      {
+       "do": "hide",
+       "id": "nickel",
+       "at": {
+        "word": "back"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "click",
+       "at": {
+        "word": "nobody"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lost",
+   "set": "lost-and-found",
+   "chapter": "Clue 3: breakage",
+   "music": "build",
+   "transition": {
+    "type": "fade",
+    "durationMs": 400
+   },
+   "figures": [
+    {
+     "id": "shelf",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.68,
+      "w": 0.78,
+      "h": 0.5
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "draw",
+     "params": {
+      "prop": "lostbox",
+      "open": 0,
+      "cone": false
+     }
+    },
+    {
+     "id": "word",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.18,
+      "w": 0.4,
+      "h": 0.16
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Breakage.",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle"
+     }
+    },
+    {
+     "id": "rev",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "…and count it",
+        "color": "paper"
+       },
+       {
+        "text": "as revenue.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "b1",
+     "speaker": "narrator",
+     "line": "Every year, some balances never get spent.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "shelf",
+       "zoom": 1.1,
+       "at": {
+        "word": "balances"
+       }
+      }
+     ]
+    },
+    {
+     "id": "b2",
+     "speaker": "narrator",
+     "line": "$3.17 left on a card. A card lost in a move.",
+     "spoken": "Three dollars and seventeen cents left on a card. A card lost in a move.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "shelf",
+       "zoom": 1.6,
+       "at": {
+        "word": "card."
+       }
+      },
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "move."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "pop",
+       "at": {
+        "word": "card."
+       },
+       "volume": 0.4
+      }
+     ]
+    },
+    {
+     "id": "b3",
+     "speaker": "narrator",
+     "line": "Retailers have a word for that money: breakage.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "shelf",
+       "params": {
+        "open": 1
+       },
+       "at": {
+        "word": "breakage."
+       },
+       "durationMs": 1200
+      },
+      {
+       "do": "show",
+       "id": "word",
+       "at": {
+        "word": "breakage."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "stamp",
+       "at": {
+        "word": "breakage."
+       },
+       "volume": 0.7
+      }
+     ]
+    },
+    {
+     "id": "b4",
+     "speaker": "narrator",
+     "line": "They look at years of history and estimate how much you'll never use.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "word",
+       "at": {
+        "word": "They"
+       }
+      },
+      {
+       "do": "set",
+       "id": "shelf",
+       "params": {
+        "dim": 0.25
+       },
+       "at": {
+        "word": "history"
+       },
+       "durationMs": 800
+      },
+      {
+       "do": "focus",
+       "id": "shelf",
+       "zoom": 1.2,
+       "at": {
+        "word": "estimate"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clock-tick",
+       "at": {
+        "word": "years"
+       }
+      }
+     ]
+    },
+    {
+     "id": "b5",
+     "speaker": "narrator",
+     "line": "Then they count it as revenue.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "Then"
+       }
+      },
+      {
+       "do": "set",
+       "id": "shelf",
+       "params": {
+        "flip": 1
+       },
+       "at": {
+        "word": "count"
+       },
+       "durationMs": 1000
+      },
+      {
+       "do": "show",
+       "id": "rev",
+       "at": {
+        "word": "revenue."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "register",
+       "at": {
+        "word": "revenue."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cold-coffee",
+   "set": "cafe-night",
+   "transition": {
+    "type": "whip",
+    "durationMs": 300
+   },
+   "figures": [
+    {
+     "id": "cold",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.64,
+      "w": 0.84,
+      "h": 0.52
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "cups",
+      "count": 6,
+      "open": 0,
+      "strike": 1,
+      "cone": false
+     }
+    },
+    {
+     "id": "brk",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.18,
+      "w": 0.44,
+      "h": 0.2
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "value": 187.6,
+      "unit": {
+       "prefix": "$",
+       "suffix": "M",
+       "decimals": 1
+      },
+      "caption": "breakage, one year"
+     }
+    },
+    {
+     "id": "nobody",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Coffee nobody drank.",
+        "color": "paper"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.86,
+      "y": 0.66,
+      "w": 0.22,
+      "h": 0.5
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "expr": "gotcha",
+      "pose": "stand",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "x1",
+     "speaker": "narrator",
+     "line": "In one year, Starbucks booked about $188 million of it.",
+     "spoken": "In one year, Starbucks booked about a hundred and eighty-eight million dollars of it.",
+     "numbers": [
+      {
+       "text": "188 million",
+       "data": "@sbux.usd[breakage]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "show",
+       "id": "brk",
+       "at": {
+        "word": "booked"
+       },
+       "durationMs": 1100
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clack",
+       "at": {
+        "word": "million"
+       }
+      }
+     ]
+    },
+    {
+     "id": "x2",
+     "speaker": "narrator",
+     "line": "That's coffee nobody drank.",
+     "holdAfterMs": 400,
+     "figures": [
+      {
+       "do": "show",
+       "id": "nobody",
+       "at": {
+        "word": "coffee"
+       }
+      },
+      {
+       "do": "set",
+       "id": "cold",
+       "params": {
+        "strike": 0
+       },
+       "at": {
+        "word": "nobody"
+       },
+       "durationMs": 2600
+      },
+      {
+       "do": "focus",
+       "id": "cold",
+       "zoom": 1.25,
+       "at": {
+        "word": "drank."
+       }
+      }
+     ]
+    },
+    {
+     "id": "x3",
+     "speaker": "nickel",
+     "line": "Coffee. Nobody. Drank.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "Coffee."
+       }
+      },
+      {
+       "do": "hide",
+       "id": "nobody",
+       "at": {
+        "word": "Coffee."
+       }
+      },
+      {
+       "do": "show",
+       "id": "nickel",
+       "at": {
+        "word": "Coffee."
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "Coffee."
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "special",
+   "set": "kitchen-night",
+   "transition": {
+    "type": "cut"
+   },
+   "figures": [
+    {
+     "id": "drawer",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.66,
+      "w": 0.56,
+      "h": 0.52
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "drawer",
+      "open": 1
+     }
+    },
+    {
+     "id": "feel",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "It doesn't feel",
+        "color": "paper"
+       },
+       {
+        "text": "like money.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "maya",
+     "kind": "maya",
+     "at": {
+      "x": 0.25,
+      "y": 0.62,
+      "w": 0.26,
+      "h": 0.74
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "outfit": "pyjamas",
+      "expr": "soft",
+      "pose": "stand"
+     }
+    },
+    {
+     "id": "trap",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Something special",
+        "color": "paper"
+       },
+       {
+        "text": "ends up in a drawer.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "s1",
+     "speaker": "narrator",
+     "line": "And why do we forget? Because a gift card doesn't feel like money.",
+     "figures": [
+      {
+       "do": "show",
+       "id": "feel",
+       "at": {
+        "word": "doesn't"
+       }
+      }
+     ]
+    },
+    {
+     "id": "s2",
+     "speaker": "narrator",
+     "line": "It feels like a gift. And gifts get saved.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "feel",
+       "at": {
+        "word": "It"
+       }
+      },
+      {
+       "do": "focus",
+       "id": "drawer",
+       "zoom": 1.3,
+       "at": {
+        "word": "saved."
+       }
+      }
+     ]
+    },
+    {
+     "id": "s3",
+     "speaker": "maya",
+     "line": "For something special.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "For"
+       }
+      },
+      {
+       "do": "show",
+       "id": "maya",
+       "at": {
+        "word": "For"
+       }
+      },
+      {
+       "do": "set",
+       "id": "maya",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "For"
+       }
+      },
+      {
+       "do": "set",
+       "id": "maya",
+       "params": {
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ]
+    },
+    {
+     "id": "s4",
+     "speaker": "narrator",
+     "line": "Something special is how it ends up in a drawer.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "maya",
+       "at": {
+        "word": "Something"
+       }
+      },
+      {
+       "do": "show",
+       "id": "trap",
+       "at": {
+        "word": "how"
+       }
+      },
+      {
+       "do": "set",
+       "id": "drawer",
+       "params": {
+        "open": 0
+       },
+       "at": {
+        "word": "drawer."
+       },
+       "durationMs": 700
+      }
+     ],
+     "sfx": [
+      {
+       "id": "drawer",
+       "at": {
+        "word": "drawer."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "catch",
+   "set": "card-vault",
+   "chapter": "The catch",
+   "music": "drop",
+   "transition": {
+    "type": "whip",
+    "durationMs": 300
+   },
+   "figures": [
+    {
+     "id": "card",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.5,
+      "w": 0.52,
+      "h": 0.56
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "pop",
+     "params": {
+      "prop": "giftcard",
+      "text": "$50"
+     }
+    },
+    {
+     "id": "two",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.15,
+      "w": 0.4,
+      "h": 0.16
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Two gifts.",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle"
+     }
+    },
+    {
+     "id": "never",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.15,
+      "w": 0.5,
+      "h": 0.16
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Never paid back.",
+        "color": "paper"
+       }
+      ],
+      "align": "middle"
+     }
+    },
+    {
+     "id": "stamp",
+     "kind": "stamp",
+     "at": {
+      "x": 0.5,
+      "y": 0.17,
+      "w": 0.42,
+      "h": 0.2
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "text": "Two gifts",
+      "sub": "one is to the store",
+      "angle": -6
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.82,
+      "y": 0.64,
+      "w": 0.24,
+      "h": 0.6
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "expr": "gotcha",
+      "pose": "hold",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 20,
+      "beamLength": 0
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "t1",
+     "speaker": "narrator",
+     "line": "So here's the catch.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "card",
+       "zoom": 1.2,
+       "at": {
+        "word": "catch."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "riser-hit"
+      }
+     ]
+    },
+    {
+     "id": "t2",
+     "speaker": "narrator",
+     "line": "A gift card is two gifts.",
+     "tag": "reveal",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "two"
+       }
+      },
+      {
+       "do": "show",
+       "id": "two",
+       "at": {
+        "word": "two"
+       }
+      },
+      {
+       "do": "set",
+       "id": "card",
+       "params": {
+        "strike": 0.35
+       },
+       "at": {
+        "word": "gifts."
+       },
+       "durationMs": 600
+      }
+     ]
+    },
+    {
+     "id": "t3",
+     "speaker": "narrator",
+     "line": "One to the person you give it to.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "two",
+       "at": {
+        "word": "One"
+       }
+      },
+      {
+       "do": "set",
+       "id": "card",
+       "params": {
+        "strike": 0.6
+       },
+       "at": {
+        "word": "person"
+       },
+       "durationMs": 900
+      }
+     ]
+    },
+    {
+     "id": "t4",
+     "speaker": "narrator",
+     "line": "And one to the store. A free loan.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "card",
+       "params": {
+        "strike": 1
+       },
+       "at": {
+        "word": "store."
+       },
+       "durationMs": 1000
+      }
+     ],
+     "sfx": [
+      {
+       "id": "whoosh",
+       "at": {
+        "word": "store."
+       },
+       "volume": 0.5
+      }
+     ]
+    },
+    {
+     "id": "t5",
+     "speaker": "narrator",
+     "line": "And if life gets busy, it never has to be paid back.",
+     "holdAfterMs": 900,
+     "figures": [
+      {
+       "do": "focus",
+       "id": "card",
+       "zoom": 1.25,
+       "at": {
+        "word": "busy,"
+       }
+      },
+      {
+       "do": "show",
+       "id": "never",
+       "at": {
+        "word": "never"
+       }
+      }
+     ]
+    },
+    {
+     "id": "t5b",
+     "silent": true,
+     "durationMs": 1100,
+     "figures": [
+      {
+       "do": "hide",
+       "id": "never",
+       "at": {
+        "fraction": 0.0
+       }
+      },
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "fraction": 0.0
+       }
+      },
+      {
+       "do": "show",
+       "id": "stamp",
+       "at": {
+        "fraction": 0.05
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "stamp",
+       "at": {
+        "fraction": 0.05
+       }
+      }
+     ]
+    },
+    {
+     "id": "t6",
+     "speaker": "nickel",
+     "line": "Case closed?",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "stamp",
+       "at": {
+        "word": "Case"
+       }
+      },
+      {
+       "do": "set",
+       "id": "card",
+       "params": {
+        "strike": 0
+       },
+       "at": {
+        "word": "Case"
+       },
+       "durationMs": 700
+      },
+      {
+       "do": "show",
+       "id": "nickel",
+       "at": {
+        "word": "Case"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "Case"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 0,
+        "expr": "smirk"
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ]
+    },
+    {
+     "id": "t7",
+     "speaker": "narrator",
+     "line": "Not yet. Because this time, the rules are on Maya's side.",
+     "tag": "rehook",
+     "figures": [
+      {
+       "do": "set",
+       "id": "card",
+       "params": {
+        "flip": 1
+       },
+       "at": {
+        "word": "rules"
+       },
+       "durationMs": 800
+      },
+      {
+       "do": "focus",
+       "id": "card",
+       "zoom": 1.3,
+       "at": {
+        "word": "side."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "sparkle",
+       "at": {
+        "word": "rules"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rules",
+   "set": "evidence-board",
+   "chapter": "The rules",
+   "music": "resolve",
+   "transition": {
+    "type": "whip",
+    "durationMs": 300
+   },
+   "figures": [
+    {
+     "id": "board",
+     "kind": "evidence",
+     "at": {
+      "x": 0.5,
+      "y": 0.46,
+      "w": 0.88,
+      "h": 0.7
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "items": [
+       {
+        "text": "5 YEARS",
+        "sub": "before it can expire"
+       },
+       {
+        "text": "12 MONTHS",
+        "sub": "before any fee"
+       },
+       {
+        "text": "UNDER $15",
+        "sub": "California: ask for cash"
+       }
+      ],
+      "lit": 0
+     }
+    },
+    {
+     "id": "loaded",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "From the day it's loaded.",
+        "color": "paper"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "r1",
+     "speaker": "narrator",
+     "line": "Under US federal rules, most store gift cards can't expire within 5 years.",
+     "spoken": "Under US federal rules, most store gift cards can't expire within five years.",
+     "numbers": [
+      {
+       "text": "5",
+       "data": "@rules.value[expiry_years]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "set",
+       "id": "board",
+       "params": {
+        "lit": 1
+       },
+       "at": {
+        "word": "expire"
+       },
+       "durationMs": 600
+      },
+      {
+       "do": "focus",
+       "id": "board",
+       "zoom": 1.4,
+       "at": {
+        "word": "5"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "pin",
+       "at": {
+        "word": "5"
+       }
+      }
+     ]
+    },
+    {
+     "id": "r2",
+     "speaker": "narrator",
+     "line": "Five years from when the money was loaded. Maya's four-year-old card? Still good.",
+     "figures": [
+      {
+       "do": "show",
+       "id": "loaded",
+       "at": {
+        "word": "loaded."
+       }
+      },
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "Maya's"
+       }
+      }
+     ]
+    },
+    {
+     "id": "r3",
+     "speaker": "narrator",
+     "line": "And no inactivity fees until a card's gone a full year unused.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "loaded",
+       "at": {
+        "word": "And"
+       }
+      },
+      {
+       "do": "set",
+       "id": "board",
+       "params": {
+        "lit": 2
+       },
+       "at": {
+        "word": "fees"
+       },
+       "durationMs": 800
+      }
+     ],
+     "sfx": [
+      {
+       "id": "pin",
+       "at": {
+        "word": "fees"
+       }
+      }
+     ]
+    },
+    {
+     "id": "r4",
+     "speaker": "narrator",
+     "line": "Some states go further.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "board",
+       "zoom": 1.5,
+       "at": {
+        "word": "further."
+       }
+      }
+     ]
+    },
+    {
+     "id": "r5",
+     "speaker": "narrator",
+     "line": "In California, under $15 left? You can ask for cash.",
+     "spoken": "In California, under fifteen dollars left? You can ask for cash.",
+     "numbers": [
+      {
+       "text": "15",
+       "data": "@rules.value[ca_cash_usd]"
+      }
+     ],
+     "figures": [
+      {
+       "do": "set",
+       "id": "board",
+       "params": {
+        "lit": 3
+       },
+       "at": {
+        "word": "California,"
+       },
+       "durationMs": 800
+      },
+      {
+       "do": "focus",
+       "id": "board",
+       "zoom": 1.3,
+       "at": {
+        "word": "ask"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "pin",
+       "at": {
+        "word": "California,"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tonight",
+   "set": "kitchen-night",
+   "chapter": "Tonight",
+   "transition": {
+    "type": "slide",
+    "durationMs": 400
+   },
+   "figures": [
+    {
+     "id": "phone",
+     "kind": "phone",
+     "at": {
+      "x": 0.5,
+      "y": 0.5,
+      "w": 0.4,
+      "h": 0.86
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "draw",
+     "params": {
+      "title": "Tonight",
+      "items": [
+       "Photo every card",
+       "Smallest ones first",
+       "Gift where they go"
+      ],
+      "typed": 0,
+      "done": 0
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "n1",
+     "speaker": "narrator",
+     "line": "So, tonight. Three things.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "phone",
+       "zoom": 1.1,
+       "at": {
+        "word": "Three"
+       }
+      }
+     ]
+    },
+    {
+     "id": "n2",
+     "speaker": "narrator",
+     "line": "Open the drawer. Photograph every card and write down the balance.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "phone",
+       "params": {
+        "typed": 1
+       },
+       "at": {
+        "word": "Photograph"
+       },
+       "durationMs": 1400
+      },
+      {
+       "do": "set",
+       "id": "phone",
+       "params": {
+        "done": 1
+       },
+       "at": {
+        "word": "balance."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "ding",
+       "at": {
+        "word": "balance."
+       },
+       "volume": 0.5
+      }
+     ]
+    },
+    {
+     "id": "n3",
+     "speaker": "narrator",
+     "line": "Spend the smallest ones first. Those are the ones you'll lose.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "phone",
+       "params": {
+        "typed": 2
+       },
+       "at": {
+        "word": "Spend"
+       },
+       "durationMs": 1300
+      },
+      {
+       "do": "set",
+       "id": "phone",
+       "params": {
+        "done": 2
+       },
+       "at": {
+        "word": "lose."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "ding",
+       "at": {
+        "word": "lose."
+       },
+       "volume": 0.5
+      }
+     ]
+    },
+    {
+     "id": "n4",
+     "speaker": "narrator",
+     "line": "And if you're giving one, give it for a place they already go. Every week.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "phone",
+       "params": {
+        "typed": 3
+       },
+       "at": {
+        "word": "giving"
+       },
+       "durationMs": 1300
+      },
+      {
+       "do": "set",
+       "id": "phone",
+       "params": {
+        "done": 3
+       },
+       "at": {
+        "word": "week."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "ding",
+       "at": {
+        "word": "week."
+       },
+       "volume": 0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bookshop",
+   "set": "bookshop-morning",
+   "chapter": "Four years late",
+   "transition": {
+    "type": "fade",
+    "durationMs": 700
+   },
+   "figures": [
+    {
+     "id": "maya",
+     "kind": "maya",
+     "at": {
+      "x": 0.3,
+      "y": 0.62,
+      "w": 0.28,
+      "h": 0.76
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "outfit": "day",
+      "expr": "soft",
+      "pose": "stand"
+     }
+    },
+    {
+     "id": "book",
+     "kind": "prop",
+     "at": {
+      "x": 0.68,
+      "y": 0.66,
+      "w": 0.4,
+      "h": 0.4
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "prop": "book",
+      "open": 0,
+      "cone": false
+     }
+    },
+    {
+     "id": "late",
+     "kind": "phrase",
+     "at": {
+      "x": 0.66,
+      "y": 0.2,
+      "w": 0.5,
+      "h": 0.2
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "Fifty dollars.",
+        "color": "paper"
+       },
+       {
+        "text": "Four years late.",
+        "color": "sodium"
+       }
+      ],
+      "plate": true
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "m1",
+     "speaker": "narrator",
+     "line": "Maya did one more thing.",
+     "figures": [
+      {
+       "do": "set",
+       "id": "maya",
+       "params": {
+        "pose": "reach"
+       },
+       "at": {
+        "word": "thing."
+       }
+      }
+     ]
+    },
+    {
+     "id": "m2",
+     "speaker": "narrator",
+     "line": "Her grandma always told her to read one book. She never had.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "book",
+       "zoom": 1.3,
+       "at": {
+        "word": "book."
+       }
+      },
+      {
+       "do": "set",
+       "id": "book",
+       "params": {
+        "open": 1
+       },
+       "at": {
+        "word": "never"
+       },
+       "durationMs": 900
+      }
+     ],
+     "sfx": [
+      {
+       "id": "rustle",
+       "at": {
+        "word": "never"
+       }
+      }
+     ]
+    },
+    {
+     "id": "m3",
+     "speaker": "narrator",
+     "line": "Fifty dollars. Four years late.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "Fifty"
+       }
+      },
+      {
+       "do": "show",
+       "id": "late",
+       "at": {
+        "word": "Fifty"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "ding",
+       "at": {
+        "word": "late."
+       },
+       "volume": 0.4
+      }
+     ]
+    },
+    {
+     "id": "m4",
+     "speaker": "maya",
+     "line": "It still counts.",
+     "figures": [
+      {
+       "do": "hide",
+       "id": "late",
+       "at": {
+        "word": "It"
+       }
+      },
+      {
+       "do": "set",
+       "id": "maya",
+       "params": {
+        "talk": 1,
+        "expr": "smile"
+       },
+       "at": {
+        "word": "It"
+       }
+      },
+      {
+       "do": "set",
+       "id": "maya",
+       "params": {
+        "talk": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "set": "kitchen-night",
+   "transition": {
+    "type": "fade",
+    "durationMs": 600
+   },
+   "figures": [
+    {
+     "id": "drawer",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.66,
+      "w": 0.56,
+      "h": 0.52
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "drawer",
+      "open": 0
+     }
+    },
+    {
+     "id": "zero",
+     "kind": "flap",
+     "at": {
+      "x": 0.5,
+      "y": 0.17,
+      "w": 0.36,
+      "h": 0.2
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "value": 50,
+      "unit": {
+       "prefix": "$",
+       "decimals": 2
+      }
+     }
+    },
+    {
+     "id": "clock",
+     "kind": "phrase",
+     "at": {
+      "x": 0.33,
+      "y": 0.83,
+      "w": 0.56,
+      "h": 0.22
+     },
+     "layer": "screen",
+     "hidden": true,
+     "reveal": "draw",
+     "params": {
+      "lines": [
+       {
+        "text": "It's you,",
+        "color": "paper"
+       },
+       {
+        "text": "forgetting.",
+        "color": "sodium"
+       }
+      ],
+      "align": "start"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.78,
+      "y": 0.62,
+      "w": 0.26,
+      "h": 0.62
+     },
+     "layer": "front",
+     "hidden": true,
+     "reveal": "pop",
+     "params": {
+      "expr": "smirk",
+      "pose": "close",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 40,
+      "beamLength": 0.4
+     }
+    },
+    {
+     "id": "casetag",
+     "kind": "phrase",
+     "at": {
+      "x": 0.17,
+      "y": 0.08,
+      "w": 0.28,
+      "h": 0.07
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "fade",
+     "params": {
+      "lines": [
+       {
+        "text": "THE CATCH · CASE 001",
+        "color": "paper"
+       }
+      ],
+      "size": 0.5
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "z1",
+     "speaker": "narrator",
+     "line": "Every gift card has a clock on it. And it's not the expiry date.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "zero",
+       "zoom": 1.2,
+       "at": {
+        "word": "clock"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clock-tick",
+       "at": {
+        "word": "clock"
+       }
+      }
+     ]
+    },
+    {
+     "id": "z2",
+     "speaker": "narrator",
+     "line": "It's you, forgetting.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "It's"
+       }
+      },
+      {
+       "do": "show",
+       "id": "clock",
+       "at": {
+        "word": "It's"
+       }
+      },
+      {
+       "do": "set",
+       "id": "zero",
+       "params": {
+        "value": 0
+       },
+       "at": {
+        "word": "forgetting."
+       },
+       "durationMs": 1200
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clack",
+       "at": {
+        "word": "forgetting."
+       }
+      }
+     ]
+    },
+    {
+     "id": "z3",
+     "speaker": "nickel",
+     "line": "Check your drawer.",
+     "holdAfterMs": 900,
+     "figures": [
+      {
+       "do": "hide",
+       "id": "clock",
+       "at": {
+        "word": "Check"
+       }
+      },
+      {
+       "do": "show",
+       "id": "nickel",
+       "at": {
+        "word": "Check"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 1
+       },
+       "at": {
+        "word": "Check"
+       }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "talk": 0,
+        "lamp": 0,
+        "beamLength": 0
+       },
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "click",
+       "at": {
+        "fraction": 0.95
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

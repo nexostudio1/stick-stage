@@ -17,6 +17,9 @@
         "16:9"
       ]
     },
+    "anyAspect": {
+      "type": "boolean"
+    },
     "kit": {
       "type": "string",
       "enum": [
@@ -29,7 +32,8 @@
         "abstract",
         "space",
         "lab",
-        "story"
+        "story",
+        "night"
       ]
     },
     "description": {

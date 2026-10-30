@@ -198,6 +198,29 @@ export const PALETTES: Record<string, Palette> = {
     detail: "#3d5580",
     rim: "#cfd6ff",
   },
+  /** The Catch's night shift: Night ground, Teal surfaces, Sodium light (plan §4). */
+  "night-shift": {
+    wallA: "#0E1A24",
+    wallB: "#16303A",
+    floor: "#122630",
+    accent: "#FFB547",
+    shade: "#0A141B",
+    sky: "#1F4650",
+    detail: "#2A4A55",
+    glow: "#FFC56B",
+    rim: "#F3E9D2",
+  },
+  /** The Catch's first daylight (a callback): warm paper walls, teal wood, morning sun. */
+  morning: {
+    wallA: "#F3E9D2",
+    wallB: "#E4D3B0",
+    floor: "#B98E5E",
+    accent: "#FFB547",
+    shade: "#D9C49C",
+    sky: "#BFE3E8",
+    detail: "#1F4650",
+    glow: "#FFF1C9",
+  },
   /** A bright, clean lab. */
   "lab-white": {
     wallA: "#e6eef0",

@@ -12,6 +12,7 @@ import { SfxManifestSchema, type SfxManifest } from "../src/engine";
 import { buf, env, filter, mix, noise, osc, perc, saturate, SR, time, writeWav, type Sig } from "./lib/synth";
 import { ROOT } from "./lib/tools";
 import { SCIENCE_SOUNDS } from "./lib/sfx-science";
+import { NIGHT_SOUNDS } from "./lib/sfx-night";
 
 const SOURCE = "synthesized in code by scripts/sfx-gen.ts (StickStage, original)";
 const LICENSE = "CC0-1.0";
@@ -202,6 +203,7 @@ const SOUNDS: Sound[] = [
     },
   },
   ...SCIENCE_SOUNDS,
+  ...NIGHT_SOUNDS,
 ];
 
 const outDir = path.join(ROOT, "public/sfx");
