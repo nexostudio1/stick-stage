@@ -8,7 +8,7 @@ description: Pick a topic and write the script for a "The Catch" case: a human, 
 Every case answers one question a normal person has felt but never asked: *who wins when I do
 this ordinary thing?* The viewer should leave with a story they retell at dinner and one thing
 they'll do differently tonight. Plan and look: `../planning/2026-10-30-the-catch/plan.md`.
-Reference case: `../planning/2026-10-30-the-catch/cases/001-the-drawer/`.
+Reference case (owner-approved 2026-10-31, copy its shape): `../planning/2026-10-30-the-catch/cases/001-the-drawer/`.
 
 ## 1. Topic test (all five, or pick another)
 
@@ -33,7 +33,7 @@ from her grandma in a kitchen drawer. Not a "consumer", not "you guys".
 - They open the video, come back at the human turn, and close it. The callback is the payoff.
 - The money is the mystery; the person is the reason to care. Never cut the person to fit more data.
 
-## 3. Five acts (fast pace: ~190 wpm; 4–7 min)
+## 3. Five acts (fast pace: ~190 wpm; 4–7 min; Gemini voices add ~20% on short lines)
 
 | Act | Share | Job |
 |---|---|---|

@@ -57,6 +57,47 @@ don't exist yet as planned in the storyboard so the build list stays honest.
   money reveal `register`, drawer `slide`. Music: `mystery` (open, clues), `build` (last clue),
   `drop` on the catch line, `resolve` (verdict). Duck under the voice.
 - Voice pace: `fast` (~190 wpm). Narrator lines `pace: "fast"`; Nickel a separate, short, dry voice.
+- Camera: keep the night finish's slow breathing zoom and the push-ins; they must glide (camera scale
+  is written at 4 decimals since f7fe7c1; never round camera values to 0.01, it reads as dropped frames).
+
+## Voices (owner decision 2026-10-31: Google TTS)
+
+Gemini TTS `google/gemini-3.8-flash-lite-tts` through **local Tamtree**, never `say`, Chatterbox or
+Kokoro in a final render (`say` only as a timing stand-in while staging).
+
+| Speaker | Voice |
+|---|---|
+| Narrator | Charon |
+| Nickel | Algenib |
+| Human lead (Maya) | Leda (pick another female/male Gemini voice for a new lead and record it in the case folder) |
+
+Recipe: local flow `catch-voice`, input `{model, lines:[{id, speaker, text, tts_voice}]}`, one item per
+beat (`text` = the beat's `spoken` if set, else `line`). Write `public/skits/<id>/voice/<beat>.wav` and
+`voice.json` (`text` = the skit line, `spoken` = what was said, `durationMs`). Full steps and Tamtree
+branch caveats: `../planning/2026-10-30-the-catch/handover.md` § Next 2. Gemini voices take ~20% longer
+than `say` on short lines (Case 001 went 3:30 → 4:15), so budget runtime for that.
+
+## Approved format (Case 001, owner 2026-10-31: "really well done")
+
+`out/the-drawer.mp4` (4:15) and `out/the-drawer-short.mp4` (29.5 s) are the reference. Reuse, don't
+reinvent:
+
+- **Start from the generator.** Copy `../planning/2026-10-30-the-catch/cases/001-the-drawer/build_skits.py`
+  into the new case folder and replace scenes, datasets and lines; keep the helpers (`fig`, `beat`,
+  `show`/`hide`/`setp`/`focus`/`sfx`, `phrase`, `num`, `NICK`, `PEEK`, `duck`) and both cuts in one file.
+- **Same structure:** ~10 scenes over the night sets, one chapter per scene, music bed per act,
+  `whip` between scenes, five acts tagged (`hook` by 0:08, `rehook`s, one `reveal`, callback).
+- **Nickel at the right moments, not rare.** Besides his own lines, he peeks (`PEEK` + `setp rise 1`
+  on the key word, `duck` after) on every payoff line: the hook question, each big-number reveal,
+  each stamp, the named mechanism ("breakage"), the human consequence, the rules, and he stands
+  beside the phone for the "tonight" actions. One expression per peek, never the same twice in a row.
+- **Every hidden figure needs a show cue.** Case 001 shipped Nickel created `hidden` with no `show`,
+  so his lines played to an empty frame. Before render, check each hidden `nickel`/lead figure has a
+  `show` or a `rise` cue in a beat where it speaks.
+- **Short cut** in the same generator (see § The 30 s short).
+- **Open: the top-left case tag.** Case 001 shows `THE CATCH · CASE 001` (`CASE_TAG`, screen layer,
+  every scene). The owner liked everything except this and wants it rethought. Don't copy it into a
+  new case unchanged; propose options (see handover § Open) and use the owner's pick.
 
 ## The 30 s short (every case)
 
