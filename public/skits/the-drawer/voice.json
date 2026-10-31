@@ -125,9 +125,9 @@
     {
       "id": "i4",
       "speaker": "narrator",
-      "text": "So accountants don't call it a sale. They call it a debt.",
+      "text": "So accountants don't call it a sale. They call it a liability.",
       "audio": "voice/i4.wav",
-      "durationMs": 3680
+      "durationMs": 4360
     },
     {
       "id": "i5",
@@ -188,10 +188,10 @@
     {
       "id": "k3",
       "speaker": "narrator",
-      "text": "In early 2024, that pile was about $2.2 billion.",
-      "spoken": "In early twenty twenty-four, that pile was about two point two billion dollars.",
+      "text": "At the end of 2023, Starbucks owed about $2.2 billion on cards and rewards.",
+      "spoken": "At the end of twenty twenty-three, Starbucks owed about two point two billion dollars on cards and rewards.",
       "audio": "voice/k3.wav",
-      "durationMs": 5040
+      "durationMs": 6240
     },
     {
       "id": "k4",

@@ -59,7 +59,7 @@
     ]
    ],
    "source": {
-    "name": "Bankrate gift card survey 2024 (YouGov, 2,373 US adults)",
+    "name": "Bankrate survey 2024 (YouGov, 2,373 US adults; cards, vouchers, store credit). $27B est. = ~258M adults x 43% x $244",
     "url": "https://www.bankrate.com/finance/credit-cards/gift-cards-survey/",
     "retrieved": "2026-10-30"
    }
@@ -1200,7 +1200,7 @@
      "hidden": true,
      "reveal": "pop",
      "params": {
-      "text": "DEBT",
+      "text": "LIABILITY",
       "angle": -10
      }
     },
@@ -1434,7 +1434,7 @@
     {
      "id": "i4",
      "speaker": "narrator",
-     "line": "So accountants don't call it a sale. They call it a debt.",
+     "line": "So accountants don't call it a sale. They call it a liability.",
      "figures": [
       {
        "do": "hide",
@@ -1458,7 +1458,7 @@
        "do": "show",
        "id": "debt",
        "at": {
-        "word": "debt."
+        "word": "liability."
        }
       },
       {
@@ -1484,7 +1484,7 @@
       {
        "id": "stamp",
        "at": {
-        "word": "debt."
+        "word": "liability."
        }
       }
      ]
@@ -1758,7 +1758,7 @@
        "suffix": "B",
        "decimals": 1
       },
-      "caption": "paid in, not yet spent"
+      "caption": "owed on cards + rewards"
      }
     },
     {
@@ -1967,8 +1967,8 @@
     {
      "id": "k3",
      "speaker": "narrator",
-     "line": "In early 2024, that pile was about $2.2 billion.",
-     "spoken": "In early twenty twenty-four, that pile was about two point two billion dollars.",
+     "line": "At the end of 2023, Starbucks owed about $2.2 billion on cards and rewards.",
+     "spoken": "At the end of twenty twenty-three, Starbucks owed about two point two billion dollars on cards and rewards.",
      "numbers": [
       {
        "text": "2.2 billion",
@@ -1980,14 +1980,14 @@
        "do": "hide",
        "id": "reload",
        "at": {
-        "word": "In"
+        "word": "At"
        }
       },
       {
        "do": "show",
        "id": "float",
        "at": {
-        "word": "pile"
+        "word": "owed"
        },
        "durationMs": 900
       },
@@ -1996,7 +1996,7 @@
        "id": "float",
        "zoom": 1.2,
        "at": {
-        "word": "billion."
+        "word": "billion"
        }
       },
       {
@@ -2006,7 +2006,7 @@
         "rise": 0.72
        },
        "at": {
-        "word": "pile"
+        "word": "owed"
        },
        "durationMs": 450
       }
@@ -2015,13 +2015,13 @@
       {
        "id": "neon-on",
        "at": {
-        "word": "pile"
+        "word": "owed"
        }
       },
       {
        "id": "clack",
        "at": {
-        "word": "billion."
+        "word": "billion"
        }
       }
      ]

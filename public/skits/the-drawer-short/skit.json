@@ -69,7 +69,7 @@
     ]
    ],
    "source": {
-    "name": "Bankrate gift card survey 2024 (YouGov, 2,373 US adults)",
+    "name": "Bankrate survey 2024 (YouGov, 2,373 US adults; cards, vouchers, store credit). $27B est. = ~258M adults x 43% x $244",
     "url": "https://www.bankrate.com/finance/credit-cards/gift-cards-survey/",
     "retrieved": "2026-10-30"
    }
@@ -503,8 +503,8 @@
     {
      "id": "h7",
      "speaker": "narrator",
-     "line": "Starbucks booked $188 million of it in one year.",
-     "spoken": "Starbucks booked a hundred and eighty-eight million dollars of it in one year.",
+     "line": "Starbucks alone booked $188 million of forgotten balances in one year.",
+     "spoken": "Starbucks alone booked a hundred and eighty-eight million dollars of forgotten balances in one year.",
      "numbers": [
       {
        "text": "188 million",
@@ -547,6 +547,14 @@
         "word": "booked"
        },
        "durationMs": 900
+      },
+      {
+       "do": "focus",
+       "id": "brk",
+       "zoom": 1.15,
+       "at": {
+        "word": "forgotten"
+       }
       }
      ],
      "sfx": [

@@ -47,10 +47,10 @@
     {
       "id": "h7",
       "speaker": "narrator",
-      "text": "Starbucks booked $188 million of it in one year.",
-      "spoken": "Starbucks booked a hundred and eighty-eight million dollars of it in one year.",
+      "text": "Starbucks alone booked $188 million of forgotten balances in one year.",
+      "spoken": "Starbucks alone booked a hundred and eighty-eight million dollars of forgotten balances in one year.",
       "audio": "voice/h7.wav",
-      "durationMs": 5000
+      "durationMs": 6360
     },
     {
       "id": "h8",
