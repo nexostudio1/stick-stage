@@ -11,6 +11,51 @@
       "source": "https://esawebb.org/images/weic2216a/",
       "fetched": "2026-10-02",
       "description": "The Pillars of Creation in the Eagle Nebula, Webb NIRCam (near-infrared). Columns of gas and dust where stars are forming; a photograph, not an impression."
+    },
+    {
+      "id": "pasteur-portrait",
+      "file": "images/pasteur-portrait.jpg",
+      "width": 1280,
+      "height": 1804,
+      "credit": "Paul Nadar, Wellcome Collection (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Louis_Pasteur_(1822_-_1895),_microbiologist_and_chemist_Wellcome_V0026980.jpg",
+      "fetched": "2026-11-02",
+      "description": "Studio portrait photograph of Louis Pasteur (1822-1895) by Paul Nadar (d. 1939). Public domain."
+    },
+    {
+      "id": "pasteur-crystals",
+      "file": "images/pasteur-crystals.jpg",
+      "width": 1280,
+      "height": 1919,
+      "credit": "Marie-Lan Taÿ Pamart, CC BY 4.0 (Musée Pasteur crystals)",
+      "licence": "cc-by-4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Left_ammonium_tartrate_crystals_Mus%C3%A9e_Pasteur_Cr%C3%A9er_le_cristal.jpg",
+      "fetched": "2026-11-02",
+      "description": "Left-handed ammonium tartrate crystals from the Pasteur Museum collection, photographed at the Sorbonne mineral collection exhibition."
+    },
+    {
+      "id": "murchison-meteorite",
+      "file": "images/murchison-meteorite.jpg",
+      "width": 1506,
+      "height": 1411,
+      "credit": "Daderot, CC0 (Naturmuseum Freiburg)",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File:Murchison_meteorite_-_Naturmuseum_Freiburg_-_DSC06761.jpg",
+      "fetched": "2026-11-02",
+      "description": "A piece of the Murchison meteorite (fell 1969, Victoria, Australia) on display in the Naturmuseum Freiburg. A photograph."
+    },
+    {
+      "id": "murchison-concept-nasa",
+      "file": "images/murchison-concept-nasa.jpg",
+      "width": 1280,
+      "height": 1280,
+      "credit": "NASA/Goddard",
+      "licence": "nasa-pd",
+      "source": "https://www.flickr.com/photos/gsfc/3364850552",
+      "fetched": "2026-11-02",
+      "impression": true,
+      "description": "NASA Goddard 2009 artist's concept of asteroids delivering amino acids to Earth; the line at the bottom is real Murchison isovaline data."
     }
   ]
 }

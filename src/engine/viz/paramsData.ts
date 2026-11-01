@@ -66,6 +66,8 @@ export const CounterParams = z.strictObject({
   unit: UnitSchema,
   /** Small line under the number. */
   caption: text.optional(),
+  /** Thousands commas; off for years. */
+  group: z.boolean().default(true),
   /** A change chip: ▲ green / ▼ red (`good: "down"` flips the colours). */
   delta: z.strictObject({ value: z.number(), unit: UnitSchema, good: z.enum(["up", "down"]).default("up") }).optional(),
   color: color.default("ink"),
@@ -104,7 +106,7 @@ export type CounterP = z.infer<typeof CounterParams>;
 export type MapP = z.infer<typeof MapParams>;
 
 /** "$4.2bn": a number in a figure's unit. */
-export const formatValue = (v: number, u: Unit): string => {
-  const s = Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: u.decimals, maximumFractionDigits: u.decimals });
+export const formatValue = (v: number, u: Unit, group = true): string => {
+  const s = Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: u.decimals, maximumFractionDigits: u.decimals, useGrouping: group });
   return `${v < 0 ? "−" : ""}${u.prefix}${s}${u.suffix}`;
 };

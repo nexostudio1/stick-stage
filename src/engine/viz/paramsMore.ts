@@ -136,3 +136,31 @@ export const FinePrintParams = z.strictObject({
   /** Fraction of the lines shown (animate it to fill the wall). */
   fill: z.number().min(0).max(1).default(1),
 });
+
+/**
+ * A handed (chiral) molecule: one centre atom and four different groups at the corners of a
+ * tetrahedron, drawn in 3D. `pair` adds its mirror twin across a mirror line; `match` slides the
+ * twin onto the original to show the groups never all line up (mismatches get a red ring).
+ */
+export const MoleculeParams = z.strictObject({
+  /** The four groups' colours, top first. */
+  groups: z.array(color).length(4).default(["a1", "a2", "a3", "a5"]),
+  /** Degrees about the vertical axis (tween it with `set`). */
+  turn: z.number().min(-1440).max(1440).default(20),
+  /** Degrees per second of continuous turning, added to `turn`. */
+  spin: z.number().min(-360).max(360).default(0),
+  /** Degrees the view looks down on it. */
+  tilt: z.number().min(-60).max(60).default(14),
+  /** 0…1: the molecule itself flips into its mirror image (a mirror swap). */
+  mirror: z.number().min(0).max(1).default(0),
+  /** Draw the mirror twin on the right, with a mirror line between. */
+  pair: z.boolean().default(false),
+  /** 0…1: the twin and the mirror line fade in. */
+  twin: z.number().min(0).max(1).default(1),
+  /** Extra degrees the twin turns (try to make it match). */
+  twinTurn: z.number().min(-1440).max(1440).default(0),
+  /** 0…1: the twin slides onto the original. */
+  match: z.number().min(0).max(1).default(0),
+  label: text.optional(),
+  twinLabel: text.optional(),
+});

@@ -11,6 +11,7 @@ import { Vectors, Wave } from "./draw/vectorWave";
 import { Burst, FinePrint, GalaxyFig, Progress } from "./draw/cosmos";
 import { BarChart, Counter, LineChart } from "./draw/data";
 import { MapFig } from "./draw/map";
+import { MoleculeFig } from "./draw/molecule";
 import { Crowd, Flap, Phrase, Stamp } from "./draw/night/board";
 import { Evidence, Phone } from "./draw/night/evidence";
 import { Maya } from "./draw/night/maya";
@@ -22,6 +23,7 @@ import type {
   AxesP,
   BurstP,
   FinePrintP,
+  MoleculeP,
   GalaxyP,
   ProgressP,
   CalloutP,
@@ -104,6 +106,8 @@ const Body: React.FC<{
       return <Burst {...as<BurstP>()} />;
     case "fineprint":
       return <FinePrint {...as<FinePrintP>()} />;
+    case "molecule":
+      return <MoleculeFig {...as<MoleculeP>()} />;
     case "line":
       return <LineChart {...as<LineP>()} fs={fs} />;
     case "bars":

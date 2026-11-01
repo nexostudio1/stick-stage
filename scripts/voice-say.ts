@@ -45,7 +45,7 @@ if (fs.existsSync(path.join(skitDir, "skit.json"))) {
     const doc = parseSkit(read("skit.json"));
     lines = skitLines(doc).map((l) => ({
       ...l,
-      voice: l.narrator ? (voiceOf(doc, l.speaker)?.voice?.say ?? DEFAULT_NARRATOR) : (library.characters[l.character]?.voice?.say ?? DEFAULT_VOICE),
+      voice: l.narrator ? (voiceOf(doc, l.speaker)?.voice?.say ?? DEFAULT_NARRATOR) : ((doc.characters?.find((c) => c.id === l.character) ?? library.characters[l.character])?.voice?.say ?? DEFAULT_VOICE),
       rate: l.narrator && l.speaker === doc.narrator?.id ? narratorRate : undefined,
     }));
   } catch (e) {

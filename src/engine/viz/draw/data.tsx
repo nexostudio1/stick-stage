@@ -203,8 +203,8 @@ const deltaText = (v: number, u: Unit) => `${v >= 0 ? "▲" : "▼"} ${formatVal
 
 export const Counter: React.FC<DrawProps<CounterP>> = ({ p, w, h, theme, reveal, fontFamily }) => {
   const v = p.from + (p.value - p.from) * reveal;
-  const txt = formatValue(v, p.unit);
-  const final = formatValue(p.value, p.unit);
+  const txt = formatValue(v, p.unit, p.group);
+  const final = formatValue(p.value, p.unit, p.group);
   const size = Math.min(h * (p.caption || p.delta ? 0.5 : 0.7), (w * 0.92) / Math.max(2, final.length * 0.62));
   const col = resolveColor(theme, p.color);
   const bold = p.variant === "bold";

@@ -23,4 +23,4 @@ Applies to any skit with `claims` or `"template": "myth-flip"` (today: `fine-pri
 - Figures are frame-pure drawers in `src/engine/viz/draw/`; equations are typeset in prep
   (`src/node/equations.ts`), never in the engine. A new figure kind gets params in `params.ts`, a
   drawer, an entry in `docs/figures.md`, and a page in `VizLab`.
-- Images are licensed NASA/ESA inserts with credits; never AI images.
+- Images are licensed inserts with credits (NASA, ESA, public domain, CC0, CC BY 4.0; no share-alike); never AI images.

@@ -204,7 +204,7 @@ export const CalloutParams = z.strictObject({
 
 import { BarsParams, CounterParams, LineParams, MapParams } from "./paramsData";
 import { CrowdParams, EvidenceParams, FlapParams, MayaParams, NickelParams, PhoneParams, PhraseParams, PropParams, StampParams } from "./paramsNight";
-import { BurstParams, EquationParams, FinePrintParams, GalaxyParams, HistogramParams, ImageParams, NumberLineParams, ProgressParams } from "./paramsMore";
+import { BurstParams, EquationParams, FinePrintParams, GalaxyParams, HistogramParams, ImageParams, MoleculeParams, NumberLineParams, ProgressParams } from "./paramsMore";
 
 export const FIGURE_PARAMS = {
   plot: PlotParams,
@@ -224,6 +224,7 @@ export const FIGURE_PARAMS = {
   galaxy: GalaxyParams,
   burst: BurstParams,
   fineprint: FinePrintParams,
+  molecule: MoleculeParams,
   line: LineParams,
   bars: BarsParams,
   counter: CounterParams,
@@ -257,3 +258,4 @@ export type ProgressP = z.infer<typeof ProgressParams>;
 export type GalaxyP = z.infer<typeof GalaxyParams>;
 export type BurstP = z.infer<typeof BurstParams>;
 export type FinePrintP = z.infer<typeof FinePrintParams>;
+export type MoleculeP = z.infer<typeof MoleculeParams>;

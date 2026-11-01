@@ -243,4 +243,15 @@ export const PAGES: VizPage[] = [
     ],
     cues: [],
   },
+  {
+    note: "molecule turns, its mirror twin fades in, slides on top: two groups never line up",
+    figures: [
+      { id: "mol", kind: "molecule", at: BAND, params: { pair: true, twin: 0, spin: 30, label: "spearmint", twinLabel: "caraway" } },
+    ],
+    cues: [
+      cue(20, { do: "set", id: "mol", params: { twin: 1 }, durationMs: 600 }),
+      cue(60, { do: "set", id: "mol", params: { twinTurn: 180 }, durationMs: 1200 }),
+      cue(100, { do: "set", id: "mol", params: { match: 1 }, durationMs: 900 }),
+    ],
+  },
 ];
