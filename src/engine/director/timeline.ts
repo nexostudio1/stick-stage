@@ -1,4 +1,5 @@
 import type { Finish } from "../shots/finishKinds";
+import type { Lettering } from "../text/fonts";
 import type { Character } from "../rig/schema";
 import type { PropDef } from "../props/schema";
 import type { SetDef } from "../set/schema";
@@ -150,6 +151,8 @@ export type Timeline = {
   figures?: FigureTrack[];
   /** Image credits burned in while a NASA / ESA image is up. */
   credits?: CreditEvent[];
+  /** The skit's subtitle spot (`overlay.captions`), over the directing style's. */
+  captionSpot?: { y?: number; fontSize?: number };
   /** How narrator caption pages are drawn (skits with a narrator). */
   narratorCaption?: "italic" | "boxed";
   /** The style's targets, so QA checks the cut it was directed with. */
@@ -198,4 +201,6 @@ export type Program = {
   props?: Record<string, PropDef>;
   /** The skit's stage finish; absent means "flat". */
   finish?: Finish;
+  /** Title and card lettering; absent means "sans". */
+  lettering?: Lettering;
 };

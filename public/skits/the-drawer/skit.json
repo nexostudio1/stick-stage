@@ -64,7 +64,7 @@
     "retrieved": "2026-10-30"
    }
   },
-  "sbux": {
+  "chain": {
    "columns": [
     "metric",
     "usd"
@@ -80,7 +80,7 @@
     ]
    ],
    "source": {
-    "name": "Starbucks 10-Q Q1 FY2024 and 10-K FY2024 (Note 1)",
+    "name": "A large US coffee chain's SEC filings: 10-Q Q1 FY2024 and 10-K FY2024 (Note 1)",
     "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
     "retrieved": "2026-10-30"
    }
@@ -112,7 +112,11 @@
   }
  },
  "overlay": {
-  "subtitles": false
+  "subtitles": true,
+  "captions": {
+   "y": 0.73,
+   "fontSize": 72
+  }
  },
  "timing": {
   "leadInMs": 200,
@@ -121,10 +125,128 @@
  },
  "scenes": [
   {
-   "id": "drawer",
+   "id": "cover",
    "set": "kitchen-night",
    "chapter": "The drawer",
    "music": "mystery",
+   "figures": [
+    {
+     "id": "drawer",
+     "kind": "prop",
+     "at": {
+      "x": 0.34,
+      "y": 0.8,
+      "w": 0.5,
+      "h": 0.46
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "drawer",
+      "open": 1
+     }
+    },
+    {
+     "id": "card",
+     "kind": "prop",
+     "at": {
+      "x": 0.34,
+      "y": 0.6,
+      "w": 0.3,
+      "h": 0.34
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "giftcard",
+      "text": "$50"
+     }
+    },
+    {
+     "id": "title",
+     "kind": "phrase",
+     "at": {
+      "x": 0.34,
+      "y": 0.2,
+      "w": 0.62,
+      "h": 0.34
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "lines": [
+       {
+        "text": "Who had my $50",
+        "color": "paper"
+       },
+       {
+        "text": "for 4 years?",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle",
+      "size": 0.46
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.78,
+      "y": 0.58,
+      "w": 0.38,
+      "h": 0.86
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "gotcha",
+      "pose": "point",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 22,
+      "beamLength": 0.7,
+      "facing": "left"
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "c1",
+     "speaker": "narrator",
+     "line": "This is fifty dollars.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "card",
+       "zoom": 1.12,
+       "at": {
+        "word": "fifty"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "clack",
+       "at": {
+        "word": "fifty"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "drawer",
+   "set": "kitchen-night",
+   "transition": {
+    "type": "cut"
+   },
    "figures": [
     {
      "id": "drawer",
@@ -140,27 +262,7 @@
      "reveal": "none",
      "params": {
       "prop": "drawer",
-      "open": 0
-     }
-    },
-    {
-     "id": "fifty",
-     "kind": "flap",
-     "at": {
-      "x": 0.5,
-      "y": 0.17,
-      "w": 0.36,
-      "h": 0.2
-     },
-     "layer": "front",
-     "hidden": true,
-     "reveal": "draw",
-     "params": {
-      "value": 50,
-      "unit": {
-       "prefix": "$",
-       "decimals": 2
-      }
+      "open": 1
      }
     },
     {
@@ -221,7 +323,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -247,7 +349,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -337,51 +439,10 @@
    ],
    "beats": [
     {
-     "id": "c1",
-     "speaker": "narrator",
-     "line": "This is fifty dollars.",
-     "figures": [
-      {
-       "do": "set",
-       "id": "drawer",
-       "params": {
-        "open": 1
-       },
-       "durationMs": 900
-      },
-      {
-       "do": "show",
-       "id": "fifty",
-       "at": {
-        "word": "fifty"
-       },
-       "durationMs": 900
-      }
-     ],
-     "sfx": [
-      {
-       "id": "drawer"
-      },
-      {
-       "id": "clack",
-       "at": {
-        "word": "fifty"
-       }
-      }
-     ]
-    },
-    {
      "id": "c2",
      "speaker": "narrator",
      "line": "Four years in a kitchen drawer.",
      "figures": [
-      {
-       "do": "hide",
-       "id": "fifty",
-       "at": {
-        "word": "Four"
-       }
-      },
       {
        "do": "show",
        "id": "years",
@@ -756,7 +817,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -782,7 +843,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -1209,7 +1270,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -1235,7 +1296,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -1279,7 +1340,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -1428,6 +1489,14 @@
        "at": {
         "word": "No"
        }
+      },
+      {
+       "do": "focus",
+       "id": "nothing",
+       "zoom": 1.2,
+       "at": {
+        "word": "Nothing."
+       }
       }
      ]
     },
@@ -1436,6 +1505,13 @@
      "speaker": "narrator",
      "line": "So accountants don't call it a sale. They call it a liability.",
      "figures": [
+      {
+       "do": "focus",
+       "id": "none",
+       "at": {
+        "word": "So"
+       }
+      },
       {
        "do": "hide",
        "id": "nothing",
@@ -1722,7 +1798,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -1894,7 +1970,7 @@
     {
      "id": "k1",
      "speaker": "narrator",
-     "line": "Starbucks customers load money onto cards and the app before they order.",
+     "line": "At the big coffee chains, people load money onto cards and apps before they order.",
      "figures": [
       {
        "do": "set",
@@ -1967,12 +2043,12 @@
     {
      "id": "k3",
      "speaker": "narrator",
-     "line": "At the end of 2023, Starbucks owed about $2.2 billion on cards and rewards.",
-     "spoken": "At the end of twenty twenty-three, Starbucks owed about two point two billion dollars on cards and rewards.",
+     "line": "At the end of 2023, one big chain owed about $2.2 billion on cards and rewards.",
+     "spoken": "At the end of twenty twenty-three, one big chain owed about two point two billion dollars on cards and rewards.",
      "numbers": [
       {
        "text": "2.2 billion",
-       "data": "@sbux.usd[float]"
+       "data": "@chain.usd[float]"
       }
      ],
      "figures": [
@@ -2161,7 +2237,7 @@
     {
      "id": "k7",
      "speaker": "narrator",
-     "line": "That's why people joke that Starbucks is a bank that sells coffee.",
+     "line": "That's why people joke that a coffee chain is a bank that sells coffee.",
      "figures": [
       {
        "do": "focus",
@@ -2379,7 +2455,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -2467,6 +2543,14 @@
      "line": "$3.17 left on a card. A card lost in a move.",
      "spoken": "Three dollars and seventeen cents left on a card. A card lost in a move.",
      "figures": [
+      {
+       "do": "focus",
+       "id": "shelf",
+       "zoom": 1.3,
+       "at": {
+        "word": "left"
+       }
+      },
       {
        "do": "focus",
        "id": "shelf",
@@ -2700,7 +2784,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -2766,12 +2850,12 @@
     {
      "id": "x1",
      "speaker": "narrator",
-     "line": "In one year, Starbucks booked about $188 million of it.",
-     "spoken": "In one year, Starbucks booked about a hundred and eighty-eight million dollars of it.",
+     "line": "In one year, that same chain booked about $188 million of it.",
+     "spoken": "In one year, that same chain booked about a hundred and eighty-eight million dollars of it.",
      "numbers": [
       {
        "text": "188 million",
-       "data": "@sbux.usd[breakage]"
+       "data": "@chain.usd[breakage]"
       }
      ],
      "figures": [
@@ -2906,7 +2990,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -2950,7 +3034,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },
@@ -3583,28 +3667,6 @@
      }
     },
     {
-     "id": "loaded",
-     "kind": "phrase",
-     "at": {
-      "x": 0.33,
-      "y": 0.83,
-      "w": 0.56,
-      "h": 0.22
-     },
-     "layer": "screen",
-     "hidden": true,
-     "reveal": "draw",
-     "params": {
-      "lines": [
-       {
-        "text": "From the day it's loaded.",
-        "color": "paper"
-       }
-      ],
-      "align": "start"
-     }
-    },
-    {
      "id": "nickel",
      "kind": "nickel",
      "at": {
@@ -3698,13 +3760,6 @@
      "line": "Five years from when the money was loaded. Maya's four-year-old card? Still good.",
      "figures": [
       {
-       "do": "show",
-       "id": "loaded",
-       "at": {
-        "word": "loaded."
-       }
-      },
-      {
        "do": "focus",
        "id": "none",
        "at": {
@@ -3730,13 +3785,6 @@
      "line": "And no inactivity fees until a card's gone a full year unused.",
      "figures": [
       {
-       "do": "hide",
-       "id": "loaded",
-       "at": {
-        "word": "And"
-       }
-      },
-      {
        "do": "set",
        "id": "nickel",
        "params": {
@@ -3758,6 +3806,14 @@
         "word": "fees"
        },
        "durationMs": 800
+      },
+      {
+       "do": "focus",
+       "id": "board",
+       "zoom": 1.2,
+       "at": {
+        "word": "unused."
+       }
       }
      ],
      "sfx": [
@@ -4319,7 +4375,7 @@
      "kind": "phrase",
      "at": {
       "x": 0.33,
-      "y": 0.83,
+      "y": 0.27,
       "w": 0.56,
       "h": 0.22
      },

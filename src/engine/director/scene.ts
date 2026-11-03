@@ -14,7 +14,7 @@ import { expandBeatGags, GAGS, type GagDef } from "./gags";
 import { anchorFrame, layoutBeats, msToFrame, reactorFor, type LaidBeat } from "./layout";
 import { xAt } from "./placement";
 import { isNarration, type Beat, type ReactionTable, type SfxManifest, type Skit } from "./schema";
-import { planShots } from "./shots";
+import { castlessShots, planShots } from "./shots";
 import { CLASSIC, type DirectingStyle } from "./style";
 import { buildTracks } from "./tracks";
 import { sceneFigures, withDriverGestures } from "./sceneFigures";
@@ -202,7 +202,8 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
     for (const k of cast.find((c) => c.id === who)?.moveKeys ?? []) if (k.frame <= at && at < k.frame + k.durationFrames) at = k.frame + k.durationFrames;
     return at;
   };
-  const plan = planShots(layout, moments, hint, fps, diags, settleAt, style);
+  const planned = planShots(layout, moments, hint, fps, diags, settleAt, style, (id) => figs.tracks.some((t) => t.id === id && t.layer === "screen"));
+  const plan = cast.length ? planned : castlessShots(planned);
   if (fail()) throw new SkitError(diags);
   const { shots, punchIns, shakes } = solveShots(plan, cast, input.lib, set, fps, width, height, safeArea, msToFrame(layout.totalMs, fps), figs.keepInFrame);
 
@@ -298,6 +299,7 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
     pages: skit.overlay.subtitles ? captionPages : [],
     // Subtitles off (key-phrase cards on screen): the full captions still go to the `.srt`.
     ...(skit.overlay.subtitles ? {} : { srtPages: captionPages }),
+    ...(skit.overlay.captions ? { captionSpot: skit.overlay.captions } : {}),
     ...(skit.narrator ? { narratorCaption: skit.narrator.captionStyle } : {}),
     ...(figs.tracks.length ? { figures: figs.tracks } : {}),
     ...(figs.credits.length ? { credits: figs.credits.map((c) => ({ ...c, to: Math.min(c.to, durationInFrames) })) } : {}),

@@ -1,0 +1,112 @@
+{
+ "$schema": "../../../schemas/skit.schema.json",
+ "schemaVersion": 2,
+ "format": "explainer",
+ "finish": "night",
+ "meta": {
+  "title": "The Drawer (cover)",
+  "aspect": "9:16"
+ },
+ "narrator": {
+  "id": "narrator",
+  "name": "Narrator",
+  "voice": {
+   "say": "Daniel"
+  },
+  "captionStyle": "italic"
+ },
+ "overlay": {
+  "subtitles": false
+ },
+ "timing": {
+  "leadInMs": 0,
+  "gapMs": 0,
+  "tailMs": 0
+ },
+ "scenes": [
+  {
+   "id": "cover",
+   "set": "kitchen-night",
+   "figures": [
+    {
+     "id": "title",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.16,
+      "w": 0.94,
+      "h": 0.17
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "lines": [
+       {
+        "text": "Your gift card",
+        "color": "paper"
+       },
+       {
+        "text": "is a loan",
+        "color": "sodium"
+       },
+       {
+        "text": "to the store",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle",
+      "size": 0.36
+     }
+    },
+    {
+     "id": "card",
+     "kind": "prop",
+     "at": {
+      "x": 0.5,
+      "y": 0.59,
+      "w": 0.9,
+      "h": 0.26
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "giftcard",
+      "text": "$50"
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.8,
+      "y": 0.82,
+      "w": 0.44,
+      "h": 0.24
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "gotcha",
+      "pose": "point",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": -30,
+      "beamLength": 0.6,
+      "facing": "left"
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "still",
+     "silent": true,
+     "durationMs": 2000
+    }
+   ]
+  }
+ ]
+}

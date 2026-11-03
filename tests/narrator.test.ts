@@ -135,6 +135,8 @@ describe("narrator (voice-over)", () => {
     const voice = fakeVoice(skitLines(parseSkit(skit)).map((l) => ({ id: l.id, text: l.text, durationMs: 1000 })));
     const r = compileSkit({ skit, voice, lib: library, sets, sfx: sfxLibrary, reactions, safeArea });
     expect(r.scenes[0]!.timeline.cast).toEqual([]);
+    // Nobody to frame: one wide shot for the whole scene.
+    expect(r.scenes[0]!.timeline.shots.map((s) => s.framing)).toEqual(["wide"]);
     expect(checkSkit({ result: r, lib: library, sets, safeArea }).findings.filter((f) => f.level === "error")).toEqual([]);
   });
 });

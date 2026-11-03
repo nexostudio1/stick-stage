@@ -4,9 +4,9 @@
  "format": "explainer",
  "finish": "night",
  "meta": {
-  "title": "Who had your gift card money for 4 years?",
+  "title": "Your forgotten gift card is a free loan to the store",
   "aspect": "9:16",
-  "description": "Americans are sitting on about $27 billion in unused gift cards. Here's who gets to keep the part we forget. Full case (and the rules on your side) in the long video.",
+  "description": "Americans are sitting on about $27 billion in unused gift cards. Until it's spent, the store holds that money for free, and the part we forget can become revenue. Full case (and the rules on your side) in the long video.",
   "links": [
    {
     "label": "▶ Full case (The Drawer)",
@@ -74,7 +74,7 @@
     "retrieved": "2026-10-30"
    }
   },
-  "sbux": {
+  "chain": {
    "columns": [
     "metric",
     "usd"
@@ -90,14 +90,18 @@
     ]
    ],
    "source": {
-    "name": "Starbucks 10-Q Q1 FY2024 and 10-K FY2024 (Note 1)",
+    "name": "A large US coffee chain's SEC filings: 10-Q Q1 FY2024 and 10-K FY2024 (Note 1)",
     "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922424000057/sbux-20240929.htm",
     "retrieved": "2026-10-30"
    }
   }
  },
  "overlay": {
-  "subtitles": false
+  "subtitles": true,
+  "captions": {
+   "y": 0.42,
+   "fontSize": 76
+  }
  },
  "timing": {
   "leadInMs": 100,
@@ -111,88 +115,74 @@
    "music": "mystery",
    "figures": [
     {
-     "id": "drawer",
+     "id": "title",
+     "kind": "phrase",
+     "at": {
+      "x": 0.5,
+      "y": 0.16,
+      "w": 0.94,
+      "h": 0.17
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "lines": [
+       {
+        "text": "Your gift card",
+        "color": "paper"
+       },
+       {
+        "text": "is a loan",
+        "color": "sodium"
+       },
+       {
+        "text": "to the store",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle",
+      "size": 0.36
+     }
+    },
+    {
+     "id": "card",
      "kind": "prop",
      "at": {
       "x": 0.5,
-      "y": 0.62,
-      "w": 0.92,
-      "h": 0.3
+      "y": 0.59,
+      "w": 0.9,
+      "h": 0.26
      },
      "layer": "back",
      "hidden": false,
      "reveal": "none",
      "params": {
-      "prop": "drawer",
-      "open": 0
-     }
-    },
-    {
-     "id": "fifty",
-     "kind": "flap",
-     "at": {
-      "x": 0.5,
-      "y": 0.3,
-      "w": 0.8,
-      "h": 0.1
-     },
-     "layer": "front",
-     "hidden": true,
-     "reveal": "draw",
-     "params": {
-      "value": 50,
-      "unit": {
-       "prefix": "$",
-       "decimals": 2
-      }
-     }
-    },
-    {
-     "id": "q",
-     "kind": "phrase",
-     "at": {
-      "x": 0.5,
-      "y": 0.17,
-      "w": 0.86,
-      "h": 0.1
-     },
-     "layer": "screen",
-     "hidden": true,
-     "reveal": "draw",
-     "params": {
-      "lines": [
-       {
-        "text": "Who's had it",
-        "color": "paper"
-       },
-       {
-        "text": "all this time?",
-        "color": "sodium"
-       }
-      ],
-      "align": "middle"
+      "prop": "giftcard",
+      "text": "$50"
      }
     },
     {
      "id": "nickel",
      "kind": "nickel",
      "at": {
-      "x": 0.78,
-      "y": 0.78,
-      "w": 0.42,
-      "h": 0.22
+      "x": 0.8,
+      "y": 0.82,
+      "w": 0.44,
+      "h": 0.24
      },
      "layer": "front",
      "hidden": false,
      "reveal": "none",
      "params": {
-      "expr": "shh",
-      "pose": "shh",
-      "rise": 0,
+      "expr": "gotcha",
+      "pose": "point",
+      "rise": 1,
       "talk": 0,
       "lamp": 1,
-      "beam": 20,
-      "beamLength": 0
+      "beam": -30,
+      "beamLength": 0.6,
+      "facing": "left"
      }
     }
    ],
@@ -200,91 +190,14 @@
     {
      "id": "h1",
      "speaker": "narrator",
-     "line": "This is fifty dollars.",
-     "figures": [
-      {
-       "do": "set",
-       "id": "drawer",
-       "params": {
-        "open": 1
-       },
-       "durationMs": 800
-      },
-      {
-       "do": "show",
-       "id": "fifty",
-       "at": {
-        "word": "fifty"
-       },
-       "durationMs": 800
-      }
-     ],
-     "sfx": [
-      {
-       "id": "drawer"
-      },
-      {
-       "id": "clack",
-       "at": {
-        "word": "fifty"
-       }
-      }
-     ]
-    },
-    {
-     "id": "h2",
-     "speaker": "narrator",
-     "line": "Four years in a kitchen drawer.",
-     "figures": [
-      {
-       "do": "focus",
-       "id": "drawer",
-       "zoom": 1.3,
-       "at": {
-        "word": "drawer."
-       }
-      }
-     ]
-    },
-    {
-     "id": "h3",
-     "speaker": "narrator",
-     "line": "So who's had it all this time?",
+     "line": "Your gift card is a free loan. To the store.",
      "tag": "hook",
      "figures": [
       {
-       "do": "focus",
-       "id": "none",
-       "at": {
-        "word": "So"
-       }
-      },
-      {
-       "do": "show",
-       "id": "q",
-       "at": {
-        "word": "who's"
-       }
-      }
-     ]
-    },
-    {
-     "id": "h4",
-     "speaker": "narrator",
-     "line": "Not her. The store.",
-     "figures": [
-      {
-       "do": "hide",
-       "id": "q",
-       "at": {
-        "word": "Not"
-       }
-      },
-      {
        "do": "set",
-       "id": "nickel",
+       "id": "card",
        "params": {
-        "rise": 1
+        "strike": 1
        },
        "at": {
         "word": "store."
@@ -294,10 +207,45 @@
      ],
      "sfx": [
       {
-       "id": "swish",
+       "id": "stamp",
        "at": {
         "word": "store."
+       },
+       "volume": 0.6
+      }
+     ]
+    },
+    {
+     "id": "h2",
+     "speaker": "narrator",
+     "line": "Until you spend it, they hold your money. No interest.",
+     "figures": [
+      {
+       "do": "focus",
+       "id": "card",
+       "zoom": 1.15,
+       "at": {
+        "word": "hold"
        }
+      },
+      {
+       "do": "set",
+       "id": "nickel",
+       "params": {
+        "expr": "sly"
+       },
+       "at": {
+        "word": "interest."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "register",
+       "at": {
+        "word": "hold"
+       },
+       "volume": 0.6
       }
      ]
     }
@@ -468,6 +416,14 @@
         "word": "billion"
        },
        "durationMs": 1000
+      },
+      {
+       "do": "focus",
+       "id": "total",
+       "zoom": 1.12,
+       "at": {
+        "word": "unused"
+       }
       }
      ],
      "sfx": [
@@ -488,27 +444,55 @@
     {
      "id": "h6",
      "speaker": "narrator",
-     "line": "And stores get to keep the part we forget.",
+     "line": "And the part we forget? Stores can count it as revenue.",
      "figures": [
       {
        "do": "focus",
        "id": "pile",
-       "zoom": 1.2,
+       "zoom": 1.15,
        "at": {
-        "word": "keep"
+        "word": "forget?"
        }
+      },
+      {
+       "do": "set",
+       "id": "pile",
+       "params": {
+        "dim": 0.4
+       },
+       "at": {
+        "word": "Stores"
+       },
+       "durationMs": 500
+      },
+      {
+       "do": "focus",
+       "id": "pile",
+       "zoom": 1.35,
+       "at": {
+        "word": "revenue."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "register",
+       "at": {
+        "word": "revenue."
+       },
+       "volume": 0.5
       }
      ]
     },
     {
      "id": "h7",
      "speaker": "narrator",
-     "line": "Starbucks alone booked $188 million of forgotten balances in one year.",
-     "spoken": "Starbucks alone booked a hundred and eighty-eight million dollars of forgotten balances in one year.",
+     "line": "One coffee chain alone booked $188 million of forgotten balances in one year.",
+     "spoken": "One coffee chain alone booked a hundred and eighty-eight million dollars of forgotten balances in one year.",
      "numbers": [
       {
        "text": "188 million",
-       "data": "@sbux.usd[breakage]"
+       "data": "@chain.usd[breakage]"
       }
      ],
      "figures": [
@@ -516,28 +500,28 @@
        "do": "focus",
        "id": "none",
        "at": {
-        "word": "Starbucks"
+        "word": "One"
        }
       },
       {
        "do": "hide",
        "id": "pile",
        "at": {
-        "word": "Starbucks"
+        "word": "One"
        }
       },
       {
        "do": "hide",
        "id": "total",
        "at": {
-        "word": "Starbucks"
+        "word": "One"
        }
       },
       {
        "do": "show",
        "id": "cold",
        "at": {
-        "word": "Starbucks"
+        "word": "coffee"
        }
       },
       {

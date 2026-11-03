@@ -192,6 +192,7 @@ export const compileSkit = (input: CompileInput): CompileResult => {
     ...(music ? { music } : {}),
     ...(musicCues.length ? { musicCues } : {}),
     ...(doc.finish && doc.finish !== "flat" ? { finish: doc.finish } : {}),
+    ...(doc.lettering && doc.lettering !== "sans" ? { lettering: doc.lettering } : {}),
     ...(Object.keys(placed.sets).length ? { sets: placed.sets } : {}),
     // Workspace characters and props ride along too, so the renderer draws them without the catalog.
     ...(doc.characters?.length ? { characters: Object.fromEntries(doc.characters.map((c) => [c.id, sceneInput.lib.characters[c.id]!])) } : {}),

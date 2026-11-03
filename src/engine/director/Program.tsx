@@ -74,7 +74,7 @@ const Whips: React.FC<{ program: Program; audio?: boolean }> = ({ program, audio
 export const SkitProgram: React.FC<SkitProgramProps> = ({ program, sets: catalogSets, lib: catalogLib, ...props }) => {
   // Places composed at compile time, and workspace characters and props, ride on the program.
   const sets = program.sets ? { ...catalogSets, ...program.sets } : catalogSets;
-  const rest = { ...props, lib: withProgramAssets(catalogLib, program), finish: program.finish };
+  const rest = { ...props, lib: withProgramAssets(catalogLib, program), finish: program.finish, lettering: program.lettering };
   const hook = program.hook;
   const hookScene = hook ? program.scenes[hook.scene] : undefined;
   const picture = hook && hookScene ? (

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "b1",
+      "speaker": "otto",
+      "text": "I'm switching to my left hand.",
+      "audio": "voice/b1.wav",
+      "durationMs": 1451
+    },
+    {
+      "id": "b2",
+      "speaker": "fern",
+      "text": "You're dropping your toast.",
+      "audio": "voice/b2.wav",
+      "durationMs": 1222
+    },
+    {
+      "id": "b3",
+      "speaker": "otto",
+      "text": "All my molecules are left-handed. I'm matching them.",
+      "audio": "voice/b3.wav",
+      "durationMs": 2933
+    },
+    {
+      "id": "b4",
+      "speaker": "fern",
+      "text": "Only the protein ones are left-handed.",
+      "audio": "voice/b4.wav",
+      "durationMs": 2082
+    },
+    {
+      "id": "b5",
+      "speaker": "otto",
+      "text": "Close enough.",
+      "audio": "voice/b5.wav",
+      "durationMs": 717
+    },
+    {
+      "id": "b6",
+      "speaker": "fern",
+      "text": "The sugars in your DNA are right-handed.",
+      "audio": "voice/b6.wav",
+      "durationMs": 2177
+    },
+    {
+      "id": "b7",
+      "speaker": "otto",
+      "text": "They're fighting?",
+      "audio": "voice/b7.wav",
+      "durationMs": 728
+    },
+    {
+      "id": "b8",
+      "speaker": "fern",
+      "text": "They're mirror-image shapes. Like left and right gloves.",
+      "audio": "voice/b8.wav",
+      "durationMs": 3084
+    },
+    {
+      "id": "b9",
+      "speaker": "otto",
+      "text": "Why did my body pick both?",
+      "audio": "voice/b9.wav",
+      "durationMs": 1421
+    },
+    {
+      "id": "b10",
+      "speaker": "fern",
+      "text": "Nobody knows why life picked that combination.",
+      "audio": "voice/b10.wav",
+      "durationMs": 2633
+    },
+    {
+      "id": "b11",
+      "speaker": "otto",
+      "text": "So which hand holds the toast?",
+      "audio": "voice/b11.wav",
+      "durationMs": 1416
+    },
+    {
+      "id": "b12",
+      "speaker": "fern",
+      "text": "The one not dropping it, Otto.",
+      "audio": "voice/b12.wav",
+      "durationMs": 2022
+    }
+  ]
+}

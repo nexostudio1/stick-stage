@@ -178,6 +178,17 @@ export const PALETTES: Record<string, Palette> = {
     sky: "#3f6f9e",
     detail: "#a9c9ea",
   },
+  /** A deeper indigo blueprint: alternates with `blueprint` across a long explainer's chapters. */
+  indigo: {
+    wallA: "#34508a",
+    wallB: "#324d86",
+    floor: "#3d5b97",
+    accent: "#f6d36b",
+    shade: "#38548f",
+    sky: "#34508a",
+    detail: "#a8bdf0",
+    rim: "#e3e9ff",
+  },
   /** Explainer grounds: warm paper (ink figures) and a deep ink night (chalk figures). */
   paper: {
     wallA: "#f6f1e6",

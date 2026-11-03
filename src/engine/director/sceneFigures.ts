@@ -48,19 +48,33 @@ export const sceneFigures = (skit: Skit, layout: Layout, lib: FigureLib, diags: 
   };
 };
 
-/** Beats where a figure changes: the director goes wide so the diagram has the frame. */
-export const figureBeat = (b: Beat): boolean => b.role === "demo" || b.figures.some((c) => c.do === "show" || c.do === "state");
+/**
+ * Beats where a figure changes: the director goes wide so the diagram has the frame.
+ * Screen-layer figures sit above the camera, so any shot shows them.
+ */
+export const figureBeat = (b: Beat, onScreen: (id: string) => boolean = () => false): boolean =>
+  b.role === "demo" || b.figures.some((c) => (c.do === "show" || c.do === "state") && !onScreen(c.id));
 
 const FOCUS_MS = 900;
 /** Frame-height band a focused figure fills: under the top safe edge, over the captions. */
 const FOCUS_BAND = [0.08, 0.72] as const;
 
-/** Focus cues → camera keys: the figure (or its anchor) centred, zoomed to fill the frame. */
-const focusKeys = (cues: readonly TimedCue[], tracks: readonly FigureTrack[], fps: number, width: number, height: number, diags: Diagnostic[]): FocusKey[] =>
-  cues
+/**
+ * Focus cues → camera keys: the figure (or its anchor) centred, zoomed to fill the frame. Hiding
+ * the figure in focus releases the camera too, so what replaces it isn't framed for the old one.
+ */
+const focusKeys = (cues: readonly TimedCue[], tracks: readonly FigureTrack[], fps: number, width: number, height: number, diags: Diagnostic[]): FocusKey[] => {
+  let focused: string | undefined;
+  return [...cues]
+    .sort((a, b) => a.frame - b.frame)
     .flatMap(({ cue, frame, path }): FocusKey[] => {
+      if (cue.do === "hide" && cue.id === focused) {
+        focused = undefined;
+        return [{ frame: Math.max(0, frame), durationFrames: msToFrame(FOCUS_MS, fps) }];
+      }
       if (cue.do !== "focus") return [];
       const durationFrames = msToFrame(cue.durationMs ?? FOCUS_MS, fps);
+      focused = cue.id === "none" ? undefined : cue.id;
       if (cue.id === "none") return [{ frame: Math.max(0, frame), durationFrames }];
       const t = tracks.find((x) => x.id === cue.id);
       if (!t) return [];
@@ -79,3 +93,4 @@ const focusKeys = (cues: readonly TimedCue[], tracks: readonly FigureTrack[], fp
       return [{ frame: Math.max(0, frame), durationFrames, camera: clampCamera({ scale, cx: pt.x, cy: cue.part ? pt.y : cy }, width, height) }];
     })
     .sort((a, b) => a.frame - b.frame);
+};

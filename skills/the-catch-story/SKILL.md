@@ -65,11 +65,44 @@ from her grandma in a kitchen drawer. Not a "consumer", not "you guys".
 - Rules (laws) are stated plainly with scope ("most store gift cards", "in California") and
   never as advice to a specific person.
 
+## 5b. Companies and brands (owner 2026-10-31)
+
+A case explains **how a system works**, never goes after one company. Real examples keep the story
+concrete, but they only illustrate the mechanism.
+- Tell it at industry level ("stores", "card issuers", "airlines"). The logline, the catch, the
+  title and the verdict never name a company.
+- Name a company only when its own number is the point and no industry figure does the job: at
+  most one company per case, inside one clue, never in the cold open, the catch or the verdict. If
+  a generic phrase ("a big coffee chain") keeps the story working, use that.
+- Its numbers come from its own filings or from regulator data, dated and scoped the way the source
+  states them ("at the end of 2023", "worldwide"). A company figure next to an industry total must
+  not read as a slice of that total.
+- Use neutral verbs: owes, holds, books, charges. No scam, trick, steal, rip-off or hide, and no
+  guessing at motive ("they want you to forget"). Say when a practice is normal and legal. A joke
+  is fine if credited as a joke ("people joke that…"). Never make up a quote.
+- Don't state as universal a rule that varies by state (unclaimed property, cash-out limits). This
+  applies to the 30 s short too.
+- `sources.md` ends with a **Brand check** line: which company is named, in which lines, and the
+  source of each of its numbers.
+
+## 5c. Hook and cover lines (owner 2026-11-01, after YouTube Studio data)
+
+The Case 001 short lost 72% of feed viewers in the first second because it opened on set-up ("This
+is fifty dollars. Four years in a kitchen drawer.") instead of the point. For every case, write:
+- **Cover question (long)**: 3–6 words, the human mystery ("Who had my $50 for 4 years?"). The
+  long video opens on it as its first frame, and it is the thumbnail text.
+- **Cover claim (short)**: 3–6 words, the counter-intuitive claim ("Your gift card is a loan to the
+  store"). It is the short's first frame *and* its first spoken line, under 3 s. Frame the claim as
+  a mind-bending fact, not advice.
+- Both must be true without the rest of the video (no claim the video later walks back) and
+  name no company.
+- The short then goes claim → one number → one clue → cliffhanger to the long cut.
+
 ## 6. Output
 
 `cases/<nnn>-<slug>/`: `script.md` (acts, lines, speaker, estimated time), `sources.md`, then
 hand over to **the-catch-staging** for `storyboard.md` and the skit JSON. Hand-back: the one-line
-logline, the twist sentence, the three actions, runtime estimate at 190 wpm, TO VERIFY list.
+logline, the twist sentence, the cover question and cover claim (§5c), the three actions, runtime estimate at 190 wpm, TO VERIFY list.
 
 ## Self-check before hand-back
 
@@ -77,3 +110,5 @@ logline, the twist sentence, the three actions, runtime estimate at 190 wpm, TO 
 - Does each clue end on a question the next clue answers?
 - Is there a line a viewer would quote in the comments?
 - Would the viewer do something different tonight? Which line tells them what?
+- Does the story still work if you swap the named company for "a big <industry> company"? It
+  should; the company is an example, not the target (§5b).

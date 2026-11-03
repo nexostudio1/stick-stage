@@ -56,6 +56,72 @@
       "fetched": "2026-11-02",
       "impression": true,
       "description": "NASA Goddard 2009 artist's concept of asteroids delivering amino acids to Earth; the line at the bottom is real Murchison isovaline data."
+    },
+    {
+      "id": "tlt-spearmint",
+      "file": "images/tlt-spearmint.jpg",
+      "width": 1200,
+      "height": 1600,
+      "credit": "Alex Abair, CC BY 4.0 (iNaturalist)",
+      "licence": "cc-by-4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mentha_spicata_spicata_548138423.jpg",
+      "fetched": "2026-11-02",
+      "description": "A spearmint plant (Mentha spicata) in flower, growing wild."
+    },
+    {
+      "id": "tlt-caraway",
+      "file": "images/tlt-caraway.jpg",
+      "width": 1600,
+      "height": 1066,
+      "credit": "Slick, CC0",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File:K%C3%BCmmel_2012-07-08-9523.jpg",
+      "fetched": "2026-11-02",
+      "description": "Caraway seeds scattered on white, close up."
+    },
+    {
+      "id": "tlt-sugar",
+      "file": "images/tlt-sugar.jpg",
+      "width": 1200,
+      "height": 1600,
+      "credit": "Pittigrilli, CC BY 4.0",
+      "licence": "cc-by-4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Open_can_with_sugar_cubes,_from_above.jpg",
+      "fetched": "2026-11-02",
+      "description": "An open tin of white sugar cubes, seen from above."
+    },
+    {
+      "id": "tlt-ibuprofen",
+      "file": "images/tlt-ibuprofen.jpg",
+      "width": 1600,
+      "height": 1600,
+      "credit": "Derrick Coetzee, CC0",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pile_of_200mg_generic_Ibuprofen_tablets.jpg",
+      "fetched": "2026-11-02",
+      "description": "A pile of generic 200 mg ibuprofen tablets."
+    },
+    {
+      "id": "tlt-ecoli",
+      "file": "images/tlt-ecoli.jpg",
+      "width": 1600,
+      "height": 1087,
+      "credit": "CDC / Evangeline Sowers, Janice Carr (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Escherichia_coli_(SEM).jpg",
+      "fetched": "2026-11-02",
+      "description": "Scanning electron micrograph of a single E. coli bacterium on a filter (US government work)."
+    },
+    {
+      "id": "tlt-orion",
+      "file": "images/tlt-orion.jpg",
+      "width": 1600,
+      "height": 1600,
+      "credit": "NASA, ESA, M. Robberto (STScI/ESA), Hubble Orion Treasury Team",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File:Orion_Nebula_-_Hubble_2006_mosaic.jpg",
+      "fetched": "2026-11-02",
+      "description": "Hubble's 2006 mosaic of the Orion Nebula."
     }
   ]
 }

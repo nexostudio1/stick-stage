@@ -4,16 +4,16 @@
     {
       "id": "h1",
       "speaker": "narrator",
-      "text": "This is fifty dollars.",
+      "text": "Your gift card is a free loan. To the store.",
       "audio": "voice/h1.wav",
-      "durationMs": 1800
+      "durationMs": 3377
     },
     {
       "id": "h2",
       "speaker": "narrator",
-      "text": "Four years in a kitchen drawer.",
+      "text": "Until you spend it, they hold your money. No interest.",
       "audio": "voice/h2.wav",
-      "durationMs": 2440
+      "durationMs": 3470
     },
     {
       "id": "h3",
@@ -40,17 +40,17 @@
     {
       "id": "h6",
       "speaker": "narrator",
-      "text": "And stores get to keep the part we forget.",
+      "text": "And the part we forget? Stores can count it as revenue.",
       "audio": "voice/h6.wav",
-      "durationMs": 2400
+      "durationMs": 3293
     },
     {
       "id": "h7",
       "speaker": "narrator",
-      "text": "Starbucks alone booked $188 million of forgotten balances in one year.",
-      "spoken": "Starbucks alone booked a hundred and eighty-eight million dollars of forgotten balances in one year.",
+      "text": "One coffee chain alone booked $188 million of forgotten balances in one year.",
+      "spoken": "One coffee chain alone booked a hundred and eighty-eight million dollars of forgotten balances in one year.",
       "audio": "voice/h7.wav",
-      "durationMs": 6360
+      "durationMs": 6090
     },
     {
       "id": "h8",

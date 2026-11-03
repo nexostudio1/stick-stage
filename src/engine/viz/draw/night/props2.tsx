@@ -12,6 +12,10 @@ const T = (x: number, y: number, size: number, fill: string, s: string, font = "
 
 type Markup = (p: PropP, t: number, uid: string) => string;
 
+// A plain kraft cup with a ribbed sleeve: no white body, band or badge, so it reads as no chain's cup.
+const KRAFT = "#B98A55";
+const SLEEVE = "#7E5631";
+
 /** One takeaway cup at (x, 0): `fill` 0…1 of coins in it, `steam` 0…1 rising off it. */
 const cupAt = (x: number, s: number, fill: number, steam: number, t: number, i: number) => {
   const coins = Math.round(fill * 4);
@@ -25,10 +29,11 @@ const cupAt = (x: number, s: number, fill: number, steam: number, t: number, i: 
   return `<g transform="translate(${f2(x)},0) scale(${f2(s)})">
     ${wisps}
     ${Array.from({ length: coins }, (_, k) => `<ellipse cx="${-16 + (k % 2) * 30}" cy="${-206 - k * 12}" rx="26" ry="10" fill="${SODIUM}" ${o}/>`).join("")}
-    <path d="M-70,-200 L70,-200 L56,0 L-56,0Z" fill="${PAPER}" ${o}/>
-    <rect x="-78" y="-222" width="156" height="26" rx="8" fill="#2A3640" ${o}/>
-    <rect x="-64" y="-140" width="128" height="56" fill="#3B6E5E"/>
-    <circle cy="-112" r="18" fill="${PAPER}"/>
+    <path d="M-70,-200 L70,-200 L56,0 L-56,0Z" fill="${KRAFT}" ${o}/>
+    <path d="M-66,-150 L66,-150 L60,-70 L-60,-70Z" fill="${SLEEVE}" ${o}/>
+    ${[-124, -110, -96].map((y) => `<path d="M${f2(-62 + (y + 150) * 0.07)},${y} L${f2(62 - (y + 150) * 0.07)},${y}" stroke="${INK}" stroke-width="3" opacity="0.35"/>`).join("")}
+    <path d="M-80,-198 L80,-198 L72,-222 Q0,-246 -72,-222Z" fill="#2A3640" ${o}/>
+    <rect x="18" y="-240" width="30" height="12" rx="5" fill="#2A3640" ${o}/>
   </g>`;
 };
 

@@ -13,7 +13,7 @@ import { CardVault, EvidenceWall, LedgerDesk, LostAndFound } from "./nightRooms"
 import { StoryBush, StoryFence, StoryFlowers, StoryGround, StoryHills, StoryPond, StoryRock, StorySea, StorySky, StoryTree } from "./storyOutdoor";
 import { StoryBed, StoryBench, StoryClubhouse, StoryDoor, StoryFloor, StoryHouse, StoryRug, StoryShelf, StorySofa, StoryTable, StoryWall, StoryWindow } from "./storyPlaces";
 import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
-import { Blueprint, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
+import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
 export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night"] as const;
 export type Kit = (typeof KITS)[number];
@@ -67,6 +67,7 @@ export const PART_INFO: Record<string, PartInfo> = {
   void: { draw: VoidBackdrop, kits: ["abstract", "space"], backdrop: true },
   "grid-floor": { draw: GridFloor, kits: ["abstract", "space"], backdrop: true },
   blueprint: { draw: Blueprint, kits: ["abstract"], backdrop: true },
+  drafting: { draw: DraftingTable, kits: ["abstract"], backdrop: true },
   starfield: { draw: Starfield, kits: ["space"], backdrop: true },
   nebula: { draw: Nebula, kits: ["space"] },
   planet: { draw: Planet, kits: ["space"] },

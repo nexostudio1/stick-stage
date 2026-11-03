@@ -1,7 +1,5 @@
 import { z } from "zod";
 import { PlaceSchema } from "../set/compose";
-import { STORY_LOOKS } from "../set/storyPalettes";
-import { FINISHES } from "../shots/finishKinds";
 import { SYMBOLS } from "../face/schema";
 import type { Aspect } from "../format/aspect";
 import { ScreenTextSchema, SignTextSchema } from "../lib/screenText";
@@ -14,6 +12,7 @@ import { MetaSchema } from "./meta";
 import { STYLE_IDS } from "./style";
 import { FigureCueSchema, FigureSchema } from "../viz/schema";
 import { LINE_ROLES, scienceFields } from "./science";
+import { lookFields } from "./lookFields";
 import { DatasetSchema, SpokenNumberSchema } from "./data";
 
 /**
@@ -227,10 +226,7 @@ export const SkitSchema = z
     set: z.string().min(1).optional(),
     /** A described place instead of `set` (story kit, `set/compose.ts`); scenes may each have their own. */
     place: PlaceSchema.optional(),
-    /** Colour look for every described place: "bright" (storybook, default), "retro" (screen print), "pastel". A place's own `look` wins. */
-    look: z.enum(STORY_LOOKS).optional(),
-    /** Stage finish: "flat" (default, the house look) or the opt-in "illustrated" (cel shade, ink line, paper grain). */
-    finish: z.enum(FINISHES).optional(),
+    ...lookFields,
     /** `explainer`: a narrated 16:9 data story (`docs/explainer.md`): 16:9 by default, cast optional, variety checks. */
     format: z.enum(["skit", "explainer"]).optional(),
     /** Explainers: tables figures and spoken numbers reference as `"@id.column"` (`director/data.ts`). */
@@ -252,6 +248,7 @@ export const SkitSchema = z
         /** "Who's wrong?" meter across the top; beats tip it with `verdict` (`director/verdictSchema.ts`). Replaces `pov` and `hook`. */
         verdict: VerdictSchema.optional(),
         subtitles: z.boolean().default(true),
+        /** Subtitle spot: y (fraction of height) and px size, clamped to the safe area. Omitted: the style's. */ captions: z.strictObject({ y: z.number().min(0).max(1).optional(), fontSize: z.number().int().min(32).max(140).optional() }).optional(),
       })
       .default({ subtitles: true }),
     timing: TimingSchema,

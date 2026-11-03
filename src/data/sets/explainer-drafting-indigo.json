@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "explainer-drafting-indigo",
+  "aspect": "16:9",
+  "kit": "abstract",
+  "palette": "indigo",
+  "description": "The lit blueprint ground in a deeper indigo, for alternating chapters of a long explainer.",
+  "tags": [
+    "explainer",
+    "widescreen",
+    "maths",
+    "engineering",
+    "grid",
+    "lit"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "drafting"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

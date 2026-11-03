@@ -26,7 +26,7 @@ describe("The Catch", () => {
     expect(nickel.narrator).toBe(true);
     const srt = programSrt(compile(skit).program, "Narrator", { nickel: "Nickel" });
     expect(srt).toContain("Nickel: Coffee.");
-    expect(srt).toContain("Narrator: This is");
+    expect(srt).toContain("Narrator: Your gift card");
   });
 
   it("act checks flag a late hook and a missing reveal", () => {

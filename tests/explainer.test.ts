@@ -99,6 +99,16 @@ describe("explainer documents", () => {
     expect(cameraAt(tl, outKey!.frame + outKey!.durationFrames).scale).toBeCloseTo(1);
   });
 
+  it("hiding the figure in focus releases the camera", () => {
+    const skit = structuredClone(sample);
+    const n2 = skit.scenes![0]!.beats![1]!;
+    n2.figures = [{ do: "hide", id: "price", at: { word: "store" } }, ...n2.figures!.slice(1)];
+    const tl = run(skit).scenes[0]!.timeline;
+    const [, out] = tl.focus!;
+    expect(out!.camera).toBeUndefined();
+    expect(cameraAt(tl, out!.frame + out!.durationFrames).scale).toBeCloseTo(1);
+  });
+
   it("starts a focus move from where the last one is mid-ease, so overlapping keys never jump", () => {
     const base = { scale: 1, cx: 960, cy: 540 };
     const keys = [

@@ -15,7 +15,15 @@ What the format changes:
 ## Grounds
 
 `explainer-paper` (light, ink figures), `explainer-night` (dark, chalk figures), `explainer-grid`
-(blueprint). No furniture: the frame is for figures. Change grounds between scenes for variety.
+(blueprint), `explainer-drafting` / `explainer-drafting-indigo` (the blueprint with a pool of light
+and a vignette; alternate them across a long video's chapters). No furniture: the frame is for
+figures. Change grounds between scenes for variety.
+
+A scene with no cast holds one wide frame (figure `focus` cues still move the camera). In a cast
+scene, a figure on `"layer": "screen"` (a caption card, an inset) appears without the cut to wide.
+
+`"lettering": "hand"` (skit level) sets cards, slams, the POV card and figure labels in Kalam Bold,
+hand-lettered to sit with drawn figures; subtitles and credits stay on the text font.
 
 ## Placing figures: slots
 

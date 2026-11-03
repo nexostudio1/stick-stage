@@ -233,7 +233,9 @@ describe("default shot policy", () => {
       { id: "a", speaker: "milo", line: "Hi there.", shot: { framing: "wide" } },
       { id: "b", speaker: "june", line: "Hello you.", shot: { framing: "medium", on: "june", at: { word: "you" } } },
     ]);
-    expect(tl.shots.map((s) => s.framing)).toEqual(["two", "wide", "medium", "close"]);
+    // The first beat's shot is the opening framing, not a cut a few frames in.
+    expect(tl.shots.map((s) => s.framing)).toEqual(["wide", "medium", "close"]);
+    expect(tl.shots[0]!.frame).toBe(0);
   });
 });
 

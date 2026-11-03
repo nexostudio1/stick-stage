@@ -174,9 +174,9 @@
     {
       "id": "k1",
       "speaker": "narrator",
-      "text": "Starbucks customers load money onto cards and the app before they order.",
+      "text": "At the big coffee chains, people load money onto cards and apps before they order.",
       "audio": "voice/k1.wav",
-      "durationMs": 4000
+      "durationMs": 5120
     },
     {
       "id": "k2",
@@ -188,10 +188,10 @@
     {
       "id": "k3",
       "speaker": "narrator",
-      "text": "At the end of 2023, Starbucks owed about $2.2 billion on cards and rewards.",
-      "spoken": "At the end of twenty twenty-three, Starbucks owed about two point two billion dollars on cards and rewards.",
+      "text": "At the end of 2023, one big chain owed about $2.2 billion on cards and rewards.",
+      "spoken": "At the end of twenty twenty-three, one big chain owed about two point two billion dollars on cards and rewards.",
       "audio": "voice/k3.wav",
-      "durationMs": 6240
+      "durationMs": 6800
     },
     {
       "id": "k4",
@@ -217,9 +217,9 @@
     {
       "id": "k7",
       "speaker": "narrator",
-      "text": "That's why people joke that Starbucks is a bank that sells coffee.",
+      "text": "That's why people joke that a coffee chain is a bank that sells coffee.",
       "audio": "voice/k7.wav",
-      "durationMs": 3720
+      "durationMs": 4240
     },
     {
       "id": "k8",
@@ -288,10 +288,10 @@
     {
       "id": "x1",
       "speaker": "narrator",
-      "text": "In one year, Starbucks booked about $188 million of it.",
-      "spoken": "In one year, Starbucks booked about a hundred and eighty-eight million dollars of it.",
+      "text": "In one year, that same chain booked about $188 million of it.",
+      "spoken": "In one year, that same chain booked about a hundred and eighty-eight million dollars of it.",
       "audio": "voice/x1.wav",
-      "durationMs": 5080
+      "durationMs": 5040
     },
     {
       "id": "x2",

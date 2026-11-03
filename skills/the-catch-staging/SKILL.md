@@ -15,7 +15,17 @@ Renders run on **local Tamtree** (no Lambda 15 min limit), so long cases are fin
 - Palette: Night `#0E1A24` ground, Teal surfaces, Paper words, **one** Sodium hero per frame
   (the answer, the light), **at most one** Ember element (loss, alarm, stamp), Neon only for data lines.
 - Fonts: Bricolage Grotesque (key phrases), Big Shoulders Display (numbers), IBM Plex Mono (labels, sources).
-- No boxed word captions. On screen: 2–6 word key-phrase cards timed to the word. Full captions → `.srt`.
+- **Subtitles on, both cuts** (owner 2026-11-01: people watch muted): `"overlay": {"subtitles": true,
+  "captions": {...}}`, the stick-story word-timed style. Long cut `{"y": 0.73, "fontSize": 72}` (clear
+  of the source credit); short `{"y": 0.42, "fontSize": 76}` (mid-screen, above the Shorts UI). Key-phrase
+  cards (2–6 words) sit in the top band, `at(0.33, 0.27, …)`, never in the subtitle band; drop a card
+  rather than stack it on a figure.
+- **No real brands in the picture** (owner 2026-10-31): no logos, wordmarks, mascots, signature
+  colours, or cup, packaging, card or store designs; everything is drawn in the tokens above, with
+  generic labels (STORE, BANK, CARD). Be extra careful with props on screen while the narrator
+  names a company (Case 001's cup once had a green band and a round badge, too close to the named
+  brand). A company name appears on screen only in the source credit. Titles, thumbnails,
+  descriptions and hashtags don't name it; the description's source credit may.
 
 ## Data as objects (never a chart on a plain fill)
 
@@ -99,6 +109,29 @@ reinvent:
   every scene). The owner liked everything except this and wants it rethought. Don't copy it into a
   new case unchanged; propose options (see handover § Open) and use the owner's pick.
 
+## First frame and cover (owner 2026-11-01, after YouTube Studio data)
+
+The Case 001 short lost 72% of feed viewers in the first second: it opened on scene-setting ("This is
+fifty dollars…") instead of the claim.
+- **Every video starts on its cover, long and short.** Frame 0 *is* the cover: 3–6 words of claim
+  or question in big type (`phrase`, `hidden: false`, `reveal: "none"`), the hero object in the
+  cone, Nickel pointing with his beam on it. No empty set, no fade-in, no silent hold: the first
+  line is spoken over the cover (a small `focus` on the hero object), then the story cuts away.
+  No brand anywhere on a cover.
+- **Two covers per case, one per format**, each built once in the generator and used twice:
+  `cover_long()` / `cover_short()` return the figures; the opening scene uses them as its figures
+  (long: a one-line scene `cover` before the cold open; short: its first scene), and a silent
+  one-scene skit renders the still from the same list, so cover and frame 0 never drift apart:
+  - `<id>-cover` (16:9) → `out/<id>-cover.png`: upload as the long video's thumbnail.
+  - `<id>-short-cover` (9:16) → `out/<id>-short-cover.png`: the Short's thumbnail. Shorts pick it
+    from the video's frames (pick frame 0) or take this file as a custom upload.
+  - Render: `pnpm still Skit out/<id>-cover.png --frame=40 --props='{"skit":"<id>-cover"}'` (same
+    for `-short-cover`). Covers need no voice.
+- **Long cover = curiosity question** ("Who had my $50 for 4 years?"); **short cover = the claim**
+  ("Your gift card is a loan to the store"), which is also the short's first spoken line (under
+  3 s). The human story comes after the claim in the short, or only in the long cut.
+- Check frame 0 of both cuts and both cover PNGs before any render is handed back.
+
 ## The 30 s short (every case)
 
 Every 16:9 case also ships a ≤ 30 s 9:16 cut for the **Thin Lines Theory** channel that sends
@@ -118,4 +151,6 @@ planned/exists.
 
 `pnpm check <id>`: variety (kinds per length, runs, 4–8 s changes, 3 s hook), `numbers` match
 datasets, wording. Frame sheet as in the explainer skill; reject any frame that is a chart on a
-flat fill, a frame with two Ember elements, or 8 s without change.
+flat fill, a frame with two Ember elements, or 8 s without change. Check the frames of every
+scene that names a company for anything that looks like its branding, and add the result to the
+case's Brand check line in `sources.md`.
