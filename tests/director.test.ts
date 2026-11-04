@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { library, reactions, sets, sfxLibrary } from "../src/data";
 import { compileSkit, resolveAnchor, SkitError, skitLines, parseSkit, type Diagnostic } from "../src/engine";
+import { SFX_CEILING, SFX_MASTER } from "../src/engine/audio/mix";
 import { compile, fakeVoice, skitOf } from "./director-fixtures";
 
 const FPS = 30;
@@ -247,6 +248,11 @@ describe("determinism and data", () => {
   it("skitLines lists spoken beats for the voice source", () => {
     const { skit } = skitOf([{ id: "a", speaker: "milo", line: "Hi.", delivery: "flat" }, { id: "s", silent: true }]);
     expect(skitLines(parseSkit(skit))).toEqual([{ id: "a", speaker: "milo", character: "milo", text: "Hi.", delivery: "flat" }]);
+  });
+  it("no effect is mixed louder than the SFX ceiling, so none can drown the dialog", () => {
+    for (const s of sfxLibrary.sounds) expect(s.gain * SFX_MASTER, s.id).toBeLessThanOrEqual(SFX_CEILING);
+    const { skit, voice } = skitOf([{ id: "a", speaker: "milo", line: "Hi.", sfx: [{ id: "whoosh", at: { ms: 0 }, volume: 2 }] }]);
+    for (const e of compileSkit({ skit, voice, lib: library, sets, sfx: sfxLibrary, reactions }).timeline.sfx) expect(e.volume, e.id).toBeLessThanOrEqual(SFX_CEILING);
   });
   it("every sound has a license and a known expression table", () => {
     expect(sfxLibrary.sounds.length).toBeGreaterThanOrEqual(10);

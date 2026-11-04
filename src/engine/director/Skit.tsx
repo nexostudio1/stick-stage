@@ -17,6 +17,7 @@ import { VerdictMeter } from "../text/VerdictMeter";
 import { cameraAt, shotAt } from "./camera";
 import { stageActorsAt } from "./placement";
 import { QaOverlay } from "./QaOverlay";
+import { SFX_DUCK } from "../audio/mix";
 import type { Timeline } from "./timeline";
 
 const FACE_FRAMINGS: readonly string[] = ["medium", "close", "extreme"];
@@ -60,7 +61,7 @@ export const Skit: React.FC<SkitProps> = ({ timeline: tl, lib, set, safeArea, fo
       ))}
       {audio && tl.sfx.map((s, i) => (
         <Sequence key={`sfx-${i}`} from={s.frame} durationInFrames={s.durationFrames} layout="none">
-          <Html5Audio src={staticFile(s.src)} volume={() => s.volume} />
+          <Html5Audio src={staticFile(s.src)} volume={(f) => (tl.audio.some((a) => s.frame + f >= a.frame && s.frame + f < a.frame + a.durationFrames) ? s.volume * SFX_DUCK : s.volume)} />
         </Sequence>
       ))}
       <CastLabels

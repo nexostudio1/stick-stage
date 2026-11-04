@@ -7,6 +7,7 @@ import { linearTiming, TransitionSeries, type TransitionPresentation } from "@re
 import React from "react";
 import { AbsoluteFill, Freeze, Html5Audio, Sequence, staticFile } from "remotion";
 import { Skit, type SkitProps } from "./Skit";
+import { SFX_MASTER } from "../audio/mix";
 import type { Program, SceneTransition } from "./timeline";
 import type { SetDef } from "../set/schema";
 
@@ -63,7 +64,7 @@ const Whips: React.FC<{ program: Program; audio?: boolean }> = ({ program, audio
       {program.scenes.map((sc) =>
         sc.transitionIn?.type === "whip" ? (
           <Sequence key={`whip-${sc.id}`} from={Math.max(0, sc.from - 2)} durationInFrames={Math.round(program.fps * 0.6)} layout="none">
-            <Html5Audio src={staticFile("sfx/whoosh.wav")} volume={0.7} />
+            <Html5Audio src={staticFile("sfx/whoosh.wav")} volume={0.7 * SFX_MASTER} />
           </Sequence>
         ) : null,
       )}
@@ -83,7 +84,7 @@ export const SkitProgram: React.FC<SkitProgramProps> = ({ program, sets: catalog
         <Freeze frame={hook.frame}>
           <Skit timeline={hookScene.timeline} set={sets[hookScene.timeline.set]!} {...rest} audio={false} />
         </Freeze>
-        {rest.audio !== false ? <Html5Audio src={staticFile("sfx/whoosh.wav")} volume={0.8} /> : null}
+        {rest.audio !== false ? <Html5Audio src={staticFile("sfx/whoosh.wav")} volume={0.8 * SFX_MASTER} /> : null}
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition presentation={slide({ direction: "from-right" })} timing={linearTiming({ durationInFrames: hook.transitionFrames })} />
       {program.scenes.map((sc) => (
