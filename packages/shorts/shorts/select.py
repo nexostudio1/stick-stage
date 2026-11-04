@@ -19,6 +19,7 @@ from pathlib import Path
 PAD_IN = 0.10
 PAD_OUT = 0.15
 SNAP_TO_CUT = 0.45
+SLIVER_WORD = 0.2      # an end may clip this much off the last word's tail to land on a cut
 TARGET = (20.0, 60.0)
 
 
@@ -67,7 +68,8 @@ def _snap_out(t: float, words: list[dict], cuts: list[float], duration: float) -
     if near:
         c = min(near, key=lambda c: abs(c - t))
         last = next((w for w in reversed(words) if w["t0"] < t), None)
-        if not last or c >= last["t1"]:
+        # End on the cut, not a flash of the next shot, unless that would clip the last word badly.
+        if not last or c >= last["t1"] - SLIVER_WORD:
             t = c
     return round(t, 3)
 
@@ -79,8 +81,14 @@ def snap(shorts: dict, an: dict) -> list[str]:
     for sh in shorts["shorts"]:
         total = 0.0
         for seg in sh["segments"]:
-            seg["t0"] = _snap_in(seg["t0"], words, cuts)
-            seg["t1"] = _snap_out(seg["t1"], words, cuts, duration)
+            # Snap from the editor's pick, never from a previous snap, so re-running is a no-op.
+            # Editing t0/t1 by hand makes them the new pick.
+            pick = seg.get("pick")
+            if not pick or (seg.get("snapped") and [seg["t0"], seg["t1"]] != seg["snapped"]):
+                pick = seg["pick"] = [seg["t0"], seg["t1"]]
+            seg["t0"] = _snap_in(pick[0], words, cuts)
+            seg["t1"] = _snap_out(pick[1], words, cuts, duration)
+            seg["snapped"] = [seg["t0"], seg["t1"]]
             if seg["t1"] <= seg["t0"]:
                 notes.append(f"{sh['id']}: a {seg['role']} segment is empty after snapping")
             total += seg["t1"] - seg["t0"]

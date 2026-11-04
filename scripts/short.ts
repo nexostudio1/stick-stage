@@ -21,7 +21,7 @@ if (!propsPath) {
   process.exit(1);
 }
 const draft = args.includes("--draft");
-const outArg = args[args.indexOf("--out") + 1];
+const outArg = args.includes("--out") ? args[args.indexOf("--out") + 1] : undefined;
 const framesArg = args.find((a) => a.startsWith("--frames="))?.slice(9);
 const props = JSON.parse(fs.readFileSync(propsPath, "utf8"));
 

@@ -78,16 +78,41 @@ def read_sidecar(path: Path) -> list[dict]:
     return lines
 
 
+def _norm(token: str) -> str:
+    return re.sub(r"[^a-z0-9']", "", token.lower())
+
+
 def assign_speakers(words: list[dict], lines: list[dict]) -> None:
-    """Each word takes the speaker of the sidecar line its midpoint falls in (or the nearest one)."""
+    """Match heard words to the sidecar's text (sidecar times are often a second off), so each word
+    takes its line's speaker. Unmatched words take a neighbour's line; an unmatched word more than
+    2 s from any matched one is noise (music, a hallucination) and is dropped."""
     if not lines:
         return
-    for w in words:
-        mid = (w["t0"] + w["t1"]) / 2
-        inside = [ln for ln in lines if ln["t0"] - 0.25 <= mid <= (ln["t1"] or ln["t0"] + 8) + 0.25]
-        best = inside[0] if inside else min(lines, key=lambda ln: abs(ln["t0"] - mid))
-        w["speaker"] = best["who"]
-        w["line"] = best["id"]
+    from difflib import SequenceMatcher
+
+    script = [(i, _norm(t)) for i, ln in enumerate(lines) for t in ln["text"].split() if _norm(t)]
+    heard = [_norm(w["text"]) for w in words]
+    owner: list[int | None] = [None] * len(words)
+    sm = SequenceMatcher(None, heard, [t for _, t in script], autojunk=False)
+    for a, b, size in sm.get_matching_blocks():
+        for k in range(size):
+            ln = lines[script[b + k][0]]
+            t = words[a + k]["t0"]
+            # A text match far from the line's slot is a common word matched by accident.
+            if ln["t0"] - 3.0 <= t <= (ln["t1"] if ln["t1"] is not None else ln["t0"] + 10) + 3.0:
+                owner[a + k] = script[b + k][0]
+    matched = [i for i, o in enumerate(owner) if o is not None]
+    keep = []
+    for i, w in enumerate(words):
+        if owner[i] is None:
+            near = min(matched, key=lambda j: abs(words[j]["t0"] - w["t0"]), default=None)
+            if near is None or abs(words[near]["t0"] - w["t0"]) > 2.0:
+                continue
+            owner[i] = owner[near]
+        ln = lines[owner[i]]
+        w["speaker"], w["line"] = ln["who"], ln["id"]
+        keep.append(w)
+    words[:] = keep
 
 
 def drift_report(words: list[dict], lines: list[dict]) -> list[dict]:

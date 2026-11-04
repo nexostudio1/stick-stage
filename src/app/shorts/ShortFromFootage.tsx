@@ -60,7 +60,7 @@ const SpanVideo: React.FC<{ span: Span; src: string; srcW: number; srcH: number;
         src={src}
         trimBefore={span.srcFrom}
         volume={volume}
-        style={{ position: "absolute", width: W, height: fgH, left: 0, top: H * 0.44 - fgH / 2, boxShadow: "0 20px 60px #0009" }}
+        style={{ position: "absolute", width: W, height: fgH, left: 0, top: H * 0.48 - fgH / 2, boxShadow: "0 20px 60px #0009" }}
       />
     </AbsoluteFill>
   );
