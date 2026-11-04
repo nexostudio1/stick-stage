@@ -45,9 +45,22 @@ Re-run `frame` and `sheet` after each change. Keep overrides: they survive a re-
 `pnpm tsx scripts/short.ts $W/props-<id>.json --draft` for review rounds (540×960, fast).
 Render final (no `--draft`) only after approval.
 
+## Review happens in t-asset
+
+Drafts go to t-asset (`~/sites/tasset`, see its `docs/shorts-review.md`) as **internal** versions:
+only the studio sees them until the owner releases them from **Drafts to review**.
+
+```bash
+cd ~/sites/tasset
+pnpm shorts ingest $W --videos <render dir> [--suffix -draft] --client "<client>" --project "<project>" --note "<what changed>"
+pnpm shorts comments $W        # open notes on each short's newest version, JSON, times on the short's clock
+```
+
+`pnpm fake-tamtree` (or the real Tamtree flow) must be running so t-asset makes the previews.
+
 ## Acting on review comments
 
-Each comment has a time range in the **short's** timeline. Map it to the source with
+Each comment has a time range in the **short's** timeline (`at`, `until` in the JSON). Map it to the source with
 framing.json's spans (`out0`, `src0`): source time = `src0 + (t - out0)`.
 
 | The note says | Edit |
