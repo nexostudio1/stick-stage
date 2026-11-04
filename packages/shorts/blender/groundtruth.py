@@ -4,8 +4,8 @@
 
 Writes {fps, frames, shots: [{id, cam, t0, t1}], samples: [{t, shot, chars: {name: [x, y, visible]}}]}.
 x and y are 0..1 with y down, the same convention as the face boxes. Shots come from the timeline
-markers that bind cameras. A character is a `<Name>_Rig` armature; its head is the first pose bone
-with "head" in its name.
+markers that bind cameras. A character is a `<Name>_Rig` armature; its face is the midpoint of its
+eye (`lid.*` / `eye.*`) bones, else its head bone.
 """
 
 import json
@@ -31,9 +31,12 @@ for i, m in enumerate(markers):
 rigs = {}
 for ob in bpy.data.objects:
     if ob.type == "ARMATURE" and ob.name.endswith("_Rig"):
-        head = next((pb for pb in ob.pose.bones if "head" in pb.name.lower()), None)
-        if head:
-            rigs[ob.name.removesuffix("_Rig").lower()] = (ob, head.name)
+        # The face is what a crop must hold: the eyes (lid/eye bones), else the head bone, whose
+        # centre can sit at the back of the skull and frames the back of the head in a close-up.
+        eyes = [pb.name for pb in ob.pose.bones if pb.name.lower().startswith(("lid.", "eye."))]
+        head = next((pb.name for pb in ob.pose.bones if "head" in pb.name.lower()), None)
+        if eyes or head:
+            rigs[ob.name.removesuffix("_Rig").lower()] = (ob, eyes or [head])
 
 
 def shot_for(frame):
@@ -52,9 +55,10 @@ for frame in range(scene.frame_start, scene.frame_end + 1, step):
         continue
     cam = bpy.data.objects[shot["cam"]]
     chars = {}
-    for name, (ob, bone) in rigs.items():
-        pb = ob.pose.bones[bone]
-        p = ob.matrix_world @ ((pb.head + pb.tail) / 2)
+    for name, (ob, bones) in rigs.items():
+        pts = [ob.pose.bones[b] for b in bones]
+        local = sum(((pb.head + pb.tail) / 2 for pb in pts), pts[0].head * 0) / len(pts)
+        p = ob.matrix_world @ local
         v = world_to_camera_view(scene, cam, p)
         visible = v.z > 0 and 0 <= v.x <= 1 and 0 <= v.y <= 1 and not ob.hide_render
         chars[name] = [round(v.x, 4), round(1 - v.y, 4), bool(visible)]
