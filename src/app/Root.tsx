@@ -27,6 +27,28 @@ import { PALETTE_LAB_SIZE, PaletteLab, paletteLabSchema } from "./labs/PaletteLa
 import { PLACE_LAB_SIZE, PlaceLab, placeLabSchema } from "./labs/PlaceLab";
 import { SHAPE_LAB_FRAMES, ShapeLab, shapeLabSchema } from "./labs/ShapeLab";
 import { calculateVizLabMetadata, VIZ_LAB_FRAMES, VizLab, vizLabSchema } from "./labs/VizLab";
+import { ShortFromFootage } from "./shorts/ShortFromFootage";
+import { calculateShortMetadata, shortSchema, type ShortProps } from "./shorts/shortData";
+
+/** Placeholder props; real ones come from `shorts props` via `--props`. */
+const SHORT_DEFAULT: ShortProps = {
+  id: "example",
+  src: "",
+  fps: 24,
+  srcWidth: 1920,
+  srcHeight: 1080,
+  window: 0.3164,
+  videoFrames: 48,
+  durationInFrames: 96,
+  teaserFrames: 0,
+  titleFrames: 48,
+  spans: [{ from: 0, frames: 48, srcFrom: 0, layout: "single", segment: 0, keys: [{ f: 0, x: 0.5 }] }],
+  captions: [],
+  title: "Title",
+  hook: "Hook",
+  closing: "Closing line",
+  brand: {},
+};
 
 const FPS = 30;
 const W = 1080;
@@ -203,6 +225,18 @@ export const RemotionRoot: React.FC = () => (
       defaultProps={{ set: "living-1", characters: ["milo", "june"], framing: "close" as const }}
       calculateMetadata={({ props }) => closeupSheetSize(props.characters.length)}
       {...closeupSheetSize(2)}
+    />
+    {/* A short cut from long footage (packages/shorts). */}
+    <Composition
+      id="ShortFromFootage"
+      component={ShortFromFootage}
+      schema={shortSchema}
+      defaultProps={SHORT_DEFAULT}
+      calculateMetadata={calculateShortMetadata}
+      durationInFrames={SHORT_DEFAULT.durationInFrames}
+      fps={SHORT_DEFAULT.fps}
+      width={W}
+      height={H}
     />
     <Composition
       id="TalkLab"
