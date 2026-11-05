@@ -4,6 +4,7 @@ import { f2 } from "../../lib/math";
 import { project, WORLD_VIEW } from "../geo";
 import { REGIONS } from "../map";
 import { formatValue, type MapP } from "../paramsData";
+import { resolveColor } from "../theme";
 import { phase, Txt, type DrawProps } from "./common";
 
 /** A world map: land, a choropleth, highlighted countries, dots and arcs, framed on `view`. */
@@ -48,6 +49,20 @@ export const MapFig: React.FC<DrawProps<MapP> & { fs: number; id: string }> = ({
             <path key={r.id} d={r.d} fill={fillOf(r.id)} stroke={bold ? mix(theme.muted, theme.paper, 0.4) : theme.paper} strokeWidth={f2(unit * 1.4)} vectorEffect="non-scaling-stroke" strokeLinejoin="round" />
           ))}
         </g>
+        {p.bands.map((b, i) => {
+          const pts = b.points.map(([lon, lat]) => at(((lon + p.bandShift + 540) % 360) - 180, lat));
+          const n = Math.max(2, Math.round(pts.length * draw));
+          const d = `M ${pts.slice(0, n).map((q) => `${f2(q.x)} ${f2(q.y)}`).join(" L ")}`;
+          const col = resolveColor(theme, b.color, theme.highlight);
+          const m = pts[Math.floor((pts.length - 1) / 2)]!;
+          return (
+            <g key={`b${i}`}>
+              <path d={d} fill="none" stroke={mix("#05070f", theme.paper, 0.15)} strokeOpacity={0.5} strokeWidth={f2(b.width * h)} strokeLinecap="round" strokeLinejoin="round" />
+              <path d={d} fill="none" stroke={col} strokeWidth={f2(unit * 3)} strokeDasharray={`${f2(unit * 10)} ${f2(unit * 8)}`} strokeLinecap="round" />
+              {b.label ? <Txt x={m.x} y={m.y - b.width * h * 0.9} size={fs * 0.75} color={theme.ink} halo={theme.paper} weight={800} fontFamily={fontFamily}>{b.label}</Txt> : null}
+            </g>
+          );
+        })}
         {p.routes.map((rt, i) => {
           const a = at(rt.from[0], rt.from[1]);
           const b = at(rt.to[0], rt.to[1]);

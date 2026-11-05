@@ -204,6 +204,7 @@ export const CalloutParams = z.strictObject({
 
 import { BarsParams, CounterParams, LineParams, MapParams } from "./paramsData";
 import { CrowdParams, EvidenceParams, FlapParams, MayaParams, NickelParams, PhoneParams, PhraseParams, PropParams, StampParams } from "./paramsNight";
+import { ClockParams, EarthMoonParams, GlobeParams, GrowthParams } from "./paramsTime";
 import { BurstParams, EquationParams, FinePrintParams, GalaxyParams, HistogramParams, ImageParams, MoleculeParams, NumberLineParams, ProgressParams } from "./paramsMore";
 
 export const FIGURE_PARAMS = {
@@ -238,6 +239,10 @@ export const FIGURE_PARAMS = {
   maya: MayaParams,
   evidence: EvidenceParams,
   phone: PhoneParams,
+  globe: GlobeParams,
+  clock: ClockParams,
+  growth: GrowthParams,
+  earthmoon: EarthMoonParams,
 } as const;
 export type FigureKind = keyof typeof FIGURE_PARAMS;
 export const FIGURE_KINDS = Object.keys(FIGURE_PARAMS) as FigureKind[];

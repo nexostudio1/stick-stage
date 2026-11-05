@@ -21,7 +21,7 @@ A scene lists its figures (a single-scene skit puts `figures` at the top level):
 | Field | Meaning |
 |---|---|
 | `id` | Cues and anchors name it |
-| `kind` | `plot`, `axes`, `vector`, `wave`, `orbit`, `particles`, `label`, `callout`, `numberline`, `scale`, `histogram`, `equation`, `image`, `progress`, `galaxy`, `burst`, `fineprint`, `molecule` |
+| `kind` | `plot`, `axes`, `vector`, `wave`, `orbit`, `particles`, `label`, `callout`, `numberline`, `scale`, `histogram`, `equation`, `image`, `progress`, `galaxy`, `burst`, `fineprint`, `molecule`, `globe`, `clock`, `growth`, `earthmoon` (and the explainer kinds below) |
 | `at` | Centre `x`, `y` and size `w`, `h`, fractions of the frame |
 | `params` | Per kind (below). Checked at compile with a path to the bad field |
 | `states`, `state` | Named param sets (`myth`, `truth`), merged over `params`; a state may set `label` |
@@ -75,10 +75,14 @@ orbit adds `star`, `perihelion`, `aphelion`; a plot `origin`; an equation each t
 | `burst` | A supernova pop on `show`: star and rays burst, settle to a glow after `hold` s; `color` |
 | `fineprint` | A wall of tiny contract text: `text` (repeated), `size`, `color`, `fill` (lines shown, animate it) |
 | `molecule` | A handed (chiral) molecule in 3D: a centre atom and four coloured groups (`groups`, 4 colour slots). `turn` (°, tween it), `spin` (°/s), `tilt`, `mirror` (0…1 flips it into its mirror image). `pair` draws its mirror twin across a dashed mirror line: `twin` (0…1 fades it in), `twinTurn` (try to make it match), `match` (0…1 slides the twin on top; the groups that don't line up get red rings), `label`, `twinLabel`. Thin Lines Theory's Mirror Molecules figure |
+| `globe` | A spinning Earth (orthographic, the `map` figure's coastlines): `lon` (centre longitude, tween it), `spin` (°/s, eastward), `lat` (view tilt), `night` (0…1 night side, lit from screen angle `light`), `ice` (0…1 polar caps), `melt` (0…1 meltwater dots running toward the equator), `bulge` + `bulgeAngle` (exaggerated tidal bulge), `arrow` (0…1 spin arrow), `points: [{ lon, lat, label }]` (near side only), `grid`. Thin Lines Theory's Lengthening Day figure |
+| `clock` | A clock face: `time` in hours (tween it and the hands sweep), `speed` (hours per second), `dial` 12 or 24, `seconds`, `wedge: { from, to, color, label, fill }` (a shaded slice of the dial, e.g. the half hour a dinosaur's day was missing), `digital` ("23:59:60") under the face |
+| `growth` | A shell or coral that keeps a diary: `shape` `rudist` (tall cup) or `coral` (curved horn) grows from its tip as `lines` rises toward `total`; `yearEvery` thickens every Nth line; `lens` (0…1) magnifies day and night layers; `tally` prints the count |
+| `earthmoon` | The Moon's tidal brake: a small turning Earth (`spin`), the Moon at `distance` (tween it to push the Moon out) and `moonAngle` + `orbit` °/s, `bulge` dragged `lag`° ahead of the Moon, `brake` (0…1 arrows), `laser` (0…0.5 out, 0.5…1 back), `ruler` text |
 | `line` | Explainers. `series: [{ data, color, label, dashed }]` (data `[[key, value], …]` or `"@dataset.column"`), `draw` (animate it), `y`, `zero`, `unit: { prefix, suffix, decimals }`, `span: { from, to, label }`, `events: [{ at, label }]`, `points: [{ at, label }]`, `variant`: `clean` / `bold` |
 | `bars` | Explainers. `series` (up to 3, grouped), `orientation`, `sort`: `none` / `asc` / `desc`, `highlight: [keys]`, `grow`, `max` (fixed scale for `set` cues), `values`, `unit`, `limit`, `variant` |
 | `counter` | Explainers. A big number: `value` (a `set` cue ticks it), `from` (where the reveal ticks from), `unit`, `caption`, `group` (thousands commas; off for years), `delta: { value, unit, good: up / down }`, `color`, `variant` |
-| `map` | Explainers. A world map (Natural Earth, baked in): `data` by ISO alpha-3 (`[["USA", 3.2]]` or `"@dataset.column"`) for a choropleth, `highlight: [codes]`, `points: [{ lon, lat, label }]`, `routes: [{ from, to }]` + `draw`, `zoom`: `"world"`, a code, codes or `[lon0, lat0, lon1, lat1]` (a `set` cue on `zoom` flies there), `legend`, `unit`, `variant` |
+| `map` | Explainers. A world map (Natural Earth, baked in): `data` by ISO alpha-3 (`[["USA", 3.2]]` or `"@dataset.column"`) for a choropleth, `highlight: [codes]`, `points: [{ lon, lat, label }]`, `routes: [{ from, to }]` + `draw`, `bands: [{ points: [[lon, lat]…], width, color, label }]` (wide tracks, an eclipse path) slid by `bandShift` (° of longitude, tween it), `zoom`: `"world"`, a code, codes or `[lon0, lat0, lon1, lat1]` (a `set` cue on `zoom` flies there), `legend`, `unit`, `variant` |
 
 | `flap` | The Catch (night look). A split-flap board: `value` + `unit` (a `set` cue riffles the digits) or `text`, `group` (thousands commas; off for years), `tiles` (min), `color` (`sodium` / `paper` / `ember` / `neon`), `caption` |
 | `crowd` | The Catch. `count` people on `rows`; `lit` of them (seeded order, tween it) hold a lit card; `caption` |

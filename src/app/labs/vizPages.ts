@@ -254,4 +254,50 @@ export const PAGES: VizPage[] = [
       cue(100, { do: "set", id: "mol", params: { match: 1 }, durationMs: 900 }),
     ],
   },
+  {
+    note: "the Earth turns east, night side shaded; ice caps grow, then melt toward the equator",
+    figures: [{ id: "earth", kind: "globe", at: LEFT, params: { lon: 20, spin: 30, arrow: 1, points: [{ lon: 44.4, lat: 32.5, label: "Babylon" }] } }],
+    cues: [
+      cue(40, { do: "set", id: "earth", params: { ice: 1 }, durationMs: 800 }),
+      cue(90, { do: "set", id: "earth", params: { ice: 0.4, melt: 1 }, durationMs: 1200 }),
+    ],
+  },
+  {
+    note: "a 24-hour dial loses its last half hour; a 12-hour clock ticks to 23:59:60",
+    figures: [
+      { id: "day", kind: "clock", at: LEFT, params: { dial: 24, time: 0, wedge: { from: 23.5, to: 24, label: "missing", fill: 0 } } },
+      { id: "leap", kind: "clock", at: RIGHT, params: { time: 23.98, seconds: true, digital: "23:59:59" } },
+    ],
+    cues: [
+      cue(20, { do: "set", id: "day", params: { time: 23.5 }, durationMs: 1500 }),
+      cue(70, { do: "set", id: "day", params: { wedge: { from: 23.5, to: 24, label: "missing", fill: 1 } }, durationMs: 600 }),
+      cue(90, { do: "set", id: "leap", params: { digital: "23:59:60" } }),
+    ],
+  },
+  {
+    note: "a rudist grows one line a day (yearly bands), a lens shows day and night layers",
+    figures: [
+      { id: "clam", kind: "growth", at: LEFT, params: { lines: 0, total: 80, yearEvery: 20, tally: true } },
+      { id: "coral", kind: "growth", at: RIGHT, params: { shape: "coral", lines: 80, total: 80, lens: 0, color: "a5" } },
+    ],
+    cues: [
+      cue(10, { do: "set", id: "clam", params: { lines: 80 }, durationMs: 3000 }),
+      cue(80, { do: "set", id: "coral", params: { lens: 1 }, durationMs: 700 }),
+    ],
+  },
+  {
+    note: "tides: the bulge runs ahead of the Moon, the brake shows, a laser goes and comes back, the Moon drifts out",
+    figures: [{ id: "em", kind: "earthmoon", at: BAND, params: { distance: 0.6, bulge: 0, laser: 0 } }],
+    cues: [
+      cue(10, { do: "set", id: "em", params: { bulge: 1 }, durationMs: 700 }),
+      cue(40, { do: "set", id: "em", params: { brake: 1 }, durationMs: 500 }),
+      cue(70, { do: "set", id: "em", params: { laser: 1 }, durationMs: 1500 }),
+      cue(120, { do: "set", id: "em", params: { distance: 0.85, ruler: "3.8 cm a year" }, durationMs: 900 }),
+    ],
+  },
+  {
+    note: "an eclipse track slides west by three hours of spin",
+    figures: [{ id: "track", kind: "map", at: BAND, params: { zoom: [-15, 20, 60, 50], points: [{ lon: 44.4, lat: 32.5, label: "Babylon" }], variant: "bold", bands: [{ points: [[30, 24], [44.4, 32.5], [51.7, 39.6], [60, 46]], label: "totality" }] } }],
+    cues: [cue(40, { do: "set", id: "track", params: { bandShift: -48.8 }, durationMs: 2500 })],
+  },
 ];

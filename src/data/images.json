@@ -122,6 +122,94 @@
       "source": "https://commons.wikimedia.org/wiki/File:Orion_Nebula_-_Hubble_2006_mosaic.jpg",
       "fetched": "2026-11-02",
       "description": "Hubble's 2006 mosaic of the Orion Nebula."
+    },
+    {
+      "id": "tld-rudist",
+      "file": "images/tld-rudist.jpg",
+      "width": 1920,
+      "height": 1340,
+      "credit": "Wilson44691 (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARudistCretaceousUAE.jpg",
+      "fetched": "2026-11-05",
+      "description": "Fossil rudist clams from the Cretaceous of the United Arab Emirates (Wikimedia Commons, released into the public domain)."
+    },
+    {
+      "id": "tld-coral",
+      "file": "images/tld-coral.jpg",
+      "width": 1920,
+      "height": 1407,
+      "credit": "Wilson44691 (CC0)",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHeliophyllum_halli_Bethany_Center_Centerfield_2.jpg",
+      "fetched": "2026-11-05",
+      "description": "Heliophyllum halli, a Middle Devonian horn coral, showing fine growth ridges (CC0)."
+    },
+    {
+      "id": "tld-lrrr",
+      "file": "images/tld-lrrr.jpg",
+      "width": 1920,
+      "height": 1920,
+      "credit": "NASA / Apollo 11 (AS11-40-5952)",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAS11-40-5952_-_Apollo_11_-_Apollo_11_Mission_image_-_The_Laser_Ranging_Retroreflector_%28LRRR%29_-_NARA_-_16685293.jpg",
+      "fetched": "2026-11-05",
+      "description": "The Laser Ranging Retroreflector left on the Moon by Apollo 11, 1969."
+    },
+    {
+      "id": "tld-laser-station",
+      "file": "images/tld-laser-station.jpg",
+      "width": 1920,
+      "height": 1440,
+      "credit": "NASA",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGoddard_Spaceflight_Center_Laser_Ranging_Facility.jpg",
+      "fetched": "2026-11-05",
+      "description": "NASA Goddard's laser ranging facility firing a laser at night."
+    },
+    {
+      "id": "tld-atomic-clock",
+      "file": "images/tld-atomic-clock.jpg",
+      "width": 1200,
+      "height": 857,
+      "credit": "NIST (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANIST-F2_cesium_fountain_atomic_clock.jpg",
+      "fetched": "2026-11-05",
+      "description": "NIST-F2, the US caesium fountain atomic clock (US government work)."
+    },
+    {
+      "id": "tld-babylon",
+      "file": "images/tld-babylon.jpg",
+      "width": 1312,
+      "height": 2000,
+      "credit": "U.S. Navy / Arlo K. Abrahamson",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUS_Navy_030525-N-5362A-004_U.S._Sailors_and_Marines_attached_to_Camp_Babylon%2C_Iraq%2C_take_a_guided_tour_of_the_ancient_ruins_of_Babylon_located_near_their_compound.jpg",
+      "fetched": "2026-11-05",
+      "description": "The ruins of ancient Babylon, Iraq, 2003 (US Navy photo, public domain)."
+    },
+    {
+      "id": "tld-greenland-melt",
+      "file": "images/tld-greenland-melt.jpg",
+      "width": 1920,
+      "height": 1280,
+      "credit": "NASA Goddard Space Flight Center",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEarly_Melt_on_the_Greenland_Ice_Sheet_%2833354485670%29.jpg",
+      "fetched": "2026-11-05",
+      "description": "Meltwater on the Greenland ice sheet, seen from a NASA flight."
+    },
+    {
+      "id": "tld-blue-marble",
+      "file": "images/tld-blue-marble.jpg",
+      "width": 1920,
+      "height": 1920,
+      "credit": "NASA / Apollo 17 crew",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_Blue_Marble%2C_AS17-148-22727.jpg",
+      "fetched": "2026-11-05",
+      "description": "The Blue Marble: Earth photographed by the Apollo 17 crew, 1972."
     }
   ]
 }

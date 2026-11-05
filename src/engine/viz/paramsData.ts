@@ -87,6 +87,13 @@ export const MapParams = z.strictObject({
   /** Arcs from one place to another (trade, shipping). `draw` animates them on. */
   routes: z.array(z.strictObject({ from: z.tuple([z.number(), z.number()]), to: z.tuple([z.number(), z.number()]) })).max(12).default([]),
   draw: z.number().min(0).max(1).default(1),
+  /** Wide translucent tracks (an eclipse path), lon/lat points; `width` is a fraction of the map's height. */
+  bands: z
+    .array(z.strictObject({ points: z.array(z.tuple([z.number(), z.number()])).min(2).max(40), width: z.number().min(0.005).max(0.3).default(0.06), color: color.default("highlight"), label: text.optional() }))
+    .max(4)
+    .default([]),
+  /** Degrees of longitude every band is slid by (tween it: "run the Earth back three hours"). */
+  bandShift: z.number().min(-360).max(360).default(0),
   /**
    * What the map frames: `"world"`, a code (`"FRA"`), several (`["FRA", "DEU"]`), or a lon/lat box
    * `[lon0, lat0, lon1, lat1]`. Change it with a `set` cue to fly between places.

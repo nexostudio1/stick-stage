@@ -12,6 +12,9 @@ import { Burst, FinePrint, GalaxyFig, Progress } from "./draw/cosmos";
 import { BarChart, Counter, LineChart } from "./draw/data";
 import { MapFig } from "./draw/map";
 import { MoleculeFig } from "./draw/molecule";
+import { Globe } from "./draw/globe";
+import { Clock, EarthMoon, Growth } from "./draw/time";
+import type { ClockP, EarthMoonP, GlobeP, GrowthP } from "./paramsTime";
 import { Crowd, Flap, Phrase, Stamp } from "./draw/night/board";
 import { Evidence, Phone } from "./draw/night/evidence";
 import { Maya } from "./draw/night/maya";
@@ -134,6 +137,14 @@ const Body: React.FC<{
       return <Evidence {...as<EvidenceP>()} />;
     case "phone":
       return <Phone {...as<PhoneP>()} />;
+    case "globe":
+      return <Globe {...as<GlobeP>()} fs={fs} id={f.id} />;
+    case "clock":
+      return <Clock {...as<ClockP>()} />;
+    case "growth":
+      return <Growth {...as<GrowthP>()} id={f.id} />;
+    case "earthmoon":
+      return <EarthMoon {...as<EarthMoonP>()} fs={fs} id={f.id} />;
     case "equation":
       return <Equation {...as<EquationP>()} typeset={f.typeset} />;
     case "image": {
