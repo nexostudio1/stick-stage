@@ -30,4 +30,4 @@ push: check-profile
 	$(DEPLOY_ENV) lambda/deploy.sh --skip-build $(FLAGS)
 
 check-profile:
-	@test -n "$(PROFILE)" || { echo "set PROFILE=<aws profile> (or AWS_PROFILE)" >&2; exit 1; }
+	@test -n "$(PROFILE)" || { echo "no AWS profile: run make $(or $(MAKECMDGOALS),deploy) PROFILE=<aws profile>, or export AWS_PROFILE=<aws profile>" >&2; exit 1; }
