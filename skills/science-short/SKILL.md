@@ -54,10 +54,11 @@ The owner then checks the sources, runs `pnpm approve <id> --by=<name>`, and pos
 - **Roles in order:** `myth`, `pushback`, `prediction`, `demo`, `reaction`, `why`,
   `why-it-felt-true`, `takeaway`, optional `loop`. A myth-flip needs `myth` and `takeaway`.
 - **Hook in 0–2 s.** The premise is clear by line 2, and the first laugh lands by ~10 s.
-- **The number is on screen at frame 0.** The hook card (or `overlay.pov`) carries the short's
-  surprising number ("A year had 372 days"); a teaser card with no number loses the muted swipe.
-- **Title states the fact, number first** ("Dinosaurs had 372 days a year"), never a
-  `Why/How/Is…?` question. Every number on screen and in the title has its claim.
+- **The surprise is on screen at frame 0.** The hook card (or `overlay.pov`, ≤ 34 characters)
+  says it in one glance ("A year with 400 days"); a vague teaser loses the muted swipe.
+- **Title: 25-50 characters, the fact stated**, never a `Why/How/Is…?` question. One number a
+  viewer can picture, or none: no ms/micro-/millionths, no unrounded big numbers. Every number on
+  screen and in the title has its claim.
 - **`spoken`** when the caption and the voice differ (`"5%"` vs `"five percent"`, equations).
   Names and jargon get `pronounce` hints on the voice request from `src/data/pronunciations.json`.
   Add a missing word there instead of misspelling the line.
