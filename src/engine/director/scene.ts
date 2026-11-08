@@ -1,5 +1,5 @@
 /** Compile one resolved scene (a single-scene skit is one scene). */
-import { SFX_MASTER } from "../audio/mix";
+import { sfxVolume } from "../audio/mix";
 import type { MusicManifest } from "../audio/music";
 import type { Library } from "../rig/actorState";
 import type { SetDef } from "../set/schema";
@@ -225,11 +225,11 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
         const frame = anchorFrame(b, s.at, `${where}.sfx[${j}].at`, fps, diags);
         const snd = sounds.get(s.id)!;
         if (frame !== undefined)
-          sfx.push({ frame: Math.max(0, frame), id: s.id, src: snd.file, volume: s.volume * snd.gain * SFX_MASTER, durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
+          sfx.push({ frame: Math.max(0, frame), id: s.id, src: snd.file, volume: sfxVolume(snd, s.volume), durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
       });
     if (b.punchline && style.punchSfx && !b.beat.sfx.some((s) => s.id === style.punchSfx) && sounds.has(style.punchSfx)) {
       const snd = sounds.get(style.punchSfx)!;
-      sfx.push({ frame: msToFrame(b.fromMs, fps), id: style.punchSfx, src: snd.file, volume: snd.gain * SFX_MASTER, durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
+      sfx.push({ frame: msToFrame(b.fromMs, fps), id: style.punchSfx, src: snd.file, volume: sfxVolume(snd), durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
     }
     b.beat.text.forEach((t, j) => {
       if (t.type === "list") {

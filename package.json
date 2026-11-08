@@ -41,6 +41,7 @@
     "props:sheet": "tsx scripts/props-sheet.ts",
     "props:nouns": "tsx scripts/prop-nouns.ts",
     "sfx": "tsx scripts/sfx-gen.ts",
+    "sfx:measure": "tsx scripts/sfx-measure.ts",
     "music": "tsx scripts/music-gen.ts",
     "test": "vitest run && tsx scripts/props-lint.ts",
     "typecheck": "tsc --noEmit",

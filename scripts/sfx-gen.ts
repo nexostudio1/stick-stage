@@ -11,6 +11,7 @@ import path from "node:path";
 import { SfxManifestSchema, type SfxManifest } from "../src/engine";
 import { buf, env, filter, mix, noise, osc, perc, saturate, SR, time, writeWav, type Sig } from "./lib/synth";
 import { ROOT } from "./lib/tools";
+import { measureWav } from "./lib/loudness";
 import { SCIENCE_SOUNDS } from "./lib/sfx-science";
 import { NIGHT_SOUNDS } from "./lib/sfx-night";
 
@@ -216,7 +217,9 @@ const old: SfxManifest = fs.existsSync(manifestPath)
 const made = SOUNDS.map((s) => {
   const file = `sfx/${s.id}.wav`;
   const durationMs = writeWav(path.join(ROOT, "public", file), s.make());
-  return { id: s.id, file, durationMs, gain: s.gain, license: LICENSE, source: SOURCE, tags: s.tags };
+  // The mix levels every effect from its measured loudness (src/engine/audio/mix.ts).
+  const { loudnessDb, peakDb } = measureWav(path.join(ROOT, "public", file));
+  return { id: s.id, file, durationMs, gain: s.gain, loudnessDb, peakDb, license: LICENSE, source: SOURCE, tags: s.tags };
 });
 const kept = old.sounds.filter((s) => s.source !== SOURCE && !made.some((m) => m.id === s.id));
 const manifest: SfxManifest = { schemaVersion: 1, sounds: [...made, ...kept] };

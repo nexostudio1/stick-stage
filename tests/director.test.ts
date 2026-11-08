@@ -1,7 +1,9 @@
+import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { library, reactions, sets, sfxLibrary } from "../src/data";
 import { compileSkit, resolveAnchor, SkitError, skitLines, parseSkit, type Diagnostic } from "../src/engine";
-import { SFX_CEILING, SFX_MASTER } from "../src/engine/audio/mix";
+import { SFX_CEILING, SFX_PEAK_DBFS, sfxVolume } from "../src/engine/audio/mix";
+import { measureWav } from "../scripts/lib/loudness";
 import { compile, fakeVoice, skitOf } from "./director-fixtures";
 
 const FPS = 30;
@@ -249,10 +251,24 @@ describe("determinism and data", () => {
     const { skit } = skitOf([{ id: "a", speaker: "milo", line: "Hi.", delivery: "flat" }, { id: "s", silent: true }]);
     expect(skitLines(parseSkit(skit))).toEqual([{ id: "a", speaker: "milo", character: "milo", text: "Hi.", delivery: "flat" }]);
   });
-  it("no effect is mixed louder than the SFX ceiling, so none can drown the dialog", () => {
-    for (const s of sfxLibrary.sounds) expect(s.gain * SFX_MASTER, s.id).toBeLessThanOrEqual(SFX_CEILING);
-    const { skit, voice } = skitOf([{ id: "a", speaker: "milo", line: "Hi.", sfx: [{ id: "whoosh", at: { ms: 0 }, volume: 2 }] }]);
-    for (const e of compileSkit({ skit, voice, lib: library, sets, sfx: sfxLibrary, reactions }).timeline.sfx) expect(e.volume, e.id).toBeLessThanOrEqual(SFX_CEILING);
+  it("every effect is levelled from its measured loudness, so none can drown the dialog", () => {
+    // Dialog peaks at about -15.7 dB on the same measure (mix.ts); every effect must sit 8 dB under it.
+    for (const s of sfxLibrary.sounds) {
+      expect(s.loudnessDb, `${s.id}: run pnpm sfx:measure`).toBeDefined();
+      const v = sfxVolume(s);
+      expect(s.loudnessDb! + 20 * Math.log10(v), s.id).toBeLessThanOrEqual(-15.7 - 8);
+      expect(s.peakDb! + 20 * Math.log10(v), s.id).toBeLessThanOrEqual(SFX_PEAK_DBFS + 0.01);
+    }
+    const { skit, voice } = skitOf([{ id: "a", speaker: "milo", line: "Hi.", sfx: [{ id: "boom", at: { ms: 0 }, volume: 2 }] }]);
+    const out = compileSkit({ skit, voice, lib: library, sets, sfx: sfxLibrary, reactions });
+    for (const e of out.timeline.sfx) expect(e.volume, e.id).toBeLessThanOrEqual(Math.min(SFX_CEILING, sfxVolume(sfxLibrary.sounds.find((s) => s.id === e.id)!)));
+    expect(out.program.whooshVolume).toBeLessThanOrEqual(SFX_CEILING);
+  });
+  it("sfx.json's loudness matches the files in public/sfx", () => {
+    for (const s of sfxLibrary.sounds) {
+      const m = measureWav(path.resolve("public", s.file));
+      expect([s.loudnessDb, s.peakDb], `${s.id}: run pnpm sfx:measure`).toEqual([m.loudnessDb, m.peakDb]);
+    }
   });
   it("every sound has a license and a known expression table", () => {
     expect(sfxLibrary.sounds.length).toBeGreaterThanOrEqual(10);

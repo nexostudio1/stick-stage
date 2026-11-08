@@ -16,6 +16,7 @@ import { chaptersOf, explainerChecks } from "./explainer";
 import { verdictAfter } from "./verdict";
 import { pronunciationsFor, type Pronunciation } from "../voice/pronounce";
 import type { Program, SceneTransition, Timeline } from "./timeline";
+import { sfxVolume } from "../audio/mix";
 
 export type { CompileInput } from "./scene";
 
@@ -179,6 +180,7 @@ export const compileSkit = (input: CompileInput): CompileResult => {
   const lastScene = programScenes[programScenes.length - 1]!;
   const durationInFrames = lastScene.from + lastScene.timeline.durationInFrames;
   const chapters = chaptersOf(doc, { scenes: programScenes, fps: doc.meta.fps, durationInFrames }, diags);
+  const whoosh = input.sfx.sounds.find((s) => s.id === "whoosh");
   const program: Program = {
     schemaVersion: 1,
     title: doc.meta.title,
@@ -189,6 +191,7 @@ export const compileSkit = (input: CompileInput): CompileResult => {
     scenes: programScenes,
     ...(doc.format === "explainer" ? { format: "explainer" as const } : {}),
     ...(chapters.length ? { chapters } : {}),
+    ...(whoosh ? { whooshVolume: sfxVolume(whoosh, 0.75) } : {}),
     ...(music ? { music } : {}),
     ...(musicCues.length ? { musicCues } : {}),
     ...(doc.finish && doc.finish !== "flat" ? { finish: doc.finish } : {}),

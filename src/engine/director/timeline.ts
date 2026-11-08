@@ -182,6 +182,8 @@ export type Program = {
   height: number;
   durationInFrames: number;
   scenes: ProgramScene[];
+  /** Playback volume of the whip-pan / hook whoosh (`sfxVolume` of `whoosh`). Absent: silent. */
+  whooshVolume?: number;
   /** Original bed. Absent when the skit names none. */
   music?: { src: string; gain: number; ducked: number };
   /** Bed changes from a scene's `music` on (act cues: mystery → build → drop → resolve), skit frames. */
