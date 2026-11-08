@@ -178,6 +178,104 @@ export const PALETTES: Record<string, Palette> = {
     sky: "#3f6f9e",
     detail: "#a9c9ea",
   },
+  /** A deeper indigo blueprint: alternates with `blueprint` across a long explainer's chapters. */
+  indigo: {
+    wallA: "#34508a",
+    wallB: "#324d86",
+    floor: "#3d5b97",
+    accent: "#f6d36b",
+    shade: "#38548f",
+    sky: "#34508a",
+    detail: "#a8bdf0",
+    rim: "#e3e9ff",
+  },
+  /** Explainer grounds: warm paper (ink figures) and a deep ink night (chalk figures). */
+  paper: {
+    wallA: "#f6f1e6",
+    wallB: "#efe7d6",
+    floor: "#e4d9c2",
+    accent: "#e8590c",
+    shade: "#ebe2cf",
+    sky: "#f6f1e6",
+    detail: "#c9bb9c",
+  },
+  ink: {
+    wallA: "#14213a",
+    wallB: "#1d2d4d",
+    floor: "#22355a",
+    accent: "#ffd84a",
+    shade: "#1a2944",
+    sky: "#14213a",
+    detail: "#3d5580",
+    rim: "#cfd6ff",
+  },
+  /** The Catch's night shift: Night ground, Teal surfaces, Sodium light (plan §4). */
+  "night-shift": {
+    wallA: "#0E1A24",
+    wallB: "#16303A",
+    floor: "#122630",
+    accent: "#FFB547",
+    shade: "#0A141B",
+    sky: "#1F4650",
+    detail: "#2A4A55",
+    glow: "#FFC56B",
+    rim: "#F3E9D2",
+  },
+  /** The Catch's first daylight (a callback): warm paper walls, teal wood, morning sun. */
+  morning: {
+    wallA: "#F3E9D2",
+    wallB: "#E4D3B0",
+    floor: "#B98E5E",
+    accent: "#FFB547",
+    shade: "#D9C49C",
+    sky: "#BFE3E8",
+    detail: "#1F4650",
+    glow: "#FFF1C9",
+  },
+  /**
+   * Themed science grounds (`science-wash`, the shorts' cutaway): mid-tone so the near-black
+   * strokes and the white-boxed subtitles both read. Dawn: amber to coral, for time and the Earth.
+   */
+  "science-dawn": {
+    wallA: "#efae7c",
+    wallB: "#e0846a",
+    floor: "#c9735e",
+    accent: "#ffe1a6",
+    shade: "#e99b78",
+    sky: "#f5c992",
+    detail: "#fff1dc",
+  },
+  /** Tide: sea teal, for the oceans, the Moon and waves. */
+  "science-tide": {
+    wallA: "#4d9a9e",
+    wallB: "#3a8089",
+    floor: "#3b7d84",
+    accent: "#ffd98a",
+    shade: "#42888f",
+    sky: "#6fbcb8",
+    detail: "#c6f1ec",
+  },
+  /** Cosmos: magenta to indigo, for space. Dark, so the cast gets a light rim. */
+  "science-cosmos": {
+    wallA: "#3a2c7a",
+    wallB: "#5b2f84",
+    floor: "#4b3b8e",
+    accent: "#ffc857",
+    shade: "#7c3fa3",
+    sky: "#c2549f",
+    detail: "#a7dcff",
+    rim: "#e6dcff",
+  },
+  /** Lab: fresh lime, for chemistry and life. */
+  "science-lab": {
+    wallA: "#bcd97f",
+    wallB: "#a1c768",
+    floor: "#8aae58",
+    accent: "#fff1a8",
+    shade: "#accd72",
+    sky: "#d8ed9f",
+    detail: "#f6ffe0",
+  },
   /** A bright, clean lab. */
   "lab-white": {
     wallA: "#e6eef0",

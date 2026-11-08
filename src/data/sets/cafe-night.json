@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cafe-night",
+  "aspect": "16:9",
+  "anyAspect": true,
+  "kit": "night",
+  "palette": "night-shift",
+  "description": "A closed coffee shop: counter, espresso machine, menu board, chairs up on tables, two pendant lamps.",
+  "tags": [
+    "the-catch",
+    "widescreen",
+    "cafe",
+    "shop",
+    "night"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "night-cafe"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

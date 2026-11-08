@@ -4,6 +4,7 @@ import { AbsoluteFill, Html5Audio, Sequence, staticFile, useCurrentFrame } from 
 import type { Library } from "../rig/actorState";
 import type { SetDef } from "../set/schema";
 import type { Finish } from "../shots/finishKinds";
+import { letteringFont, type Lettering } from "../text/fonts";
 import { Stage } from "../shots/Stage";
 import { CastLabels } from "../text/CastLabels";
 import { CardText, ListText } from "../text/ExplainerText";
@@ -16,6 +17,7 @@ import { VerdictMeter } from "../text/VerdictMeter";
 import { cameraAt, shotAt } from "./camera";
 import { stageActorsAt } from "./placement";
 import { QaOverlay } from "./QaOverlay";
+import { SFX_DUCK } from "../audio/mix";
 import type { Timeline } from "./timeline";
 
 const FACE_FRAMINGS: readonly string[] = ["medium", "close", "extreme"];
@@ -32,11 +34,14 @@ export type SkitProps = {
   audio?: boolean;
   /** Stage finish (the program's `finish`). */
   finish?: Finish;
+  /** Title lettering (the program's `lettering`): cards, slams and figure labels. */
+  lettering?: Lettering;
 };
 
 /** Renders a compiled skit: stage under the director's camera, dialog + SFX audio, text overlays. */
-export const Skit: React.FC<SkitProps> = ({ timeline: tl, lib, set, safeArea, fontFamily, showLabels, audio = true, finish }) => {
+export const Skit: React.FC<SkitProps> = ({ timeline: tl, lib, set, safeArea, fontFamily, showLabels, audio = true, finish, lettering }) => {
   const frame = useCurrentFrame();
+  const titleFont = letteringFont(lettering, fontFamily);
   const { width: W, height: H, fps } = tl;
   const actors = stageActorsAt(lib, tl.cast, set, frame, fps, W);
   const camera = cameraAt(tl, frame);
@@ -44,9 +49,11 @@ export const Skit: React.FC<SkitProps> = ({ timeline: tl, lib, set, safeArea, fo
   // The POV card sits where a face close-up puts the head, so it steps aside on face shots.
   const faceShot = FACE_FRAMINGS.includes(shotAt(tl, frame).framing);
   const direction = tl.direction ?? "ltr";
+  // Credits up at once share one line (an image credit and a data source, two charts side by side).
+  const credits = [...new Set((tl.credits ?? []).filter((c) => frame >= c.from && frame < c.to).map((c) => c.text))];
   return (
     <AbsoluteFill style={{ background: "#ffffff" }}>
-      <Stage set={set} actors={actors} width={W} height={H} frame={frame} camera={camera} fontFamily={fontFamily} labels={tl.labels} figures={tl.figures} fps={fps} finish={finish} />
+      <Stage set={set} actors={actors} width={W} height={H} frame={frame} camera={camera} fontFamily={titleFont} labels={tl.labels} figures={tl.figures} fps={fps} finish={finish} />
       {audio && tl.audio.map((a) => (
         <Sequence key={`v-${a.beatId}`} from={a.frame} durationInFrames={a.durationFrames} layout="none">
           <Html5Audio src={staticFile(a.src)} />
@@ -54,7 +61,7 @@ export const Skit: React.FC<SkitProps> = ({ timeline: tl, lib, set, safeArea, fo
       ))}
       {audio && tl.sfx.map((s, i) => (
         <Sequence key={`sfx-${i}`} from={s.frame} durationInFrames={s.durationFrames} layout="none">
-          <Html5Audio src={staticFile(s.src)} volume={() => s.volume} />
+          <Html5Audio src={staticFile(s.src)} volume={(f) => (tl.audio.some((a) => s.frame + f >= a.frame && s.frame + f < a.frame + a.durationFrames) ? s.volume * SFX_DUCK : s.volume)} />
         </Sequence>
       ))}
       <CastLabels
@@ -66,17 +73,17 @@ export const Skit: React.FC<SkitProps> = ({ timeline: tl, lib, set, safeArea, fo
         minY={safeArea.top * H}
         fontFamily={fontFamily}
       />
-      {tl.pov && !faceShot ? <PovCard text={tl.pov.text} frame={frame} from={tl.pov.from} to={tl.pov.to} width={W} height={H} safeArea={safeArea} fontFamily={fontFamily} direction={direction} /> : null}
-      {tl.card ? <CardText card={tl.card} title={tl.card.lines.join("\n")} frame={frame} width={W} height={H} safeArea={safeArea} fontFamily={fontFamily} direction={direction} /> : null}
+      {tl.pov && !faceShot ? <PovCard text={tl.pov.text} frame={frame} from={tl.pov.from} to={tl.pov.to} width={W} height={H} safeArea={safeArea} fontFamily={titleFont} direction={direction} /> : null}
+      {tl.card ? <CardText card={tl.card} title={tl.card.lines.join("\n")} frame={frame} width={W} height={H} safeArea={safeArea} fontFamily={titleFont} direction={direction} /> : null}
       {tl.lists.map((l, i) => (
-        <ListText key={`list-${i}`} list={l} frame={frame} width={W} height={H} safeArea={safeArea} fontFamily={fontFamily} direction={direction} />
+        <ListText key={`list-${i}`} list={l} frame={frame} width={W} height={H} safeArea={safeArea} fontFamily={titleFont} direction={direction} />
       ))}
       {tl.verdict ? <VerdictMeter verdict={tl.verdict} frame={frame} width={W} height={H} safeArea={safeArea} fontFamily={fontFamily} /> : null}
-      <Subtitles hidden={slamUp} {...subtitleSpec(tl.directing)} pages={tl.pages} frame={frame} fps={fps} width={W} height={H} safeArea={safeArea} style={{ fontFamily }} narratorStyle={tl.narratorCaption} direction={tl.direction} />
+      <Subtitles hidden={slamUp} {...subtitleSpec(tl.directing)} {...tl.captionSpot} pages={tl.pages} frame={frame} fps={fps} width={W} height={H} safeArea={safeArea} style={{ fontFamily }} narratorStyle={tl.narratorCaption} direction={tl.direction} />
       {tl.slams.map((s, i) => (
-        <SlamText key={i} seed={`${tl.title}-${i}`} text={s.text} frame={frame} from={s.from} to={s.to} width={W} height={H} safeArea={safeArea} fontFamily={fontFamily} direction={direction} />
+        <SlamText key={i} seed={`${tl.title}-${i}`} text={s.text} frame={frame} from={s.from} to={s.to} width={W} height={H} safeArea={safeArea} fontFamily={titleFont} direction={direction} />
       ))}
-      {tl.credits?.map((c, i) => (frame >= c.from && frame < c.to ? <CreditLine key={`credit-${i}`} text={c.text} width={W} height={H} safeArea={safeArea} fontFamily={fontFamily} /> : null))}
+      {credits.length ? <CreditLine text={credits.join(" · ")} width={W} height={H} safeArea={safeArea} fontFamily={fontFamily} /> : null}
       {showLabels ? <QaOverlay tl={tl} lib={lib} set={set} safeArea={safeArea} camera={camera} frame={frame} /> : null}
       {showLabels ? <SkitLabel tl={tl} frame={frame} /> : null}
     </AbsoluteFill>

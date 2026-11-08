@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Are all the molecules in your body left-handed?",
+    "aspect": "9:16",
+    "description": "Not every molecule in your body is left-handed.\nLife builds proteins from left-handed amino acids but uses right-handed sugars in DNA. Nobody knows why that combination.",
+    "hashtags": [
+      "biology",
+      "molecules",
+      "mythbusting"
+    ]
+  },
+  "cast": [
+    {
+      "id": "otto",
+      "character": "milo",
+      "mark": "left",
+      "holding": {
+        "prop": "plate"
+      }
+    },
+    {
+      "id": "fern",
+      "character": "june",
+      "mark": "right"
+    }
+  ],
+  "overlay": {
+    "subtitles": true,
+    "pov": "Your body has a favourite hand. Sort of."
+  },
+  "scenes": [
+    {
+      "id": "kitchen",
+      "set": "kitchen-1",
+      "figures": [
+        {
+          "id": "claim",
+          "kind": "label",
+          "at": {
+            "x": 0.5,
+            "y": 0.33,
+            "w": 0.9,
+            "h": 0.1
+          },
+          "layer": "back",
+          "panel": true,
+          "params": {
+            "text": "ALL LEFT-HANDED",
+            "size": 0.42,
+            "color": "myth"
+          },
+          "hidden": true,
+          "reveal": "pop",
+          "label": "Otto's theory"
+        },
+        {
+          "id": "truth",
+          "kind": "label",
+          "at": {
+            "x": 0.5,
+            "y": 0.33,
+            "w": 0.9,
+            "h": 0.1
+          },
+          "layer": "back",
+          "panel": true,
+          "params": {
+            "text": "ONLY PROTEINS",
+            "size": 0.42,
+            "color": "truth"
+          },
+          "hidden": true,
+          "reveal": "pop",
+          "label": "Actually"
+        }
+      ],
+      "beats": [
+        {
+          "id": "b1",
+          "speaker": "otto",
+          "line": "I'm switching to my left hand.",
+          "role": "setup",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "otto",
+              "do": "pose",
+              "pose": "hold-up",
+              "at": {
+                "word": "left"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "speaker": "fern",
+          "line": "You're dropping your toast.",
+          "role": "setup",
+          "expression": "deadpan",
+          "delivery": "flat",
+          "actions": [
+            {
+              "who": "otto",
+              "do": "drop",
+              "at": {
+                "word": "dropping"
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "thud",
+              "at": {
+                "word": "toast"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "speaker": "otto",
+          "line": "All my molecules are left-handed. I'm matching them.",
+          "role": "escalation",
+          "expression": "happy",
+          "actions": [
+            {
+              "who": "otto",
+              "do": "pose",
+              "pose": "hands-on-hips",
+              "at": {
+                "word": "matching"
+              }
+            }
+          ],
+          "figures": [
+            {
+              "do": "show",
+              "id": "claim",
+              "at": {
+                "word": "molecules"
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "pop",
+              "at": {
+                "word": "molecules"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b4",
+          "speaker": "fern",
+          "line": "Only the protein ones are left-handed.",
+          "role": "escalation",
+          "expression": "deadpan",
+          "figures": [
+            {
+              "do": "hide",
+              "id": "claim",
+              "at": {
+                "word": "protein"
+              }
+            },
+            {
+              "do": "show",
+              "id": "truth",
+              "at": {
+                "word": "protein"
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "buzzer",
+              "at": {
+                "word": "protein"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b5",
+          "speaker": "otto",
+          "line": "Close enough.",
+          "role": "escalation",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "otto",
+              "do": "pose",
+              "pose": "shrug",
+              "at": {
+                "fraction": 0.3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aside",
+      "set": "blueprint-1",
+      "transition": {
+        "type": "whip",
+        "durationMs": 400
+      },
+      "figures": [
+        {
+          "id": "left",
+          "kind": "label",
+          "at": {
+            "x": 0.27,
+            "y": 0.25,
+            "w": 0.42,
+            "h": 0.12
+          },
+          "layer": "back",
+          "panel": true,
+          "label": "Proteins",
+          "params": {
+            "text": "LEFT",
+            "size": 0.5,
+            "color": "a1"
+          },
+          "hidden": true,
+          "reveal": "pop"
+        },
+        {
+          "id": "right",
+          "kind": "label",
+          "at": {
+            "x": 0.73,
+            "y": 0.25,
+            "w": 0.42,
+            "h": 0.12
+          },
+          "layer": "back",
+          "panel": true,
+          "label": "DNA sugars",
+          "params": {
+            "text": "RIGHT",
+            "size": 0.5,
+            "color": "a2"
+          },
+          "hidden": true,
+          "reveal": "pop"
+        },
+        {
+          "id": "gloves",
+          "kind": "label",
+          "at": {
+            "x": 0.5,
+            "y": 0.35,
+            "w": 0.86,
+            "h": 0.05
+          },
+          "layer": "back",
+          "params": {
+            "text": "Mirror images, like gloves",
+            "size": 0.45,
+            "color": "ink"
+          },
+          "hidden": true,
+          "reveal": "fade"
+        },
+        {
+          "id": "unsolved",
+          "kind": "label",
+          "at": {
+            "x": 0.5,
+            "y": 0.35,
+            "w": 0.86,
+            "h": 0.05
+          },
+          "layer": "back",
+          "params": {
+            "text": "Why this mix? Unsolved.",
+            "size": 0.45,
+            "color": "highlight"
+          },
+          "hidden": true,
+          "reveal": "fade"
+        }
+      ],
+      "beats": [
+        {
+          "id": "b6",
+          "speaker": "fern",
+          "line": "The sugars in your DNA are right-handed.",
+          "role": "escalation",
+          "expression": "deadpan",
+          "actions": [
+            {
+              "who": "fern",
+              "do": "pose",
+              "pose": "point",
+              "at": {
+                "word": "right-handed"
+              }
+            }
+          ],
+          "figures": [
+            {
+              "do": "show",
+              "id": "left",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "do": "show",
+              "id": "right",
+              "at": {
+                "word": "right-handed"
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "whoosh-warp",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "sparkle",
+              "at": {
+                "word": "right-handed"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b7",
+          "speaker": "otto",
+          "line": "They're fighting?",
+          "role": "escalation",
+          "expression": "shocked",
+          "actions": [
+            {
+              "who": "otto",
+              "do": "symbol",
+              "symbol": "exclaim",
+              "at": {
+                "fraction": 0.4
+              }
+            }
+          ]
+        },
+        {
+          "id": "b8",
+          "speaker": "fern",
+          "line": "They're mirror-image shapes. Like left and right gloves.",
+          "role": "escalation",
+          "expression": "deadpan",
+          "actions": [
+            {
+              "who": "fern",
+              "do": "pose",
+              "pose": "arms-up",
+              "at": {
+                "word": "gloves"
+              }
+            }
+          ],
+          "figures": [
+            {
+              "do": "show",
+              "id": "gloves",
+              "at": {
+                "word": "mirror-image"
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "ding-idea",
+              "at": {
+                "word": "gloves"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b9",
+          "speaker": "otto",
+          "line": "Why did my body pick both?",
+          "role": "escalation",
+          "expression": "confused",
+          "actions": [
+            {
+              "who": "otto",
+              "do": "pose",
+              "pose": "think",
+              "at": {
+                "fraction": 0.2
+              }
+            }
+          ]
+        },
+        {
+          "id": "b10",
+          "speaker": "fern",
+          "line": "Nobody knows why life picked that combination.",
+          "role": "escalation",
+          "expression": "neutral",
+          "actions": [
+            {
+              "who": "fern",
+              "do": "pose",
+              "pose": "shrug",
+              "at": {
+                "word": "Nobody"
+              }
+            }
+          ],
+          "figures": [
+            {
+              "do": "hide",
+              "id": "gloves",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "do": "show",
+              "id": "unsolved",
+              "at": {
+                "word": "Nobody"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "back",
+      "set": "kitchen-1",
+      "transition": {
+        "type": "whip",
+        "durationMs": 400
+      },
+      "beats": [
+        {
+          "id": "b11",
+          "speaker": "otto",
+          "line": "So which hand holds the toast?",
+          "role": "escalation",
+          "expression": "thinking",
+          "actions": [
+            {
+              "who": "otto",
+              "do": "look",
+              "to": "fern",
+              "at": {
+                "fraction": 0.2
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "whoosh",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "b12",
+          "speaker": "fern",
+          "line": "The one not dropping it, Otto.",
+          "role": "punchline",
+          "expression": "deadpan",
+          "punchline": true,
+          "reaction": "embarrassed",
+          "pauseBeforeMs": 350,
+          "holdAfterMs": 400,
+          "actions": [
+            {
+              "who": "fern",
+              "do": "gag",
+              "gag": "look-to-camera",
+              "at": {
+                "word": "Otto"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "DROPPING",
+              "at": {
+                "word": "dropping"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

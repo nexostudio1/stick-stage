@@ -92,11 +92,27 @@ import widePark from "./sets/wide-park.json";
 import wideStreet from "./sets/wide-street.json";
 import wideCafe from "./sets/wide-cafe.json";
 import wideClassroom from "./sets/wide-classroom.json";
+import explainerPaper from "./sets/explainer-paper.json";
+import explainerNight from "./sets/explainer-night.json";
+import kitchenNight from "./sets/kitchen-night.json";
+import cardVault from "./sets/card-vault.json";
+import ledgerRoom from "./sets/ledger-room.json";
+import cafeNight from "./sets/cafe-night.json";
+import lostAndFound from "./sets/lost-and-found.json";
+import evidenceBoard from "./sets/evidence-board.json";
+import bookshopMorning from "./sets/bookshop-morning.json";
+import explainerGrid from "./sets/explainer-grid.json";
+import explainerDrafting from "./sets/explainer-drafting.json";
+import explainerDraftingIndigo from "./sets/explainer-drafting-indigo.json";
 import void1 from "./sets/void-1.json";
 import blueprint1 from "./sets/blueprint-1.json";
 import space1 from "./sets/space-1.json";
 import space2 from "./sets/space-2.json";
 import lab1 from "./sets/lab-1.json";
+import scienceDawn from "./sets/science-dawn.json";
+import scienceTide from "./sets/science-tide.json";
+import scienceCosmos from "./sets/science-cosmos.json";
+import scienceLab from "./sets/science-lab.json";
 
 import castNotesJson from "./cast-notes.json";
 import safeAreaJson from "./safe-area.json";
@@ -134,7 +150,10 @@ const STORY_SETS: SetDef[] = [
 export const sets: Record<string, SetDef> = createSets([
   plain1, living1, lounge1, office1, park1, street1, kitchen1, bedroom1, cafe1, classroom1, meeting1, living2, park2, streetNight1, beach1, stage1,
   widePlain, wideLiving, wideLounge, wideOffice, widePark, wideStreet, wideCafe, wideClassroom,
+  explainerPaper, explainerNight, explainerGrid, explainerDrafting, explainerDraftingIndigo,
+  kitchenNight, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
   void1, blueprint1, space1, space2, lab1,
+  scienceDawn, scienceTide, scienceCosmos, scienceLab,
   ...STORY_SETS,
 ]);
 

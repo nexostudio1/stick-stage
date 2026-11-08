@@ -21,7 +21,7 @@ A scene lists its figures (a single-scene skit puts `figures` at the top level):
 | Field | Meaning |
 |---|---|
 | `id` | Cues and anchors name it |
-| `kind` | `plot`, `axes`, `vector`, `wave`, `orbit`, `particles`, `label`, `callout`, `numberline`, `scale`, `histogram`, `equation`, `image`, `progress`, `galaxy`, `burst`, `fineprint` |
+| `kind` | `plot`, `axes`, `vector`, `wave`, `orbit`, `particles`, `label`, `callout`, `numberline`, `scale`, `histogram`, `equation`, `image`, `progress`, `galaxy`, `burst`, `fineprint`, `molecule`, `globe`, `clock`, `growth`, `earthmoon` (and the explainer kinds below) |
 | `at` | Centre `x`, `y` and size `w`, `h`, fractions of the frame |
 | `params` | Per kind (below). Checked at compile with a path to the bad field |
 | `states`, `state` | Named param sets (`myth`, `truth`), merged over `params`; a state may set `label` |
@@ -74,6 +74,25 @@ orbit adds `star`, `perihelion`, `aphelion`; a plot `origin`; an equation each t
 | `galaxy` | A spiral galaxy: `spin` (°/s), `speedLines` (0…1, "spins too fast" arcs), `tilt`, `caption` |
 | `burst` | A supernova pop on `show`: star and rays burst, settle to a glow after `hold` s; `color` |
 | `fineprint` | A wall of tiny contract text: `text` (repeated), `size`, `color`, `fill` (lines shown, animate it) |
+| `molecule` | A handed (chiral) molecule in 3D: a centre atom and four coloured groups (`groups`, 4 colour slots). `turn` (°, tween it), `spin` (°/s), `tilt`, `mirror` (0…1 flips it into its mirror image). `pair` draws its mirror twin across a dashed mirror line: `twin` (0…1 fades it in), `twinTurn` (try to make it match), `match` (0…1 slides the twin on top; the groups that don't line up get red rings), `label`, `twinLabel`. Thin Lines Theory's Mirror Molecules figure |
+| `globe` | A spinning Earth (orthographic, the `map` figure's coastlines): `lon` (centre longitude, tween it), `spin` (°/s, eastward), `lat` (view tilt), `night` (0…1 night side, lit from screen angle `light`), `ice` (0…1 polar caps), `melt` (0…1 meltwater dots running toward the equator), `bulge` + `bulgeAngle` (exaggerated tidal bulge), `arrow` (0…1 spin arrow), `points: [{ lon, lat, label }]` (near side only), `grid`. Thin Lines Theory's Lengthening Day figure |
+| `clock` | A clock face: `time` in hours (tween it and the hands sweep), `speed` (hours per second), `dial` 12 or 24, `seconds`, `wedge: { from, to, color, label, fill }` (a shaded slice of the dial, e.g. the half hour a dinosaur's day was missing), `digital` ("23:59:60") under the face |
+| `growth` | A shell or coral that keeps a diary: `shape` `rudist` (tall cup) or `coral` (curved horn) grows from its tip as `lines` rises toward `total`; `yearEvery` thickens every Nth line; `lens` (0…1) magnifies day and night layers; `tally` prints the count |
+| `earthmoon` | The Moon's tidal brake: a small turning Earth (`spin`), the Moon at `distance` (tween it to push the Moon out) and `moonAngle` + `orbit` °/s, `bulge` dragged `lag`° ahead of the Moon, `brake` (0…1 arrows), `laser` (0…0.5 out, 0.5…1 back), `ruler` text |
+| `line` | Explainers. `series: [{ data, color, label, dashed }]` (data `[[key, value], …]` or `"@dataset.column"`), `draw` (animate it), `y`, `zero`, `unit: { prefix, suffix, decimals }`, `span: { from, to, label }`, `events: [{ at, label }]`, `points: [{ at, label }]`, `variant`: `clean` / `bold` |
+| `bars` | Explainers. `series` (up to 3, grouped), `orientation`, `sort`: `none` / `asc` / `desc`, `highlight: [keys]`, `grow`, `max` (fixed scale for `set` cues), `values`, `unit`, `limit`, `variant` |
+| `counter` | Explainers. A big number: `value` (a `set` cue ticks it), `from` (where the reveal ticks from), `unit`, `caption`, `group` (thousands commas; off for years), `delta: { value, unit, good: up / down }`, `color`, `variant` |
+| `map` | Explainers. A world map (Natural Earth, baked in): `data` by ISO alpha-3 (`[["USA", 3.2]]` or `"@dataset.column"`) for a choropleth, `highlight: [codes]`, `points: [{ lon, lat, label }]`, `routes: [{ from, to }]` + `draw`, `bands: [{ points: [[lon, lat]…], width, color, label }]` (wide tracks, an eclipse path) slid by `bandShift` (° of longitude, tween it), `zoom`: `"world"`, a code, codes or `[lon0, lat0, lon1, lat1]` (a `set` cue on `zoom` flies there), `legend`, `unit`, `variant` |
+
+| `flap` | The Catch (night look). A split-flap board: `value` + `unit` (a `set` cue riffles the digits) or `text`, `group` (thousands commas; off for years), `tiles` (min), `color` (`sodium` / `paper` / `ember` / `neon`), `caption` |
+| `crowd` | The Catch. `count` people on `rows`; `lit` of them (seeded order, tween it) hold a lit card; `caption` |
+| `stamp` | The Catch. A rubber stamp that slams in on `show`: `text`, `sub`, `color` (default `ember`), `angle` |
+| `phrase` | The Catch's key-phrase card (replaces boxed captions): `lines: [{ text, color }]` (1–3), `align`, `size`, `plate` (dark backing on a day set). Put it on `layer: "screen"` |
+| `prop` | The Catch. A hero object under a light cone: `prop` (`drawer`, `envelope`, `giftcard`, `till`, `ledger`, `jar`, `cups`, `coins`, `vault`, `cup`, `lostbox`, `book`, `lamp`), `open` (its motion), `strike` (ledger strike / card split / steam left), `flip` (card back / tags to `$`), `text`, `count`, `cone`, `dim` |
+| `nickel` | The Catch's host (raccoon, ember hoodie, headlamp): `expr` (`smirk`, `sly`, `shock`, `grin`, `gotcha`, `shh`), `pose` (`stand`, `shh`, `point`, `sip`, `hold`, `close`), `rise` (peek up from the box bottom), `talk` (0/1, cue it with the line), `lamp`, `beam` (°), `beamLength`, `facing` |
+| `maya` | Case 001's lead: `outfit` (`pyjamas`, `day`), `expr`, `pose` (`stand`, `hold`, `reach`), `talk`, `facing` |
+| `evidence` | Cards pinned on the evidence wall: `items: [{ text, sub }]` (≤ 4), `lit` (tween it: pins glow, red string runs card to card) |
+| `phone` | A phone note: `title`, `items` (≤ 5), `typed` (fractional = mid-typing), `done` (ticked) |
 
 **Expressions** (`fn`, marker `x`/`y`) are a small safe language: numbers, variables (`x` and the
 plot's `vars`), `+ - * / ^`, `pi`, `e`, and `sin cos tan exp ln log sqrt abs min max floor pow …`.
@@ -106,11 +125,12 @@ themselves. `POST /validate` typesets in memory, so bad TeX is a 422 before any 
 engine never runs MathJax. On `show` the parts appear left to right; `set` cues light up
 (`highlight`) or cancel (`strike`) tagged terms.
 
-## NASA and ESA images
+## Images (NASA, ESA, public domain)
 
 Images are downloaded once into `public/images/` and listed in `src/data/images.json` with the
 credit exactly as the source gives it, the licence, the source page and the date. Only
-`nasa-pd`, `cc-by-4.0` (ESA/Webb, ESA/Hubble) and `cc-by-sa-3.0-igo` load; the ESA Standard Licence
+`nasa-pd`, `cc-by-4.0` (ESA/Webb, ESA/Hubble, museum photos), `cc-by-sa-3.0-igo`, `public-domain`
+(out of copyright, e.g. a 19th-century portrait) and `cc0` load; the ESA Standard Licence
 is left out until someone has read it for a monetised channel. Mark a human-made artist's
 impression `"impression": true` (it is labelled on screen). AI images are never added.
 

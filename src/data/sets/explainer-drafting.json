@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "explainer-drafting",
+  "aspect": "16:9",
+  "kit": "abstract",
+  "palette": "blueprint",
+  "description": "Blueprint grid under a soft pool of light with a deep vignette. The lit explainer ground for long videos.",
+  "tags": [
+    "explainer",
+    "widescreen",
+    "maths",
+    "engineering",
+    "grid",
+    "lit"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "drafting"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

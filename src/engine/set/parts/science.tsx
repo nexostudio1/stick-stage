@@ -73,6 +73,39 @@ export const Blueprint: PartComponent = ({ palette, W, groundY, fig, seed }) => 
   );
 };
 
+/**
+ * Blueprint paper with depth: the same grid under a soft pool of light (seeded, off centre) and a
+ * deep-ink vignette, so a long explainer's ground isn't one flat blue.
+ */
+export const DraftingTable: PartComponent = (props) => {
+  const { palette, W, groundY, prefix, seed } = props;
+  const id = `${prefix}-drafting`;
+  const lx = randRange(seed, "lx", 0.36, 0.64);
+  return (
+    <g>
+      <Blueprint {...props} />
+      <defs>
+        <radialGradient id={`${id}-pool`} cx={f2(lx)} cy="0.38" r="0.6">
+          <stop offset="0" stopColor={lighten(palette.wallA, 0.22)} stopOpacity="0.55" />
+          <stop offset="0.6" stopColor={lighten(palette.wallA, 0.08)} stopOpacity="0.15" />
+          <stop offset="1" stopColor={palette.wallA} stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id={`${id}-vig`} cx="0.5" cy="0.45" r="0.78">
+          <stop offset="0.55" stopColor={darken(palette.wallA, 0.45)} stopOpacity="0" />
+          <stop offset="1" stopColor={darken(palette.wallA, 0.45)} stopOpacity="0.7" />
+        </radialGradient>
+        <linearGradient id={`${id}-tint`} x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor={mix(palette.wallA, palette.accent, 0.18)} stopOpacity="0.18" />
+          <stop offset="1" stopColor={darken(palette.wallA, 0.25)} stopOpacity="0.2" />
+        </linearGradient>
+      </defs>
+      <rect width={W} height={groundY} fill={`url(#${id}-tint)`} />
+      <rect width={W} height={groundY} fill={`url(#${id}-pool)`} />
+      <rect width={W} height={groundY} fill={`url(#${id}-vig)`} />
+    </g>
+  );
+};
+
 /** Seeded stars over the sky colour (a few bright ones with a cross glint). */
 export const Starfield: PartComponent = ({ part, palette, W, groundY, fig, seed }) => {
   const n = Math.round(90 * part.size);

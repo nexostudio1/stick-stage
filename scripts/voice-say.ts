@@ -12,7 +12,7 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { z } from "zod";
-import { formatDiagnostics, parseSkit, SkitError, skitLines, type VoiceManifest } from "../src/engine";
+import { formatDiagnostics, parseSkit, SkitError, skitLines, voiceOf, type VoiceManifest } from "../src/engine";
 import { library } from "../src/data";
 import { wavDurationMs } from "../src/node";
 import { ROOT } from "./lib/tools";
@@ -45,8 +45,8 @@ if (fs.existsSync(path.join(skitDir, "skit.json"))) {
     const doc = parseSkit(read("skit.json"));
     lines = skitLines(doc).map((l) => ({
       ...l,
-      voice: l.narrator ? (doc.narrator?.voice?.say ?? DEFAULT_NARRATOR) : (library.characters[l.character]?.voice?.say ?? DEFAULT_VOICE),
-      rate: l.narrator ? narratorRate : undefined,
+      voice: l.narrator ? (voiceOf(doc, l.speaker)?.voice?.say ?? DEFAULT_NARRATOR) : ((doc.characters?.find((c) => c.id === l.character) ?? library.characters[l.character])?.voice?.say ?? DEFAULT_VOICE),
+      rate: l.narrator && l.speaker === doc.narrator?.id ? narratorRate : undefined,
     }));
   } catch (e) {
     console.error(e instanceof SkitError ? formatDiagnostics(e.diagnostics) : e);

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "science-cosmos",
+  "kit": "abstract",
+  "palette": "science-cosmos",
+  "description": "Magenta-to-indigo science ground with a turning ringed planet and twinkling sparkles. Dark, so the cast gets a light rim. For the science aside on space, stars and satellites.",
+  "tags": [
+    "space",
+    "stars",
+    "planets",
+    "satellites",
+    "science"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 640,
+  "layers": [
+    {
+      "part": "science-wash",
+      "variant": "cosmos"
+    },
+    {
+      "part": "grid-floor"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

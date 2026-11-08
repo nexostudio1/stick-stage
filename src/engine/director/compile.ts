@@ -12,9 +12,11 @@ import { docBeats, isNarration, SkitSchema, type Beat, type CastMember, type Ski
 import { compileScene, type CompileInput } from "./scene";
 import { styleById, type StyleId } from "./style";
 import { scienceChecks } from "./scienceChecks";
+import { chaptersOf, explainerChecks } from "./explainer";
 import { verdictAfter } from "./verdict";
 import { pronunciationsFor, type Pronunciation } from "../voice/pronounce";
 import type { Program, SceneTransition, Timeline } from "./timeline";
+import { sfxVolume } from "../audio/mix";
 
 export type { CompileInput } from "./scene";
 
@@ -39,7 +41,9 @@ export type CompileResult = {
 export const parseSkit = (json: unknown): SkitDoc => {
   const r = SkitSchema.safeParse(migrate("skit", json).doc);
   if (!r.success) throw new SkitError(fromZodIssues(r.error.issues));
-  const frame = frameOfMeta(r.data.meta);
+  // An explainer is widescreen unless the doc says otherwise (a 9:16 cut-down of the same doc).
+  const wide = r.data.format === "explainer" && !r.data.meta.aspect && r.data.meta.width === undefined;
+  const frame = frameOfMeta(wide ? { ...r.data.meta, aspect: "16:9" } : r.data.meta);
   if (!frame.ok) throw new SkitError([{ level: "error", code: "aspect", path: `meta.${frame.path}`, message: frame.message }]);
   return { ...r.data, meta: { ...r.data.meta, aspect: frame.aspect, width: frame.width, height: frame.height } };
 };
@@ -133,7 +137,7 @@ export const compileSkit = (input: CompileInput): CompileResult => {
   const parsed = parseSkit(input.skit);
   const doc = input.lang ? applyLanguage(parsed, input.lang) : parsed;
   const show = doc.meta.series ? input.series?.[doc.meta.series.id] : undefined;
-  const style = styleById(doc.style ?? show?.style);
+  const style = styleById(doc.style ?? show?.style ?? (doc.format === "explainer" ? "explainer" : undefined));
   const cold = (doc.coldOpen ?? show?.coldOpen) as HookKind | undefined;
   const placed = placeSets(doc);
   const sceneInput = withCharacters({ ...input, style, sets: { ...input.sets, ...placed.sets } }, doc);
@@ -155,6 +159,13 @@ export const compileSkit = (input: CompileInput): CompileResult => {
   const bed = doc.music ? input.music?.beds.find((b) => b.id === doc.music) : undefined;
   if (doc.music && !bed)
     diags.push({ level: "error", code: "unknown-music", path: "music", message: `unknown music bed "${doc.music}"`, expected: input.music?.beds.map((b) => b.id).join(", ") || "pass a music manifest" });
+  const sceneBeds = (doc.scenes ?? []).map((sc, i) => {
+    if (!sc.music) return undefined;
+    const b = input.music?.beds.find((x) => x.id === sc.music);
+    if (!b) diags.push({ level: "error", code: "unknown-music", path: `scenes[${i}].music`, message: `unknown music bed "${sc.music}"`, expected: input.music?.beds.map((x) => x.id).join(", ") || "pass a music manifest" });
+    return b;
+  });
+  diags.push(...explainerChecks(doc));
   if (diags.some((d) => d.level === "error")) throw new SkitError(diags);
   diags.push(...scienceChecks(doc, input.skit));
   const music: MusicBed | undefined = bed ? { src: bed.file, gain: bed.gain, ducked: bed.ducked } : undefined;
@@ -165,17 +176,26 @@ export const compileSkit = (input: CompileInput): CompileResult => {
     if (i > 0) from += scenes[i - 1]!.timeline.durationInFrames - (t?.durationFrames ?? 0);
     return { id: sc.id, from, transitionIn: t, timeline: sc.timeline };
   });
+  const musicCues = sceneBeds.flatMap((b, i) => (b && programScenes[i] ? [{ frame: programScenes[i]!.from, src: b.file, gain: b.gain, ducked: b.ducked }] : []));
   const lastScene = programScenes[programScenes.length - 1]!;
+  const durationInFrames = lastScene.from + lastScene.timeline.durationInFrames;
+  const chapters = chaptersOf(doc, { scenes: programScenes, fps: doc.meta.fps, durationInFrames }, diags);
+  const whoosh = input.sfx.sounds.find((s) => s.id === "whoosh");
   const program: Program = {
     schemaVersion: 1,
     title: doc.meta.title,
     fps: doc.meta.fps,
     width: doc.meta.width,
     height: doc.meta.height,
-    durationInFrames: lastScene.from + lastScene.timeline.durationInFrames,
+    durationInFrames,
     scenes: programScenes,
+    ...(doc.format === "explainer" ? { format: "explainer" as const } : {}),
+    ...(chapters.length ? { chapters } : {}),
+    ...(whoosh ? { whooshVolume: sfxVolume(whoosh, 0.75) } : {}),
     ...(music ? { music } : {}),
+    ...(musicCues.length ? { musicCues } : {}),
     ...(doc.finish && doc.finish !== "flat" ? { finish: doc.finish } : {}),
+    ...(doc.lettering && doc.lettering !== "sans" ? { lettering: doc.lettering } : {}),
     ...(Object.keys(placed.sets).length ? { sets: placed.sets } : {}),
     // Workspace characters and props ride along too, so the renderer draws them without the catalog.
     ...(doc.characters?.length ? { characters: Object.fromEntries(doc.characters.map((c) => [c.id, sceneInput.lib.characters[c.id]!])) } : {}),

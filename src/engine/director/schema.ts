@@ -1,7 +1,5 @@
 import { z } from "zod";
 import { PlaceSchema } from "../set/compose";
-import { STORY_LOOKS } from "../set/storyPalettes";
-import { FINISHES } from "../shots/finishKinds";
 import { SYMBOLS } from "../face/schema";
 import type { Aspect } from "../format/aspect";
 import { ScreenTextSchema, SignTextSchema } from "../lib/screenText";
@@ -14,6 +12,8 @@ import { MetaSchema } from "./meta";
 import { STYLE_IDS } from "./style";
 import { FigureCueSchema, FigureSchema } from "../viz/schema";
 import { LINE_ROLES, scienceFields } from "./science";
+import { lookFields } from "./lookFields";
+import { DatasetSchema, SpokenNumberSchema } from "./data";
 
 /**
  * Skit document (`public/skits/<id>/skit.json`). Library ids (poses, expressions, props, sets,
@@ -85,6 +85,8 @@ export const BeatSchema = z.strictObject({
   spoken: z.string().min(1).optional(),
   /** The line's job in its format (`myth`, `demo`, `why-it-felt-true`…). The director frames by it. */
   role: z.enum(LINE_ROLES).optional(),
+  /** Act job (`qa/acts.ts`): `hook` (question by 8 s), `promise`, `rehook` (every ≤ 75 s), `reveal` (once). */
+  tag: z.enum(["hook", "promise", "rehook", "reveal"]).optional(),
   /** A beat with no dialog: reactions, comedic pauses. Needs `durationMs` (default 900). */
   silent: z.boolean().default(false),
   durationMs: z.number().min(100).max(10000).optional(),
@@ -115,6 +117,8 @@ export const BeatSchema = z.strictObject({
   text: z.array(TextCueSchema).default([]),
   /** Diagram cues: show, hide, switch state, or tween a scene figure. */
   figures: z.array(FigureCueSchema).default([]),
+  /** Explainers: numbers this line says, each checked against its dataset cell (`director/data.ts`). */
+  numbers: z.array(SpokenNumberSchema).max(8).optional(),
   /** Verdict meter after this line: the share (0–100) blaming the meter's left side. Needs `overlay.verdict`. */
   verdict: z.number().min(0).max(100).optional(),
 });
@@ -136,26 +140,8 @@ export const CastSchema = z.strictObject({
 });
 export type CastMember = z.infer<typeof CastSchema>;
 
-export const TRANSITIONS = ["cut", "fade", "slide", "wipe", "clock-wipe"] as const;
-export const TransitionSchema = z.strictObject({
-  type: z.enum(TRANSITIONS).default("fade"),
-  /** Ignored for "cut". */
-  durationMs: z.number().min(100).max(2000).default(400),
-});
-export type Transition = z.infer<typeof TransitionSchema>;
-
-/**
- * Title card: an optional small kicker line, then the title stacked in big words. The kicker
- * shows from the scene start; the title pops in on `at` (in the beat `beat`, default the scene's
- * first beat). One anchor per title line reveals the lines one by one; `\n` forces a break.
- */
-export const CardSchema = z.strictObject({
-  kicker: z.string().min(1).max(60).optional(),
-  title: z.string().min(1).max(60),
-  beat: z.string().min(1).optional(),
-  at: z.union([AnchorSchema, z.array(AnchorSchema).min(1).max(3)]).optional(),
-});
-export type Card = z.infer<typeof CardSchema>;
+export { TRANSITIONS, TransitionSchema, CardSchema, type Transition, type Card } from "./cues";
+import { CardSchema, TransitionSchema, type Card } from "./cues";
 
 /** The off-screen voice: beats whose `speaker` is the narrator's `id` are voice-over. */
 export const NarratorSchema = z.strictObject({
@@ -206,7 +192,11 @@ export const SceneSchema = z.strictObject({
   /** Words on a set part for this scene only. The shared set is unchanged. */
   labels: z.array(PartLabelSchema).max(6).optional(),
   /** Diagrams on the stage next to the cast (`docs/figures.md`). */
-  figures: z.array(FigureSchema).max(8).optional(),
+  figures: z.array(FigureSchema).max(12).optional(),
+  /** A music bed from this scene on (an act cue), replacing the skit's `music` or the last scene's. */
+  music: z.string().min(1).optional(),
+  /** Explainers: this scene starts a YouTube chapter with this title. */
+  chapter: z.string().min(1).max(60).optional(),
   beats: z.array(BeatSchema).min(1),
 });
 export type Scene = z.infer<typeof SceneSchema>;
@@ -236,13 +226,17 @@ export const SkitSchema = z
     set: z.string().min(1).optional(),
     /** A described place instead of `set` (story kit, `set/compose.ts`); scenes may each have their own. */
     place: PlaceSchema.optional(),
-    /** Colour look for every described place: "bright" (storybook, default), "retro" (screen print), "pastel". A place's own `look` wins. */
-    look: z.enum(STORY_LOOKS).optional(),
-    /** Stage finish: "flat" (default, the house look) or the opt-in "illustrated" (cel shade, ink line, paper grain). */
-    finish: z.enum(FINISHES).optional(),
-    cast: z.array(CastSchema).min(1).max(4),
+    ...lookFields,
+    /** `explainer`: a narrated 16:9 data story (`docs/explainer.md`): 16:9 by default, cast optional, variety checks. */
+    format: z.enum(["skit", "explainer"]).optional(),
+    /** Explainers: tables figures and spoken numbers reference as `"@id.column"` (`director/data.ts`). */
+    datasets: z.record(z.string().regex(/^[A-Za-z0-9_-]+$/), DatasetSchema).optional(),
+    /** Who is on stage. An explainer with a narrator may have nobody. */
+    cast: z.array(CastSchema).max(4).default([]),
     /** Off-screen voice-over (optional). */
     narrator: NarratorSchema.optional(),
+    /** More off-screen speakers (hosts drawn as figures, e.g. Nickel): voice-over lines, own voices. */
+    voices: z.array(NarratorSchema).max(4).optional(),
     overlay: z
       .strictObject({
         pov: z.string().max(80).optional(),
@@ -254,6 +248,7 @@ export const SkitSchema = z
         /** "Who's wrong?" meter across the top; beats tip it with `verdict` (`director/verdictSchema.ts`). Replaces `pov` and `hook`. */
         verdict: VerdictSchema.optional(),
         subtitles: z.boolean().default(true),
+        /** Subtitle spot: y (fraction of height) and px size, clamped to the safe area. Omitted: the style's. */ captions: z.strictObject({ y: z.number().min(0).max(1).optional(), fontSize: z.number().int().min(32).max(140).optional() }).optional(),
       })
       .default({ subtitles: true }),
     timing: TimingSchema,
@@ -280,12 +275,14 @@ export const SkitSchema = z
     /** Dubbed words, keyed by BCP 47. Staging stays; timing follows the new voice. */
     i18n: I18nSchema.optional(),
     /** Figures for a single-scene skit (a multi-scene skit puts them on each scene). */
-    figures: z.array(FigureSchema).max(8).optional(),
+    figures: z.array(FigureSchema).max(12).optional(),
     ...scienceFields,
     beats: z.array(BeatSchema).min(1).optional(),
     scenes: z.array(SceneSchema).min(1).optional(),
   })
   .superRefine((d, ctx) => {
+    if (!d.cast.length && !(d.format === "explainer" && d.narrator))
+      ctx.addIssue({ code: "custom", path: ["cast"], message: `a skit needs a cast (only an explainer with a narrator may have none)` });
     if (d.beats && d.scenes) ctx.addIssue({ code: "custom", path: ["scenes"], message: `use either "beats" (one scene) or "scenes", not both` });
     if (!d.beats && !d.scenes) ctx.addIssue({ code: "custom", path: ["beats"], message: `a skit needs "beats" (or "scenes")` });
     if (d.scenes && d.figures) ctx.addIssue({ code: "custom", path: ["figures"], message: `a multi-scene skit puts "figures" on each scene` });
@@ -297,6 +294,10 @@ export const SkitSchema = z
     });
     if (d.narrator && d.cast.some((c) => c.id === d.narrator!.id))
       ctx.addIssue({ code: "custom", path: ["narrator", "id"], message: `the narrator's id "${d.narrator.id}" is also a cast id; rename one` });
+    d.voices?.forEach((v, i) => {
+      if (d.cast.some((c) => c.id === v.id) || d.narrator?.id === v.id || d.voices!.findIndex((x) => x.id === v.id) !== i)
+        ctx.addIssue({ code: "custom", path: ["voices", i, "id"], message: `voice id "${v.id}" is already a cast, narrator or voice id; rename one` });
+    });
   });
 type SkitParsed = z.infer<typeof SkitSchema>;
 /** A parsed skit. `meta.aspect`, `width` and `height` are filled in by `parseSkit`. */
@@ -309,9 +310,6 @@ export type SkitInput = z.input<typeof SkitSchema>;
 export type Skit = Omit<SkitDoc, "set" | "place" | "beats" | "scenes"> & { set: string; beats: Beat[]; card?: Card };
 
 /** Is this beat a voice-over (spoken by the skit's narrator)? */
-export const isNarration = (skit: Pick<SkitDoc, "narrator">, b: Pick<Beat, "speaker">): boolean => !!skit.narrator && b.speaker === skit.narrator.id;
-
-/** Every beat of a skit document, across scenes. */
-export const docBeats = (d: SkitDoc): Beat[] => d.beats ?? d.scenes!.flatMap((s) => s.beats);
+export { docBeats, isNarration, voiceOf } from "./speakers";
 
 export { ReactionTableSchema, SfxManifestSchema, type ReactionTable, type SfxManifest } from "./librarySchemas";

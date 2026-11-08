@@ -41,6 +41,8 @@ export const planShots = (
   /** When someone moving at `frame` (a slide, a stagger, a walk) comes to rest. Default: no wait. */
   settleAt: (who: string, frame: number) => number = (_w, f) => f,
   style: DirectingStyle = CLASSIC,
+  /** Figures drawn on the screen layer (above the camera): showing one needs no wide shot. */
+  onScreen: (id: string) => boolean = () => false,
 ): ShotPlan => {
   const plan: ShotPlan = { cuts: [{ frame: 0, framing: style.coverage === "wide" ? "wide" : "two", reason: style.coverage === "wide" ? "open wide" : "open on two" }], punchIns: [], shakes: [] };
   let cam: Cam = { framing: plan.cuts[0]!.framing, since: 0, punched: false };
@@ -111,7 +113,7 @@ export const planShots = (
     };
 
     // A figure changing (shown, flipped from myth to truth, a demo) gets the whole frame.
-    if (b.kind === "line" && !b.punchline && figureBeat(b.beat)) {
+    if (b.kind === "line" && !b.punchline && figureBeat(b.beat, onScreen)) {
       if (cam.framing !== "wide" || cam.punched) cut(from, "wide", undefined, "wide for the figure");
       return;
     }
@@ -195,5 +197,12 @@ export const planShots = (
     }
   });
   plan.cuts.sort((a, b) => a.frame - b.frame);
+  // A cut on the first beat would land as the scene's transition ends and read as a zoom jump:
+  // open on that framing instead.
+  const first = plan.cuts[1];
+  if (first && first.frame <= msToFrame(layout.beats[0]?.fromMs ?? 0, fps)) plan.cuts.splice(0, 2, { ...first, frame: 0, reason: `open on ${first.framing} (${first.reason})` });
   return plan;
 };
+
+/** A scene with nobody on stage has no two-shot to cut to: it holds one wide frame (figure focus moves it). */
+export const castlessShots = (plan: ShotPlan): ShotPlan => ({ cuts: [{ frame: 0, framing: "wide", reason: "no cast: wide" }], punchIns: [], shakes: plan.shakes });

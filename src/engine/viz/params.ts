@@ -202,7 +202,10 @@ export const CalloutParams = z.strictObject({
   ]),
 });
 
-import { BurstParams, EquationParams, FinePrintParams, GalaxyParams, HistogramParams, ImageParams, NumberLineParams, ProgressParams } from "./paramsMore";
+import { BarsParams, CounterParams, LineParams, MapParams } from "./paramsData";
+import { CrowdParams, EvidenceParams, FlapParams, MayaParams, NickelParams, PhoneParams, PhraseParams, PropParams, StampParams } from "./paramsNight";
+import { ClockParams, EarthMoonParams, GlobeParams, GrowthParams } from "./paramsTime";
+import { BurstParams, EquationParams, FinePrintParams, GalaxyParams, HistogramParams, ImageParams, MoleculeParams, NumberLineParams, ProgressParams } from "./paramsMore";
 
 export const FIGURE_PARAMS = {
   plot: PlotParams,
@@ -222,6 +225,24 @@ export const FIGURE_PARAMS = {
   galaxy: GalaxyParams,
   burst: BurstParams,
   fineprint: FinePrintParams,
+  molecule: MoleculeParams,
+  line: LineParams,
+  bars: BarsParams,
+  counter: CounterParams,
+  map: MapParams,
+  flap: FlapParams,
+  crowd: CrowdParams,
+  stamp: StampParams,
+  phrase: PhraseParams,
+  prop: PropParams,
+  nickel: NickelParams,
+  maya: MayaParams,
+  evidence: EvidenceParams,
+  phone: PhoneParams,
+  globe: GlobeParams,
+  clock: ClockParams,
+  growth: GrowthParams,
+  earthmoon: EarthMoonParams,
 } as const;
 export type FigureKind = keyof typeof FIGURE_PARAMS;
 export const FIGURE_KINDS = Object.keys(FIGURE_PARAMS) as FigureKind[];
@@ -242,3 +263,4 @@ export type ProgressP = z.infer<typeof ProgressParams>;
 export type GalaxyP = z.infer<typeof GalaxyParams>;
 export type BurstP = z.infer<typeof BurstParams>;
 export type FinePrintP = z.infer<typeof FinePrintParams>;
+export type MoleculeP = z.infer<typeof MoleculeParams>;

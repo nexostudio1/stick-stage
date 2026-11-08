@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "lost-and-found",
+  "aspect": "16:9",
+  "anyAspect": true,
+  "kit": "night",
+  "palette": "night-shift",
+  "description": "A lost-and-found back room: shelves of boxes, a hand-lettered sign, one bare bulb.",
+  "tags": [
+    "the-catch",
+    "widescreen",
+    "storage",
+    "night"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "lost-found"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

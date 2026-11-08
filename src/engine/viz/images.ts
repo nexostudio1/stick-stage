@@ -8,9 +8,17 @@ import { z } from "zod";
 /**
  * `nasa-pd`: NASA media, generally not copyrighted (credit still required; no insignia).
  * `cc-by-4.0`: ESA/Webb, ESA/Hubble. `cc-by-sa-3.0-igo`: many other ESA images.
+ * `public-domain`: out of copyright (e.g. a photographer dead 80+ years) or released as such by a
+ * museum; `cc0`: given to the public domain by its author. Both are safe for a monetised channel.
  * The "ESA Standard Licence" is deliberately absent until someone has read it for a monetised channel.
  */
-export const IMAGE_LICENCES = ["nasa-pd", "cc-by-4.0", "cc-by-sa-3.0-igo"] as const;
+export const IMAGE_LICENCES = [
+  "nasa-pd",
+  "cc-by-4.0",
+  "cc-by-sa-3.0-igo",
+  "public-domain",
+  "cc0",
+] as const;
 
 export const ImageDefSchema = z.strictObject({
   id: z.string().regex(/^[a-z0-9-]+$/, "lowercase letters, digits and -"),

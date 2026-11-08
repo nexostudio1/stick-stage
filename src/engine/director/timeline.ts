@@ -1,4 +1,5 @@
 import type { Finish } from "../shots/finishKinds";
+import type { Lettering } from "../text/fonts";
 import type { Character } from "../rig/schema";
 import type { PropDef } from "../props/schema";
 import type { SetDef } from "../set/schema";
@@ -95,6 +96,9 @@ export type PunchIn = {
   durationFrames: number;
 };
 
+/** A camera move onto a figure (`focus` cue); no `camera`: back to the shot. Held until the next key. */
+export type FocusKey = { frame: number; durationFrames: number; camera?: Camera };
+
 export type Shake = { frame: number; durationFrames: number; intensity: number };
 
 export type AudioClip = { frame: number; durationFrames: number; src: string; beatId: string };
@@ -131,6 +135,8 @@ export type Timeline = {
   shots: ShotKey[];
   punchIns: PunchIn[];
   shakes: Shake[];
+  /** Figure focus moves (explainers). Absent when the scene has none. */
+  focus?: FocusKey[];
   audio: AudioClip[];
   sfx: SfxEvent[];
   pov?: { text: string; from: number; to: number };
@@ -139,10 +145,14 @@ export type Timeline = {
   card?: CardEvent;
   verdict?: VerdictEvent;
   pages: CaptionPage[];
+  /** Caption pages for the `.srt` only, when on-screen subtitles are off. */
+  srtPages?: CaptionPage[];
   /** Diagrams on the stage (absent when the scene has none). */
   figures?: FigureTrack[];
   /** Image credits burned in while a NASA / ESA image is up. */
   credits?: CreditEvent[];
+  /** The skit's subtitle spot (`overlay.captions`), over the directing style's. */
+  captionSpot?: { y?: number; fontSize?: number };
   /** How narrator caption pages are drawn (skits with a narrator). */
   narratorCaption?: "italic" | "boxed";
   /** The style's targets, so QA checks the cut it was directed with. */
@@ -153,7 +163,7 @@ export type Timeline = {
 };
 
 /** How a scene comes in (`cut` has no overlap). */
-export type SceneTransition = { type: "cut" | "fade" | "slide" | "wipe" | "clock-wipe"; durationFrames: number };
+export type SceneTransition = { type: "cut" | "fade" | "slide" | "wipe" | "clock-wipe" | "whip"; durationFrames: number };
 
 export type ProgramScene = {
   id: string;
@@ -172,12 +182,20 @@ export type Program = {
   height: number;
   durationInFrames: number;
   scenes: ProgramScene[];
+  /** Playback volume of the whip-pan / hook whoosh (`sfxVolume` of `whoosh`). Absent: silent. */
+  whooshVolume?: number;
   /** Original bed. Absent when the skit names none. */
   music?: { src: string; gain: number; ducked: number };
+  /** Bed changes from a scene's `music` on (act cues: mystery → build → drop → resolve), skit frames. */
+  musicCues?: { frame: number; src: string; gain: number; ducked: number }[];
   /** A flash of a later frame, then a slide into beat one. */
   hook?: { kind: "teaser" | "slam"; scene: number; frame: number; prefixFrames: number; transitionFrames: number };
   /** The still the cover and thumbnail are framed from. */
   cover?: { scene: number; frame: number; title: string; badge?: string };
+  /** `explainer`: long-form rules apply in QA (`qa/variety.ts`). */
+  format?: "explainer";
+  /** YouTube chapters (explainers): a title per scene start, the first at frame 0. */
+  chapters?: { title: string; frame: number }[];
   /** Sets composed from described places (`place`), by id. The renderer looks here before the catalog. */
   sets?: Record<string, SetDef>;
   /** Workspace characters and props (the skit's `characters` / `props`), merged over the catalog when drawn. */
@@ -185,4 +203,6 @@ export type Program = {
   props?: Record<string, PropDef>;
   /** The skit's stage finish; absent means "flat". */
   finish?: Finish;
+  /** Title and card lettering; absent means "sans". */
+  lettering?: Lettering;
 };

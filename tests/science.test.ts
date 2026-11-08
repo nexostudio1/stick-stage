@@ -149,8 +149,18 @@ describe("figures", () => {
       ],
       { figures: [{ id: "g", kind: "plot", hidden: true, params: { series: [{ fn: "x" }] } }] },
     );
-    expect(r.timeline.shots.some((s) => s.framing === "wide" && s.reason === "wide for the figure")).toBe(true);
+    expect(r.timeline.shots[0]).toMatchObject({ frame: 0, framing: "wide", reason: "open on wide (wide for the figure)" });
     expect(r.timeline.figures?.[0]?.spans[0]?.show.frame).toBeGreaterThan(0);
+  });
+  it("a screen-layer figure needs no wide shot", () => {
+    const beats = [
+      { id: "a", speaker: "milo", line: "Hello there you." },
+      { id: "b", speaker: "june", line: "Look at this card.", figures: [{ do: "show" as const, id: "c" }] },
+      { id: "z", speaker: "milo", line: "Nice card." },
+    ];
+    const card = { id: "c", kind: "label", hidden: true, layer: "screen" as "screen" | "back", params: { text: "HI" } };
+    expect(compile(beats, { figures: [card] }).timeline.shots.map((s) => s.framing)).not.toContain("wide");
+    expect(compile(beats, { figures: [{ ...card, layer: "back" }] }).timeline.shots.map((s) => s.framing)).toContain("wide");
   });
 });
 
@@ -168,7 +178,7 @@ describe("myth-flip", () => {
     expect(beats[7]).toMatchObject({ punchline: true });
     expect(beats[4]!.actions).toContainEqual(expect.objectContaining({ do: "gag", gag: "concede" }));
     expect(skit.claims?.length).toBe(2);
-    expect(skit.cast[0]).toMatchObject({ pose: "arms-crossed" });
+    expect(skit.cast![0]).toMatchObject({ pose: "arms-crossed" });
   });
   it("compiles, passes the self-check, and warns until approved", () => {
     const lines = skitLines(parseSkit(skit)).map((l) => ({ id: l.id, text: l.text, durationMs: 400 + l.text.split(/\s+/).length * 330 }));

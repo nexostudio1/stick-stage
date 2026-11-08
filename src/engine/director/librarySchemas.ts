@@ -23,6 +23,10 @@ export const SfxManifestSchema = z.object({
       durationMs: z.number().positive(),
       /** Playback gain so stings sit under dialog. */
       gain: z.number().min(0).max(2).default(0.8),
+      /** Loudest 400 ms RMS window, dBFS (`pnpm sfx:measure`). The mix levels every sound from it. */
+      loudnessDb: z.number().max(0).optional(),
+      /** Sample peak, dBFS (`pnpm sfx:measure`). */
+      peakDb: z.number().max(6).optional(),
       license: z.string().min(1),
       source: z.string().min(1),
       tags: z.array(z.string()).default([]),

@@ -31,3 +31,14 @@ export const SYMBOL_FALLBACKS: readonly { family: string; file: string; weight?:
 
 /** A CSS / SVG `font-family` value: the family, then the symbol fallbacks. */
 export const withSymbolFallbacks = (family: string): string => [family, ...SYMBOL_FALLBACKS.map((f) => f.family)].map((f) => `"${f}"`).join(", ");
+
+/**
+ * Skit lettering for titles, cards and figure labels (subtitles stay on the text font).
+ * `hand`: Kalam Bold (OFL), hand-lettered to sit with drawn stick figures.
+ */
+export const LETTERINGS = ["sans", "hand"] as const;
+export type Lettering = (typeof LETTERINGS)[number];
+export const HAND_FONT = { family: "StickStage Hand", file: "fonts/Kalam-Bold.ttf", weight: "100 900" } as const;
+
+/** The title `font-family`: the hand face first (glyphs it lacks fall through to `base`), or `base`. */
+export const letteringFont = (lettering: Lettering | undefined, base: string): string => (lettering === "hand" ? `"${HAND_FONT.family}", ${base}` : base);

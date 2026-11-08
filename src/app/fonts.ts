@@ -1,6 +1,6 @@
 import { loadFont } from "@remotion/fonts";
 import { staticFile } from "remotion";
-import { FONT_STACK, SYMBOL_FALLBACKS, withSymbolFallbacks } from "../engine/text/fonts";
+import { FONT_STACK, HAND_FONT, SYMBOL_FALLBACKS, withSymbolFallbacks } from "../engine/text/fonts";
 
 /** Montserrat (OFL, `public/fonts/`), bundled locally so renders never fetch fonts. */
 const TEXT_FAMILY = "StickStage Sans";
@@ -15,3 +15,9 @@ const load = (family: string, file: string, weight?: string) =>
 load(TEXT_FAMILY, "fonts/Montserrat-Variable.ttf", "100 900");
 for (const font of SYMBOL_FALLBACKS) load(font.family, font.file, font.weight);
 for (const font of FONT_STACK) load(font.family, font.file);
+load(HAND_FONT.family, HAND_FONT.file, HAND_FONT.weight);
+
+// The Catch's night-shift fonts (OFL, `public/fonts/`), named by `CATCH_FONTS`.
+load("Catch Display", "fonts/BricolageGrotesque-Variable.ttf", "200 800");
+load("Catch Numbers", "fonts/BigShouldersDisplay-Variable.ttf", "100 900");
+load("Catch Mono", "fonts/IBMPlexMono-SemiBold.ttf", "600");

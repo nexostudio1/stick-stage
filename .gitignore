@@ -9,3 +9,6 @@ packages/stickstage/dist
 public/skits/_jobs
 build/
 __pycache__/
+
+# Thin Lines Theory channel content: built from the private planning library, never committed
+public/skits/tlt-*/

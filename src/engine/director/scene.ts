@@ -1,4 +1,5 @@
 /** Compile one resolved scene (a single-scene skit is one scene). */
+import { sfxVolume } from "../audio/mix";
 import type { MusicManifest } from "../audio/music";
 import type { Library } from "../rig/actorState";
 import type { SetDef } from "../set/schema";
@@ -14,7 +15,7 @@ import { expandBeatGags, GAGS, type GagDef } from "./gags";
 import { anchorFrame, layoutBeats, msToFrame, reactorFor, type LaidBeat } from "./layout";
 import { xAt } from "./placement";
 import { isNarration, type Beat, type ReactionTable, type SfxManifest, type Skit } from "./schema";
-import { planShots } from "./shots";
+import { castlessShots, planShots } from "./shots";
 import { CLASSIC, type DirectingStyle } from "./style";
 import { buildTracks } from "./tracks";
 import { sceneFigures, withDriverGestures } from "./sceneFigures";
@@ -60,7 +61,7 @@ const checkIds = (skit: Skit, input: CompileInput, diags: Diagnostic[]) => {
   };
   need("set", skit.set, ids(sets), ["set"]);
   const setDef = sets[skit.set];
-  if (setDef && setDef.aspect !== skit.meta.aspect)
+  if (setDef && setDef.aspect !== skit.meta.aspect && !setDef.anyAspect)
     diags.push({
       level: "error",
       code: "aspect-set",
@@ -88,7 +89,7 @@ const checkIds = (skit: Skit, input: CompileInput, diags: Diagnostic[]) => {
     need("prop", c.holding?.prop, ids(lib.props), ["cast", i, "holding", "prop"]);
   });
   const sounds = sfx.sounds.map((s) => s.id);
-  const speakers = skit.narrator ? [...castIds, skit.narrator.id] : castIds;
+  const speakers = [...castIds, ...(skit.narrator ? [skit.narrator.id] : []), ...(skit.voices ?? []).map((v) => v.id)];
   skit.beats.forEach((b, i) => {
     const p = (...rest: (string | number)[]) => ["beats", i, ...rest];
     if (b.speaker !== undefined && !speakers.includes(b.speaker)) {
@@ -202,7 +203,8 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
     for (const k of cast.find((c) => c.id === who)?.moveKeys ?? []) if (k.frame <= at && at < k.frame + k.durationFrames) at = k.frame + k.durationFrames;
     return at;
   };
-  const plan = planShots(layout, moments, hint, fps, diags, settleAt, style);
+  const planned = planShots(layout, moments, hint, fps, diags, settleAt, style, (id) => figs.tracks.some((t) => t.id === id && t.layer === "screen"));
+  const plan = cast.length ? planned : castlessShots(planned);
   if (fail()) throw new SkitError(diags);
   const { shots, punchIns, shakes } = solveShots(plan, cast, input.lib, set, fps, width, height, safeArea, msToFrame(layout.totalMs, fps), figs.keepInFrame);
 
@@ -223,11 +225,11 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
         const frame = anchorFrame(b, s.at, `${where}.sfx[${j}].at`, fps, diags);
         const snd = sounds.get(s.id)!;
         if (frame !== undefined)
-          sfx.push({ frame: Math.max(0, frame), id: s.id, src: snd.file, volume: s.volume * snd.gain, durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
+          sfx.push({ frame: Math.max(0, frame), id: s.id, src: snd.file, volume: sfxVolume(snd, s.volume), durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
       });
     if (b.punchline && style.punchSfx && !b.beat.sfx.some((s) => s.id === style.punchSfx) && sounds.has(style.punchSfx)) {
       const snd = sounds.get(style.punchSfx)!;
-      sfx.push({ frame: msToFrame(b.fromMs, fps), id: style.punchSfx, src: snd.file, volume: snd.gain, durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
+      sfx.push({ frame: msToFrame(b.fromMs, fps), id: style.punchSfx, src: snd.file, volume: sfxVolume(snd), durationFrames: Math.ceil((snd.durationMs / 1000) * fps) + 1 });
     }
     b.beat.text.forEach((t, j) => {
       if (t.type === "list") {
@@ -253,6 +255,7 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
   if (fail()) throw new SkitError(diags);
   const nextCut = (f: number) => shots.find((c) => c.frame > f)?.frame ?? durationInFrames;
   const spoken = layout.beats.filter((b) => b.kind === "line" && b.line);
+  const captionPages = buildCaptionPages(spoken.map((b) => ({ startMs: (msToFrame(b.zeroMs, fps) / fps) * 1000, words: b.line!.words, narrator: b.narrator || b.thought, speaker: b.beat.speaker })));
   const timeline: Timeline = {
     schemaVersion: 1,
     title: skit.meta.title,
@@ -278,6 +281,7 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
     shots,
     punchIns,
     shakes,
+    ...(figs.focus.length ? { focus: figs.focus } : {}),
     audio,
     sfx: sfx.sort((a, b) => a.frame - b.frame),
     pov: !topCard
@@ -293,9 +297,10 @@ export const compileScene = (skitIn: Skit, input: CompileInput): { timeline: Tim
     lists: lists.map((l) => ({ ...l, to: nextCut(l.at[0]!) })),
     ...(card ? { card } : {}),
     ...(verdict ? { verdict } : {}),
-    pages: skit.overlay.subtitles
-      ? buildCaptionPages(spoken.map((b) => ({ startMs: (msToFrame(b.zeroMs, fps) / fps) * 1000, words: b.line!.words, narrator: b.narrator || b.thought })))
-      : [],
+    pages: skit.overlay.subtitles ? captionPages : [],
+    // Subtitles off (key-phrase cards on screen): the full captions still go to the `.srt`.
+    ...(skit.overlay.subtitles ? {} : { srtPages: captionPages }),
+    ...(skit.overlay.captions ? { captionSpot: skit.overlay.captions } : {}),
     ...(skit.narrator ? { narratorCaption: skit.narrator.captionStyle } : {}),
     ...(figs.tracks.length ? { figures: figs.tracks } : {}),
     ...(figs.credits.length ? { credits: figs.credits.map((c) => ({ ...c, to: Math.min(c.to, durationInFrames) })) } : {}),

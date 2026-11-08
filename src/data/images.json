@@ -11,6 +11,205 @@
       "source": "https://esawebb.org/images/weic2216a/",
       "fetched": "2026-10-02",
       "description": "The Pillars of Creation in the Eagle Nebula, Webb NIRCam (near-infrared). Columns of gas and dust where stars are forming; a photograph, not an impression."
+    },
+    {
+      "id": "pasteur-portrait",
+      "file": "images/pasteur-portrait.jpg",
+      "width": 1280,
+      "height": 1804,
+      "credit": "Paul Nadar, Wellcome Collection (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Louis_Pasteur_(1822_-_1895),_microbiologist_and_chemist_Wellcome_V0026980.jpg",
+      "fetched": "2026-11-02",
+      "description": "Studio portrait photograph of Louis Pasteur (1822-1895) by Paul Nadar (d. 1939). Public domain."
+    },
+    {
+      "id": "pasteur-crystals",
+      "file": "images/pasteur-crystals.jpg",
+      "width": 1280,
+      "height": 1919,
+      "credit": "Marie-Lan Taÿ Pamart, CC BY 4.0 (Musée Pasteur crystals)",
+      "licence": "cc-by-4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Left_ammonium_tartrate_crystals_Mus%C3%A9e_Pasteur_Cr%C3%A9er_le_cristal.jpg",
+      "fetched": "2026-11-02",
+      "description": "Left-handed ammonium tartrate crystals from the Pasteur Museum collection, photographed at the Sorbonne mineral collection exhibition."
+    },
+    {
+      "id": "murchison-meteorite",
+      "file": "images/murchison-meteorite.jpg",
+      "width": 1506,
+      "height": 1411,
+      "credit": "Daderot, CC0 (Naturmuseum Freiburg)",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File:Murchison_meteorite_-_Naturmuseum_Freiburg_-_DSC06761.jpg",
+      "fetched": "2026-11-02",
+      "description": "A piece of the Murchison meteorite (fell 1969, Victoria, Australia) on display in the Naturmuseum Freiburg. A photograph."
+    },
+    {
+      "id": "murchison-concept-nasa",
+      "file": "images/murchison-concept-nasa.jpg",
+      "width": 1280,
+      "height": 1280,
+      "credit": "NASA/Goddard",
+      "licence": "nasa-pd",
+      "source": "https://www.flickr.com/photos/gsfc/3364850552",
+      "fetched": "2026-11-02",
+      "impression": true,
+      "description": "NASA Goddard 2009 artist's concept of asteroids delivering amino acids to Earth; the line at the bottom is real Murchison isovaline data."
+    },
+    {
+      "id": "tlt-spearmint",
+      "file": "images/tlt-spearmint.jpg",
+      "width": 1200,
+      "height": 1600,
+      "credit": "Alex Abair, CC BY 4.0 (iNaturalist)",
+      "licence": "cc-by-4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mentha_spicata_spicata_548138423.jpg",
+      "fetched": "2026-11-02",
+      "description": "A spearmint plant (Mentha spicata) in flower, growing wild."
+    },
+    {
+      "id": "tlt-caraway",
+      "file": "images/tlt-caraway.jpg",
+      "width": 1600,
+      "height": 1066,
+      "credit": "Slick, CC0",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File:K%C3%BCmmel_2012-07-08-9523.jpg",
+      "fetched": "2026-11-02",
+      "description": "Caraway seeds scattered on white, close up."
+    },
+    {
+      "id": "tlt-sugar",
+      "file": "images/tlt-sugar.jpg",
+      "width": 1200,
+      "height": 1600,
+      "credit": "Pittigrilli, CC BY 4.0",
+      "licence": "cc-by-4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Open_can_with_sugar_cubes,_from_above.jpg",
+      "fetched": "2026-11-02",
+      "description": "An open tin of white sugar cubes, seen from above."
+    },
+    {
+      "id": "tlt-ibuprofen",
+      "file": "images/tlt-ibuprofen.jpg",
+      "width": 1600,
+      "height": 1600,
+      "credit": "Derrick Coetzee, CC0",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pile_of_200mg_generic_Ibuprofen_tablets.jpg",
+      "fetched": "2026-11-02",
+      "description": "A pile of generic 200 mg ibuprofen tablets."
+    },
+    {
+      "id": "tlt-ecoli",
+      "file": "images/tlt-ecoli.jpg",
+      "width": 1600,
+      "height": 1087,
+      "credit": "CDC / Evangeline Sowers, Janice Carr (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Escherichia_coli_(SEM).jpg",
+      "fetched": "2026-11-02",
+      "description": "Scanning electron micrograph of a single E. coli bacterium on a filter (US government work)."
+    },
+    {
+      "id": "tlt-orion",
+      "file": "images/tlt-orion.jpg",
+      "width": 1600,
+      "height": 1600,
+      "credit": "NASA, ESA, M. Robberto (STScI/ESA), Hubble Orion Treasury Team",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File:Orion_Nebula_-_Hubble_2006_mosaic.jpg",
+      "fetched": "2026-11-02",
+      "description": "Hubble's 2006 mosaic of the Orion Nebula."
+    },
+    {
+      "id": "tld-rudist",
+      "file": "images/tld-rudist.jpg",
+      "width": 1920,
+      "height": 1340,
+      "credit": "Wilson44691 (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ARudistCretaceousUAE.jpg",
+      "fetched": "2026-11-05",
+      "description": "Fossil rudist clams from the Cretaceous of the United Arab Emirates (Wikimedia Commons, released into the public domain)."
+    },
+    {
+      "id": "tld-coral",
+      "file": "images/tld-coral.jpg",
+      "width": 1920,
+      "height": 1407,
+      "credit": "Wilson44691 (CC0)",
+      "licence": "cc0",
+      "source": "https://commons.wikimedia.org/wiki/File%3AHeliophyllum_halli_Bethany_Center_Centerfield_2.jpg",
+      "fetched": "2026-11-05",
+      "description": "Heliophyllum halli, a Middle Devonian horn coral, showing fine growth ridges (CC0)."
+    },
+    {
+      "id": "tld-lrrr",
+      "file": "images/tld-lrrr.jpg",
+      "width": 1920,
+      "height": 1920,
+      "credit": "NASA / Apollo 11 (AS11-40-5952)",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AAS11-40-5952_-_Apollo_11_-_Apollo_11_Mission_image_-_The_Laser_Ranging_Retroreflector_%28LRRR%29_-_NARA_-_16685293.jpg",
+      "fetched": "2026-11-05",
+      "description": "The Laser Ranging Retroreflector left on the Moon by Apollo 11, 1969."
+    },
+    {
+      "id": "tld-laser-station",
+      "file": "images/tld-laser-station.jpg",
+      "width": 1920,
+      "height": 1440,
+      "credit": "NASA",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AGoddard_Spaceflight_Center_Laser_Ranging_Facility.jpg",
+      "fetched": "2026-11-05",
+      "description": "NASA Goddard's laser ranging facility firing a laser at night."
+    },
+    {
+      "id": "tld-atomic-clock",
+      "file": "images/tld-atomic-clock.jpg",
+      "width": 1200,
+      "height": 857,
+      "credit": "NIST (public domain)",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3ANIST-F2_cesium_fountain_atomic_clock.jpg",
+      "fetched": "2026-11-05",
+      "description": "NIST-F2, the US caesium fountain atomic clock (US government work)."
+    },
+    {
+      "id": "tld-babylon",
+      "file": "images/tld-babylon.jpg",
+      "width": 1312,
+      "height": 2000,
+      "credit": "U.S. Navy / Arlo K. Abrahamson",
+      "licence": "public-domain",
+      "source": "https://commons.wikimedia.org/wiki/File%3AUS_Navy_030525-N-5362A-004_U.S._Sailors_and_Marines_attached_to_Camp_Babylon%2C_Iraq%2C_take_a_guided_tour_of_the_ancient_ruins_of_Babylon_located_near_their_compound.jpg",
+      "fetched": "2026-11-05",
+      "description": "The ruins of ancient Babylon, Iraq, 2003 (US Navy photo, public domain)."
+    },
+    {
+      "id": "tld-greenland-melt",
+      "file": "images/tld-greenland-melt.jpg",
+      "width": 1920,
+      "height": 1280,
+      "credit": "NASA Goddard Space Flight Center",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AEarly_Melt_on_the_Greenland_Ice_Sheet_%2833354485670%29.jpg",
+      "fetched": "2026-11-05",
+      "description": "Meltwater on the Greenland ice sheet, seen from a NASA flight."
+    },
+    {
+      "id": "tld-blue-marble",
+      "file": "images/tld-blue-marble.jpg",
+      "width": 1920,
+      "height": 1920,
+      "credit": "NASA / Apollo 17 crew",
+      "licence": "nasa-pd",
+      "source": "https://commons.wikimedia.org/wiki/File%3AThe_Blue_Marble%2C_AS17-148-22727.jpg",
+      "fetched": "2026-11-05",
+      "description": "The Blue Marble: Earth photographed by the Apollo 17 crew, 1972."
     }
   ]
 }

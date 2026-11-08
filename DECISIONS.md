@@ -283,3 +283,13 @@ Plan: `../planning/2026-10-02-toon-characters/plan.md` (owner approved the v2 lo
 - **Workspace characters and props ride on the program** (`withProgramAssets`). Before this, a skit's own `characters` compiled but `SkitComposition` drew with the catalog library only.
 - **New self-check `speaker-offstage`:** a line spoken from off stage the whole time.
 - Not built: the Tamshoot side (T1/T2, its own change in agent-orchestrator), a vision-model frame check, crowds, cast above 4.
+
+## 2026-10-30: The Catch, night-shift engine (branch `the-catch`)
+
+- **Nickel and Maya are figure kinds, not rigs.** The host has to match the approved design sheet (`frames/nickel.html`) exactly, and the toon tier is still unmerged (`toon-characters`). The puppets render the sheet's part functions as SVG markup (`dangerouslySetInnerHTML`, frame-pure: expression, pose, blink, talk and headlamp are params). If they need walking, sitting or IK later, port them to the toon/shape tier.
+- **Off-screen `voices`** beside the narrator, so a figure-drawn host speaks with his own voice. Harness voice hints, `voice:say`, Kokoro and the post text all read `voiceOf()`.
+- **Night sets are whole-frame backdrops with `anyAspect`**, so one set serves the 16:9 case and its 9:16 short.
+- **Act-cued music**: scene `music` changes the bed; an act-cued skit keeps the bed under the punchline (the comedy rule silences it).
+- **Variety tightens to 4 s under `finish: "night"`**, and act tags (`hook`, `promise`, `rehook`, `reveal`) gate the story (`qa/acts.ts`).
+- **Every long case ships a 30 s short** for Thin Lines Theory with `meta.links` backlinks (owner rule, 2026-10-30).
+- Not built: `stacks` and neon `line` (Case 001 has no comparison or time series), AI background plates (owner's call), real voices (local Tamtree).

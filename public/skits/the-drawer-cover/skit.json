@@ -1,0 +1,125 @@
+{
+ "$schema": "../../../schemas/skit.schema.json",
+ "schemaVersion": 2,
+ "format": "explainer",
+ "finish": "night",
+ "meta": {
+  "title": "The Drawer (cover)",
+  "aspect": "16:9"
+ },
+ "narrator": {
+  "id": "narrator",
+  "name": "Narrator",
+  "voice": {
+   "say": "Daniel"
+  },
+  "captionStyle": "italic"
+ },
+ "overlay": {
+  "subtitles": false
+ },
+ "timing": {
+  "leadInMs": 0,
+  "gapMs": 0,
+  "tailMs": 0
+ },
+ "scenes": [
+  {
+   "id": "cover",
+   "set": "kitchen-night",
+   "figures": [
+    {
+     "id": "drawer",
+     "kind": "prop",
+     "at": {
+      "x": 0.34,
+      "y": 0.8,
+      "w": 0.5,
+      "h": 0.46
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "drawer",
+      "open": 1
+     }
+    },
+    {
+     "id": "card",
+     "kind": "prop",
+     "at": {
+      "x": 0.34,
+      "y": 0.6,
+      "w": 0.3,
+      "h": 0.34
+     },
+     "layer": "back",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "prop": "giftcard",
+      "text": "$50"
+     }
+    },
+    {
+     "id": "title",
+     "kind": "phrase",
+     "at": {
+      "x": 0.34,
+      "y": 0.2,
+      "w": 0.62,
+      "h": 0.34
+     },
+     "layer": "screen",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "lines": [
+       {
+        "text": "Who had my $50",
+        "color": "paper"
+       },
+       {
+        "text": "for 4 years?",
+        "color": "sodium"
+       }
+      ],
+      "align": "middle",
+      "size": 0.46
+     }
+    },
+    {
+     "id": "nickel",
+     "kind": "nickel",
+     "at": {
+      "x": 0.78,
+      "y": 0.58,
+      "w": 0.38,
+      "h": 0.86
+     },
+     "layer": "front",
+     "hidden": false,
+     "reveal": "none",
+     "params": {
+      "expr": "gotcha",
+      "pose": "point",
+      "rise": 1,
+      "talk": 0,
+      "lamp": 1,
+      "beam": 22,
+      "beamLength": 0.7,
+      "facing": "left"
+     }
+    }
+   ],
+   "beats": [
+    {
+     "id": "still",
+     "silent": true,
+     "durationMs": 2000
+    }
+   ]
+  }
+ ]
+}

@@ -18,6 +18,7 @@
     "sheet": "tsx scripts/sheet.ts",
     "voice:say": "tsx scripts/voice-say.ts",
     "voice:tts": "tsx scripts/voice-tts.ts",
+    "voice:openrouter": "tsx scripts/voice-openrouter.ts",
     "prep": "tsx scripts/prep.ts",
     "compile": "tsx scripts/compile.ts",
     "check": "tsx scripts/check.ts",
@@ -33,6 +34,7 @@
     "safearea": "tsx scripts/safearea.ts",
     "lib:build": "tsx scripts/build-lib.ts",
     "lib:pack-test": "tsx scripts/pack-test.ts",
+    "map:data": "tsx scripts/map-data.ts",
     "props:lint": "tsx scripts/props-lint.ts",
     "props:index": "tsx scripts/props-index.ts",
     "props:draw": "tsx scripts/props-draw.ts",
@@ -40,6 +42,7 @@
     "props:sheet": "tsx scripts/props-sheet.ts",
     "props:nouns": "tsx scripts/prop-nouns.ts",
     "sfx": "tsx scripts/sfx-gen.ts",
+    "sfx:measure": "tsx scripts/sfx-measure.ts",
     "music": "tsx scripts/music-gen.ts",
     "test": "vitest run && tsx scripts/props-lint.ts",
     "typecheck": "tsc --noEmit",
@@ -52,6 +55,7 @@
     "node": ">=22"
   },
   "dependencies": {
+    "@aws-sdk/client-lambda": "3.1152.0",
     "@aws-sdk/client-s3": "3.1152.0",
     "@aws-sdk/s3-request-presigner": "3.1152.0",
     "@remotion/bundler": "4.0.529",

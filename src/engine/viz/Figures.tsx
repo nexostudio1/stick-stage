@@ -1,7 +1,7 @@
 import React from "react";
 import { easeOutBack } from "../lib/easing";
 import { f2 } from "../lib/math";
-import { figureFontSize } from "./geometry";
+import { figureFontSize, figureUnit } from "./geometry";
 import { Txt, type DrawProps } from "./draw/common";
 import { Equation, ImageFigure } from "./draw/media";
 import { Orbit, Particles } from "./draw/orbitParticles";
@@ -9,10 +9,24 @@ import { Axes, Plot } from "./draw/plot";
 import { Callout, Histogram, Label, NumberLine } from "./draw/scales";
 import { Vectors, Wave } from "./draw/vectorWave";
 import { Burst, FinePrint, GalaxyFig, Progress } from "./draw/cosmos";
+import { BarChart, Counter, LineChart } from "./draw/data";
+import { MapFig } from "./draw/map";
+import { MoleculeFig } from "./draw/molecule";
+import { Globe } from "./draw/globe";
+import { Clock, EarthMoon, Growth } from "./draw/time";
+import type { ClockP, EarthMoonP, GlobeP, GrowthP } from "./paramsTime";
+import { Crowd, Flap, Phrase, Stamp } from "./draw/night/board";
+import { Evidence, Phone } from "./draw/night/evidence";
+import { Maya } from "./draw/night/maya";
+import { Nickel } from "./draw/night/nickel";
+import { Prop } from "./draw/night/props";
+import type { CrowdP, EvidenceP, FlapP, MayaP, NickelP, PhoneP, PhraseP, PropP, StampP } from "./paramsNight";
+import type { BarsP, CounterP, LineP, MapP } from "./paramsData";
 import type {
   AxesP,
   BurstP,
   FinePrintP,
+  MoleculeP,
   GalaxyP,
   ProgressP,
   CalloutP,
@@ -95,6 +109,42 @@ const Body: React.FC<{
       return <Burst {...as<BurstP>()} />;
     case "fineprint":
       return <FinePrint {...as<FinePrintP>()} />;
+    case "molecule":
+      return <MoleculeFig {...as<MoleculeP>()} />;
+    case "line":
+      return <LineChart {...as<LineP>()} fs={fs} />;
+    case "bars":
+      return <BarChart {...as<BarsP>()} fs={fs} />;
+    case "counter":
+      return <Counter {...as<CounterP>()} />;
+    case "map":
+      return <MapFig {...as<MapP>()} fs={fs} id={f.id} />;
+    case "flap":
+      return <Flap {...as<FlapP>()} />;
+    case "crowd":
+      return <Crowd {...as<CrowdP>()} />;
+    case "stamp":
+      return <Stamp {...as<StampP>()} />;
+    case "phrase":
+      return <Phrase {...as<PhraseP>()} />;
+    case "prop":
+      return <Prop {...as<PropP>()} />;
+    case "nickel":
+      return <Nickel {...as<NickelP>()} />;
+    case "maya":
+      return <Maya {...as<MayaP>()} />;
+    case "evidence":
+      return <Evidence {...as<EvidenceP>()} />;
+    case "phone":
+      return <Phone {...as<PhoneP>()} />;
+    case "globe":
+      return <Globe {...as<GlobeP>()} fs={fs} id={f.id} />;
+    case "clock":
+      return <Clock {...as<ClockP>()} />;
+    case "growth":
+      return <Growth {...as<GrowthP>()} id={f.id} />;
+    case "earthmoon":
+      return <EarthMoon {...as<EarthMoonP>()} fs={fs} id={f.id} />;
     case "equation":
       return <Equation {...as<EquationP>()} typeset={f.typeset} />;
     case "image": {
@@ -127,7 +177,7 @@ const FigureView: React.FC<Omit<FiguresProps, "figures" | "layer"> & { f: Figure
 }) => {
   const st = evalFigure(f, frame, fps);
   if (!st.visible) return null;
-  const unit = width / 1080;
+  const unit = figureUnit(width, height);
   const { x, y, w, h } = f.rect;
   const fs = fontSize(f, unit);
   const sw = theme.stroke * unit;

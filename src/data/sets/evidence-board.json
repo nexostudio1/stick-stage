@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "evidence-board",
+  "aspect": "16:9",
+  "anyAspect": true,
+  "kit": "night",
+  "palette": "night-shift",
+  "description": "A cork evidence wall filling the frame, lit from below; the evidence figure pins cards and string on it.",
+  "tags": [
+    "the-catch",
+    "widescreen",
+    "detective",
+    "board",
+    "night"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "evidence-wall"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

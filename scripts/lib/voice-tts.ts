@@ -16,7 +16,7 @@ export type VoiceOptions = {
 
 /** Which voice each line gets: the override, the house cast's Kokoro voice, then the default. */
 export const voiceFor = (character: string, narrator: boolean, voices: Record<string, string> = {}): string =>
-  narrator ? (voices.narrator ?? KOKORO_NARRATOR) : (voices[character] ?? KOKORO_VOICES[character] ?? KOKORO_DEFAULT);
+  narrator ? (voices[character] ?? voices.narrator ?? KOKORO_NARRATOR) : (voices[character] ?? KOKORO_VOICES[character] ?? KOKORO_DEFAULT);
 
 /** Cut the silence a TTS leaves around a phrase, keeping `padMs` so consonants aren't clipped. */
 export const trimSilence = ({ audio, rate }: Audio, padMs = 40, floor = 0.012): Float32Array => {

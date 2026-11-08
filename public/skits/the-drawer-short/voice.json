@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "h1",
+      "speaker": "narrator",
+      "text": "Your gift card is a free loan. To the store.",
+      "audio": "voice/h1.wav",
+      "durationMs": 3377
+    },
+    {
+      "id": "h2",
+      "speaker": "narrator",
+      "text": "Until you spend it, they hold your money. No interest.",
+      "audio": "voice/h2.wav",
+      "durationMs": 3470
+    },
+    {
+      "id": "h3",
+      "speaker": "narrator",
+      "text": "So who's had it all this time?",
+      "audio": "voice/h3.wav",
+      "durationMs": 2240
+    },
+    {
+      "id": "h4",
+      "speaker": "narrator",
+      "text": "Not her. The store.",
+      "audio": "voice/h4.wav",
+      "durationMs": 1800
+    },
+    {
+      "id": "h5",
+      "speaker": "narrator",
+      "text": "Americans are sitting on about $27 billion in unused gift cards.",
+      "spoken": "Americans are sitting on about twenty-seven billion dollars in unused gift cards.",
+      "audio": "voice/h5.wav",
+      "durationMs": 5480
+    },
+    {
+      "id": "h6",
+      "speaker": "narrator",
+      "text": "And the part we forget? Stores can count it as revenue.",
+      "audio": "voice/h6.wav",
+      "durationMs": 3293
+    },
+    {
+      "id": "h7",
+      "speaker": "narrator",
+      "text": "One coffee chain alone booked $188 million of forgotten balances in one year.",
+      "spoken": "One coffee chain alone booked a hundred and eighty-eight million dollars of forgotten balances in one year.",
+      "audio": "voice/h7.wav",
+      "durationMs": 6090
+    },
+    {
+      "id": "h8",
+      "speaker": "nickel",
+      "text": "Coffee. Nobody. Drank.",
+      "audio": "voice/h8.wav",
+      "durationMs": 2000
+    },
+    {
+      "id": "h9",
+      "speaker": "narrator",
+      "text": "But the rules are on your side. Full case, linked below.",
+      "audio": "voice/h9.wav",
+      "durationMs": 3920
+    }
+  ]
+}

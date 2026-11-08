@@ -8,12 +8,15 @@ import { Buildings, Hydrant, Shopfront, Sidewalk } from "./street";
 import { Bed, Counter, FloorLamp, Fridge, Tv } from "./home";
 import { Board, Curtain, Sand, Sea, Umbrella } from "./venue";
 import type { PartComponent } from "./types";
+import { DayBookshop, NightCafe, NightKitchen } from "./night";
+import { CardVault, EvidenceWall, LedgerDesk, LostAndFound } from "./nightRooms";
 import { StoryBush, StoryFence, StoryFlowers, StoryGround, StoryHills, StoryPond, StoryRock, StorySea, StorySky, StoryTree } from "./storyOutdoor";
 import { StoryBed, StoryBench, StoryClubhouse, StoryDoor, StoryFloor, StoryHouse, StoryRug, StoryShelf, StorySofa, StoryTable, StoryWall, StoryWindow } from "./storyPlaces";
 import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
-import { Blueprint, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
+import { ScienceWash } from "./scienceThemes";
+import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
-export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story"] as const;
+export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night"] as const;
 export type Kit = (typeof KITS)[number];
 
 export type PartInfo = {
@@ -65,6 +68,9 @@ export const PART_INFO: Record<string, PartInfo> = {
   void: { draw: VoidBackdrop, kits: ["abstract", "space"], backdrop: true },
   "grid-floor": { draw: GridFloor, kits: ["abstract", "space"], backdrop: true },
   blueprint: { draw: Blueprint, kits: ["abstract"], backdrop: true },
+  drafting: { draw: DraftingTable, kits: ["abstract"], backdrop: true },
+  // Themed, animated cutaway grounds for the shorts (variant: dawn | tide | cosmos | lab).
+  "science-wash": { draw: ScienceWash, kits: ["abstract"], backdrop: true },
   starfield: { draw: Starfield, kits: ["space"], backdrop: true },
   nebula: { draw: Nebula, kits: ["space"] },
   planet: { draw: Planet, kits: ["space"] },
@@ -75,6 +81,14 @@ export const PART_INFO: Record<string, PartInfo> = {
   "lab-bench": { draw: LabBench, kits: ["lab"] },
   "fume-hood": { draw: FumeHood, kits: ["lab"] },
   "wall-chart": { draw: WallChart, kits: ["lab"] },
+  // The night kit (The Catch): whole-frame rooms with a light cone and ambient motion.
+  "night-kitchen": { draw: NightKitchen, kits: ["night"], backdrop: true },
+  "night-cafe": { draw: NightCafe, kits: ["night"], backdrop: true },
+  "day-bookshop": { draw: DayBookshop, kits: ["night"], backdrop: true },
+  "card-vault": { draw: CardVault, kits: ["night"], backdrop: true },
+  "ledger-desk": { draw: LedgerDesk, kits: ["night"], backdrop: true },
+  "lost-found": { draw: LostAndFound, kits: ["night"], backdrop: true },
+  "evidence-wall": { draw: EvidenceWall, kits: ["night"], backdrop: true },
   // The story kit: flat, outline-free parts for the shape tier.
   "story-sky": { draw: StorySky, kits: ["story"], backdrop: true },
   "story-hills": { draw: StoryHills, kits: ["story"], backdrop: true },
@@ -114,6 +128,7 @@ export const KIT_BACKDROP: Record<Kit, SetDef["layers"]> = {
   space: [part("starfield"), part("grid-floor")],
   lab: [part("wall", { pattern: "none" }), part("floor")],
   story: [part("story-sky"), part("story-hills"), part("story-ground")],
+  night: [part("night-kitchen")],
 };
 
 function part(id: string, extra: Partial<SetDef["layers"][number]> = {}): SetDef["layers"][number] {

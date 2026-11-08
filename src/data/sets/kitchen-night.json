@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "kitchen-night",
+  "aspect": "16:9",
+  "anyAspect": true,
+  "kit": "night",
+  "palette": "night-shift",
+  "description": "A dark kitchen at night: wall cabinets, a counter lit by an under-cabinet strip, a moonlit window. The Catch's human world.",
+  "tags": [
+    "the-catch",
+    "widescreen",
+    "kitchen",
+    "home",
+    "night"
+  ],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "night-kitchen"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

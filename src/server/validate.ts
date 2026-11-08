@@ -3,7 +3,7 @@
  * with each character's voice hints, and the director's verdict on placeholder timings. Runs
  * before any TTS is spent, so a bad premise fails here and not after the voices exist.
  */
-import { buildCatalog, catalogVersion, checkDraft, fromPremise, parseBrief, parseSkit, premiseFromReply, repairPrompt, ReplyError, skitFromReply, SkitError, writerWorld, type CheckReport, type Diagnostic, type skitLines } from "../engine/core";
+import { buildCatalog, catalogVersion, checkDraft, fromPremise, parseBrief, parseSkit, premiseFromReply, repairPrompt, ReplyError, skitFromReply, SkitError, voiceOf, writerWorld, type CheckReport, type Diagnostic, type skitLines } from "../engine/core";
 import type { Project } from "../node";
 import { typesetForCheck } from "./typesetCheck";
 import { deliveryFor, performedText, pronunciationsFor, type Pronunciation } from "../engine/core";
@@ -112,7 +112,7 @@ export const validate = (p: Project, body: unknown, notes: Readonly<Record<strin
       lines: d.lines.map((l) => ({
         ...l,
         ...pronounceOf(l.spoken ?? l.text, p.pronunciations),
-        voice: l.narrator ? hint(d.result.doc.narrator?.voice) : voiceHint(p, l.character),
+        voice: l.narrator ? hint(voiceOf(d.result.doc, l.speaker)?.voice) : voiceHint(p, l.character),
         // How to perform it, for a style-prompted TTS: voice `performedText`, keep `text` for the manifest.
         direction: deliveryFor(l).direction,
         performedText: performedText(l),

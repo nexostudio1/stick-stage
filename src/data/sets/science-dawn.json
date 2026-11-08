@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "science-dawn",
+  "kit": "abstract",
+  "palette": "science-dawn",
+  "description": "Warm amber-to-coral science ground with a slowly orbiting sun and planets. For the science aside on time, days, the Earth's spin and the solar system.",
+  "tags": [
+    "time",
+    "earth",
+    "sun",
+    "days",
+    "science"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 640,
+  "layers": [
+    {
+      "part": "science-wash",
+      "variant": "dawn"
+    },
+    {
+      "part": "grid-floor"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}
