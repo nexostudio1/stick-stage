@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "science-tide",
+  "kit": "abstract",
+  "palette": "science-tide",
+  "description": "Sea-teal science ground with travelling waves and spreading ripples. For the science aside on tides, the oceans, the Moon and waves.",
+  "tags": [
+    "tides",
+    "ocean",
+    "moon",
+    "waves",
+    "science"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 640,
+  "layers": [
+    {
+      "part": "science-wash",
+      "variant": "tide"
+    },
+    {
+      "part": "grid-floor"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

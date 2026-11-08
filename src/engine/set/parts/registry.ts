@@ -13,6 +13,7 @@ import { CardVault, EvidenceWall, LedgerDesk, LostAndFound } from "./nightRooms"
 import { StoryBush, StoryFence, StoryFlowers, StoryGround, StoryHills, StoryPond, StoryRock, StorySea, StorySky, StoryTree } from "./storyOutdoor";
 import { StoryBed, StoryBench, StoryClubhouse, StoryDoor, StoryFloor, StoryHouse, StoryRug, StoryShelf, StorySofa, StoryTable, StoryWall, StoryWindow } from "./storyPlaces";
 import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
+import { ScienceWash } from "./scienceThemes";
 import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
 export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night"] as const;
@@ -68,6 +69,8 @@ export const PART_INFO: Record<string, PartInfo> = {
   "grid-floor": { draw: GridFloor, kits: ["abstract", "space"], backdrop: true },
   blueprint: { draw: Blueprint, kits: ["abstract"], backdrop: true },
   drafting: { draw: DraftingTable, kits: ["abstract"], backdrop: true },
+  // Themed, animated cutaway grounds for the shorts (variant: dawn | tide | cosmos | lab).
+  "science-wash": { draw: ScienceWash, kits: ["abstract"], backdrop: true },
   starfield: { draw: Starfield, kits: ["space"], backdrop: true },
   nebula: { draw: Nebula, kits: ["space"] },
   planet: { draw: Planet, kits: ["space"] },

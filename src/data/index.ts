@@ -109,6 +109,10 @@ import blueprint1 from "./sets/blueprint-1.json";
 import space1 from "./sets/space-1.json";
 import space2 from "./sets/space-2.json";
 import lab1 from "./sets/lab-1.json";
+import scienceDawn from "./sets/science-dawn.json";
+import scienceTide from "./sets/science-tide.json";
+import scienceCosmos from "./sets/science-cosmos.json";
+import scienceLab from "./sets/science-lab.json";
 
 import castNotesJson from "./cast-notes.json";
 import safeAreaJson from "./safe-area.json";
@@ -149,6 +153,7 @@ export const sets: Record<string, SetDef> = createSets([
   explainerPaper, explainerNight, explainerGrid, explainerDrafting, explainerDraftingIndigo,
   kitchenNight, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
   void1, blueprint1, space1, space2, lab1,
+  scienceDawn, scienceTide, scienceCosmos, scienceLab,
   ...STORY_SETS,
 ]);
 

@@ -232,6 +232,50 @@ export const PALETTES: Record<string, Palette> = {
     detail: "#1F4650",
     glow: "#FFF1C9",
   },
+  /**
+   * Themed science grounds (`science-wash`, the shorts' cutaway): mid-tone so the near-black
+   * strokes and the white-boxed subtitles both read. Dawn: amber to coral, for time and the Earth.
+   */
+  "science-dawn": {
+    wallA: "#efae7c",
+    wallB: "#e0846a",
+    floor: "#c9735e",
+    accent: "#ffe1a6",
+    shade: "#e99b78",
+    sky: "#f5c992",
+    detail: "#fff1dc",
+  },
+  /** Tide: sea teal, for the oceans, the Moon and waves. */
+  "science-tide": {
+    wallA: "#4d9a9e",
+    wallB: "#3a8089",
+    floor: "#3b7d84",
+    accent: "#ffd98a",
+    shade: "#42888f",
+    sky: "#6fbcb8",
+    detail: "#c6f1ec",
+  },
+  /** Cosmos: magenta to indigo, for space. Dark, so the cast gets a light rim. */
+  "science-cosmos": {
+    wallA: "#3a2c7a",
+    wallB: "#5b2f84",
+    floor: "#4b3b8e",
+    accent: "#ffc857",
+    shade: "#7c3fa3",
+    sky: "#c2549f",
+    detail: "#a7dcff",
+    rim: "#e6dcff",
+  },
+  /** Lab: fresh lime, for chemistry and life. */
+  "science-lab": {
+    wallA: "#bcd97f",
+    wallB: "#a1c768",
+    floor: "#8aae58",
+    accent: "#fff1a8",
+    shade: "#accd72",
+    sky: "#d8ed9f",
+    detail: "#f6ffe0",
+  },
   /** A bright, clean lab. */
   "lab-white": {
     wallA: "#e6eef0",
