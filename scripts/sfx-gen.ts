@@ -218,8 +218,8 @@ const made = SOUNDS.map((s) => {
   const file = `sfx/${s.id}.wav`;
   const durationMs = writeWav(path.join(ROOT, "public", file), s.make());
   // The mix levels every effect from its measured loudness (src/engine/audio/mix.ts).
-  const { loudnessDb, peakDb } = measureWav(path.join(ROOT, "public", file));
-  return { id: s.id, file, durationMs, gain: s.gain, loudnessDb, peakDb, license: LICENSE, source: SOURCE, tags: s.tags };
+  const { loudnessDb, peakDb, truePeakDb } = measureWav(path.join(ROOT, "public", file));
+  return { id: s.id, file, durationMs, gain: s.gain, loudnessDb, peakDb, truePeakDb, license: LICENSE, source: SOURCE, tags: s.tags };
 });
 const kept = old.sounds.filter((s) => s.source !== SOURCE && !made.some((m) => m.id === s.id));
 const manifest: SfxManifest = { schemaVersion: 1, sounds: [...made, ...kept] };
