@@ -20,8 +20,9 @@ params: `docs/figures.md` (kinds `line`, `bars`, `counter`, `map`, plus `label`,
 3. **Stage each scene with figures.** Pick a `slot` per figure (`full`, `left`/`right`, `center`,
    `top`, `lower-third`, `inset`), bind params to data (`"@id.column"`, `"@id.column[key]"`), and
    cue them on words: `show`, `state`, `set` (draw a line on, tick a counter, fly the map with
-   `zoom`), `focus` / `focus none`. Alternate grounds (`explainer-paper`, `explainer-night`,
-   `explainer-grid`) and `variant` (`clean` / `bold`) between scenes.
+   `zoom`), `focus` / `focus none`. Alternate grounds (`explainer-paper`, `explainer-night`, and the science
+   themes `explainer-dawn` / `-tide` / `-cosmos` / `-lab`) and `variant` (`clean` / `bold`) between
+   scenes. Never the retired blueprint grounds (`explainer-grid`, `explainer-drafting*`).
 4. **Tag spoken numbers.** Each number a line says gets `"numbers": [{ "text": "13", "data": "@margins.gross_pct[Costco]" }]`.
 5. **Check.** `pnpm voice:tts <id>` (or `voice:say`), then `pnpm check <id>`. Fix every error:
    `number-mismatch` / `number-not-said` (the line or the data is wrong: never "fix" data to match

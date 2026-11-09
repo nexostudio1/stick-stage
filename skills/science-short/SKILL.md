@@ -84,7 +84,8 @@ Every line gets one change on screen, anchored on the word it illustrates
 Keep the screen changing every 3–5 s, one pause at most (≤ 0.6 s) and no dead air.
 
 **Sets:** `space-2` (Nebula night, dark sky; the palette's `rim` keeps the cast readable),
-`space-1`, `lab-1`, `blueprint-1`, `void-1`. Props: categories `maths` and `science`
+`space-1`, `lab-1`, `void-1`, and the themed `science-dawn` / `-tide` / `-cosmos` / `-lab`.
+`blueprint-1` is retired. Props: categories `maths` and `science`
 (`docs/skits.md`, prop table).
 
 ## Checking it

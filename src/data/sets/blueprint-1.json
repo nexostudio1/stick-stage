@@ -2,6 +2,7 @@
   "schemaVersion": 1,
   "id": "blueprint-1",
   "kit": "abstract",
+  "retired": "The blueprint grid is retired (2026-11-09). Use science-dawn, -tide, -cosmos or -lab.",
   "palette": "blueprint",
   "description": "Blueprint paper: a blue ground with a fine grid and drafting marks. For maths, geometry, electromagnetism and anything engineered.",
   "tags": ["maths", "geometry", "electromagnetism", "engineering", "design", "science"],

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "explainer-tide",
+  "aspect": "16:9",
+  "kit": "abstract",
+  "palette": "science-tide",
+  "description": "Sea-teal explainer ground with travelling waves and ripples round the edges. For the oceans, tides, the Moon and anything that waves.",
+  "tags": ["explainer", "widescreen", "science", "sea", "tides", "moon", "waves", "water"],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "science-wash",
+      "variant": "tide"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

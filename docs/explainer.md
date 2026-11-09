@@ -14,10 +14,16 @@ What the format changes:
 
 ## Grounds
 
-`explainer-paper` (light, ink figures), `explainer-night` (dark, chalk figures), `explainer-grid`
-(blueprint), `explainer-drafting` / `explainer-drafting-indigo` (the blueprint with a pool of light
-and a vignette; alternate them across a long video's chapters). No furniture: the frame is for
-figures. Change grounds between scenes for variety.
+`explainer-paper` (light, ink figures), `explainer-night` (dark, chalk figures), and the science
+themes at 16:9: `explainer-dawn` (time, the Earth, the Sun), `explainer-tide` (sea, tides, the
+Moon), `explainer-cosmos` (space; dark, chalk figures) and `explainer-lab` (chemistry, life). Each
+theme drifts slowly and keeps its shapes to the frame's edges, faded behind the centre where the
+figures sit. Pick the theme that fits the chapter and alternate across a long video. No furniture:
+the frame is for figures.
+
+The blueprint grounds (`explainer-grid`, `explainer-drafting`, `explainer-drafting-indigo`, and
+`blueprint-1` for shorts) are **retired**: they still draw, so old videos re-render unchanged, but
+`GET /sets` hides them and the compiler warns (`set-retired`) a skit that picks one.
 
 A scene with no cast holds one wide frame (figure `focus` cues still move the camera). In a cast
 scene, a figure on `"layer": "screen"` (a caption card, an inset) appears without the cut to wide.

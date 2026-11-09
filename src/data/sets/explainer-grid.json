@@ -3,15 +3,10 @@
   "id": "explainer-grid",
   "aspect": "16:9",
   "kit": "abstract",
+  "retired": "The blueprint grid is retired (2026-11-09). Use explainer-dawn, -tide, -cosmos or -lab (the science grounds at 16:9), or explainer-paper / explainer-night.",
   "palette": "blueprint",
   "description": "Blueprint grid paper across the whole frame. An explainer ground for maths, engineering and how-it-works scenes.",
-  "tags": [
-    "explainer",
-    "widescreen",
-    "maths",
-    "engineering",
-    "grid"
-  ],
+  "tags": ["explainer", "widescreen", "maths", "engineering", "grid"],
   "groundY": 1080,
   "figureHeightPx": 560,
   "layers": [

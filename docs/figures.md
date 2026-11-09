@@ -34,7 +34,7 @@ A scene lists its figures (a single-scene skit puts `figures` at the top level):
 
 **Layout on a 9:16 short.** The cast's heads are around 40% down the frame. Put figures in the band
 above them: `y` about 0.27, `h` ≤ 0.24. One wide figure, or two side by side (`w` 0.42 at `x`
-0.27 and 0.73). The science sets (`void-1`, `blueprint-1`, `lab-1`, `space-1`) use a smaller figure
+0.27 and 0.73). The science sets (`void-1`, `lab-1`, `space-1`) use a smaller figure
 height (640 px) to leave that room. A two-shot widens to keep a visible figure in frame, and a beat
 that shows a figure or changes its state (or has `role: "demo"`) gets the wide shot.
 

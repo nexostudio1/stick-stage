@@ -52,6 +52,11 @@ export const SetSchema = z.object({
   description: z.string().optional(),
   /** Topic keywords this set suits, e.g. "work", "date", "morning"; `GET /sets` lists them. */
   tags: z.array(z.string()).default([]),
+  /**
+   * Why the set is retired and what to use instead. A retired set still draws (old skits re-render
+   * unchanged), but `GET /sets` hides it and the compiler warns a skit that picks it.
+   */
+  retired: z.string().optional(),
   palette: z.string(),
   groundY: z.number().min(0),
   /** Standing figure height in px at this set's scale. */

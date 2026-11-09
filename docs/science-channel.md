@@ -64,8 +64,8 @@ line carries the hints it needs (`pronounce`). See [voice-contract.md](voice-con
 
 - Cast: Vera and Gus are **toons** (`style.build: "toon"`; [creating-characters.md](creating-characters.md#the-toon-tier)).
   The comedy cast stays stick.
-- Sets: `void-1` (the main stage), `blueprint-1`, `lab-1`, `space-1`, and `space-2` (Nebula night, a
-  dark sky). The older grounds are mid-tone on purpose: dark outlines keep ≥ 3:1 against every
+- Sets: `void-1` (the main stage), `lab-1`, `space-1`, `space-2` (Nebula night, a dark sky), and
+  the themed `science-dawn` / `-tide` / `-cosmos` / `-lab`. `blueprint-1` is retired. The older grounds are mid-tone on purpose: dark outlines keep ≥ 3:1 against every
   tone. A dark palette sets `rim`, and Stage puts a light rim around the cast so dark outlines still
   read.
 - Hook card: `overlay.hook` puts a short text card on screen from frame 0 for muted viewers, and it

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "explainer-lab",
+  "aspect": "16:9",
+  "kit": "abstract",
+  "palette": "science-lab",
+  "description": "Lime explainer ground with rising bubbles over a hex grid round the edges. For chemistry, molecules and life.",
+  "tags": ["explainer", "widescreen", "science", "chemistry", "molecules", "biology", "life"],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "science-wash",
+      "variant": "lab"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

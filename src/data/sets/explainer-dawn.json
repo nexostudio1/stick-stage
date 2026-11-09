@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "explainer-dawn",
+  "aspect": "16:9",
+  "kit": "abstract",
+  "palette": "science-dawn",
+  "description": "Amber-to-coral explainer ground with a sun and turning orbits round the edges. For time, days, the Earth and the Sun.",
+  "tags": ["explainer", "widescreen", "science", "time", "earth", "sun", "days", "seasons"],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "science-wash",
+      "variant": "dawn"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

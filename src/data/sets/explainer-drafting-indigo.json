@@ -3,16 +3,10 @@
   "id": "explainer-drafting-indigo",
   "aspect": "16:9",
   "kit": "abstract",
+  "retired": "The blueprint grid is retired (2026-11-09). Use explainer-dawn, -tide, -cosmos or -lab (the science grounds at 16:9), or explainer-paper / explainer-night.",
   "palette": "indigo",
   "description": "The lit blueprint ground in a deeper indigo, for alternating chapters of a long explainer.",
-  "tags": [
-    "explainer",
-    "widescreen",
-    "maths",
-    "engineering",
-    "grid",
-    "lit"
-  ],
+  "tags": ["explainer", "widescreen", "maths", "engineering", "grid", "lit"],
   "groundY": 1080,
   "figureHeightPx": 560,
   "layers": [

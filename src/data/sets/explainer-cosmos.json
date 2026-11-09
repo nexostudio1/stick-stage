@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "explainer-cosmos",
+  "aspect": "16:9",
+  "kit": "abstract",
+  "palette": "science-cosmos",
+  "description": "Magenta-to-indigo explainer ground with tilted rings and twinkles round the edges. Dark, so figures switch to chalk. For space, stars and planets.",
+  "tags": ["explainer", "widescreen", "science", "space", "stars", "planets", "dark"],
+  "groundY": 1080,
+  "figureHeightPx": 560,
+  "layers": [
+    {
+      "part": "science-wash",
+      "variant": "cosmos"
+    }
+  ],
+  "marks": {
+    "left": 0.25,
+    "center": 0.5,
+    "right": 0.75
+  }
+}

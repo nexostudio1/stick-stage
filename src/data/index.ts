@@ -113,6 +113,10 @@ import scienceDawn from "./sets/science-dawn.json";
 import scienceTide from "./sets/science-tide.json";
 import scienceCosmos from "./sets/science-cosmos.json";
 import scienceLab from "./sets/science-lab.json";
+import explainerDawn from "./sets/explainer-dawn.json";
+import explainerTide from "./sets/explainer-tide.json";
+import explainerCosmos from "./sets/explainer-cosmos.json";
+import explainerLab from "./sets/explainer-lab.json";
 
 import castNotesJson from "./cast-notes.json";
 import safeAreaJson from "./safe-area.json";
@@ -154,6 +158,7 @@ export const sets: Record<string, SetDef> = createSets([
   kitchenNight, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
   void1, blueprint1, space1, space2, lab1,
   scienceDawn, scienceTide, scienceCosmos, scienceLab,
+  explainerDawn, explainerTide, explainerCosmos, explainerLab,
   ...STORY_SETS,
 ]);
 

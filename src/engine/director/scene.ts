@@ -61,6 +61,7 @@ const checkIds = (skit: Skit, input: CompileInput, diags: Diagnostic[]) => {
   };
   need("set", skit.set, ids(sets), ["set"]);
   const setDef = sets[skit.set];
+  if (setDef?.retired) diags.push({ level: "warning", code: "set-retired", path: "set", message: `"${setDef.id}" is retired: ${setDef.retired}` });
   if (setDef && setDef.aspect !== skit.meta.aspect && !setDef.anyAspect)
     diags.push({
       level: "error",

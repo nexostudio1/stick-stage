@@ -9,7 +9,8 @@
  * palette, so each variant pairs with its own `science-*` palette but works with any.
  *
  * Text stays readable: the shapes are masked down inside the figure band (y 0.22-0.38 of the
- * frame, where cards and the hook sit) and toward the subtitles at the bottom.
+ * frame, where cards and the hook sit) and toward the subtitles at the bottom. On a wide frame (the
+ * `explainer-*` grounds) they keep to the edges instead and fade behind the centre.
  */
 import React from "react";
 import { darken, lighten, mix } from "../../lib/color";
@@ -140,6 +141,7 @@ export const ScienceWash: PartComponent = ({ part, palette: pal, W, H, groundY, 
   const Shapes = SHAPES[variant];
   const t = frame / 30;
   const id = `${prefix}-sci`;
+  const wide = W > H;
   // The gradient's stops breathe between the palette's tones over DRIFT_S seconds.
   const k = 0.5 + 0.5 * Math.sin((t / DRIFT_S) * Math.PI * 2);
   const top = mix(pal.wallB, pal.shade, 0.35 * k);
@@ -178,8 +180,14 @@ export const ScienceWash: PartComponent = ({ part, palette: pal, W, H, groundY, 
           <stop offset={f2((groundY * 0.92) / H)} stopColor="#fff" stopOpacity="0.8" />
           <stop offset={f2(groundY / H)} stopColor="#fff" stopOpacity="0.4" />
         </linearGradient>
+        {/* Wide (16:9 explainers): figures fill the middle, so the shapes keep to the edges. */}
+        <radialGradient id={`${id}-wide`} cx="0.5" cy="0.48" r="0.62">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.12" />
+          <stop offset="0.55" stopColor="#fff" stopOpacity="0.25" />
+          <stop offset="1" stopColor="#fff" stopOpacity="1" />
+        </radialGradient>
         <mask id={`${id}-mask`} maskUnits="userSpaceOnUse" x="0" y="0" width={W} height={H}>
-          <rect width={W} height={H} fill={`url(#${id}-band)`} />
+          <rect width={W} height={H} fill={`url(#${id}-${wide ? "wide" : "band"})`} />
         </mask>
       </defs>
       <rect width={W} height={groundY + 2} fill={`url(#${id}-bg)`} />
@@ -194,7 +202,8 @@ export const ScienceWash: PartComponent = ({ part, palette: pal, W, H, groundY, 
           <Shapes {...layer} depth={0} />
         </g>
       </g>
-      <rect y={groundY * 0.82} width={W} height={groundY * 0.18 + 2} fill={darken(low, 0.2)} opacity={0.18} />
+      {/* The floor shadow under a short's cast; a wide explainer has no floor, so it would read as a stripe. */}
+      {wide ? null : <rect y={groundY * 0.82} width={W} height={groundY * 0.18 + 2} fill={darken(low, 0.2)} opacity={0.18} />}
     </g>
   );
 };
