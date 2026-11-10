@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "crew-train-bay",
+  "kit": "crew",
+  "palette": "crew-train",
+  "description": "A bright commuter train carriage on the move, two facing seats with a table between them (marks left and right sit) and standing room at far-left by the left backrest; a grab pole by the right seat; green country streams past the windows. The relatable three-person channel's home set.",
+  "tags": [
+    "commute",
+    "train",
+    "friends",
+    "morning",
+    "travel",
+    "crew"
+  ],
+  "groundY": 1360,
+  "figureHeightPx": 640,
+  "layers": [
+    {
+      "part": "crew-train-bay"
+    },
+    {
+      "part": "crew-train-pole",
+      "x": 0.93
+    },
+    {
+      "part": "crew-train-seat",
+      "mark": "left",
+      "seatFor": [
+        "left"
+      ]
+    },
+    {
+      "part": "crew-train-seat",
+      "mark": "right",
+      "flip": true,
+      "seatFor": [
+        "right"
+      ]
+    }
+  ],
+  "foreground": [
+    {
+      "part": "crew-train-table",
+      "x": 0.585
+    },
+    {
+      "part": "crew-train-near-seats"
+    }
+  ],
+  "marks": {
+    "far-left": 0.21,
+    "left": 0.44,
+    "center": 0.585,
+    "right": 0.73,
+    "far-right": 0.9
+  }
+}

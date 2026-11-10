@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "four-maya",
+  "id": "crew-maya",
   "displayName": "Maya",
   "proportions": {
     "height": 0.97,
@@ -38,7 +38,7 @@
   "accessories": [
     {
       "slot": "hair",
-      "id": "four-long",
+      "id": "crew-long",
       "color": "#7a3b2e"
     }
   ],

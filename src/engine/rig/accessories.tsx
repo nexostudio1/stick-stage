@@ -3,7 +3,7 @@ import { f2 } from "../lib/math";
 import { onHead, type AccessoryDef, type AccessoryLayer, type BodyAnchor } from "./accessoryKit";
 import { ANIMAL_PARTS } from "./animalParts";
 import { SCIENCE_WEAR } from "./scienceWear";
-import { FOUR_WEAR } from "./fourWear";
+import { CREW_WEAR } from "./crewWear";
 import type { Character } from "./schema";
 
 export type { AccessoryLayer, BodyAnchor } from "./accessoryKit";
@@ -153,7 +153,7 @@ const REGISTRY: Record<string, AccessoryDef> = {
   },
   ...ANIMAL_PARTS,
   ...SCIENCE_WEAR,
-  ...FOUR_WEAR,
+  ...CREW_WEAR,
 };
 
 export const accessoryIds = (): string[] => Object.keys(REGISTRY);

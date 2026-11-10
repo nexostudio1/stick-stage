@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "four-ollie",
+  "id": "crew-ollie",
   "displayName": "Ollie",
   "proportions": {
     "height": 1.0,
@@ -38,7 +38,7 @@
   "accessories": [
     {
       "slot": "hair",
-      "id": "four-mop",
+      "id": "crew-mop",
       "color": "#6b4226"
     },
     {

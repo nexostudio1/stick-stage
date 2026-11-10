@@ -1,7 +1,7 @@
 /**
- * The `four` kit's train furniture, drawn in profile to match the cast (who are seen side-on):
+ * The `crew` kit's train furniture, drawn in profile to match the cast (who are seen side-on):
  * a single seat with a tall backrest, a wall table between two facing seats, and a hanging grab
- * strap for a standing passenger. Palette tokens only (`four-train`).
+ * strap for a standing passenger. Palette tokens only (`crew-train`).
  */
 import React from "react";
 import { darken, lighten, mix } from "../../lib/color";
@@ -9,18 +9,18 @@ import { f2 } from "../../lib/math";
 import { SEAT_HEIGHT } from "./seats";
 import { edge, flipAt, partBase, partX, SET_LINE, type PartComponent } from "./types";
 
-/** Strap rail height, as a fraction of frame height (matches `FourTrainBay`). */
+/** Strap rail height, as a fraction of frame height (matches `CrewTrainBay`). */
 const RAIL_Y = 0.075;
 
 /**
  * One seat in profile for a passenger facing right (backrest on the left); `flip: true` for one
  * facing left. Place it on the passenger's mark and list that mark in `seatFor`.
  */
-export const FourTrainSeat: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks }) => {
+export const CrewTrainSeat: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks }) => {
   const s = fig * part.size;
   const cx = partX(part, W, marks, 0.5);
   const base = partBase(part, H, groundY);
-  const seatTop = base - SEAT_HEIGHT["four-train-seat"] * s;
+  const seatTop = base - SEAT_HEIGHT["crew-train-seat"] * s;
   const fill = pal.detail;
   const back = { x0: cx - s * 0.2, x1: cx - s * 0.1, top: base - s * 0.78 };
   const cushion = { x0: back.x0, x1: cx + s * 0.13 };
@@ -45,7 +45,7 @@ export const FourTrainSeat: PartComponent = ({ part, palette: pal, W, H, groundY
 };
 
 /** A small wall table between two facing seats, with two coffee cups. Drawn over the cast's knees (foreground). */
-export const FourTrainTable: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks }) => {
+export const CrewTrainTable: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks }) => {
   const s = fig * part.size;
   const cx = partX(part, W, marks, 0.5);
   const base = partBase(part, H, groundY);
@@ -68,7 +68,7 @@ export const FourTrainTable: PartComponent = ({ part, palette: pal, W, H, ground
 };
 
 /** A grab strap from the ceiling rail to a loop at `y` (fraction of frame height) for a standing passenger's hand. */
-export const FourTrainStrap: PartComponent = ({ part, palette: pal, W, H, fig, marks }) => {
+export const CrewTrainStrap: PartComponent = ({ part, palette: pal, W, H, fig, marks }) => {
   const x = partX(part, W, marks, 0.5);
   const railY = H * RAIL_Y;
   const loopY = (part.y ?? 0.42) * H;
@@ -82,7 +82,7 @@ export const FourTrainStrap: PartComponent = ({ part, palette: pal, W, H, fig, m
 };
 
 /** The tops of the next row of seat backs along the bottom edge (foreground), for depth in a wide shot. */
-export const FourTrainNearSeats: PartComponent = ({ palette: pal, W, H }) => {
+export const CrewTrainNearSeats: PartComponent = ({ palette: pal, W, H }) => {
   const fill = darken(pal.detail, 0.06);
   const top = H * 0.86;
   const backs = [

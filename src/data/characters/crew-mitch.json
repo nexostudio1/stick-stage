@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "four-mitch",
+  "id": "crew-mitch",
   "displayName": "Mitch",
   "proportions": {
     "height": 1.05,
@@ -38,7 +38,7 @@
   "accessories": [
     {
       "slot": "headwear",
-      "id": "four-cap-back",
+      "id": "crew-cap-back",
       "color": "#1d3557"
     }
   ],

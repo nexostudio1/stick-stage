@@ -1,8 +1,8 @@
 import type { Palette } from "./palettes";
 
 /**
- * The relatable four-person channel (`four` kit): bright, saturated places, unlike the soft room
- * palettes. Only `four-*` sets use these, so no other channel changes.
+ * The relatable three-person channel (`crew` kit): bright, saturated places, unlike the soft room
+ * palettes. Only `crew-*` sets use these, so no other channel changes.
  *
  * Rules:
  * - big blocks of strong colour (seats, panels, the view outside); the wall behind the heads stays
@@ -10,9 +10,9 @@ import type { Palette } from "./palettes";
  * - the cast's tops (red, green, mustard, violet) never match the colour directly behind them;
  * - the view outside gets lighter and bluer with distance (`scenery` far → near).
  */
-export const FOUR_PALETTES: Record<string, Palette> = {
+export const CREW_PALETTES: Record<string, Palette> = {
   /** Commuter train on a sunny morning: cream walls, cobalt seats, coral straps, green country outside. */
-  "four-train": {
+  "crew-train": {
     wallA: "#fff3d6",
     wallB: "#2ec4b6",
     floor: "#8a93b8",

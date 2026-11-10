@@ -11,42 +11,35 @@
       "friends"
     ],
     "series": {
-      "id": "four",
+      "id": "crew",
       "season": 1,
       "episode": 1
     }
   },
-  "set": "four-train-bay",
+  "set": "crew-train-bay",
   "style": "snappy",
   "coldOpen": "pov",
   "cast": [
     {
       "id": "mitch",
-      "character": "four-mitch",
+      "character": "crew-mitch",
       "mark": "far-left",
       "facing": "right",
       "pose": "lean-in"
     },
     {
-      "id": "mei",
-      "character": "four-mei",
+      "id": "ollie",
+      "character": "crew-ollie",
       "mark": "left",
       "seated": true,
       "facing": "right"
     },
     {
       "id": "maya",
-      "character": "four-maya",
+      "character": "crew-maya",
       "mark": "right",
       "seated": true,
       "facing": "left"
-    },
-    {
-      "id": "ollie",
-      "character": "four-ollie",
-      "mark": "far-right",
-      "facing": "left",
-      "pose": "four-pole"
     }
   ],
   "overlay": {
@@ -68,12 +61,12 @@
         },
         {
           "id": "l2",
-          "speaker": "mei",
+          "speaker": "maya",
           "line": "So... lending someone an umbrella.",
           "expression": "deadpan",
           "shot": {
             "framing": "medium",
-            "on": "mei"
+            "on": "maya"
           }
         },
         {
@@ -81,16 +74,6 @@
           "speaker": "ollie",
           "line": "What if the driver gets wet? Liability. We'd need lawyers.",
           "expression": "worried",
-          "actions": [
-            {
-              "who": "ollie",
-              "do": "pose",
-              "pose": "four-pole",
-              "at": {
-                "word": "What"
-              }
-            }
-          ],
           "shot": {
             "framing": "medium",
             "on": "ollie"
@@ -111,16 +94,6 @@
           "speaker": "ollie",
           "line": "I already bought the domain.",
           "expression": "happy",
-          "actions": [
-            {
-              "who": "ollie",
-              "do": "pose",
-              "pose": "four-pole",
-              "at": {
-                "word": "I"
-              }
-            }
-          ],
           "shot": {
             "framing": "medium",
             "on": "ollie"
@@ -128,12 +101,12 @@
         },
         {
           "id": "l6",
-          "speaker": "mei",
+          "speaker": "maya",
           "line": "You've bought forty domains.",
           "expression": "deadpan",
           "shot": {
             "framing": "medium",
-            "on": "mei"
+            "on": "maya"
           }
         },
         {
@@ -141,16 +114,6 @@
           "speaker": "ollie",
           "line": "Forty-three. I'm diversified.",
           "expression": "smug",
-          "actions": [
-            {
-              "who": "ollie",
-              "do": "pose",
-              "pose": "four-pole",
-              "at": {
-                "word": "Forty-three"
-              }
-            }
-          ],
           "shot": {
             "framing": "close",
             "on": "ollie"
@@ -170,35 +133,25 @@
           "speaker": "ollie",
           "line": "Monday.",
           "expression": "happy",
-          "actions": [
-            {
-              "who": "ollie",
-              "do": "pose",
-              "pose": "four-pole",
-              "at": {
-                "word": "Monday"
-              }
-            }
-          ],
           "shot": {
             "framing": "wide"
           }
         },
         {
           "id": "l10",
-          "speaker": "mei",
+          "speaker": "maya",
           "line": "Same Monday as last year?",
           "expression": "skeptical",
           "shot": {
             "framing": "medium",
-            "on": "mei"
+            "on": "maya"
           }
         }
       ]
     },
     {
       "id": "platform",
-      "set": "four-train-station-carts",
+      "set": "crew-train-station-carts",
       "transition": {
         "type": "cut"
       },

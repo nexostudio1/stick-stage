@@ -1,12 +1,12 @@
 /**
- * The `four` kit's commuter train (the relatable four-person channel). A whole-frame carriage
+ * The `crew` kit's commuter train (the relatable three-person channel). A whole-frame carriage
  * interior seen from the aisle: ceiling with a strap rail, an ad strip, two big windows, a lower
  * panel and the floor. Outside the windows the country scrolls past in three parallax layers
  * (variant "moving", the default), a platform stands still ("station"), or the platform has two coffee
  * carts with a queue ("station-carts", in the right-hand window).
  *
- * Seats, the table and straps (`fourTrainFurniture.tsx`) and the grab pole (`four-train-pole`) are
- * separate parts so a set can place them on its marks. Colours are palette tokens only (`four-train`); ambient motion
+ * Seats, the table and straps (`crewTrainFurniture.tsx`) and the grab pole (`crew-train-pole`) are
+ * separate parts so a set can place them on its marks. Colours are palette tokens only (`crew-train`); ambient motion
  * runs off the composition frame.
  */
 import React from "react";
@@ -186,7 +186,7 @@ const CoffeeCarts: React.FC<{ pal: Palette; W: number; bottom: number; h: number
 };
 
 /** The carriage: ceiling, strap rail with swaying straps, ad strip, windows (moving or station), panels, floor. */
-export const FourTrainBay: PartComponent = ({ part, palette: pal, W, H, groundY, fig, seed, prefix, frame = 0 }) => {
+export const CrewTrainBay: PartComponent = ({ part, palette: pal, W, H, groundY, fig, seed, prefix, frame = 0 }) => {
   const t = frame / FPS;
   const carts = part.variant === "station-carts";
   const station = part.variant === "station" || carts;
@@ -257,7 +257,7 @@ export const FourTrainBay: PartComponent = ({ part, palette: pal, W, H, groundY,
 };
 
 /** A floor-to-ceiling grab pole beside a seat, behind a standing passenger who holds it. */
-export const FourTrainPole: PartComponent = ({ part, palette: pal, W, H, fig, marks }) => {
+export const CrewTrainPole: PartComponent = ({ part, palette: pal, W, H, fig, marks }) => {
   const x = partX(part, W, marks, 0.5);
   const r = fig * 0.022 * part.size;
   const metal = mix(pal.shade, pal.wallA, 0.55);

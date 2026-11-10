@@ -14,11 +14,11 @@ import { StoryBush, StoryFence, StoryFlowers, StoryGround, StoryHills, StoryPond
 import { StoryBed, StoryBench, StoryClubhouse, StoryDoor, StoryFloor, StoryHouse, StoryRug, StoryShelf, StorySofa, StoryTable, StoryWall, StoryWindow } from "./storyPlaces";
 import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
 import { ScienceWash } from "./scienceThemes";
-import { FourTrainBay, FourTrainPole } from "./fourTrain";
-import { FourTrainNearSeats, FourTrainSeat, FourTrainStrap, FourTrainTable } from "./fourTrainFurniture";
+import { CrewTrainBay, CrewTrainPole } from "./crewTrain";
+import { CrewTrainNearSeats, CrewTrainSeat, CrewTrainStrap, CrewTrainTable } from "./crewTrainFurniture";
 import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
-export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "four"] as const;
+export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "crew"] as const;
 export type Kit = (typeof KITS)[number];
 
 export type PartInfo = {
@@ -114,13 +114,13 @@ export const PART_INFO: Record<string, PartInfo> = {
   "story-sofa": { draw: StorySofa, kits: ["story"] },
   "story-table": { draw: StoryTable, kits: ["story"] },
   "story-shelf": { draw: StoryShelf, kits: ["story"] },
-  // The four kit (the relatable four-person channel): bright whole-frame places with ambient motion.
-  "four-train-bay": { draw: FourTrainBay, kits: ["four"], backdrop: true },
-  "four-train-seat": { draw: FourTrainSeat, kits: ["four"] },
-  "four-train-pole": { draw: FourTrainPole, kits: ["four"] },
-  "four-train-table": { draw: FourTrainTable, kits: ["four"], foreground: true },
-  "four-train-strap": { draw: FourTrainStrap, kits: ["four"] },
-  "four-train-near-seats": { draw: FourTrainNearSeats, kits: ["four"], foreground: true },
+  // The crew kit (the relatable three-person channel): bright whole-frame places with ambient motion.
+  "crew-train-bay": { draw: CrewTrainBay, kits: ["crew"], backdrop: true },
+  "crew-train-seat": { draw: CrewTrainSeat, kits: ["crew"] },
+  "crew-train-pole": { draw: CrewTrainPole, kits: ["crew"] },
+  "crew-train-table": { draw: CrewTrainTable, kits: ["crew"], foreground: true },
+  "crew-train-strap": { draw: CrewTrainStrap, kits: ["crew"] },
+  "crew-train-near-seats": { draw: CrewTrainNearSeats, kits: ["crew"], foreground: true },
 };
 
 export const PARTS: Record<string, PartComponent> = Object.fromEntries(Object.entries(PART_INFO).map(([id, p]) => [id, p.draw]));
@@ -138,7 +138,7 @@ export const KIT_BACKDROP: Record<Kit, SetDef["layers"]> = {
   lab: [part("wall", { pattern: "none" }), part("floor")],
   story: [part("story-sky"), part("story-hills"), part("story-ground")],
   night: [part("night-kitchen")],
-  four: [part("four-train-bay")],
+  crew: [part("crew-train-bay")],
 };
 
 function part(id: string, extra: Partial<SetDef["layers"][number]> = {}): SetDef["layers"][number] {

@@ -8,8 +8,8 @@ export const SEAT_HEIGHT = {
   "story-bench": 0.07,
   "story-bed": 0.08,
   "story-sofa": 0.075,
-  /** The `four` kit's train seat. */
-  "four-train-seat": 0.19,
+  /** The `crew` kit's train seat. */
+  "crew-train-seat": 0.19,
 } as const;
 
 /** Set part id → seat kind. */
@@ -21,5 +21,5 @@ export const SEAT_PARTS: Record<string, keyof typeof SEAT_HEIGHT> = {
   "story-bench": "story-bench",
   "story-bed": "story-bed",
   "story-sofa": "story-sofa",
-  "four-train-seat": "four-train-seat",
+  "crew-train-seat": "crew-train-seat",
 };

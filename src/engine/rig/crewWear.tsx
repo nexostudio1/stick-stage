@@ -3,8 +3,8 @@ import { f2 } from "../lib/math";
 import { onHead, type AccessoryDef } from "./accessoryKit";
 
 /**
- * Hair and headwear for the relatable four-person channel's cast (`four-*` characters). Head-local,
- * stick build. Only `four-*` characters use these ids, so no other cast changes.
+ * Hair and headwear for the relatable three-person channel's cast (`crew-*` characters). Head-local,
+ * stick build. Only `crew-*` characters use these ids, so no other cast changes.
  */
 
 /** Points along the head outline from `from`° to `to`° at radius `k`, with an optional bump every other point. */
@@ -14,9 +14,9 @@ const arc = (R: number, from: number, to: number, n: number, k: number, bump = 0
     return `${f2(p.x)},${f2(p.y)}`;
   });
 
-export const FOUR_WEAR: Record<string, AccessoryDef> = {
+export const CREW_WEAR: Record<string, AccessoryDef> = {
   /** Mitch: a baseball cap worn backwards, the brim sticking out behind. */
-  "four-cap-back": {
+  "crew-cap-back": {
     slot: "headwear",
     layers: {
       front: ({ R, stroke, sw, color }) => {
@@ -36,7 +36,7 @@ export const FOUR_WEAR: Record<string, AccessoryDef> = {
     },
   },
   /** Ollie: a messy mop, bumpy all round the crown with a fringe falling forward. */
-  "four-mop": {
+  "crew-mop": {
     slot: "hair",
     layers: {
       front: ({ R, stroke, sw, color }) => {
@@ -52,37 +52,17 @@ export const FOUR_WEAR: Record<string, AccessoryDef> = {
       },
     },
   },
-  /** Mei: a sleek jaw-length bob with a blunt fringe. */
-  "four-bob": {
-    slot: "hair",
-    layers: {
-      back: ({ R, stroke, sw, color }) => (
-        <path
-          d={`M ${f2(-R * 1.14)} ${f2(R * 0.1)} Q ${f2(-R * 1.22)} ${f2(-R * 1.25)} ${f2(0)} ${f2(-R * 1.16)} Q ${f2(R * 1.22)} ${f2(-R * 1.25)} ${f2(R * 1.14)} ${f2(R * 0.1)} L ${f2(R * 1.1)} ${f2(R * 0.72)} L ${f2(-R * 1.1)} ${f2(R * 0.72)} Z`}
-          fill={color}
-          stroke={stroke}
-          strokeWidth={sw}
-          strokeLinejoin="round"
-        />
-      ),
-      front: ({ R, stroke, sw, color }) => {
-        const a = onHead(R, -96, 1.06);
-        const b = onHead(R, 96, 1.06);
-        const d = `M ${f2(a.x)} ${f2(a.y)} A ${f2(R * 1.06)} ${f2(R * 1.06)} 0 0 1 ${f2(b.x)} ${f2(b.y)} L ${f2(R * 0.9)} ${f2(-R * 0.36)} L ${f2(-R * 0.2)} ${f2(-R * 0.4)} Q ${f2(-R * 0.8)} ${f2(-R * 0.3)} ${f2(a.x)} ${f2(a.y)} Z`;
-        return <path d={d} fill={color} stroke={stroke} strokeWidth={sw} strokeLinejoin="round" />;
-      },
-    },
-  },
   /** Maya: long wavy hair past the shoulders, parted to one side. */
-  "four-long": {
+  "crew-long": {
     slot: "hair",
     layers: {
       back: ({ R, stroke, sw, color }) => {
-        const side = (s: number) =>
-          `Q ${f2(s * R * 1.42)} ${f2(R * 0.5)} ${f2(s * R * 1.2)} ${f2(R * 1.0)} Q ${f2(s * R * 1.05)} ${f2(R * 1.4)} ${f2(s * R * 1.32)} ${f2(R * 1.85)}`;
+        // Falls from behind the head: no wider than the head at the temples, a soft wave below the jaw.
         const d =
-          `M ${f2(-R * 0.2)} ${f2(-R * 1.15)} Q ${f2(-R * 1.3)} ${f2(-R * 1.05)} ${f2(-R * 1.2)} ${f2(0)} ${side(-1)} ` +
-          `Q ${f2(0)} ${f2(R * 2.05)} ${f2(R * 1.32)} ${f2(R * 1.85)} Q ${f2(R * 1.05)} ${f2(R * 1.4)} ${f2(R * 1.2)} ${f2(R * 1.0)} Q ${f2(R * 1.42)} ${f2(R * 0.5)} ${f2(R * 1.2)} ${f2(0)} Q ${f2(R * 1.3)} ${f2(-R * 1.05)} ${f2(-R * 0.2)} ${f2(-R * 1.15)} Z`;
+          `M ${f2(-R * 1.0)} ${f2(-R * 0.35)} A ${f2(R * 1.04)} ${f2(R * 1.04)} 0 0 1 ${f2(R * 1.0)} ${f2(-R * 0.35)} ` +
+          `Q ${f2(R * 1.12)} ${f2(R * 0.4)} ${f2(R * 1.02)} ${f2(R * 0.95)} Q ${f2(R * 0.92)} ${f2(R * 1.35)} ${f2(R * 1.12)} ${f2(R * 1.75)} ` +
+          `Q ${f2(0)} ${f2(R * 1.95)} ${f2(-R * 1.12)} ${f2(R * 1.75)} Q ${f2(-R * 0.92)} ${f2(R * 1.35)} ${f2(-R * 1.02)} ${f2(R * 0.95)} ` +
+          `Q ${f2(-R * 1.12)} ${f2(R * 0.4)} ${f2(-R * 1.0)} ${f2(-R * 0.35)} Z`;
         return <path d={d} fill={color} stroke={stroke} strokeWidth={sw} strokeLinejoin="round" />;
       },
       front: ({ R, stroke, sw, color }) => {

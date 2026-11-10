@@ -10,10 +10,10 @@
     },
     {
       "id": "l2",
-      "speaker": "mei",
+      "speaker": "maya",
       "text": "So... lending someone an umbrella.",
       "audio": "voice/l2.wav",
-      "durationMs": 2127
+      "durationMs": 2209
     },
     {
       "id": "l3",
@@ -38,10 +38,10 @@
     },
     {
       "id": "l6",
-      "speaker": "mei",
+      "speaker": "maya",
       "text": "You've bought forty domains.",
       "audio": "voice/l6.wav",
-      "durationMs": 1479
+      "durationMs": 1733
     },
     {
       "id": "l7",
@@ -66,17 +66,17 @@
     },
     {
       "id": "l10",
-      "speaker": "mei",
+      "speaker": "maya",
       "text": "Same Monday as last year?",
       "audio": "voice/l10.wav",
-      "durationMs": 1466
+      "durationMs": 1633
     },
     {
       "id": "l11",
       "speaker": "maya",
       "text": "Coffee guy started with one cart the week we started this.",
       "audio": "voice/l11.wav",
-      "durationMs": 3421
+      "durationMs": 3340
     }
   ]
 }

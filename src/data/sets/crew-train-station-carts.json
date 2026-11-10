@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "crew-train-station-carts",
+  "kit": "crew",
+  "palette": "crew-train",
+  "description": "The three-person train stopped at a busy platform: two coffee carts with a queue in the right-hand window (behind Maya's seat). Same seating as crew-train-bay. Use it for a payoff about someone else who just got on with it.",
+  "tags": [
+    "commute",
+    "train",
+    "station",
+    "coffee",
+    "small business",
+    "crew"
+  ],
+  "groundY": 1360,
+  "figureHeightPx": 640,
+  "layers": [
+    {
+      "part": "crew-train-bay",
+      "variant": "station-carts"
+    },
+    {
+      "part": "crew-train-pole",
+      "x": 0.93
+    },
+    {
+      "part": "crew-train-seat",
+      "mark": "left",
+      "seatFor": [
+        "left"
+      ]
+    },
+    {
+      "part": "crew-train-seat",
+      "mark": "right",
+      "flip": true,
+      "seatFor": [
+        "right"
+      ]
+    }
+  ],
+  "foreground": [
+    {
+      "part": "crew-train-table",
+      "x": 0.585
+    },
+    {
+      "part": "crew-train-near-seats"
+    }
+  ],
+  "marks": {
+    "far-left": 0.21,
+    "left": 0.44,
+    "center": 0.585,
+    "right": 0.73,
+    "far-right": 0.9
+  }
+}

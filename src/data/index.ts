@@ -22,10 +22,9 @@ import wren from "./characters/wren.json";
 import blip from "./characters/blip.json";
 import bram from "./characters/bram.json";
 import tess from "./characters/tess.json";
-import fourMitch from "./characters/four-mitch.json";
-import fourOllie from "./characters/four-ollie.json";
-import fourMei from "./characters/four-mei.json";
-import fourMaya from "./characters/four-maya.json";
+import crewMitch from "./characters/crew-mitch.json";
+import crewOllie from "./characters/crew-ollie.json";
+import crewMaya from "./characters/crew-maya.json";
 
 import idle from "./poses/idle.json";
 import point from "./poses/point.json";
@@ -44,7 +43,7 @@ import holdOut from "./poses/hold-out.json";
 import holdChest from "./poses/hold-chest.json";
 import holdUp from "./poses/hold-up.json";
 import highFive from "./poses/high-five.json";
-import fourPole from "./poses/four-pole.json";
+import crewPole from "./poses/crew-pole.json";
 import shove from "./poses/shove.json";
 import faintPose from "./poses/faint.json";
 import wavePose from "./poses/wave.json";
@@ -54,7 +53,7 @@ import { PROP_DOCS, PROP_IDS } from "./props";
 import miloJune from "./series/milo-june.json";
 import parkFables from "./series/park-fables.json";
 import whosWrong from "./series/whos-wrong.json";
-import four from "./series/four.json";
+import crew from "./series/crew.json";
 
 import neutral from "./expressions/neutral.json";
 import happy from "./expressions/happy.json";
@@ -123,9 +122,9 @@ import explainerDawn from "./sets/explainer-dawn.json";
 import explainerTide from "./sets/explainer-tide.json";
 import explainerCosmos from "./sets/explainer-cosmos.json";
 import explainerLab from "./sets/explainer-lab.json";
-import fourTrainBay from "./sets/four-train-bay.json";
-import fourTrainStation from "./sets/four-train-station.json";
-import fourTrainStationCarts from "./sets/four-train-station-carts.json";
+import crewTrainBay from "./sets/crew-train-bay.json";
+import crewTrainStation from "./sets/crew-train-station.json";
+import crewTrainStationCarts from "./sets/crew-train-station-carts.json";
 
 import castNotesJson from "./cast-notes.json";
 import safeAreaJson from "./safe-area.json";
@@ -146,8 +145,8 @@ export const EXPRESSION_IDS = ["neutral", "happy", "smug", "sarcastic", "annoyed
 export const EXTRA_EXPRESSION_IDS = ["skeptical", "worried", "embarrassed", "thinking", "laughing"];
 
 export const library: Library = createLibrary({
-  characters: [milo, june, lila, theo, moss, dash, reed, nell, pip, vera, gus, tofu, bobo, pim, mabel, otto, fennel, biscuit, wren, blip, bram, tess, fourMitch, fourOllie, fourMei, fourMaya],
-  poses: [idle, point, shrug, facepalm, armsUp, armsCrossed, think, leanIn, recoil, slump, handsOnHips, holdPhone, sit, holdOut, holdChest, holdUp, highFive, shove, faintPose, wavePose, thumbsUp, fourPole],
+  characters: [milo, june, lila, theo, moss, dash, reed, nell, pip, vera, gus, tofu, bobo, pim, mabel, otto, fennel, biscuit, wren, blip, bram, tess, crewMitch, crewOllie, crewMaya],
+  poses: [idle, point, shrug, facepalm, armsUp, armsCrossed, think, leanIn, recoil, slump, handsOnHips, holdPhone, sit, holdOut, holdChest, holdUp, highFive, shove, faintPose, wavePose, thumbsUp, crewPole],
   expressions: [neutral, happy, smug, sarcastic, annoyed, angry, shocked, sad, crying, cringe, confused, deadpan, skeptical, worried, embarrassed, thinking, laughing],
   props: PROP_DOCS,
 });
@@ -168,7 +167,7 @@ export const sets: Record<string, SetDef> = createSets([
   void1, blueprint1, space1, space2, lab1,
   scienceDawn, scienceTide, scienceCosmos, scienceLab,
   explainerDawn, explainerTide, explainerCosmos, explainerLab,
-  fourTrainBay, fourTrainStation, fourTrainStationCarts,
+  crewTrainBay, crewTrainStation, crewTrainStationCarts,
   ...STORY_SETS,
 ]);
 
@@ -195,7 +194,7 @@ export const series: Readonly<Record<string, Series>> = {
   "milo-june": SeriesSchema.parse(migrate("series", miloJune).doc),
   "park-fables": SeriesSchema.parse(migrate("series", parkFables).doc),
   "whos-wrong": SeriesSchema.parse(migrate("series", whosWrong).doc),
-  four: SeriesSchema.parse(migrate("series", four).doc),
+  crew: SeriesSchema.parse(migrate("series", crew).doc),
 };
 
 /** How each shipped character is played. A character with no entry is played straight. */
