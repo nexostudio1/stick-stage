@@ -1,6 +1,6 @@
 ---
 name: crew-episode
-description: Write, stage and render an episode of the relatable three-person channel (working name "Same Three People"): Mitch, Ollie and Maya on the commuter train (later the office and the BBQ) have a 20-28 s everyday conversation with a 2-second hook, a laugh at the two-thirds mark and Maya's quiet closing thought as the train stops. Covers the premise test, beat map, line rules, shots, the platform cut, running gags, packaging (POV card, title, caption), multi-part rules, render and hand-back. Use when asked for a crew / Same Three People / train-channel episode, the next episode of this channel, or to restage crew-we-launch-monday or crew-millionaire-at-94. The team writes or approves the final jokes; drafts are placeholders.
+description: Write, stage and render an episode of the relatable three-person channel (working name "Same Three People"): Mitch, Ollie and Maya on the commuter train, in the office meeting room or at a backyard BBQ have a 20-28 s everyday conversation with a 2-second hook, a laugh at the two-thirds mark and Maya's quiet closing thought as the train stops. Covers the premise test, beat map, line rules, shots, the platform cut, running gags, packaging (POV card, title, caption), multi-part rules, render and hand-back. Use when asked for a crew / Same Three People / train-channel episode, the next episode of this channel, or to restage crew-we-launch-monday or crew-millionaire-at-94. The team writes or approves the final jokes; drafts are placeholders.
 ---
 
 # Crew episode (Same Three People)
@@ -80,10 +80,25 @@ the thought. Always cut to the station for the last line (on the train sets).
   every `ai-wording` warning.
 - Cold-viewer read: say each line aloud as if you'd never met them. Every reference must land.
 
+## The three places
+
+Pick the place the topic lives in; rotate so no place runs three episodes in a row. Marks are the
+same in all three (`far-left` 0.21 stands, `left` 0.44 and `right` 0.73 sit facing each other),
+so the cast block in the reference skits works everywhere.
+
+| Set | Use for | Mitch (`far-left`, stands) | Ollie / Maya (sit) | The ending |
+|---|---|---|---|---|
+| `crew-train-bay` | commute, money, plans, phones, "we should…" | leans on Ollie's seat | train seats across a table | cut to `crew-train-station` / `-station-carts`: the train stops |
+| `crew-meeting-room` | work: meetings, emails, deadlines, bosses, "quick call" | presents at the whiteboard (`crew-whiteboard` can take `text`, ≤3 short lines) | office chairs across the meeting table | hold wide; coworkers keep walking past the glass |
+| `crew-backyard-bbq` | weekends, family, neighbours, sport, food, plans that never happen | cooks behind the grill (smoke rises) | camp chairs with a cooler between | hold wide under the string lights |
+
+The "train stops" signature belongs to the train. In the other places the thought lands on a
+wide hold. New places are new `crew-*` sets (isolation rule), never edits to another kit.
+
 ## Staging (copy the reference skit's shape)
 
-- `"set": "crew-train-bay"`, `"style": "snappy"`, `"coldOpen": "pov"`, cast and marks exactly as
-  in the reference skits. The last scene: `"set": "crew-train-station-carts"` (or
+- `"set"`: one of the three places, `"style": "snappy"`, `"coldOpen": "pov"`, cast and marks exactly as
+  in the reference skits. On the train, the last scene: `"set": "crew-train-station-carts"` (or
   `crew-train-station`) with `"transition": { "type": "cut" }`.
 - Per-line `shot`: line 1 `wide`; singles `medium` on the speaker; `close` only for the first
   laugh's speaker or a shock, and only on a line longer than ~1 s (`closeup-hold` warns); a `wide`

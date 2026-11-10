@@ -16,6 +16,8 @@ import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
 import { ScienceWash } from "./scienceThemes";
 import { CrewTrainBay, CrewTrainPole } from "./crewTrain";
 import { CrewTrainNearSeats, CrewTrainSeat, CrewTrainStrap, CrewTrainTable } from "./crewTrainFurniture";
+import { CrewMeetingRoom, CrewMeetingTable, CrewOfficeChair, CrewOfficeNear, CrewWhiteboard } from "./crewOffice";
+import { CrewBackyard, CrewBbqGrill, CrewBbqNear, CrewCampChair, CrewEsky } from "./crewBbq";
 import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
 export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "crew"] as const;
@@ -121,6 +123,16 @@ export const PART_INFO: Record<string, PartInfo> = {
   "crew-train-table": { draw: CrewTrainTable, kits: ["crew"], foreground: true },
   "crew-train-strap": { draw: CrewTrainStrap, kits: ["crew"] },
   "crew-train-near-seats": { draw: CrewTrainNearSeats, kits: ["crew"], foreground: true },
+  "crew-meeting-room": { draw: CrewMeetingRoom, kits: ["crew"], backdrop: true },
+  "crew-office-chair": { draw: CrewOfficeChair, kits: ["crew"] },
+  "crew-meeting-table": { draw: CrewMeetingTable, kits: ["crew"], foreground: true },
+  "crew-whiteboard": { draw: CrewWhiteboard, kits: ["crew"] },
+  "crew-backyard": { draw: CrewBackyard, kits: ["crew"], backdrop: true },
+  "crew-camp-chair": { draw: CrewCampChair, kits: ["crew"] },
+  "crew-bbq-grill": { draw: CrewBbqGrill, kits: ["crew"], foreground: true },
+  "crew-esky": { draw: CrewEsky, kits: ["crew"], foreground: true },
+  "crew-office-near": { draw: CrewOfficeNear, kits: ["crew"], foreground: true },
+  "crew-bbq-near": { draw: CrewBbqNear, kits: ["crew"], foreground: true },
 };
 
 export const PARTS: Record<string, PartComponent> = Object.fromEntries(Object.entries(PART_INFO).map(([id, p]) => [id, p.draw]));
