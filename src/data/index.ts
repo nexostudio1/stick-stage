@@ -44,6 +44,7 @@ import holdOut from "./poses/hold-out.json";
 import holdChest from "./poses/hold-chest.json";
 import holdUp from "./poses/hold-up.json";
 import highFive from "./poses/high-five.json";
+import fourPole from "./poses/four-pole.json";
 import shove from "./poses/shove.json";
 import faintPose from "./poses/faint.json";
 import wavePose from "./poses/wave.json";
@@ -145,7 +146,7 @@ export const EXTRA_EXPRESSION_IDS = ["skeptical", "worried", "embarrassed", "thi
 
 export const library: Library = createLibrary({
   characters: [milo, june, lila, theo, moss, dash, reed, nell, pip, vera, gus, tofu, bobo, pim, mabel, otto, fennel, biscuit, wren, blip, bram, tess, fourMitch, fourOllie, fourMei, fourMaya],
-  poses: [idle, point, shrug, facepalm, armsUp, armsCrossed, think, leanIn, recoil, slump, handsOnHips, holdPhone, sit, holdOut, holdChest, holdUp, highFive, shove, faintPose, wavePose, thumbsUp],
+  poses: [idle, point, shrug, facepalm, armsUp, armsCrossed, think, leanIn, recoil, slump, handsOnHips, holdPhone, sit, holdOut, holdChest, holdUp, highFive, shove, faintPose, wavePose, thumbsUp, fourPole],
   expressions: [neutral, happy, smug, sarcastic, annoyed, angry, shocked, sad, crying, cringe, confused, deadpan, skeptical, worried, embarrassed, thinking, laughing],
   props: PROP_DOCS,
 });

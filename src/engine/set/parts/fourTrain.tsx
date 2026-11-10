@@ -4,8 +4,8 @@
  * panel and the floor. Outside the windows the country scrolls past in three parallax layers
  * (variant "moving", the default) or a platform stands still ("station").
  *
- * Seats (`four-train-seat`) and the grab pole (`four-train-pole`, foreground) are separate parts so a
- * set can place them on its marks. Colours are palette tokens only (`four-train`); ambient motion
+ * Seats, the table and straps (`fourTrainFurniture.tsx`) and the grab pole (`four-train-pole`) are
+ * separate parts so a set can place them on its marks. Colours are palette tokens only (`four-train`); ambient motion
  * runs off the composition frame.
  */
 import React from "react";
@@ -13,8 +13,7 @@ import { darken, lighten, mix } from "../../lib/color";
 import { f2 } from "../../lib/math";
 import { noise, rand } from "../../lib/seed";
 import type { Palette } from "../palettes";
-import { SEAT_HEIGHT } from "./seats";
-import { edge, partBase, partX, SET_LINE, type PartComponent } from "./types";
+import { edge, partX, SET_LINE, type PartComponent } from "./types";
 
 const FPS = 30;
 
@@ -208,35 +207,7 @@ export const FourTrainBay: PartComponent = ({ part, palette: pal, W, H, groundY,
   );
 };
 
-/** A double seat with a high back, in the carriage's moquette. Seats two (`seatFor` both marks). */
-export const FourTrainSeat: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks }) => {
-  const s = fig * part.size;
-  const w = s * 0.9;
-  const cx = partX(part, W, marks, 0.5);
-  const base = partBase(part, H, groundY);
-  const seatTop = base - SEAT_HEIGHT["four-train-seat"] * s;
-  const backTop = base - s * 0.66;
-  const x0 = cx - w / 2;
-  const fill = pal.detail;
-  const dark = darken(fill, 0.12);
-  const dots = Array.from({ length: 14 }, (_, i) => ({ x: x0 + w * (0.08 + 0.84 * ((i * 0.37) % 1)), y: backTop + (seatTop - backTop) * (0.15 + 0.7 * ((i * 0.53) % 1)) }));
-  return (
-    <g stroke={edge(fill)} strokeWidth={SET_LINE} strokeLinejoin="round">
-      <rect x={f2(x0)} y={f2(backTop)} width={f2(w)} height={f2(seatTop - backTop + s * 0.04)} rx={s * 0.06} fill={fill} />
-      {dots.map((d, i) => (
-        <circle key={i} cx={f2(d.x)} cy={f2(d.y)} r={s * 0.012} fill={lighten(fill, 0.25)} stroke="none" />
-      ))}
-      {[0.27, 0.73].map((k) => (
-        <rect key={k} x={f2(x0 + w * k - s * 0.1)} y={f2(backTop - s * 0.015)} width={f2(s * 0.2)} height={f2(s * 0.09)} rx={s * 0.02} fill={lighten(pal.wallA, 0.3)} />
-      ))}
-      <line x1={f2(cx)} x2={f2(cx)} y1={f2(backTop + s * 0.08)} y2={f2(seatTop)} stroke={dark} />
-      <rect x={f2(x0 - s * 0.02)} y={f2(seatTop)} width={f2(w + s * 0.04)} height={f2(s * 0.08)} rx={s * 0.03} fill={lighten(fill, 0.06)} />
-      <rect x={f2(x0 + s * 0.02)} y={f2(seatTop + s * 0.08)} width={f2(w - s * 0.04)} height={f2(base - seatTop - s * 0.08)} fill={dark} />
-    </g>
-  );
-};
-
-/** A floor-to-ceiling grab pole, drawn over the cast (foreground) for depth. */
+/** A floor-to-ceiling grab pole beside a seat, behind a standing passenger who holds it. */
 export const FourTrainPole: PartComponent = ({ part, palette: pal, W, H, fig, marks }) => {
   const x = partX(part, W, marks, 0.5);
   const r = fig * 0.022 * part.size;

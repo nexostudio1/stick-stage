@@ -3,7 +3,7 @@
   "id": "four-train-station",
   "kit": "four",
   "palette": "four-train",
-  "description": "A bright commuter train carriage stopped at a station platform, four seats in two facing pairs with a grab pole between them; the platform is outside the windows. Use it for arrivals and payoffs that happen on the platform. The relatable four-person channel's home set.",
+  "description": "A bright commuter train carriage stopped at a station platform, two facing seats with a table between them (marks left and right sit) and standing room at each end (far-left leans by a backrest, far-right holds the grab pole by the right seat); the platform is outside the windows. Use it for arrivals and payoffs that happen on the platform. The relatable four-person channel's home set.",
   "tags": [
     "commute",
     "train",
@@ -20,35 +20,36 @@
       "variant": "station"
     },
     {
-      "part": "four-train-seat",
-      "x": 0.24,
-      "seatFor": [
-        "far-left",
-        "left"
-      ],
-      "size": 1.04
+      "part": "four-train-pole",
+      "x": 0.812
     },
     {
       "part": "four-train-seat",
-      "x": 0.76,
+      "mark": "left",
       "seatFor": [
-        "right",
-        "far-right"
-      ],
-      "size": 1.04
+        "left"
+      ]
+    },
+    {
+      "part": "four-train-seat",
+      "mark": "right",
+      "flip": true,
+      "seatFor": [
+        "right"
+      ]
     }
   ],
   "foreground": [
     {
-      "part": "four-train-pole",
+      "part": "four-train-table",
       "x": 0.5
     }
   ],
   "marks": {
-    "far-left": 0.11,
-    "left": 0.37,
+    "far-left": 0.13,
+    "left": 0.36,
     "center": 0.5,
-    "right": 0.63,
-    "far-right": 0.89
+    "right": 0.64,
+    "far-right": 0.88
   }
 }
