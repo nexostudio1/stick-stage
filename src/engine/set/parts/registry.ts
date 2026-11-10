@@ -14,9 +14,13 @@ import { StoryBush, StoryFence, StoryFlowers, StoryGround, StoryHills, StoryPond
 import { StoryBed, StoryBench, StoryClubhouse, StoryDoor, StoryFloor, StoryHouse, StoryRug, StoryShelf, StorySofa, StoryTable, StoryWall, StoryWindow } from "./storyPlaces";
 import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
 import { ScienceWash } from "./scienceThemes";
+import { CrewTrainBay, CrewTrainPole } from "./crewTrain";
+import { CrewTrainNearSeats, CrewTrainSeat, CrewTrainStrap, CrewTrainTable } from "./crewTrainFurniture";
+import { CrewMeetingRoom, CrewMeetingTable, CrewOfficeChair, CrewOfficeChairFront, CrewOfficeNear, CrewWhiteboard } from "./crewOffice";
+import { CrewBackyard, CrewBbqGrill, CrewBbqNear, CrewCampChair, CrewEsky } from "./crewBbq";
 import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
-export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night"] as const;
+export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "crew"] as const;
 export type Kit = (typeof KITS)[number];
 
 export type PartInfo = {
@@ -112,6 +116,24 @@ export const PART_INFO: Record<string, PartInfo> = {
   "story-sofa": { draw: StorySofa, kits: ["story"] },
   "story-table": { draw: StoryTable, kits: ["story"] },
   "story-shelf": { draw: StoryShelf, kits: ["story"] },
+  // The crew kit (the relatable three-person channel): bright whole-frame places with ambient motion.
+  "crew-train-bay": { draw: CrewTrainBay, kits: ["crew"], backdrop: true },
+  "crew-train-seat": { draw: CrewTrainSeat, kits: ["crew"] },
+  "crew-train-pole": { draw: CrewTrainPole, kits: ["crew"] },
+  "crew-train-table": { draw: CrewTrainTable, kits: ["crew"], foreground: true },
+  "crew-train-strap": { draw: CrewTrainStrap, kits: ["crew"] },
+  "crew-train-near-seats": { draw: CrewTrainNearSeats, kits: ["crew"], foreground: true },
+  "crew-meeting-room": { draw: CrewMeetingRoom, kits: ["crew"], backdrop: true },
+  "crew-office-chair": { draw: CrewOfficeChair, kits: ["crew"] },
+  "crew-office-chair-front": { draw: CrewOfficeChairFront, kits: ["crew"] },
+  "crew-meeting-table": { draw: CrewMeetingTable, kits: ["crew"], foreground: true },
+  "crew-whiteboard": { draw: CrewWhiteboard, kits: ["crew"] },
+  "crew-backyard": { draw: CrewBackyard, kits: ["crew"], backdrop: true },
+  "crew-camp-chair": { draw: CrewCampChair, kits: ["crew"] },
+  "crew-bbq-grill": { draw: CrewBbqGrill, kits: ["crew"], foreground: true },
+  "crew-esky": { draw: CrewEsky, kits: ["crew"], foreground: true },
+  "crew-office-near": { draw: CrewOfficeNear, kits: ["crew"], foreground: true },
+  "crew-bbq-near": { draw: CrewBbqNear, kits: ["crew"], foreground: true },
 };
 
 export const PARTS: Record<string, PartComponent> = Object.fromEntries(Object.entries(PART_INFO).map(([id, p]) => [id, p.draw]));
@@ -129,6 +151,7 @@ export const KIT_BACKDROP: Record<Kit, SetDef["layers"]> = {
   lab: [part("wall", { pattern: "none" }), part("floor")],
   story: [part("story-sky"), part("story-hills"), part("story-ground")],
   night: [part("night-kitchen")],
+  crew: [part("crew-train-bay")],
 };
 
 function part(id: string, extra: Partial<SetDef["layers"][number]> = {}): SetDef["layers"][number] {

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "ollie",
+      "text": "I'm gonna be a millionaire at ninety-four.",
+      "audio": "voice/l1.wav",
+      "durationMs": 2209
+    },
+    {
+      "id": "l2",
+      "speaker": "maya",
+      "text": "Ninety-four.",
+      "audio": "voice/l2.wav",
+      "durationMs": 872
+    },
+    {
+      "id": "l3",
+      "speaker": "ollie",
+      "text": "If I skip coffee. It's all in the spreadsheet.",
+      "audio": "voice/l3.wav",
+      "durationMs": 2743
+    },
+    {
+      "id": "l4",
+      "speaker": "mitch",
+      "text": "I don't do spreadsheets. I never check my balance.",
+      "audio": "voice/l4.wav",
+      "durationMs": 3705
+    },
+    {
+      "id": "l5",
+      "speaker": "ollie",
+      "text": "Never?",
+      "audio": "voice/l5.wav",
+      "durationMs": 432
+    },
+    {
+      "id": "l6",
+      "speaker": "mitch",
+      "text": "If I don't look, it can't hurt me.",
+      "audio": "voice/l6.wav",
+      "durationMs": 2184
+    },
+    {
+      "id": "l7",
+      "speaker": "ollie",
+      "text": "That's not how money works.",
+      "audio": "voice/l7.wav",
+      "durationMs": 1716
+    },
+    {
+      "id": "l8",
+      "speaker": "mitch",
+      "text": "It's how my dentist works too.",
+      "audio": "voice/l8.wav",
+      "durationMs": 1847
+    },
+    {
+      "id": "l9",
+      "speaker": "ollie",
+      "text": "Maya, back me up. You budget, right?",
+      "audio": "voice/l9.wav",
+      "durationMs": 2754
+    },
+    {
+      "id": "l10",
+      "speaker": "maya",
+      "text": "I buy the coffee.",
+      "audio": "voice/l10.wav",
+      "durationMs": 1119
+    },
+    {
+      "id": "l11",
+      "speaker": "maya",
+      "text": "You'll be rich at ninety-four. I'll have had the coffees.",
+      "audio": "voice/l11.wav",
+      "durationMs": 3208
+    }
+  ]
+}

@@ -29,6 +29,9 @@ export const KOKORO_VOICES: Readonly<Record<string, string>> = {
   blip: "af_nicole",
   bram: "am_onyx",
   tess: "af_aoede",
+  "crew-mitch": "am_fenrir",
+  "crew-ollie": "bm_fable",
+  "crew-maya": "af_river",
 };
 export const KOKORO_NARRATOR = "am_michael";
 export const KOKORO_DEFAULT = "af_heart";

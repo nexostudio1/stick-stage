@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "crew-backyard-bbq",
+  "kit": "crew",
+  "palette": "crew-bbq",
+  "description": "A sunny backyard BBQ: blue sky with drifting clouds, trees over a timber fence, string lights, a red shade umbrella and a lawn. Everyone stands: the cook behind a kettle grill with smoke rising (mark far-left), two guests with drinks (marks left and right) and a cooler at their feet. The relatable three-person channel's weekend set.",
+  "tags": [
+    "bbq",
+    "backyard",
+    "weekend",
+    "summer",
+    "friends",
+    "crew"
+  ],
+  "groundY": 1360,
+  "figureHeightPx": 640,
+  "layers": [
+    {
+      "part": "crew-backyard"
+    }
+  ],
+  "foreground": [
+    {
+      "part": "crew-bbq-grill",
+      "mark": "far-left",
+      "dx": 0.08
+    },
+    {
+      "part": "crew-esky",
+      "x": 0.66
+    },
+    {
+      "part": "crew-bbq-near"
+    }
+  ],
+  "marks": {
+    "far-left": 0.19,
+    "left": 0.5,
+    "center": 0.64,
+    "right": 0.8
+  }
+}

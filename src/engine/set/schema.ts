@@ -47,7 +47,7 @@ export const SetSchema = z.object({
   aspect: z.enum(ASPECTS).default("9:16"),
   /** A whole-frame backdrop drawn from the frame size (the night kit): fits a 9:16 or 16:9 skit. */
   anyAspect: z.boolean().optional(),
-  kit: z.enum(["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night"]),
+  kit: z.enum(["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "crew"]),
   /** Catalog text for whoever picks the set (an LLM or a person): what the place is and what it suits. */
   description: z.string().optional(),
   /** Topic keywords this set suits, e.g. "work", "date", "morning"; `GET /sets` lists them. */
