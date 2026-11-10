@@ -82,23 +82,36 @@ the thought. Always cut to the station for the last line (on the train sets).
 
 ## The three places
 
-Pick the place the topic lives in; rotate so no place runs three episodes in a row. Marks are the
-same in all three (`far-left` 0.21 stands, `left` 0.44 and `right` 0.73 sit facing each other),
-so the cast block in the reference skits works everywhere.
+Pick the place the topic lives in; rotate so no place runs three episodes in a row. Each place
+has its own seating, so copy that place's cast block exactly (marks differ per set).
 
-| Set | Use for | Mitch (`far-left`, stands) | Ollie / Maya (sit) | The ending |
-|---|---|---|---|---|
-| `crew-train-bay` | commute, money, plans, phones, "we should…" | leans on Ollie's seat | train seats across a table | cut to `crew-train-station` / `-station-carts`: the train stops |
-| `crew-meeting-room` | work: meetings, emails, deadlines, bosses, "quick call" | presents at the whiteboard (`crew-whiteboard` can take `text`, ≤3 short lines) | office chairs across the meeting table | hold wide; coworkers keep walking past the glass |
-| `crew-backyard-bbq` | weekends, family, neighbours, sport, food, plans that never happen | cooks behind the grill (smoke rises) | camp chairs with a cooler between | hold wide under the string lights |
+| Set | Use for | Who is where | The ending |
+|---|---|---|---|
+| `crew-train-bay` | commute, money, plans, phones, "we should…" | Mitch stands (`far-left`, `lean-in`); Ollie (`left`) and Maya (`right`) sit facing across a table | cut to `crew-train-station` / `-station-carts`: the train stops |
+| `crew-meeting-room` | work: meetings, emails, deadlines, bosses, "quick call" | **all sit**: Ollie (`left`, facing right) and Maya (`right`, facing left) side-on at the table's ends; Mitch at the back facing the camera (`center`) | hold wide; coworkers keep walking past the glass |
+| `crew-backyard-bbq` | weekends, family, neighbours, sport, food, plans that never happen | **all stand**: Mitch behind the grill (`far-left`), Ollie (`left`) and Maya (`right`) with drinks | hold wide under the string lights |
 
-The "train stops" signature belongs to the train. In the other places the thought lands on a
-wide hold. New places are new `crew-*` sets (isolation rule), never edits to another kit.
+Cast blocks (`seated` needs the seat at that mark):
+
+```jsonc
+// crew-meeting-room
+{ "id": "mitch", "character": "crew-mitch", "mark": "center", "seated": true },
+{ "id": "ollie", "character": "crew-ollie", "mark": "left", "seated": true, "facing": "right" },
+{ "id": "maya",  "character": "crew-maya",  "mark": "right", "seated": true, "facing": "left" }
+// crew-backyard-bbq
+{ "id": "mitch", "character": "crew-mitch", "mark": "far-left", "facing": "right" },
+{ "id": "ollie", "character": "crew-ollie", "mark": "left", "facing": "right", "holding": { "prop": "soda-can" } },
+{ "id": "maya",  "character": "crew-maya",  "mark": "right", "facing": "left", "holding": { "prop": "cup" } }
+```
+
+Anyone can take the back seat in the meeting room (Maya facing the camera suits a closing
+thought); swap the marks in the skit. The "train stops" signature belongs to the train. New
+places are new `crew-*` sets (isolation rule), never edits to another kit.
 
 ## Staging (copy the reference skit's shape)
 
-- `"set"`: one of the three places, `"style": "snappy"`, `"coldOpen": "pov"`, cast and marks exactly as
-  in the reference skits. On the train, the last scene: `"set": "crew-train-station-carts"` (or
+- `"set"`: one of the three places, `"style": "snappy"`, `"coldOpen": "pov"`, the cast block for that place
+  (above; the reference skits show the train's). On the train, the last scene: `"set": "crew-train-station-carts"` (or
   `crew-train-station`) with `"transition": { "type": "cut" }`.
 - Per-line `shot`: line 1 `wide`; singles `medium` on the speaker; `close` only for the first
   laugh's speaker or a shock, and only on a line longer than ~1 s (`closeup-hold` warns); a `wide`

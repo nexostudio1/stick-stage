@@ -12,6 +12,7 @@ export const SEAT_HEIGHT = {
   "crew-train-seat": 0.19,
   /** The `crew` kit's meeting-room and backyard seats. */
   "crew-office-chair": 0.2,
+  "crew-office-chair-front": 0.2,
   "crew-camp-chair": 0.17,
 } as const;
 
@@ -26,5 +27,6 @@ export const SEAT_PARTS: Record<string, keyof typeof SEAT_HEIGHT> = {
   "story-sofa": "story-sofa",
   "crew-train-seat": "crew-train-seat",
   "crew-office-chair": "crew-office-chair",
+  "crew-office-chair-front": "crew-office-chair-front",
   "crew-camp-chair": "crew-camp-chair",
 };

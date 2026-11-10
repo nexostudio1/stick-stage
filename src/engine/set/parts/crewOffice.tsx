@@ -165,33 +165,68 @@ export const CrewOfficeChair: PartComponent = ({ part, palette: pal, W, H, groun
   );
 };
 
-/** The meeting table between two facing chairs (foreground): a laptop, two mugs, a notepad. */
+/**
+ * The long meeting table (foreground), seen a little from above so its top has depth: the two
+ * side sitters' knees go under its ends, and whoever sits at the back (`crew-office-chair-front`)
+ * shows from the chest up behind it. A laptop, mugs and a notepad on top.
+ */
 export const CrewMeetingTable: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks }) => {
   const s = fig * part.size;
   const cx = partX(part, W, marks, 0.5);
   const base = partBase(part, H, groundY);
-  const top = base - s * 0.4;
-  const w = s * 0.5;
+  const front = base - s * 0.36;
+  const back = front - s * 0.09;
+  const w = s * 0.66;
+  const inset = s * 0.05;
   const wood = mix(pal.wallA, pal.accent, 0.18);
   const legC = darken(pal.shade, 0.2);
+  const surfY = (k: number) => front - (front - back) * k;
   return (
     <g strokeLinejoin="round">
-      {[-0.4, 0.4].map((k) => (
-        <rect key={k} x={f2(cx + k * w - s * 0.012)} y={f2(top)} width={f2(s * 0.024)} height={f2(base - top)} fill={legC} stroke={edge(legC)} strokeWidth={SET_LINE} />
+      {[-0.44, 0.44].map((k) => (
+        <rect key={k} x={f2(cx + k * w - s * 0.014)} y={f2(front)} width={f2(s * 0.028)} height={f2(base - front)} fill={legC} stroke={edge(legC)} strokeWidth={SET_LINE} />
       ))}
-      {/* Laptop, open, screen facing left (towards the left seat). */}
-      <path d={`M ${f2(cx - w * 0.05)} ${f2(top)} l ${f2(-s * 0.05)} ${f2(-s * 0.13)} l ${f2(s * 0.012)} 0 l ${f2(s * 0.05)} ${f2(s * 0.13)} Z`} fill={darken(pal.shade, 0.25)} stroke={edge(pal.shade, 0.3)} strokeWidth={SET_LINE} />
-      <rect x={f2(cx - w * 0.05)} y={f2(top - s * 0.012)} width={f2(s * 0.14)} height={f2(s * 0.012)} rx={3} fill={lighten(pal.shade, 0.3)} stroke={edge(pal.shade)} strokeWidth={SET_LINE} />
-      {/* Mugs. */}
-      {[cx - w * 0.32, cx + w * 0.3].map((x, i) => (
+      {/* Modesty panel: hides the back sitter's legs. */}
+      <rect x={f2(cx - w * 0.3)} y={f2(front)} width={f2(w * 0.6)} height={f2(base - front - s * 0.06)} rx={8} fill={darken(wood, 0.06)} stroke={edge(wood, 0.25)} strokeWidth={SET_LINE} />
+      {/* Top surface (a trapezoid for depth), then the front edge. */}
+      <path d={`M ${f2(cx - w / 2)} ${f2(front)} L ${f2(cx - w / 2 + inset)} ${f2(back)} L ${f2(cx + w / 2 - inset)} ${f2(back)} L ${f2(cx + w / 2)} ${f2(front)} Z`} fill={lighten(wood, 0.12)} stroke={edge(wood, 0.25)} strokeWidth={SET_LINE} />
+      <rect x={f2(cx - w / 2)} y={f2(front)} width={f2(w)} height={f2(s * 0.045)} rx={f2(s * 0.012)} fill={wood} stroke={edge(wood, 0.25)} strokeWidth={SET_LINE} />
+      {/* Laptop at the back sitter's place, its lid towards them. */}
+      <path d={`M ${f2(cx - s * 0.08)} ${f2(surfY(0.35))} h ${f2(s * 0.16)} l ${f2(-s * 0.012)} ${f2(-s * 0.1)} h ${f2(-s * 0.136)} Z`} fill={lighten(pal.shade, 0.35)} stroke={edge(pal.shade, 0.3)} strokeWidth={SET_LINE} />
+      <circle cx={f2(cx)} cy={f2(surfY(0.35) - s * 0.05)} r={f2(s * 0.012)} fill={lighten(pal.wallA, 0.5)} />
+      {/* Mugs and notepads at each side place. */}
+      {[cx - w * 0.33, cx + w * 0.33].map((x, i) => (
         <g key={i} stroke={edge(pal.wallB, 0.3)} strokeWidth={SET_LINE}>
-          <rect x={f2(x - s * 0.025)} y={f2(top - s * 0.06)} width={f2(s * 0.05)} height={f2(s * 0.06)} rx={5} fill={i ? pal.accent : lighten(pal.wallA, 0.4)} />
-          <path d={`M ${f2(x + s * 0.025)} ${f2(top - s * 0.05)} q ${f2(s * 0.025)} ${f2(s * 0.02)} 0 ${f2(s * 0.04)}`} fill="none" />
+          <rect x={f2(x - s * 0.06)} y={f2(surfY(0.6) - s * 0.008)} width={f2(s * 0.08)} height={f2(s * 0.016)} fill={lighten(pal.glow ?? pal.wallA, 0.3)} strokeWidth={2} />
+          <rect x={f2(x + (i ? -s * 0.08 : s * 0.04))} y={f2(surfY(0.3) - s * 0.06)} width={f2(s * 0.045)} height={f2(s * 0.06)} rx={5} fill={i ? pal.accent : lighten(pal.wallA, 0.4)} />
         </g>
       ))}
-      {/* Notepad. */}
-      <rect x={f2(cx + w * 0.05)} y={f2(top - s * 0.01)} width={f2(s * 0.09)} height={f2(s * 0.01)} fill={lighten(pal.glow ?? pal.wallA, 0.3)} stroke={edge(pal.wallA, 0.25)} strokeWidth={2} />
-      <rect x={f2(cx - w / 2)} y={f2(top)} width={f2(w)} height={f2(s * 0.045)} rx={f2(s * 0.015)} fill={wood} stroke={edge(wood, 0.25)} strokeWidth={SET_LINE} />
+    </g>
+  );
+};
+
+/**
+ * An office chair seen from the front, for whoever sits at the back of the meeting table facing
+ * the camera. The backrest shows around their shoulders; the table hides the rest.
+ */
+export const CrewOfficeChairFront: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks }) => {
+  const s = fig * part.size;
+  const cx = partX(part, W, marks, 0.5);
+  const base = partBase(part, H, groundY);
+  const seatTop = base - SEAT_HEIGHT["crew-office-chair-front"] * s;
+  const fill = pal.detail;
+  const metal = darken(pal.shade, 0.25);
+  const bw = s * 0.34;
+  const top = seatTop - s * 0.5;
+  return (
+    <g stroke={edge(fill)} strokeWidth={SET_LINE} strokeLinejoin="round">
+      <rect x={f2(cx - s * 0.015)} y={f2(seatTop)} width={f2(s * 0.03)} height={f2(base - seatTop)} fill={metal} />
+      <rect x={f2(cx - bw / 2)} y={f2(top)} width={f2(bw)} height={f2(seatTop - top)} rx={f2(s * 0.06)} fill={fill} />
+      <rect x={f2(cx - bw * 0.36)} y={f2(top + s * 0.05)} width={f2(bw * 0.72)} height={f2(s * 0.012)} rx={4} fill={lighten(fill, 0.2)} stroke="none" />
+      {[-1, 1].map((k) => (
+        <rect key={k} x={f2(cx + k * (bw / 2 + s * 0.01) - s * 0.02)} y={f2(seatTop - s * 0.14)} width={f2(s * 0.04)} height={f2(s * 0.14)} rx={6} fill={metal} />
+      ))}
+      <rect x={f2(cx - bw * 0.62)} y={f2(seatTop - s * 0.02)} width={f2(bw * 1.24)} height={f2(s * 0.06)} rx={f2(s * 0.03)} fill={lighten(fill, 0.08)} />
     </g>
   );
 };

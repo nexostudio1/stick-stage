@@ -3,7 +3,7 @@
   "id": "crew-meeting-room",
   "kit": "crew",
   "palette": "crew-office",
-  "description": "A bright office meeting room: a glass wall onto an open-plan office where coworkers walk past, a wall screen with a live chart, a ticking clock, coral pendant lights and a plant. Two office chairs face each other across a meeting table with a laptop and mugs (marks left and right sit); a whiteboard behind far-left for whoever is presenting. The relatable three-person channel's work set.",
+  "description": "A bright office meeting room: a glass wall onto an open-plan office where coworkers walk past, a wall screen with a live chart, a ticking clock, coral pendant lights and a plant. Everyone sits at a long meeting table: two side-on at its ends (marks left and right, facing each other) and one at the back facing the camera (mark center), seen from the chest up behind the table. The relatable three-person channel's work set.",
   "tags": [
     "office",
     "work",
@@ -18,9 +18,11 @@
       "part": "crew-meeting-room"
     },
     {
-      "part": "crew-whiteboard",
-      "mark": "far-left",
-      "dx": -0.06
+      "part": "crew-office-chair-front",
+      "mark": "center",
+      "seatFor": [
+        "center"
+      ]
     },
     {
       "part": "crew-office-chair",
@@ -41,17 +43,15 @@
   "foreground": [
     {
       "part": "crew-meeting-table",
-      "x": 0.585
+      "mark": "center"
     },
     {
       "part": "crew-office-near"
     }
   ],
   "marks": {
-    "far-left": 0.21,
-    "left": 0.44,
-    "center": 0.585,
-    "right": 0.73,
-    "far-right": 0.9
+    "left": 0.22,
+    "center": 0.5,
+    "right": 0.78
   }
 }
