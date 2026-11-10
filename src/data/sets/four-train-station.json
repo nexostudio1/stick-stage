@@ -12,7 +12,7 @@
     "travel",
     "four"
   ],
-  "groundY": 1500,
+  "groundY": 1360,
   "figureHeightPx": 580,
   "layers": [
     {
@@ -43,6 +43,9 @@
     {
       "part": "four-train-table",
       "x": 0.5
+    },
+    {
+      "part": "four-train-near-seats"
     }
   ],
   "marks": {

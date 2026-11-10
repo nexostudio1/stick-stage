@@ -125,6 +125,7 @@ import explainerCosmos from "./sets/explainer-cosmos.json";
 import explainerLab from "./sets/explainer-lab.json";
 import fourTrainBay from "./sets/four-train-bay.json";
 import fourTrainStation from "./sets/four-train-station.json";
+import fourTrainStationCarts from "./sets/four-train-station-carts.json";
 
 import castNotesJson from "./cast-notes.json";
 import safeAreaJson from "./safe-area.json";
@@ -167,7 +168,7 @@ export const sets: Record<string, SetDef> = createSets([
   void1, blueprint1, space1, space2, lab1,
   scienceDawn, scienceTide, scienceCosmos, scienceLab,
   explainerDawn, explainerTide, explainerCosmos, explainerLab,
-  fourTrainBay, fourTrainStation,
+  fourTrainBay, fourTrainStation, fourTrainStationCarts,
   ...STORY_SETS,
 ]);
 

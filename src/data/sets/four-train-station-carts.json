@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "four-train-station-carts",
+  "kit": "four",
+  "palette": "four-train",
+  "description": "The four-person train stopped at a busy platform: two coffee carts with a queue in the right-hand window (behind Maya's seat). Same seating as four-train-bay. Use it for a payoff about someone else who just got on with it.",
+  "tags": [
+    "commute",
+    "train",
+    "station",
+    "coffee",
+    "small business",
+    "four"
+  ],
+  "groundY": 1360,
+  "figureHeightPx": 580,
+  "layers": [
+    {
+      "part": "four-train-bay",
+      "variant": "station-carts"
+    },
+    {
+      "part": "four-train-pole",
+      "x": 0.812
+    },
+    {
+      "part": "four-train-seat",
+      "mark": "left",
+      "seatFor": [
+        "left"
+      ]
+    },
+    {
+      "part": "four-train-seat",
+      "mark": "right",
+      "flip": true,
+      "seatFor": [
+        "right"
+      ]
+    }
+  ],
+  "foreground": [
+    {
+      "part": "four-train-table",
+      "x": 0.5
+    },
+    {
+      "part": "four-train-near-seats"
+    }
+  ],
+  "marks": {
+    "far-left": 0.13,
+    "left": 0.36,
+    "center": 0.5,
+    "right": 0.64,
+    "far-right": 0.88
+  }
+}

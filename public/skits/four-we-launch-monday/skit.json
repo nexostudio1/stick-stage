@@ -53,114 +53,173 @@
     "pov": "POV: your friends' startup only exists on the train",
     "subtitles": true
   },
-  "beats": [
+  "scenes": [
     {
-      "id": "l1",
-      "speaker": "mitch",
-      "line": "Okay, hear me out. Uber, but for umbrellas.",
-      "expression": "happy"
-    },
-    {
-      "id": "l2",
-      "speaker": "mei",
-      "line": "So... lending someone an umbrella.",
-      "expression": "deadpan"
-    },
-    {
-      "id": "l3",
-      "speaker": "ollie",
-      "line": "What if the driver gets wet? Liability. We'd need lawyers.",
-      "expression": "worried",
-      "actions": [
+      "id": "moving",
+      "beats": [
         {
-          "who": "ollie",
-          "do": "pose",
-          "pose": "four-pole",
-          "at": {
-            "word": "What"
+          "id": "l1",
+          "speaker": "mitch",
+          "line": "Okay, hear me out. Uber, but for umbrellas.",
+          "expression": "happy",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "mei",
+          "line": "So... lending someone an umbrella.",
+          "expression": "deadpan",
+          "shot": {
+            "framing": "medium",
+            "on": "mei"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "ollie",
+          "line": "What if the driver gets wet? Liability. We'd need lawyers.",
+          "expression": "worried",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "four-pole",
+              "at": {
+                "word": "What"
+              }
+            }
+          ],
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "mitch",
+          "line": "Fine. Tinder, but for leftovers.",
+          "expression": "smug",
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "ollie",
+          "line": "I already bought the domain.",
+          "expression": "happy",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "four-pole",
+              "at": {
+                "word": "I"
+              }
+            }
+          ],
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "mei",
+          "line": "You've bought forty domains.",
+          "expression": "deadpan",
+          "shot": {
+            "framing": "medium",
+            "on": "mei"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "ollie",
+          "line": "Forty-three. I'm diversified.",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "four-pole",
+              "at": {
+                "word": "Forty-three"
+              }
+            }
+          ],
+          "shot": {
+            "framing": "close",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "mitch",
+          "line": "We just need to pick one and launch.",
+          "expression": "happy",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "ollie",
+          "line": "Monday.",
+          "expression": "happy",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "four-pole",
+              "at": {
+                "word": "Monday"
+              }
+            }
+          ],
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "mei",
+          "line": "Same Monday as last year?",
+          "expression": "skeptical",
+          "shot": {
+            "framing": "medium",
+            "on": "mei"
           }
         }
       ]
     },
     {
-      "id": "l4",
-      "speaker": "mitch",
-      "line": "Fine. Tinder, but for leftovers.",
-      "expression": "smug"
-    },
-    {
-      "id": "l5",
-      "speaker": "ollie",
-      "line": "I already bought the domain.",
-      "expression": "happy",
-      "actions": [
+      "id": "platform",
+      "set": "four-train-station-carts",
+      "transition": {
+        "type": "cut"
+      },
+      "beats": [
         {
-          "who": "ollie",
-          "do": "pose",
-          "pose": "four-pole",
-          "at": {
-            "word": "I"
-          }
+          "id": "l11",
+          "speaker": "maya",
+          "line": "Coffee guy started with one cart the week we started this.",
+          "expression": "neutral",
+          "pauseBeforeMs": 300,
+          "shot": {
+            "framing": "wide"
+          },
+          "punchline": false
         }
       ]
-    },
-    {
-      "id": "l6",
-      "speaker": "mei",
-      "line": "You've bought forty domains.",
-      "expression": "deadpan"
-    },
-    {
-      "id": "l7",
-      "speaker": "ollie",
-      "line": "Forty-three. I'm diversified.",
-      "expression": "smug",
-      "actions": [
-        {
-          "who": "ollie",
-          "do": "pose",
-          "pose": "four-pole",
-          "at": {
-            "word": "Forty-three"
-          }
-        }
-      ]
-    },
-    {
-      "id": "l8",
-      "speaker": "mitch",
-      "line": "We just need to pick one and launch.",
-      "expression": "happy"
-    },
-    {
-      "id": "l9",
-      "speaker": "ollie",
-      "line": "Monday.",
-      "expression": "happy",
-      "actions": [
-        {
-          "who": "ollie",
-          "do": "pose",
-          "pose": "four-pole",
-          "at": {
-            "word": "Monday"
-          }
-        }
-      ]
-    },
-    {
-      "id": "l10",
-      "speaker": "mei",
-      "line": "Same Monday as last year?",
-      "expression": "skeptical"
-    },
-    {
-      "id": "l11",
-      "speaker": "maya",
-      "line": "Coffee guy started with one cart the week we started this.",
-      "expression": "neutral",
-      "punchline": true,
-      "pauseBeforeMs": 300
     }
-  ]
+  ],
+  "timing": {
+    "leadInMs": 200,
+    "gapMs": 120,
+    "tailMs": 1400
+  }
 }

@@ -15,7 +15,7 @@ import { StoryBed, StoryBench, StoryClubhouse, StoryDoor, StoryFloor, StoryHouse
 import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
 import { ScienceWash } from "./scienceThemes";
 import { FourTrainBay, FourTrainPole } from "./fourTrain";
-import { FourTrainSeat, FourTrainStrap, FourTrainTable } from "./fourTrainFurniture";
+import { FourTrainNearSeats, FourTrainSeat, FourTrainStrap, FourTrainTable } from "./fourTrainFurniture";
 import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
 export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "four"] as const;
@@ -120,6 +120,7 @@ export const PART_INFO: Record<string, PartInfo> = {
   "four-train-pole": { draw: FourTrainPole, kits: ["four"] },
   "four-train-table": { draw: FourTrainTable, kits: ["four"], foreground: true },
   "four-train-strap": { draw: FourTrainStrap, kits: ["four"] },
+  "four-train-near-seats": { draw: FourTrainNearSeats, kits: ["four"], foreground: true },
 };
 
 export const PARTS: Record<string, PartComponent> = Object.fromEntries(Object.entries(PART_INFO).map(([id, p]) => [id, p.draw]));

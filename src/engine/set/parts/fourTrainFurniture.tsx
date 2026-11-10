@@ -80,3 +80,28 @@ export const FourTrainStrap: PartComponent = ({ part, palette: pal, W, H, fig, m
     </g>
   );
 };
+
+/** The tops of the next row of seat backs along the bottom edge (foreground), for depth in a wide shot. */
+export const FourTrainNearSeats: PartComponent = ({ palette: pal, W, H }) => {
+  const fill = darken(pal.detail, 0.06);
+  const top = H * 0.86;
+  const backs = [
+    { x0: -W * 0.04, x1: W * 0.4 },
+    { x0: W * 0.6, x1: W * 1.04 },
+  ];
+  return (
+    <g stroke={edge(fill)} strokeWidth={SET_LINE} strokeLinejoin="round">
+      {backs.map((b, i) => (
+        <g key={i}>
+          <rect x={f2(b.x0)} y={f2(top)} width={f2(b.x1 - b.x0)} height={f2(H - top + 40)} rx={W * 0.05} fill={fill} />
+          {[0.28, 0.72].map((k) => (
+            <rect key={k} x={f2(b.x0 + (b.x1 - b.x0) * k - W * 0.08)} y={f2(top - H * 0.008)} width={f2(W * 0.16)} height={f2(H * 0.035)} rx={W * 0.02} fill={lighten(pal.wallA, 0.3)} />
+          ))}
+          {Array.from({ length: 8 }, (_, j) => (
+            <circle key={j} cx={f2(b.x0 + (b.x1 - b.x0) * (0.08 + 0.12 * j))} cy={f2(top + H * (0.06 + 0.03 * (j % 2)))} r={W * 0.006} fill={lighten(fill, 0.22)} stroke="none" />
+          ))}
+        </g>
+      ))}
+    </g>
+  );
+};

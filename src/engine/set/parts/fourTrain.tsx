@@ -2,7 +2,8 @@
  * The `four` kit's commuter train (the relatable four-person channel). A whole-frame carriage
  * interior seen from the aisle: ceiling with a strap rail, an ad strip, two big windows, a lower
  * panel and the floor. Outside the windows the country scrolls past in three parallax layers
- * (variant "moving", the default) or a platform stands still ("station").
+ * (variant "moving", the default), a platform stands still ("station"), or the platform has two coffee
+ * carts with a queue ("station-carts", in the right-hand window).
  *
  * Seats, the table and straps (`fourTrainFurniture.tsx`) and the grab pole (`four-train-pole`) are
  * separate parts so a set can place them on its marks. Colours are palette tokens only (`four-train`); ambient motion
@@ -50,7 +51,7 @@ const Scroll: React.FC<{ frame: number; speed: number; w: number; children: Reac
 };
 
 /** The view through the windows, clipped by the caller. */
-const Outside: React.FC<{ pal: Palette; W: number; y0: number; y1: number; frame: number; seed: string; station: boolean }> = ({ pal, W, y0, y1, frame, seed, station }) => {
+const Outside: React.FC<{ pal: Palette; W: number; y0: number; y1: number; frame: number; seed: string; station: boolean; carts: boolean }> = ({ pal, W, y0, y1, frame, seed, station, carts }) => {
   const s = sceneryOf(pal);
   const h = y1 - y0;
   const horizon = y0 + h * 0.7;
@@ -78,10 +79,11 @@ const Outside: React.FC<{ pal: Palette; W: number; y0: number; y1: number; frame
           <line key={i} x1={f2(i * tile)} x2={f2(i * tile)} y1={f2(y0 + h * 0.18)} y2={f2(edgeY)} stroke={lighten(pal.wallB, 0.4)} strokeWidth={2} />
         ))}
         <rect x={0} y={y0 + h * 0.18} width={W} height={h * 0.06} fill={pal.detail} />
-        <rect x={W * 0.56} y={y0 + h * 0.32} width={W * 0.3} height={h * 0.13} rx={8} fill={pal.shade} />
-        <rect x={W * 0.58} y={y0 + h * 0.37} width={W * 0.26} height={h * 0.03} rx={4} fill={lighten(pal.shade, 0.5)} />
+        <rect x={W * (carts ? 0.1 : 0.56)} y={y0 + h * 0.32} width={W * 0.3} height={h * 0.13} rx={8} fill={pal.shade} />
+        <rect x={W * (carts ? 0.12 : 0.58)} y={y0 + h * 0.37} width={W * 0.26} height={h * 0.03} rx={4} fill={lighten(pal.shade, 0.5)} />
         <rect x={0} y={edgeY} width={W} height={y1 - edgeY} fill={mix(pal.floor, pal.wallA, 0.45)} />
         <rect x={0} y={edgeY + h * 0.03} width={W} height={h * 0.025} fill={pal.glow ?? pal.accent} />
+        {carts ? <CoffeeCarts pal={pal} W={W} bottom={edgeY + h * 0.02} h={h} frame={frame} /> : null}
       </g>
     );
   }
@@ -137,10 +139,57 @@ const Outside: React.FC<{ pal: Palette; W: number; y0: number; y1: number; frame
   );
 };
 
+/** Two coffee carts on the platform with a small queue: the Ep 1 payoff ("he has two carts now"). */
+const CoffeeCarts: React.FC<{ pal: Palette; W: number; bottom: number; h: number; frame: number }> = ({ pal, W, bottom, h, frame }) => {
+  const sc = h * 0.5;
+  const ink = pal.shade;
+  const cart = (cx: number, i: number) => {
+    const w = sc * 0.62;
+    const bodyTop = bottom - sc * 0.48;
+    const awning = bottom - sc * 0.95;
+    const stripes = 5;
+    return (
+      <g key={i} stroke={darken(ink, 0.1)} strokeWidth={2.5} strokeLinejoin="round">
+        {[-1, 1].map((k) => (
+          <line key={k} x1={f2(cx + k * w * 0.42)} x2={f2(cx + k * w * 0.42)} y1={f2(awning)} y2={f2(bodyTop)} />
+        ))}
+        {Array.from({ length: stripes }, (_, j) => (
+          <rect key={j} x={f2(cx - w * 0.55 + (w * 1.1 * j) / stripes)} y={f2(awning - sc * 0.12)} width={f2((w * 1.1) / stripes)} height={f2(sc * 0.12)} fill={j % 2 ? pal.wallA : pal.accent} />
+        ))}
+        <rect x={f2(cx - w / 2)} y={f2(bodyTop)} width={f2(w)} height={f2(sc * 0.4)} rx={6} fill={pal.accent} />
+        <rect x={f2(cx - w * 0.54)} y={f2(bodyTop - sc * 0.04)} width={f2(w * 1.08)} height={f2(sc * 0.05)} rx={4} fill={lighten(pal.wallA, 0.2)} />
+        <circle cx={f2(cx)} cy={f2(bodyTop + sc * 0.2)} r={f2(sc * 0.1)} fill={pal.glow ?? pal.wallA} />
+        <path d={`M ${f2(cx - sc * 0.045)} ${f2(bodyTop + sc * 0.16)} h ${f2(sc * 0.09)} l ${f2(-sc * 0.012)} ${f2(sc * 0.08)} h ${f2(-sc * 0.066)} Z`} fill={darken(pal.accent, 0.25)} stroke="none" />
+        {[-0.3, 0.3].map((k) => (
+          <circle key={k} cx={f2(cx + k * w)} cy={f2(bottom - sc * 0.06)} r={f2(sc * 0.06)} fill={ink} />
+        ))}
+      </g>
+    );
+  };
+  // The queue: little silhouettes, shuffling a touch.
+  const people = [0.6, 0.66, 0.72, 0.89, 0.95].map((k, i) => {
+    const x = W * k + Math.sin(frame / 20 + i * 1.7) * 2;
+    const tall = sc * (0.55 + 0.08 * ((i * 37) % 3));
+    return (
+      <g key={i} fill={mix(ink, pal.wallB, 0.25)}>
+        <circle cx={f2(x)} cy={f2(bottom - tall)} r={f2(sc * 0.07)} />
+        <rect x={f2(x - sc * 0.05)} y={f2(bottom - tall + sc * 0.06)} width={f2(sc * 0.1)} height={f2(tall - sc * 0.06)} rx={f2(sc * 0.04)} />
+      </g>
+    );
+  });
+  return (
+    <g>
+      {people}
+      {[W * 0.78, W * 0.84 + sc * 0.62].map((x, i) => cart(x - sc * 0.31, i))}
+    </g>
+  );
+};
+
 /** The carriage: ceiling, strap rail with swaying straps, ad strip, windows (moving or station), panels, floor. */
 export const FourTrainBay: PartComponent = ({ part, palette: pal, W, H, groundY, fig, seed, prefix, frame = 0 }) => {
   const t = frame / FPS;
-  const station = part.variant === "station";
+  const carts = part.variant === "station-carts";
+  const station = part.variant === "station" || carts;
   const wy0 = H * TRAIN_WINDOW.top;
   const wy1 = H * TRAIN_WINDOW.bottom;
   const pad = W * 0.05;
@@ -175,7 +224,7 @@ export const FourTrainBay: PartComponent = ({ part, palette: pal, W, H, groundY,
       ))}
       {/* Windows: the view, a frame, a sheen. */}
       <g clipPath={`url(#${clip})`}>
-        <Outside pal={pal} W={W} y0={wy0} y1={wy1} frame={frame} seed={seed} station={station} />
+        <Outside pal={pal} W={W} y0={wy0} y1={wy1} frame={frame} seed={seed} station={station} carts={carts} />
         <polygon points={`${f2(W * 0.1)},${f2(wy1)} ${f2(W * 0.22)},${f2(wy0)} ${f2(W * 0.28)},${f2(wy0)} ${f2(W * 0.16)},${f2(wy1)}`} fill={lighten(pal.sky, 0.9)} opacity={0.14} />
         <polygon points={`${f2(W * 0.6)},${f2(wy1)} ${f2(W * 0.72)},${f2(wy0)} ${f2(W * 0.75)},${f2(wy0)} ${f2(W * 0.63)},${f2(wy1)}`} fill={lighten(pal.sky, 0.9)} opacity={0.14} />
       </g>
