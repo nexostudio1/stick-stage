@@ -42,6 +42,7 @@ Comedy-skit and science-short engine on Remotion. Open source (MIT); Tamtree use
 - `the-catch-story` (`skills/the-catch-story/SKILL.md`): a "The Catch" case script: a human, relatable, useful money story (topic test, five acts, fast-voice lines, sourced numbers).
 - `the-catch-staging` (`skills/the-catch-staging/SKILL.md`): a The Catch script → storyboard and explainer skit in the night-shift world with Nickel, data as objects, SFX and music cues.
 - `whos-wrong` (`skills/whos-wrong/SKILL.md`): a "Who's Wrong?" episode: a petty two-sided argument with Bram and Tess, the verdict meter, the `argument` style's fast pace; the team writes the twist.
+- `crew-episode` (`skills/crew-episode/SKILL.md`): an episode of the relatable three-person channel (Mitch, Ollie, Maya on the train): 2-second hook, laugh, Maya's closing thought as the train stops, packaging and multi-part rules; the team approves the jokes.
 
 Path-scoped rules live in `.claude/rules/` (`toon-rig.md` for the rig, characters and poses; `shape-rig.md` for the shape tier, story kit and places; `science-skits.md` for skits, figures and approval).
 

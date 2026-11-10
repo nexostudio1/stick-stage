@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "He'll be a millionaire at 94",
+    "description": "Every friend group has a spreadsheet one and a never-checks-the-balance one. Which one are you? Tag your Mitch.",
+    "hashtags": [
+      "relatable",
+      "stickfigure",
+      "money",
+      "budget",
+      "friends"
+    ],
+    "series": {
+      "id": "crew",
+      "season": 1,
+      "episode": 2
+    }
+  },
+  "set": "crew-train-bay",
+  "style": "snappy",
+  "coldOpen": "pov",
+  "cast": [
+    {
+      "id": "mitch",
+      "character": "crew-mitch",
+      "mark": "far-left",
+      "facing": "right",
+      "pose": "lean-in"
+    },
+    {
+      "id": "ollie",
+      "character": "crew-ollie",
+      "mark": "left",
+      "seated": true,
+      "facing": "right"
+    },
+    {
+      "id": "maya",
+      "character": "crew-maya",
+      "mark": "right",
+      "seated": true,
+      "facing": "left"
+    }
+  ],
+  "overlay": {
+    "pov": "POV: your friend made a budget",
+    "subtitles": true
+  },
+  "scenes": [
+    {
+      "id": "moving",
+      "beats": [
+        {
+          "id": "l1",
+          "speaker": "ollie",
+          "line": "I'm gonna be a millionaire at ninety-four.",
+          "expression": "happy",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "maya",
+          "line": "Ninety-four.",
+          "expression": "deadpan",
+          "shot": {
+            "framing": "medium",
+            "on": "maya"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "ollie",
+          "line": "If I skip coffee. It's all in the spreadsheet.",
+          "expression": "happy",
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "mitch",
+          "line": "I don't do spreadsheets. I never check my balance.",
+          "expression": "smug",
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "ollie",
+          "line": "Never?",
+          "expression": "shocked",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "mitch",
+          "line": "If I don't look, it can't hurt me.",
+          "expression": "smug",
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "ollie",
+          "line": "That's not how money works.",
+          "expression": "worried",
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "mitch",
+          "line": "It's how my dentist works too.",
+          "expression": "happy",
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "ollie",
+          "line": "Maya, back me up. You budget, right?",
+          "expression": "worried",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "maya",
+          "line": "I buy the coffee.",
+          "expression": "deadpan",
+          "shot": {
+            "framing": "medium",
+            "on": "maya"
+          },
+          "punchline": true
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "set": "crew-train-station-carts",
+      "transition": {
+        "type": "cut"
+      },
+      "beats": [
+        {
+          "id": "l11",
+          "speaker": "maya",
+          "line": "You'll be rich at ninety-four. I'll have had the coffees.",
+          "expression": "neutral",
+          "shot": {
+            "framing": "wide"
+          },
+          "pauseBeforeMs": 300,
+          "punchline": false
+        }
+      ]
+    }
+  ],
+  "timing": {
+    "leadInMs": 200,
+    "gapMs": 120,
+    "tailMs": 1400
+  }
+}
