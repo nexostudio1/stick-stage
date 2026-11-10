@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "We launch Monday. Every Monday.",
+    "description": "Every friend group has a startup that only exists on the commute. Tag your co-founders.",
+    "hashtags": ["relatable", "stickfigure", "startup", "commute", "friends"],
+    "series": { "id": "four", "season": 1, "episode": 1 }
+  },
+  "set": "four-train-bay",
+  "style": "snappy",
+  "coldOpen": "pov",
+  "cast": [
+    { "id": "mitch", "character": "four-mitch", "mark": "far-left", "seated": true, "facing": "right" },
+    { "id": "ollie", "character": "four-ollie", "mark": "left", "seated": true, "facing": "right" },
+    { "id": "mei", "character": "four-mei", "mark": "right", "seated": true, "facing": "left" },
+    { "id": "maya", "character": "four-maya", "mark": "far-right", "seated": true, "facing": "left" }
+  ],
+  "overlay": { "pov": "POV: your friends' startup only exists on the train", "subtitles": true },
+  "beats": [
+    { "id": "l1", "speaker": "mitch", "line": "Okay, hear me out. Uber, but for umbrellas.", "expression": "happy" },
+    { "id": "l2", "speaker": "mei", "line": "So... lending someone an umbrella.", "expression": "deadpan" },
+    { "id": "l3", "speaker": "ollie", "line": "What if the driver gets wet? Liability. We'd need lawyers.", "expression": "worried" },
+    { "id": "l4", "speaker": "mitch", "line": "Fine. Tinder, but for leftovers.", "expression": "smug" },
+    { "id": "l5", "speaker": "ollie", "line": "I already bought the domain.", "expression": "happy" },
+    { "id": "l6", "speaker": "mei", "line": "You've bought forty domains.", "expression": "deadpan" },
+    { "id": "l7", "speaker": "ollie", "line": "Forty-three. I'm diversified.", "expression": "smug" },
+    { "id": "l8", "speaker": "mitch", "line": "We just need to pick one and launch.", "expression": "happy" },
+    { "id": "l9", "speaker": "ollie", "line": "Monday.", "expression": "happy" },
+    { "id": "l10", "speaker": "mei", "line": "Same Monday as last year?", "expression": "skeptical" },
+    { "id": "l11", "speaker": "maya", "line": "Coffee guy started with one cart the week we started this.", "expression": "neutral", "punchline": true, "pauseBeforeMs": 300 }
+  ]
+}

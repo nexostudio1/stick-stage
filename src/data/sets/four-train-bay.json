@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "four-train-bay",
+  "kit": "four",
+  "palette": "four-train",
+  "description": "A bright commuter train carriage on the move, four seats in two facing pairs with a grab pole between them; green country streams past the windows. The relatable four-person channel's home set.",
+  "tags": [
+    "commute",
+    "train",
+    "friends",
+    "morning",
+    "travel",
+    "four"
+  ],
+  "groundY": 1500,
+  "figureHeightPx": 580,
+  "layers": [
+    {
+      "part": "four-train-bay"
+    },
+    {
+      "part": "four-train-seat",
+      "x": 0.24,
+      "seatFor": [
+        "far-left",
+        "left"
+      ],
+      "size": 1.04
+    },
+    {
+      "part": "four-train-seat",
+      "x": 0.76,
+      "seatFor": [
+        "right",
+        "far-right"
+      ],
+      "size": 1.04
+    }
+  ],
+  "foreground": [
+    {
+      "part": "four-train-pole",
+      "x": 0.5
+    }
+  ],
+  "marks": {
+    "far-left": 0.11,
+    "left": 0.37,
+    "center": 0.5,
+    "right": 0.63,
+    "far-right": 0.89
+  }
+}

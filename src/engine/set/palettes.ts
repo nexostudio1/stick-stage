@@ -1,5 +1,6 @@
 import { darken, lighten, mix } from "../lib/color";
 import { STORY_PALETTES } from "./storyPalettes";
+import { FOUR_PALETTES } from "./fourPalettes";
 
 export type Palette = {
   wallA: string;
@@ -18,6 +19,8 @@ export type Palette = {
   glow?: string;
   /** The place's light: a soft-light grade on the cast so it sits in the scene (story kit). */
   light?: string;
+  /** The view outside a vehicle window, far → near (the `four` kit's train). Other kits ignore it. */
+  scenery?: { far: string; mid: string; near: string; ground: string };
 };
 
 /**
@@ -290,6 +293,8 @@ export const PALETTES: Record<string, Palette> = {
 
 /** Story kit palettes (the shape tier) in their three looks: see `storyPalettes.ts`. */
 Object.assign(PALETTES, STORY_PALETTES);
+/** The relatable four-person channel (`four` kit): saturated, high-contrast places. */
+Object.assign(PALETTES, FOUR_PALETTES);
 
 /** Tones every part may use, derived from the seven tokens (still no raw hex in parts). */
 export const derived = (p: Palette) => ({

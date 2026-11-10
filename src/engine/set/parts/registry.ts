@@ -14,9 +14,10 @@ import { StoryBush, StoryFence, StoryFlowers, StoryGround, StoryHills, StoryPond
 import { StoryBed, StoryBench, StoryClubhouse, StoryDoor, StoryFloor, StoryHouse, StoryRug, StoryShelf, StorySofa, StoryTable, StoryWall, StoryWindow } from "./storyPlaces";
 import { Galaxy, MoonFloor, NebulaSky, RingedPlanet } from "./cosmos";
 import { ScienceWash } from "./scienceThemes";
+import { FourTrainBay, FourTrainPole, FourTrainSeat } from "./fourTrain";
 import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
-export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night"] as const;
+export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "four"] as const;
 export type Kit = (typeof KITS)[number];
 
 export type PartInfo = {
@@ -112,6 +113,10 @@ export const PART_INFO: Record<string, PartInfo> = {
   "story-sofa": { draw: StorySofa, kits: ["story"] },
   "story-table": { draw: StoryTable, kits: ["story"] },
   "story-shelf": { draw: StoryShelf, kits: ["story"] },
+  // The four kit (the relatable four-person channel): bright whole-frame places with ambient motion.
+  "four-train-bay": { draw: FourTrainBay, kits: ["four"], backdrop: true },
+  "four-train-seat": { draw: FourTrainSeat, kits: ["four"] },
+  "four-train-pole": { draw: FourTrainPole, kits: ["four"], foreground: true },
 };
 
 export const PARTS: Record<string, PartComponent> = Object.fromEntries(Object.entries(PART_INFO).map(([id, p]) => [id, p.draw]));
@@ -129,6 +134,7 @@ export const KIT_BACKDROP: Record<Kit, SetDef["layers"]> = {
   lab: [part("wall", { pattern: "none" }), part("floor")],
   story: [part("story-sky"), part("story-hills"), part("story-ground")],
   night: [part("night-kitchen")],
+  four: [part("four-train-bay")],
 };
 
 function part(id: string, extra: Partial<SetDef["layers"][number]> = {}): SetDef["layers"][number] {

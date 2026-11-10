@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "four-ollie",
+  "displayName": "Ollie",
+  "proportions": {
+    "height": 1.0,
+    "headRadius": 0.17,
+    "neck": 0.02,
+    "torso": 0.26,
+    "upperArm": 0.14,
+    "forearm": 0.13,
+    "thigh": 0.16,
+    "shin": 0.17
+  },
+  "style": {
+    "stroke": "#1b1b1f",
+    "strokeWidth": 12,
+    "headFill": "#ffffff",
+    "torso": {
+      "style": "bean",
+      "fill": "#2bb673",
+      "width": 0.13
+    },
+    "limbCurve": 0.3,
+    "hands": "nub",
+    "feet": "oval",
+    "footFill": "#1b1b1f"
+  },
+  "face": {
+    "eyes": "big-pupil",
+    "brows": true,
+    "mouthSet": "default",
+    "offsetX": 0.14,
+    "eyeSpacing": 0.46,
+    "eyeY": -0.02,
+    "mouthY": 0.46
+  },
+  "accessories": [
+    {
+      "slot": "hair",
+      "id": "four-mop",
+      "color": "#6b4226"
+    },
+    {
+      "slot": "eyewear",
+      "id": "glasses-round"
+    }
+  ],
+  "voice": {
+    "say": "Daniel"
+  }
+}

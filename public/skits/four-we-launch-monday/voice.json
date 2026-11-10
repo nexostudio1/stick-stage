@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "mitch",
+      "text": "Okay, hear me out. Uber, but for umbrellas.",
+      "audio": "voice/l1.wav",
+      "durationMs": 4239
+    },
+    {
+      "id": "l2",
+      "speaker": "mei",
+      "text": "So... lending someone an umbrella.",
+      "audio": "voice/l2.wav",
+      "durationMs": 2127
+    },
+    {
+      "id": "l3",
+      "speaker": "ollie",
+      "text": "What if the driver gets wet? Liability. We'd need lawyers.",
+      "audio": "voice/l3.wav",
+      "durationMs": 4008
+    },
+    {
+      "id": "l4",
+      "speaker": "mitch",
+      "text": "Fine. Tinder, but for leftovers.",
+      "audio": "voice/l4.wav",
+      "durationMs": 3280
+    },
+    {
+      "id": "l5",
+      "speaker": "ollie",
+      "text": "I already bought the domain.",
+      "audio": "voice/l5.wav",
+      "durationMs": 1700
+    },
+    {
+      "id": "l6",
+      "speaker": "mei",
+      "text": "You've bought forty domains.",
+      "audio": "voice/l6.wav",
+      "durationMs": 1479
+    },
+    {
+      "id": "l7",
+      "speaker": "ollie",
+      "text": "Forty-three. I'm diversified.",
+      "audio": "voice/l7.wav",
+      "durationMs": 2354
+    },
+    {
+      "id": "l8",
+      "speaker": "mitch",
+      "text": "We just need to pick one and launch.",
+      "audio": "voice/l8.wav",
+      "durationMs": 2091
+    },
+    {
+      "id": "l9",
+      "speaker": "ollie",
+      "text": "Monday.",
+      "audio": "voice/l9.wav",
+      "durationMs": 583
+    },
+    {
+      "id": "l10",
+      "speaker": "mei",
+      "text": "Same Monday as last year?",
+      "audio": "voice/l10.wav",
+      "durationMs": 1466
+    },
+    {
+      "id": "l11",
+      "speaker": "maya",
+      "text": "Coffee guy started with one cart the week we started this.",
+      "audio": "voice/l11.wav",
+      "durationMs": 3421
+    }
+  ]
+}

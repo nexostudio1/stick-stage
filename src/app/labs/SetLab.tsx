@@ -31,6 +31,7 @@ export const LAB_PALETTES: Record<Kit, string[]> = {
   lab: ["lab-white", "mint", "void"],
   story: ["story-day", "story-sunset", "story-night"],
   night: ["night-shift", "morning", "ink"],
+  four: ["four-train", "four-train", "four-train"],
 };
 
 type Row = { part: string; kit: Kit };
