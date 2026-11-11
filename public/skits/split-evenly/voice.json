@@ -6,77 +6,99 @@
       "speaker": "bram",
       "text": "Sixty-two dollars. Let's just split it evenly.",
       "audio": "voice/l1.wav",
-      "durationMs": 2763
+      "durationMs": 2763,
+      "loudnessDb": -17.7,
+      "peakDb": -3.6
     },
     {
       "id": "l2",
       "speaker": "tess",
       "text": "I had a side salad. And tap water.",
       "audio": "voice/l2.wav",
-      "durationMs": 2080
+      "durationMs": 2080,
+      "loudnessDb": -13.9,
+      "peakDb": -1.3
     },
     {
       "id": "l3",
       "speaker": "bram",
       "text": "Splitting evenly is how friends work.",
       "audio": "voice/l3.wav",
-      "durationMs": 2060
+      "durationMs": 2060,
+      "loudnessDb": -16.2,
+      "peakDb": -3.8
     },
     {
       "id": "l4",
       "speaker": "tess",
       "text": "You had two steaks.",
       "audio": "voice/l4.wav",
-      "durationMs": 939
+      "durationMs": 939,
+      "loudnessDb": -13.5,
+      "peakDb": -1.1
     },
     {
       "id": "l5",
       "speaker": "bram",
       "text": "One was a sharing steak—",
       "audio": "voice/l5.wav",
-      "durationMs": 1369
+      "durationMs": 1369,
+      "loudnessDb": -17.6,
+      "peakDb": -7
     },
     {
       "id": "l6",
       "speaker": "tess",
       "text": "You didn't share it!",
       "audio": "voice/l6.wav",
-      "durationMs": 835
+      "durationMs": 835,
+      "loudnessDb": -13.9,
+      "peakDb": -2.9
     },
     {
       "id": "l7",
       "speaker": "bram",
       "text": "You never asked!",
       "audio": "voice/l7.wav",
-      "durationMs": 833
+      "durationMs": 833,
+      "loudnessDb": -18.8,
+      "peakDb": -8.7
     },
     {
       "id": "l8",
       "speaker": "tess",
       "text": "Fine. I'll pay for exactly what I had.",
       "audio": "voice/l8.wav",
-      "durationMs": 2146
+      "durationMs": 2146,
+      "loudnessDb": -14.3,
+      "peakDb": -2.8
     },
     {
       "id": "l9",
       "speaker": "bram",
       "text": "Great. Then let's do last Friday too.",
       "audio": "voice/l9.wav",
-      "durationMs": 2582
+      "durationMs": 2582,
+      "loudnessDb": -16.7,
+      "peakDb": -3.6
     },
     {
       "id": "l10",
       "speaker": "tess",
       "text": "What was last Friday?",
       "audio": "voice/l10.wav",
-      "durationMs": 1079
+      "durationMs": 1079,
+      "loudnessDb": -14.2,
+      "peakDb": -1.7
     },
     {
       "id": "l11",
       "speaker": "bram",
       "text": "Your birthday. You had the lobster.",
       "audio": "voice/l11.wav",
-      "durationMs": 2301
+      "durationMs": 2301,
+      "loudnessDb": -17.4,
+      "peakDb": -4.8
     }
   ]
 }

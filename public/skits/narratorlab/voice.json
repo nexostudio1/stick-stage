@@ -6,42 +6,54 @@
       "speaker": "narrator",
       "text": "This is Milo. Milo owns one stapler.",
       "audio": "voice/n1.wav",
-      "durationMs": 3295
+      "durationMs": 3295,
+      "loudnessDb": -18.1,
+      "peakDb": -4.8
     },
     {
       "id": "m1",
       "speaker": "june",
       "text": "Can I borrow your stapler?",
       "audio": "voice/m1.wav",
-      "durationMs": 1532
+      "durationMs": 1532,
+      "loudnessDb": -13.8,
+      "peakDb": -2.3
     },
     {
       "id": "m2",
       "speaker": "milo",
       "text": "Absolutely not.",
       "audio": "voice/m2.wav",
-      "durationMs": 1106
+      "durationMs": 1106,
+      "loudnessDb": -16.4,
+      "peakDb": -3
     },
     {
       "id": "n2",
       "speaker": "narrator",
       "text": "Our stapler. Our desk. Our chair.",
       "audio": "voice/n2.wav",
-      "durationMs": 3215
+      "durationMs": 3215,
+      "loudnessDb": -19.5,
+      "peakDb": -5.8
     },
     {
       "id": "n3",
       "speaker": "narrator",
       "text": "Scientists call it Stapler Syndrome.",
       "audio": "voice/n3.wav",
-      "durationMs": 2863
+      "durationMs": 2863,
+      "loudnessDb": -19.2,
+      "peakDb": -5
     },
     {
       "id": "n4",
       "speaker": "narrator",
       "text": "He has never used it.",
       "audio": "voice/n4.wav",
-      "durationMs": 1727
+      "durationMs": 1727,
+      "loudnessDb": -15.8,
+      "peakDb": -4
     }
   ]
 }

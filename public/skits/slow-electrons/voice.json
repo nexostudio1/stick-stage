@@ -6,56 +6,72 @@
       "speaker": "gus",
       "text": "Flip the switch and electrons zoom down the wire at light speed.",
       "audio": "voice/l1.wav",
-      "durationMs": 3849
+      "durationMs": 3849,
+      "loudnessDb": -18.8,
+      "peakDb": -7.4
     },
     {
       "id": "l2",
       "speaker": "vera",
       "text": "Zoom? They barely shuffle.",
       "audio": "voice/l2.wav",
-      "durationMs": 1704
+      "durationMs": 1704,
+      "loudnessDb": -14.2,
+      "peakDb": -3.3
     },
     {
       "id": "l3",
       "speaker": "gus",
       "text": "They must. The light comes on instantly.",
       "audio": "voice/l3.wav",
-      "durationMs": 3072
+      "durationMs": 3072,
+      "loudnessDb": -18.9,
+      "peakDb": -7.8
     },
     {
       "id": "l4",
       "speaker": "vera",
       "text": "Here's how fast they really go.",
       "audio": "voice/l4.wav",
-      "durationMs": 1792
+      "durationMs": 1792,
+      "loudnessDb": -14.1,
+      "peakDb": -2.8
     },
     {
       "id": "l5",
       "speaker": "gus",
       "text": "…huh.",
       "audio": "voice/l5.wav",
-      "durationMs": 390
+      "durationMs": 390,
+      "loudnessDb": -21.2,
+      "peakDb": -9
     },
     {
       "id": "l6",
       "speaker": "vera",
       "text": "A wire is packed with so many electrons that each one only has to creep.",
       "audio": "voice/l6.wav",
-      "durationMs": 4061
+      "durationMs": 4061,
+      "loudnessDb": -13.1,
+      "peakDb": -3.1
     },
     {
       "id": "l7",
       "speaker": "vera",
       "text": "The light is instant because the push travels fast. Every electron starts moving at once.",
       "audio": "voice/l7.wav",
-      "durationMs": 5194
+      "durationMs": 5194,
+      "loudnessDb": -13.6,
+      "peakDb": -2.8
     },
     {
       "id": "l8",
       "speaker": "vera",
       "text": "The signal is fast. The electrons are slow.",
       "audio": "voice/l8.wav",
-      "durationMs": 2779
+      "durationMs": 2779,
+      "loudnessDb": -14.5,
+      "peakDb": -3.2
     }
   ]
 }

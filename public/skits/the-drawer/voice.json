@@ -6,63 +6,81 @@
       "speaker": "narrator",
       "text": "This is fifty dollars.",
       "audio": "voice/c1.wav",
-      "durationMs": 1960
+      "durationMs": 1960,
+      "loudnessDb": -15.1,
+      "peakDb": -1.6
     },
     {
       "id": "c2",
       "speaker": "narrator",
       "text": "Four years in a kitchen drawer.",
       "audio": "voice/c2.wav",
-      "durationMs": 1840
+      "durationMs": 1840,
+      "loudnessDb": -17.4,
+      "peakDb": -5
     },
     {
       "id": "c3",
       "speaker": "narrator",
       "text": "So who's had it all this time?",
       "audio": "voice/c3.wav",
-      "durationMs": 2240
+      "durationMs": 2240,
+      "loudnessDb": -12.4,
+      "peakDb": -1.6
     },
     {
       "id": "c4",
       "speaker": "narrator",
       "text": "Not Maya. Not her grandma.",
       "audio": "voice/c4.wav",
-      "durationMs": 2320
+      "durationMs": 2320,
+      "loudnessDb": -16.1,
+      "peakDb": -1.9
     },
     {
       "id": "c5",
       "speaker": "narrator",
       "text": "Birthday card. Little heart on the envelope.",
       "audio": "voice/c5.wav",
-      "durationMs": 4120
+      "durationMs": 4120,
+      "loudnessDb": -15.3,
+      "peakDb": -1.7
     },
     {
       "id": "c6",
       "speaker": "maya",
       "text": "I was saving it for something special.",
       "audio": "voice/c6.wav",
-      "durationMs": 2520
+      "durationMs": 2520,
+      "loudnessDb": -11.2,
+      "peakDb": -1.3
     },
     {
       "id": "c7",
       "speaker": "nickel",
       "text": "Shh. Follow the money.",
       "audio": "voice/c7.wav",
-      "durationMs": 2160
+      "durationMs": 2160,
+      "loudnessDb": -20.1,
+      "peakDb": -7.6
     },
     {
       "id": "v1",
       "speaker": "narrator",
       "text": "Maya's not careless. She's normal.",
       "audio": "voice/v1.wav",
-      "durationMs": 2600
+      "durationMs": 2600,
+      "loudnessDb": -15.6,
+      "peakDb": -2.7
     },
     {
       "id": "v2",
       "speaker": "narrator",
       "text": "More than four in ten American adults have a gift card they haven't used.",
       "audio": "voice/v2.wav",
-      "durationMs": 4160
+      "durationMs": 4160,
+      "loudnessDb": -15.8,
+      "peakDb": -1.8
     },
     {
       "id": "v3",
@@ -70,7 +88,9 @@
       "text": "The average? $244 each.",
       "spoken": "The average? Two hundred and forty-four dollars each.",
       "audio": "voice/v3.wav",
-      "durationMs": 3480
+      "durationMs": 3480,
+      "loudnessDb": -14.5,
+      "peakDb": -2.2
     },
     {
       "id": "v4",
@@ -78,112 +98,144 @@
       "text": "Add it up and it's about $27 billion.",
       "spoken": "Add it up and it's about twenty-seven billion dollars.",
       "audio": "voice/v4.wav",
-      "durationMs": 4240
+      "durationMs": 4240,
+      "loudnessDb": -13.3,
+      "peakDb": -1.4
     },
     {
       "id": "v5",
       "speaker": "narrator",
       "text": "In drawers, wallets, old phone apps.",
       "audio": "voice/v5.wav",
-      "durationMs": 3640
+      "durationMs": 3640,
+      "loudnessDb": -15.4,
+      "peakDb": -1.9
     },
     {
       "id": "v6",
       "speaker": "narrator",
       "text": "Doing a job. Just not for us.",
       "audio": "voice/v6.wav",
-      "durationMs": 3320
+      "durationMs": 3320,
+      "loudnessDb": -16.4,
+      "peakDb": -3.2
     },
     {
       "id": "v7",
       "speaker": "nickel",
       "text": "Then for who?",
       "audio": "voice/v7.wav",
-      "durationMs": 1720
+      "durationMs": 1720,
+      "loudnessDb": -17.6,
+      "peakDb": -4.4
     },
     {
       "id": "i1",
       "speaker": "narrator",
       "text": "When Maya's grandma bought that card, the store got fifty dollars. Cash. That day.",
       "audio": "voice/i1.wav",
-      "durationMs": 5760
+      "durationMs": 5760,
+      "loudnessDb": -15.4,
+      "peakDb": -1.7
     },
     {
       "id": "i2",
       "speaker": "narrator",
       "text": "But the store didn't sell anything.",
       "audio": "voice/i2.wav",
-      "durationMs": 2400
+      "durationMs": 2400,
+      "loudnessDb": -17.1,
+      "peakDb": -3.8
     },
     {
       "id": "i3",
       "speaker": "narrator",
       "text": "No sweater left the shelf. No book. Nothing.",
       "audio": "voice/i3.wav",
-      "durationMs": 4040
+      "durationMs": 4040,
+      "loudnessDb": -16.4,
+      "peakDb": -2.2
     },
     {
       "id": "i4",
       "speaker": "narrator",
       "text": "So accountants don't call it a sale. They call it a liability.",
       "audio": "voice/i4.wav",
-      "durationMs": 4360
+      "durationMs": 4360,
+      "loudnessDb": -14.8,
+      "peakDb": -1.8
     },
     {
       "id": "i5",
       "speaker": "narrator",
       "text": "The store owes whoever holds the card fifty dollars of stuff.",
       "audio": "voice/i5.wav",
-      "durationMs": 4280
+      "durationMs": 4280,
+      "loudnessDb": -14.4,
+      "peakDb": -3
     },
     {
       "id": "i6",
       "speaker": "narrator",
       "text": "It's an IOU. And IOUs have a funny feature.",
       "audio": "voice/i6.wav",
-      "durationMs": 3800
+      "durationMs": 3800,
+      "loudnessDb": -12.6,
+      "peakDb": -1.6
     },
     {
       "id": "i7",
       "speaker": "narrator",
       "text": "Until you show up, the money just sits with the store.",
       "audio": "voice/i7.wav",
-      "durationMs": 3440
+      "durationMs": 3440,
+      "loudnessDb": -13.8,
+      "peakDb": -1.9
     },
     {
       "id": "i8",
       "speaker": "narrator",
       "text": "No interest. No rent. No questions.",
       "audio": "voice/i8.wav",
-      "durationMs": 3320
+      "durationMs": 3320,
+      "loudnessDb": -12.9,
+      "peakDb": -1.4
     },
     {
       "id": "i9",
       "speaker": "nickel",
       "text": "Free money. Until you come back.",
       "audio": "voice/i9.wav",
-      "durationMs": 2560
+      "durationMs": 2560,
+      "loudnessDb": -15.3,
+      "peakDb": -2.8
     },
     {
       "id": "i10",
       "speaker": "narrator",
       "text": "Now picture that at the size of a coffee chain.",
       "audio": "voice/i10.wav",
-      "durationMs": 3120
+      "durationMs": 3120,
+      "loudnessDb": -12.8,
+      "peakDb": -1.3
     },
     {
       "id": "k1",
       "speaker": "narrator",
       "text": "At the big coffee chains, people load money onto cards and apps before they order.",
       "audio": "voice/k1.wav",
-      "durationMs": 5120
+      "durationMs": 5120,
+      "loudnessDb": -14.5,
+      "peakDb": -1.6
     },
     {
       "id": "k2",
       "speaker": "narrator",
       "text": "Auto-reload, ten here, twenty-five there.",
       "audio": "voice/k2.wav",
-      "durationMs": 4080
+      "durationMs": 4080,
+      "loudnessDb": -11.4,
+      "peakDb": -1.6
     },
     {
       "id": "k3",
@@ -191,70 +243,90 @@
       "text": "At the end of 2023, one big chain owed about $2.2 billion on cards and rewards.",
       "spoken": "At the end of twenty twenty-three, one big chain owed about two point two billion dollars on cards and rewards.",
       "audio": "voice/k3.wav",
-      "durationMs": 6800
+      "durationMs": 6800,
+      "loudnessDb": -14.6,
+      "peakDb": -1.8
     },
     {
       "id": "k4",
       "speaker": "narrator",
       "text": "Money that's paid, but not yet spent.",
       "audio": "voice/k4.wav",
-      "durationMs": 3200
+      "durationMs": 3200,
+      "loudnessDb": -14.5,
+      "peakDb": -1.8
     },
     {
       "id": "k5",
       "speaker": "narrator",
       "text": "If you lent a bank two billion dollars, it would pay you interest.",
       "audio": "voice/k5.wav",
-      "durationMs": 4880
+      "durationMs": 4880,
+      "loudnessDb": -15.3,
+      "peakDb": -1.9
     },
     {
       "id": "k6",
       "speaker": "narrator",
-      "text": "Lend it to a coffee shop and you get\u2026 coffee. Later. Maybe.",
+      "text": "Lend it to a coffee shop and you get… coffee. Later. Maybe.",
       "audio": "voice/k6.wav",
-      "durationMs": 5120
+      "durationMs": 5120,
+      "loudnessDb": -16.6,
+      "peakDb": -1.5
     },
     {
       "id": "k7",
       "speaker": "narrator",
       "text": "That's why people joke that a coffee chain is a bank that sells coffee.",
       "audio": "voice/k7.wav",
-      "durationMs": 4240
+      "durationMs": 4240,
+      "loudnessDb": -15.7,
+      "peakDb": -0.8
     },
     {
       "id": "k8",
       "speaker": "narrator",
       "text": "It isn't a bank. But for that money, it gets the best part of being one.",
       "audio": "voice/k8.wav",
-      "durationMs": 4600
+      "durationMs": 4600,
+      "loudnessDb": -13.7,
+      "peakDb": -1.8
     },
     {
       "id": "k9",
       "speaker": "nickel",
       "text": "Cheap money. Very cheap.",
       "audio": "voice/k9.wav",
-      "durationMs": 2240
+      "durationMs": 2240,
+      "loudnessDb": -15.2,
+      "peakDb": -3.9
     },
     {
       "id": "k10",
       "speaker": "narrator",
       "text": "But that's not the strange part.",
       "audio": "voice/k10.wav",
-      "durationMs": 1800
+      "durationMs": 1800,
+      "loudnessDb": -17.4,
+      "peakDb": -3.2
     },
     {
       "id": "k11",
       "speaker": "narrator",
       "text": "The strange part is the money nobody ever comes back for.",
       "audio": "voice/k11.wav",
-      "durationMs": 3640
+      "durationMs": 3640,
+      "loudnessDb": -15.7,
+      "peakDb": -1.8
     },
     {
       "id": "b1",
       "speaker": "narrator",
       "text": "Every year, some balances never get spent.",
       "audio": "voice/b1.wav",
-      "durationMs": 3320
+      "durationMs": 3320,
+      "loudnessDb": -12.3,
+      "peakDb": -1.6
     },
     {
       "id": "b2",
@@ -262,28 +334,36 @@
       "text": "$3.17 left on a card. A card lost in a move.",
       "spoken": "Three dollars and seventeen cents left on a card. A card lost in a move.",
       "audio": "voice/b2.wav",
-      "durationMs": 5360
+      "durationMs": 5360,
+      "loudnessDb": -14.6,
+      "peakDb": -2.1
     },
     {
       "id": "b3",
       "speaker": "narrator",
       "text": "Retailers have a word for that money: breakage.",
       "audio": "voice/b3.wav",
-      "durationMs": 3320
+      "durationMs": 3320,
+      "loudnessDb": -11.4,
+      "peakDb": -1.6
     },
     {
       "id": "b4",
       "speaker": "narrator",
       "text": "They look at years of history and estimate how much you'll never use.",
       "audio": "voice/b4.wav",
-      "durationMs": 4400
+      "durationMs": 4400,
+      "loudnessDb": -14.9,
+      "peakDb": -1.5
     },
     {
       "id": "b5",
       "speaker": "narrator",
       "text": "Then they count it as revenue.",
       "audio": "voice/b5.wav",
-      "durationMs": 1680
+      "durationMs": 1680,
+      "loudnessDb": -16,
+      "peakDb": -2.2
     },
     {
       "id": "x1",
@@ -291,98 +371,126 @@
       "text": "In one year, that same chain booked about $188 million of it.",
       "spoken": "In one year, that same chain booked about a hundred and eighty-eight million dollars of it.",
       "audio": "voice/x1.wav",
-      "durationMs": 5040
+      "durationMs": 5040,
+      "loudnessDb": -13.7,
+      "peakDb": -2.1
     },
     {
       "id": "x2",
       "speaker": "narrator",
       "text": "That's coffee nobody drank.",
       "audio": "voice/x2.wav",
-      "durationMs": 2120
+      "durationMs": 2120,
+      "loudnessDb": -14.2,
+      "peakDb": -1.6
     },
     {
       "id": "x3",
       "speaker": "nickel",
       "text": "Coffee. Nobody. Drank.",
       "audio": "voice/x3.wav",
-      "durationMs": 2600
+      "durationMs": 2600,
+      "loudnessDb": -15.8,
+      "peakDb": -2.8
     },
     {
       "id": "s1",
       "speaker": "narrator",
       "text": "And why do we forget? Because a gift card doesn't feel like money.",
       "audio": "voice/s1.wav",
-      "durationMs": 3280
+      "durationMs": 3280,
+      "loudnessDb": -14.7,
+      "peakDb": -1.8
     },
     {
       "id": "s2",
       "speaker": "narrator",
       "text": "It feels like a gift. And gifts get saved.",
       "audio": "voice/s2.wav",
-      "durationMs": 3280
+      "durationMs": 3280,
+      "loudnessDb": -13,
+      "peakDb": -1.6
     },
     {
       "id": "s3",
       "speaker": "maya",
       "text": "For something special.",
       "audio": "voice/s3.wav",
-      "durationMs": 1600
+      "durationMs": 1600,
+      "loudnessDb": -13.7,
+      "peakDb": -1
     },
     {
       "id": "s4",
       "speaker": "narrator",
       "text": "Something special is how it ends up in a drawer.",
       "audio": "voice/s4.wav",
-      "durationMs": 2680
+      "durationMs": 2680,
+      "loudnessDb": -13.8,
+      "peakDb": -1.4
     },
     {
       "id": "t1",
       "speaker": "narrator",
       "text": "So here's the catch.",
       "audio": "voice/t1.wav",
-      "durationMs": 1560
+      "durationMs": 1560,
+      "loudnessDb": -16.5,
+      "peakDb": -3.7
     },
     {
       "id": "t2",
       "speaker": "narrator",
       "text": "A gift card is two gifts.",
       "audio": "voice/t2.wav",
-      "durationMs": 2000
+      "durationMs": 2000,
+      "loudnessDb": -17.2,
+      "peakDb": -3
     },
     {
       "id": "t3",
       "speaker": "narrator",
       "text": "One to the person you give it to.",
       "audio": "voice/t3.wav",
-      "durationMs": 1960
+      "durationMs": 1960,
+      "loudnessDb": -17.2,
+      "peakDb": -3.1
     },
     {
       "id": "t4",
       "speaker": "narrator",
       "text": "And one to the store. A free loan.",
       "audio": "voice/t4.wav",
-      "durationMs": 2640
+      "durationMs": 2640,
+      "loudnessDb": -17,
+      "peakDb": -4.4
     },
     {
       "id": "t5",
       "speaker": "narrator",
       "text": "And if life gets busy, it never has to be paid back.",
       "audio": "voice/t5.wav",
-      "durationMs": 3920
+      "durationMs": 3920,
+      "loudnessDb": -15.1,
+      "peakDb": -1.6
     },
     {
       "id": "t6",
       "speaker": "nickel",
       "text": "Case closed?",
       "audio": "voice/t6.wav",
-      "durationMs": 1520
+      "durationMs": 1520,
+      "loudnessDb": -19.3,
+      "peakDb": -4.4
     },
     {
       "id": "t7",
       "speaker": "narrator",
       "text": "Not yet. Because this time, the rules are on Maya's side.",
       "audio": "voice/t7.wav",
-      "durationMs": 4600
+      "durationMs": 4600,
+      "loudnessDb": -14.5,
+      "peakDb": -3
     },
     {
       "id": "r1",
@@ -390,28 +498,36 @@
       "text": "Under US federal rules, most store gift cards can't expire within 5 years.",
       "spoken": "Under US federal rules, most store gift cards can't expire within five years.",
       "audio": "voice/r1.wav",
-      "durationMs": 5440
+      "durationMs": 5440,
+      "loudnessDb": -15,
+      "peakDb": -1.8
     },
     {
       "id": "r2",
       "speaker": "narrator",
       "text": "Five years from when the money was loaded. Maya's four-year-old card? Still good.",
       "audio": "voice/r2.wav",
-      "durationMs": 5400
+      "durationMs": 5400,
+      "loudnessDb": -14.3,
+      "peakDb": -1.4
     },
     {
       "id": "r3",
       "speaker": "narrator",
       "text": "And no inactivity fees until a card's gone a full year unused.",
       "audio": "voice/r3.wav",
-      "durationMs": 4680
+      "durationMs": 4680,
+      "loudnessDb": -13,
+      "peakDb": -2.8
     },
     {
       "id": "r4",
       "speaker": "narrator",
       "text": "Some states go further.",
       "audio": "voice/r4.wav",
-      "durationMs": 1600
+      "durationMs": 1600,
+      "loudnessDb": -13.3,
+      "peakDb": -1.7
     },
     {
       "id": "r5",
@@ -419,84 +535,108 @@
       "text": "In California, under $15 left? You can ask for cash.",
       "spoken": "In California, under fifteen dollars left? You can ask for cash.",
       "audio": "voice/r5.wav",
-      "durationMs": 4640
+      "durationMs": 4640,
+      "loudnessDb": -15.3,
+      "peakDb": -1.8
     },
     {
       "id": "n1",
       "speaker": "narrator",
       "text": "So, tonight. Three things.",
       "audio": "voice/n1.wav",
-      "durationMs": 2280
+      "durationMs": 2280,
+      "loudnessDb": -17.5,
+      "peakDb": -3.8
     },
     {
       "id": "n2",
       "speaker": "narrator",
       "text": "Open the drawer. Photograph every card and write down the balance.",
       "audio": "voice/n2.wav",
-      "durationMs": 3920
+      "durationMs": 3920,
+      "loudnessDb": -13,
+      "peakDb": -1.4
     },
     {
       "id": "n3",
       "speaker": "narrator",
       "text": "Spend the smallest ones first. Those are the ones you'll lose.",
       "audio": "voice/n3.wav",
-      "durationMs": 3360
+      "durationMs": 3360,
+      "loudnessDb": -16,
+      "peakDb": -2.1
     },
     {
       "id": "n4",
       "speaker": "narrator",
       "text": "And if you're giving one, give it for a place they already go. Every week.",
       "audio": "voice/n4.wav",
-      "durationMs": 5000
+      "durationMs": 5000,
+      "loudnessDb": -15.1,
+      "peakDb": -1.7
     },
     {
       "id": "m1",
       "speaker": "narrator",
       "text": "Maya did one more thing.",
       "audio": "voice/m1.wav",
-      "durationMs": 2120
+      "durationMs": 2120,
+      "loudnessDb": -16.5,
+      "peakDb": -3.6
     },
     {
       "id": "m2",
       "speaker": "narrator",
       "text": "Her grandma always told her to read one book. She never had.",
       "audio": "voice/m2.wav",
-      "durationMs": 4240
+      "durationMs": 4240,
+      "loudnessDb": -15.2,
+      "peakDb": -2.6
     },
     {
       "id": "m3",
       "speaker": "narrator",
       "text": "Fifty dollars. Four years late.",
       "audio": "voice/m3.wav",
-      "durationMs": 3000
+      "durationMs": 3000,
+      "loudnessDb": -11.4,
+      "peakDb": -1.4
     },
     {
       "id": "m4",
       "speaker": "maya",
       "text": "It still counts.",
       "audio": "voice/m4.wav",
-      "durationMs": 1960
+      "durationMs": 1960,
+      "loudnessDb": -14.3,
+      "peakDb": -1.9
     },
     {
       "id": "z1",
       "speaker": "narrator",
       "text": "Every gift card has a clock on it. And it's not the expiry date.",
       "audio": "voice/z1.wav",
-      "durationMs": 4720
+      "durationMs": 4720,
+      "loudnessDb": -13,
+      "peakDb": -0.9
     },
     {
       "id": "z2",
       "speaker": "narrator",
       "text": "It's you, forgetting.",
       "audio": "voice/z2.wav",
-      "durationMs": 1760
+      "durationMs": 1760,
+      "loudnessDb": -14.7,
+      "peakDb": -3.9
     },
     {
       "id": "z3",
       "speaker": "nickel",
       "text": "Check your drawer.",
       "audio": "voice/z3.wav",
-      "durationMs": 1400
+      "durationMs": 1400,
+      "loudnessDb": -17.8,
+      "peakDb": -3.3
     }
   ]
 }

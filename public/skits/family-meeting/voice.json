@@ -6,84 +6,108 @@
       "speaker": "milo",
       "text": "Okay, family. Welcome to our first quarterly family meeting.",
       "audio": "voice/l1.wav",
-      "durationMs": 4223
+      "durationMs": 4223,
+      "loudnessDb": -16.3,
+      "peakDb": -2.1
     },
     {
       "id": "l2",
       "speaker": "june",
       "text": "Dad, it's breakfast. And it's just us.",
       "audio": "voice/l2.wav",
-      "durationMs": 2641
+      "durationMs": 2641,
+      "loudnessDb": -16.4,
+      "peakDb": -2.3
     },
     {
       "id": "l3",
       "speaker": "milo",
       "text": "Agenda item one. Someone ate the last biscuit.",
       "audio": "voice/l3.wav",
-      "durationMs": 3103
+      "durationMs": 3103,
+      "loudnessDb": -16.8,
+      "peakDb": -1.6
     },
     {
       "id": "l4",
       "speaker": "june",
       "text": "Tragic.",
       "audio": "voice/l4.wav",
-      "durationMs": 558
+      "durationMs": 558,
+      "loudnessDb": -16.4,
+      "peakDb": -3.6
     },
     {
       "id": "l5",
       "speaker": "milo",
       "text": "So. Who owns this action?",
       "audio": "voice/l5.wav",
-      "durationMs": 1927
+      "durationMs": 1927,
+      "loudnessDb": -16.4,
+      "peakDb": -2.9
     },
     {
       "id": "l6",
       "speaker": "june",
       "text": "The dog.",
       "audio": "voice/l6.wav",
-      "durationMs": 480
+      "durationMs": 480,
+      "loudnessDb": -16.2,
+      "peakDb": -2.4
     },
     {
       "id": "l7",
       "speaker": "milo",
       "text": "The dog doesn't have opposable thumbs.",
       "audio": "voice/l7.wav",
-      "durationMs": 2171
+      "durationMs": 2171,
+      "loudnessDb": -17,
+      "peakDb": -2
     },
     {
       "id": "l8",
       "speaker": "june",
       "text": "Which is why he needed my help.",
       "audio": "voice/l8.wav",
-      "durationMs": 1639
+      "durationMs": 1639,
+      "loudnessDb": -12.7,
+      "peakDb": -2.1
     },
     {
       "id": "l9",
       "speaker": "milo",
       "text": "Wait. So you're admitting you took it?",
       "audio": "voice/l9.wav",
-      "durationMs": 2278
+      "durationMs": 2278,
+      "loudnessDb": -15,
+      "peakDb": -4
     },
     {
       "id": "l10",
       "speaker": "june",
       "text": "I'm saying it was cross-team collaboration.",
       "audio": "voice/l10.wav",
-      "durationMs": 2365
+      "durationMs": 2365,
+      "loudnessDb": -13.7,
+      "peakDb": -2.1
     },
     {
       "id": "l11",
       "speaker": "milo",
       "text": "Honestly? That's great teamwork.",
       "audio": "voice/l11.wav",
-      "durationMs": 2174
+      "durationMs": 2174,
+      "loudnessDb": -17.5,
+      "peakDb": -2.6
     },
     {
       "id": "l12",
       "speaker": "june",
       "text": "Thanks. Now let's discuss my bonus.",
       "audio": "voice/l12.wav",
-      "durationMs": 2510
+      "durationMs": 2510,
+      "loudnessDb": -13.9,
+      "peakDb": -2.1
     }
   ]
 }

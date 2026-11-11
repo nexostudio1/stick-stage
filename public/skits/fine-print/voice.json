@@ -6,7 +6,9 @@
       "speaker": "gus",
       "text": "Done. I've read the whole universe: stars, planets, gas.",
       "audio": "voice/l1.wav",
-      "durationMs": 5153
+      "durationMs": 5153,
+      "loudnessDb": -17.4,
+      "peakDb": -7.1
     },
     {
       "id": "l2",
@@ -14,7 +16,9 @@
       "text": "All the atoms? About 5% of it.",
       "spoken": "All the atoms? About five percent of it.",
       "audio": "voice/l2.wav",
-      "durationMs": 2606
+      "durationMs": 2606,
+      "loudnessDb": -14.4,
+      "peakDb": -3.4
     },
     {
       "id": "l3",
@@ -22,7 +26,9 @@
       "text": "So the other 95% is… more planets?",
       "spoken": "So the other ninety-five percent is… more planets?",
       "audio": "voice/l3.wav",
-      "durationMs": 3733
+      "durationMs": 3733,
+      "loudnessDb": -18.4,
+      "peakDb": -7.2
     },
     {
       "id": "l4",
@@ -30,14 +36,18 @@
       "text": "27% is dark matter. Galaxies spin too fast without it.",
       "spoken": "Twenty-seven percent is dark matter. Galaxies spin too fast without it.",
       "audio": "voice/l4.wav",
-      "durationMs": 4529
+      "durationMs": 4529,
+      "loudnessDb": -15.1,
+      "peakDb": -2.9
     },
     {
       "id": "l5",
       "speaker": "gus",
       "text": "So the galaxies are cheating.",
       "audio": "voice/l5.wav",
-      "durationMs": 1957
+      "durationMs": 1957,
+      "loudnessDb": -19.3,
+      "peakDb": -7.3
     },
     {
       "id": "l6",
@@ -45,21 +55,27 @@
       "text": "68% is dark energy. Far-off supernovae show the expansion speeding up.",
       "spoken": "Sixty-eight percent is dark energy. Far-off supernovae show the expansion speeding up.",
       "audio": "voice/l6.wav",
-      "durationMs": 5332
+      "durationMs": 5332,
+      "loudnessDb": -14.1,
+      "peakDb": -1.5
     },
     {
       "id": "l7",
       "speaker": "gus",
       "text": "And what are they, actually?",
       "audio": "voice/l7.wav",
-      "durationMs": 1778
+      "durationMs": 1778,
+      "loudnessDb": -17.6,
+      "peakDb": -7.5
     },
     {
       "id": "l8",
       "speaker": "vera",
       "text": "Nobody knows yet.",
       "audio": "voice/l8.wav",
-      "durationMs": 1141
+      "durationMs": 1141,
+      "loudnessDb": -14,
+      "peakDb": -3.8
     },
     {
       "id": "l9",
@@ -67,7 +83,9 @@
       "text": "Everything you've ever touched is in that 5%.",
       "spoken": "Everything you've ever touched is in that five percent.",
       "audio": "voice/l9.wav",
-      "durationMs": 2643
+      "durationMs": 2643,
+      "loudnessDb": -13.8,
+      "peakDb": -3.3
     },
     {
       "id": "l10",
@@ -75,7 +93,9 @@
       "text": "You read the 5%. The rest is fine print.",
       "spoken": "You read the five percent. The rest is fine print.",
       "audio": "voice/l10.wav",
-      "durationMs": 2998
+      "durationMs": 2998,
+      "loudnessDb": -15.2,
+      "peakDb": -2.9
     }
   ]
 }

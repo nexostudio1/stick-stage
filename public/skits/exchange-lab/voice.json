@@ -6,28 +6,36 @@
       "speaker": "milo",
       "text": "Setup line: the hook, said in the first second.",
       "audio": "voice/l1.wav",
-      "durationMs": 3437
+      "durationMs": 3437,
+      "loudnessDb": -17.4,
+      "peakDb": -2
     },
     {
       "id": "l2",
       "speaker": "june",
       "text": "Answer line.",
       "audio": "voice/l2.wav",
-      "durationMs": 844
+      "durationMs": 844,
+      "loudnessDb": -14.5,
+      "peakDb": -3.1
     },
     {
       "id": "l3",
       "speaker": "milo",
       "text": "Escalation line: it gets worse.",
       "audio": "voice/l3.wav",
-      "durationMs": 2523
+      "durationMs": 2523,
+      "loudnessDb": -17.6,
+      "peakDb": -1.9
     },
     {
       "id": "l4",
       "speaker": "june",
       "text": "Punchline.",
       "audio": "voice/l4.wav",
-      "durationMs": 766
+      "durationMs": 766,
+      "loudnessDb": -15,
+      "peakDb": -2.7
     }
   ]
 }

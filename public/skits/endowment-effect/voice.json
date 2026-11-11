@@ -6,126 +6,162 @@
       "speaker": "narrator",
       "text": "Your company announces: \"We're changing the team structure.\"",
       "audio": "voice/h1.wav",
-      "durationMs": 3615
+      "durationMs": 3615,
+      "loudnessDb": -20.5,
+      "peakDb": -5.7
     },
     {
       "id": "h2",
       "speaker": "narrator",
       "text": "And suddenly… the project you complained about for six months… is now \"my project.\"",
       "audio": "voice/h2.wav",
-      "durationMs": 4975
+      "durationMs": 4975,
+      "loudnessDb": -19.3,
+      "peakDb": -5.1
     },
     {
       "id": "o1",
       "speaker": "manager",
       "text": "Would you be okay handing this project to Sarah?",
       "audio": "voice/o1.wav",
-      "durationMs": 2417
+      "durationMs": 2417,
+      "loudnessDb": -13.2,
+      "peakDb": -2.3
     },
     {
       "id": "o2",
       "speaker": "you",
       "text": "Actually… I think there are some risks.",
       "audio": "voice/o2.wav",
-      "durationMs": 2488
+      "durationMs": 2488,
+      "loudnessDb": -16.6,
+      "peakDb": -1.3
     },
     {
       "id": "o3",
       "speaker": "manager",
       "text": "Didn't you say this project was a nightmare?",
       "audio": "voice/o3.wav",
-      "durationMs": 2302
+      "durationMs": 2302,
+      "loudnessDb": -13.8,
+      "peakDb": -2.5
     },
     {
       "id": "o4",
       "speaker": "you",
       "text": "That's different.",
       "audio": "voice/o4.wav",
-      "durationMs": 940
+      "durationMs": 940,
+      "loudnessDb": -19,
+      "peakDb": -2.7
     },
     {
       "id": "y1",
       "speaker": "you",
       "text": "This dashboard is useless.",
       "audio": "voice/y1.wav",
-      "durationMs": 1658
+      "durationMs": 1658,
+      "loudnessDb": -16.6,
+      "peakDb": -3.4
     },
     {
       "id": "t1",
       "speaker": "you",
       "text": "Sarah wants to change the dashboard?",
       "audio": "voice/t1.wav",
-      "durationMs": 2102
+      "durationMs": 2102,
+      "loudnessDb": -15.6,
+      "peakDb": -2.8
     },
     {
       "id": "t2",
       "speaker": "you",
       "text": "Absolutely not.",
       "audio": "voice/t2.wav",
-      "durationMs": 1106
+      "durationMs": 1106,
+      "loudnessDb": -16.4,
+      "peakDb": -3
     },
     {
       "id": "w1",
       "speaker": "narrator",
       "text": "Why? Because once something becomes ours… we tend to value it more.",
       "audio": "voice/w1.wav",
-      "durationMs": 4414
+      "durationMs": 4414,
+      "loudnessDb": -18.5,
+      "peakDb": -4.8
     },
     {
       "id": "w2",
       "speaker": "narrator",
       "text": "Our project. Our process. Our spreadsheet. Even our terrible old workflow.",
       "audio": "voice/w2.wav",
-      "durationMs": 5487
+      "durationMs": 5487,
+      "loudnessDb": -16,
+      "peakDb": -4
     },
     {
       "id": "e1",
       "speaker": "narrator",
       "text": "Psychologists call this the: Endowment Effect.",
       "audio": "voice/e1.wav",
-      "durationMs": 3263
+      "durationMs": 3263,
+      "loudnessDb": -19.8,
+      "peakDb": -5
     },
     {
       "id": "e2",
       "speaker": "narrator",
       "text": "We don't just evaluate things based on what they're worth.",
       "audio": "voice/e2.wav",
-      "durationMs": 3134
+      "durationMs": 3134,
+      "loudnessDb": -19.6,
+      "peakDb": -6
     },
     {
       "id": "e3",
       "speaker": "narrator",
       "text": "We also value them differently… because we own them.",
       "audio": "voice/e3.wav",
-      "durationMs": 3054
+      "durationMs": 3054,
+      "loudnessDb": -18.7,
+      "peakDb": -5.1
     },
     {
       "id": "c1",
       "speaker": "narrator",
       "text": "That's why replacing your team's old system can feel like: \"We're improving the business.\"",
       "audio": "voice/c1.wav",
-      "durationMs": 4831
+      "durationMs": 4831,
+      "loudnessDb": -16.4,
+      "peakDb": -3.9
     },
     {
       "id": "c2",
       "speaker": "narrator",
       "text": "But replacing your system feels like: \"They're destroying everything I've built.\"",
       "audio": "voice/c2.wav",
-      "durationMs": 4445
+      "durationMs": 4445,
+      "loudnessDb": -16.7,
+      "peakDb": -4.9
     },
     {
       "id": "f1",
       "speaker": "narrator",
       "text": "Sometimes… the hardest thing to let go of isn't a bad idea.",
       "audio": "voice/f1.wav",
-      "durationMs": 3663
+      "durationMs": 3663,
+      "loudnessDb": -17,
+      "peakDb": -4.4
     },
     {
       "id": "f2",
       "speaker": "narrator",
       "text": "It's our bad idea.",
       "audio": "voice/f2.wav",
-      "durationMs": 1359
+      "durationMs": 1359,
+      "loudnessDb": -19.9,
+      "peakDb": -5.4
     }
   ]
 }

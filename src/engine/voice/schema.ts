@@ -23,6 +23,14 @@ export const VoiceLineSchema = z.object({
   audio: z.string().min(1),
   /** Measured audio duration. Optional: prepare measures it when missing. */
   durationMs: z.number().positive().optional(),
+  /**
+   * Measured on the file: the loudest 400 ms RMS window (dBFS), same measure as `sfx.json`
+   * (`pnpm voice:measure`). Rendered voices do not arrive level: the crew cast's three voices
+   * span 4.1 dB, and lines within one skit up to 12.1 dB.
+   */
+  loudnessDb: z.number().optional(),
+  /** Measured sample peak (dBFS), so a line can be levelled without clipping. */
+  peakDb: z.number().optional(),
   /** Word timings from the TTS provider, if it has them (e.g. one SSML <mark> per word). */
   words: z.array(WordInputSchema).optional(),
 });
