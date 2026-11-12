@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "After the Nvidia news, HR got nervous",
+    "description": "After the Nvidia news, every office suddenly has spy training. Every office also has a Mitch. Which one are you? Tag your Maya.",
+    "hashtags": [
+      "relatable",
+      "stickfigure",
+      "officelife",
+      "friends",
+      "nvidia"
+    ],
+    "series": {
+      "id": "crew",
+      "season": 1,
+      "episode": 3
+    }
+  },
+  "set": "crew-meeting-room",
+  "style": "snappy",
+  "coldOpen": "pov",
+  "cast": [
+    {
+      "id": "mitch",
+      "character": "crew-mitch",
+      "mark": "center",
+      "seated": true
+    },
+    {
+      "id": "ollie",
+      "character": "crew-ollie",
+      "mark": "left",
+      "seated": true,
+      "facing": "right"
+    },
+    {
+      "id": "maya",
+      "character": "crew-maya",
+      "mark": "right",
+      "seated": true,
+      "facing": "left"
+    }
+  ],
+  "overlay": {
+    "pov": "POV: HR after the Nvidia news",
+    "subtitles": true
+  },
+  "scenes": [
+    {
+      "id": "training",
+      "beats": [
+        {
+          "id": "l1",
+          "speaker": "ollie",
+          "line": "After Nvidia, we've got spy training.",
+          "expression": "worried",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "maya",
+          "line": "Spy training.",
+          "expression": "deadpan",
+          "shot": {
+            "framing": "medium",
+            "on": "maya"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "mitch",
+          "line": "What, how to be one?",
+          "expression": "happy",
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "ollie",
+          "line": "No. How not to get played.",
+          "expression": "worried",
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "ollie",
+          "line": "Gorgeous stranger buys you a drink? Red flag.",
+          "expression": "worried",
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "mitch",
+          "line": "That's not a red flag, mate. That's Friday.",
+          "expression": "smug",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "ollie",
+          "line": "And if they're really into your work...",
+          "expression": "worried",
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "mitch",
+          "line": "My own mum's not into my work.",
+          "expression": "happy",
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "ollie",
+          "line": "It's serious! Maya, back me up.",
+          "expression": "worried",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "maya",
+          "line": "Huh. That conference guy did love my spreadsheets.",
+          "expression": "deadpan",
+          "pauseBeforeMs": 300,
+          "shot": {
+            "framing": "close",
+            "on": "maya"
+          },
+          "punchline": true
+        }
+      ]
+    }
+  ],
+  "timing": {
+    "leadInMs": 200,
+    "gapMs": 120,
+    "tailMs": 1400
+  }
+}
