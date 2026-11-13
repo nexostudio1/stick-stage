@@ -6,7 +6,7 @@
       "speaker": "mitch",
       "text": "¿Las seis? Cinco minutitos más…",
       "audio": "voice/a1.mp3",
-      "durationMs": 2600,
+      "durationMs": 2680,
       "words": [
         {
           "text": "¿Las",
@@ -30,8 +30,8 @@
         },
         {
           "text": "más…",
-          "startMs": 2080,
-          "endMs": 2480
+          "startMs": 2100,
+          "endMs": 2560
         }
       ]
     },
@@ -74,27 +74,27 @@
       "speaker": "mitch",
       "text": "Solo miro una cosa…",
       "audio": "voice/a3.mp3",
-      "durationMs": 1160,
+      "durationMs": 1800,
       "words": [
         {
           "text": "Solo",
           "startMs": 0,
-          "endMs": 240
+          "endMs": 320
         },
         {
           "text": "miro",
-          "startMs": 280,
-          "endMs": 400
+          "startMs": 360,
+          "endMs": 720
         },
         {
           "text": "una",
-          "startMs": 440,
-          "endMs": 560
+          "startMs": 820,
+          "endMs": 1120
         },
         {
           "text": "cosa…",
-          "startMs": 640,
-          "endMs": 1040
+          "startMs": 1200,
+          "endMs": 1680
         }
       ]
     },
@@ -103,27 +103,27 @@
       "speaker": "mitch",
       "text": "¿¡Ya es la una!?",
       "audio": "voice/a4.mp3",
-      "durationMs": 1160,
+      "durationMs": 920,
       "words": [
         {
           "text": "¿¡Ya",
           "startMs": 0,
-          "endMs": 240
+          "endMs": 80
         },
         {
           "text": "es",
-          "startMs": 267,
-          "endMs": 320
+          "startMs": 107,
+          "endMs": 160
         },
         {
           "text": "la",
-          "startMs": 373,
-          "endMs": 480
+          "startMs": 213,
+          "endMs": 320
         },
         {
           "text": "una!?",
-          "startMs": 580,
-          "endMs": 1040
+          "startMs": 400,
+          "endMs": 800
         }
       ]
     },
@@ -200,7 +200,7 @@
       "speaker": "mitch",
       "text": "Ya rompí la dieta… ¡pues me como seis!",
       "audio": "voice/a7.mp3",
-      "durationMs": 2520,
+      "durationMs": 3320,
       "words": [
         {
           "text": "Ya",
@@ -209,38 +209,38 @@
         },
         {
           "text": "rompí",
-          "startMs": 140,
-          "endMs": 400
-        },
-        {
-          "text": "la",
-          "startMs": 453,
+          "startMs": 160,
           "endMs": 560
         },
         {
+          "text": "la",
+          "startMs": 587,
+          "endMs": 640
+        },
+        {
           "text": "dieta…",
-          "startMs": 627,
-          "endMs": 1200
+          "startMs": 707,
+          "endMs": 1120
         },
         {
           "text": "¡pues",
-          "startMs": 1220,
-          "endMs": 1360
+          "startMs": 1400,
+          "endMs": 1840
         },
         {
           "text": "me",
-          "startMs": 1413,
-          "endMs": 1520
+          "startMs": 1893,
+          "endMs": 2000
         },
         {
           "text": "como",
-          "startMs": 1568,
-          "endMs": 1760
+          "startMs": 2064,
+          "endMs": 2320
         },
         {
           "text": "seis!",
-          "startMs": 1856,
-          "endMs": 2400
+          "startMs": 2448,
+          "endMs": 3200
         }
       ]
     },
@@ -249,42 +249,42 @@
       "speaker": "mitch",
       "text": "Mañana empiezo de verdad. ¡A las seis!",
       "audio": "voice/a8.mp3",
-      "durationMs": 2360,
+      "durationMs": 2760,
       "words": [
         {
           "text": "Mañana",
           "startMs": 0,
-          "endMs": 240
+          "endMs": 320
         },
         {
           "text": "empiezo",
-          "startMs": 280,
-          "endMs": 640
+          "startMs": 360,
+          "endMs": 720
         },
         {
           "text": "de",
-          "startMs": 693,
+          "startMs": 747,
           "endMs": 800
         },
         {
           "text": "verdad.",
-          "startMs": 823,
-          "endMs": 1360
+          "startMs": 857,
+          "endMs": 1280
         },
         {
           "text": "¡A",
-          "startMs": 1380,
-          "endMs": 1440
+          "startMs": 1480,
+          "endMs": 1800
         },
         {
           "text": "las",
-          "startMs": 1480,
-          "endMs": 1600
+          "startMs": 1830,
+          "endMs": 1920
         },
         {
           "text": "seis!",
-          "startMs": 1696,
-          "endMs": 2240
+          "startMs": 2016,
+          "endMs": 2640
         }
       ]
     }
