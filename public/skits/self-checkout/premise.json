@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "template": "exchange",
+  "aspect": "9:16",
+  "title": "Unexpected item",
+  "description": "Milo had a disagreement with the self-checkout.",
+  "hashtags": [
+    "stickfigure",
+    "relatable",
+    "selfcheckout",
+    "groceries"
+  ],
+  "pov": "POV: your friend just got back from the shops",
+  "set": "kitchen-1",
+  "cast": [
+    {
+      "id": "milo",
+      "character": "milo"
+    },
+    {
+      "id": "june",
+      "character": "june"
+    }
+  ],
+  "lines": [
+    {
+      "who": "milo",
+      "text": "The self-checkout just accused me of stealing a banana.",
+      "expression": "shocked",
+      "role": "setup",
+      "prop": "shopping-bag"
+    },
+    {
+      "who": "june",
+      "text": "Did you steal the banana?",
+      "expression": "deadpan",
+      "role": "escalation"
+    },
+    {
+      "who": "milo",
+      "text": "No! I scanned it. It said unexpected item.",
+      "expression": "annoyed",
+      "role": "escalation"
+    },
+    {
+      "who": "june",
+      "text": "The banana was unexpected.",
+      "expression": "deadpan",
+      "role": "escalation"
+    },
+    {
+      "who": "milo",
+      "text": "It's a supermarket. Bananas are the whole point!",
+      "expression": "worried",
+      "role": "escalation",
+      "prop": "banana"
+    },
+    {
+      "who": "milo",
+      "text": "I apologised to it. Out loud. Twice.",
+      "expression": "sad",
+      "role": "escalation"
+    },
+    {
+      "who": "milo",
+      "text": "It printed a receipt this long. Mostly warnings.",
+      "expression": "crying",
+      "role": "escalation",
+      "prop": "receipt"
+    },
+    {
+      "who": "june",
+      "text": "You scanned, bagged, and got told off. That's a shift.",
+      "expression": "thinking",
+      "role": "escalation"
+    },
+    {
+      "who": "milo",
+      "text": "Wait. Do I work there now?",
+      "expression": "confused",
+      "role": "escalation"
+    },
+    {
+      "who": "june",
+      "text": "Unpaid. And you're on again Saturday.",
+      "expression": "deadpan",
+      "role": "punchline",
+      "slam": "UNPAID"
+    }
+  ]
+}

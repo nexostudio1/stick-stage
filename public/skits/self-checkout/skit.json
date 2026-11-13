@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Unexpected item",
+    "aspect": "9:16",
+    "description": "Milo had a disagreement with the self-checkout.",
+    "hashtags": [
+      "stickfigure",
+      "relatable",
+      "selfcheckout",
+      "groceries"
+    ]
+  },
+  "set": "kitchen-1",
+  "cast": [
+    {
+      "id": "milo",
+      "character": "milo",
+      "mark": "left"
+    },
+    {
+      "id": "june",
+      "character": "june",
+      "mark": "right"
+    }
+  ],
+  "overlay": {
+    "pov": "POV: your friend just got back from the shops",
+    "subtitles": true
+  },
+  "beats": [
+    {
+      "id": "l1",
+      "speaker": "milo",
+      "line": "The self-checkout just accused me of stealing a banana.",
+      "actions": [
+        {
+          "who": "milo",
+          "do": "hold",
+          "prop": "shopping-bag",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "milo",
+          "do": "symbol",
+          "symbol": "exclaim",
+          "at": {
+            "word": "banana"
+          },
+          "durationMs": 1200
+        }
+      ],
+      "expression": "shocked",
+      "role": "setup"
+    },
+    {
+      "id": "l2",
+      "speaker": "june",
+      "line": "Did you steal the banana?",
+      "actions": [
+        {
+          "who": "june",
+          "do": "pose",
+          "pose": "arms-crossed",
+          "at": {
+            "word": "steal"
+          }
+        }
+      ],
+      "expression": "deadpan",
+      "role": "escalation"
+    },
+    {
+      "id": "l3",
+      "speaker": "milo",
+      "line": "No! I scanned it. It said unexpected item.",
+      "actions": [
+        {
+          "who": "milo",
+          "do": "pose",
+          "pose": "point",
+          "at": {
+            "word": "scanned"
+          }
+        }
+      ],
+      "expression": "annoyed",
+      "role": "escalation",
+      "sfx": [
+        {
+          "id": "buzzer",
+          "at": {
+            "word": "unexpected"
+          }
+        }
+      ]
+    },
+    {
+      "id": "l4",
+      "speaker": "june",
+      "line": "The banana was unexpected.",
+      "actions": [
+        {
+          "who": "june",
+          "do": "pose",
+          "pose": "shrug",
+          "at": {
+            "word": "unexpected"
+          }
+        }
+      ],
+      "expression": "deadpan",
+      "role": "escalation",
+      "pauseBeforeMs": 300
+    },
+    {
+      "id": "l5",
+      "speaker": "milo",
+      "line": "It's a supermarket. Bananas are the whole point!",
+      "actions": [
+        {
+          "who": "milo",
+          "do": "hold",
+          "prop": "banana",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "milo",
+          "do": "pose",
+          "pose": "hold-up",
+          "at": {
+            "word": "Bananas"
+          }
+        }
+      ],
+      "expression": "worried",
+      "role": "escalation"
+    },
+    {
+      "id": "l8",
+      "speaker": "milo",
+      "line": "I apologised to it. Out loud. Twice.",
+      "actions": [
+        {
+          "who": "milo",
+          "do": "symbol",
+          "symbol": "sweat",
+          "at": {
+            "word": "loud"
+          },
+          "durationMs": 1200
+        },
+        {
+          "who": "milo",
+          "do": "pose",
+          "pose": "slump",
+          "at": {
+            "word": "Twice"
+          }
+        }
+      ],
+      "expression": "sad",
+      "role": "escalation"
+    },
+    {
+      "id": "l10",
+      "speaker": "milo",
+      "line": "It printed a receipt this long. Mostly warnings.",
+      "actions": [
+        {
+          "who": "milo",
+          "do": "hold",
+          "prop": "receipt",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "milo",
+          "do": "pose",
+          "pose": "hold-up",
+          "at": {
+            "word": "long"
+          }
+        },
+        {
+          "who": "milo",
+          "do": "symbol",
+          "symbol": "tears",
+          "at": {
+            "word": "warnings"
+          },
+          "durationMs": 1200
+        }
+      ],
+      "expression": "crying",
+      "role": "escalation"
+    },
+    {
+      "id": "l11",
+      "speaker": "june",
+      "line": "You scanned, bagged, and got told off. That's a shift.",
+      "actions": [
+        {
+          "who": "june",
+          "do": "pose",
+          "pose": "hands-on-hips",
+          "at": {
+            "word": "shift"
+          }
+        }
+      ],
+      "expression": "thinking",
+      "role": "escalation",
+      "holdAfterMs": 200
+    },
+    {
+      "id": "realize",
+      "silent": true,
+      "durationMs": 900,
+      "actions": [
+        {
+          "who": "milo",
+          "do": "expression",
+          "expression": "confused",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "milo",
+          "do": "symbol",
+          "symbol": "question",
+          "at": {
+            "ms": 80
+          },
+          "durationMs": 1200
+        }
+      ]
+    },
+    {
+      "id": "l12",
+      "speaker": "milo",
+      "line": "Wait. Do I work there now?",
+      "actions": [
+        {
+          "who": "milo",
+          "do": "pose",
+          "pose": "hold-chest",
+          "at": {
+            "word": "work"
+          }
+        }
+      ],
+      "expression": "confused",
+      "role": "escalation"
+    },
+    {
+      "id": "l13",
+      "speaker": "june",
+      "line": "Unpaid. And you're on again Saturday.",
+      "actions": [],
+      "expression": "deadpan",
+      "role": "punchline",
+      "punchline": true,
+      "pauseBeforeMs": 400,
+      "holdAfterMs": 300,
+      "text": [
+        {
+          "type": "slam",
+          "value": "UNPAID",
+          "at": {
+            "word": "Unpaid"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "record-scratch",
+          "at": {
+            "word": "Unpaid"
+          }
+        }
+      ]
+    }
+  ]
+}

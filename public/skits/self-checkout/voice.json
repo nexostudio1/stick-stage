@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "milo",
+      "text": "The self-checkout just accused me of stealing a banana.",
+      "audio": "voice/l1.wav",
+      "durationMs": 2755
+    },
+    {
+      "id": "l2",
+      "speaker": "june",
+      "text": "Did you steal the banana?",
+      "audio": "voice/l2.wav",
+      "durationMs": 1165
+    },
+    {
+      "id": "l3",
+      "speaker": "milo",
+      "text": "No! I scanned it. It said unexpected item.",
+      "audio": "voice/l3.wav",
+      "durationMs": 3304
+    },
+    {
+      "id": "l4",
+      "speaker": "june",
+      "text": "The banana was unexpected.",
+      "audio": "voice/l4.wav",
+      "durationMs": 1489
+    },
+    {
+      "id": "l5",
+      "speaker": "milo",
+      "text": "It's a supermarket. Bananas are the whole point!",
+      "audio": "voice/l5.wav",
+      "durationMs": 2800
+    },
+    {
+      "id": "l6",
+      "speaker": "june",
+      "text": "And then?",
+      "audio": "voice/l6.wav",
+      "durationMs": 608
+    },
+    {
+      "id": "l7",
+      "speaker": "milo",
+      "text": "A light started flashing. Everyone turned around.",
+      "audio": "voice/l7.wav",
+      "durationMs": 2776
+    },
+    {
+      "id": "l8",
+      "speaker": "milo",
+      "text": "I apologised to it. Out loud. Twice.",
+      "audio": "voice/l8.wav",
+      "durationMs": 3729
+    },
+    {
+      "id": "l9",
+      "speaker": "june",
+      "text": "Did it forgive you?",
+      "audio": "voice/l9.wav",
+      "durationMs": 942
+    },
+    {
+      "id": "l10",
+      "speaker": "milo",
+      "text": "It printed a receipt this long. Mostly warnings.",
+      "audio": "voice/l10.wav",
+      "durationMs": 3247
+    },
+    {
+      "id": "l11",
+      "speaker": "june",
+      "text": "You scanned, bagged, and got told off. That's a shift.",
+      "audio": "voice/l11.wav",
+      "durationMs": 3936
+    },
+    {
+      "id": "l12",
+      "speaker": "milo",
+      "text": "Wait. Do I work there now?",
+      "audio": "voice/l12.wav",
+      "durationMs": 1964
+    },
+    {
+      "id": "l13",
+      "speaker": "june",
+      "text": "Unpaid. And you're on again Saturday.",
+      "audio": "voice/l13.wav",
+      "durationMs": 2339
+    }
+  ]
+}
