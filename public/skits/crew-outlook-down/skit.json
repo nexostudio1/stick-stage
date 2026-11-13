@@ -52,7 +52,7 @@
         {
           "id": "l1",
           "speaker": "ollie",
-          "line": "Outlook's down. We're cut off.",
+          "line": "Outlook's down. We've lost all communication.",
           "expression": "worried",
           "shot": {
             "framing": "wide"
@@ -71,11 +71,21 @@
         {
           "id": "l3",
           "speaker": "mitch",
-          "line": "Legend. Long lunch, mate.",
+          "line": "Legend. No email, no work. Long lunch, mate.",
           "expression": "happy",
           "shot": {
             "framing": "medium",
             "on": "mitch"
+          }
+        },
+        {
+          "id": "l4",
+          "speaker": "ollie",
+          "line": "What if someone replied-all and we missed it?",
+          "expression": "worried",
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
           }
         },
         {
