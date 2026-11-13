@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Novato vs Pro",
+    "aspect": "9:16",
+    "language": "es",
+    "description": "Novato vs pro: disciplina, motivación, porno y dinero.",
+    "hashtags": [
+      "psicologiamasculina",
+      "disciplina",
+      "mentalidad",
+      "novatovspro"
+    ]
+  },
+  "set": "street-night-1",
+  "cast": [
+    {
+      "id": "mitch",
+      "character": "crew-mitch",
+      "mark": "left"
+    },
+    {
+      "id": "ollie",
+      "character": "crew-ollie",
+      "mark": "right"
+    }
+  ],
+  "overlay": {
+    "pov": "NOVATO vs PRO",
+    "subtitles": true
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "speaker": "mitch",
+      "line": "Hoy no tengo motivación.",
+      "expression": "sad",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "slump",
+          "at": {
+            "word": "motivación"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "speaker": "ollie",
+      "line": "Yo tampoco. Entreno igual.",
+      "expression": "deadpan",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "arms-crossed",
+          "at": {
+            "word": "igual"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "thud",
+          "at": {
+            "word": "igual"
+          }
+        }
+      ],
+      "text": [
+        {
+          "type": "slam",
+          "value": "IGUAL",
+          "at": {
+            "word": "igual"
+          }
+        }
+      ],
+      "holdAfterMs": 250
+    },
+    {
+      "id": "b3",
+      "speaker": "mitch",
+      "line": "Empiezo el lunes. En serio.",
+      "expression": "happy",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "thumbs-up",
+          "at": {
+            "word": "lunes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "speaker": "ollie",
+      "line": "El lunes no existe. Existe hoy.",
+      "expression": "deadpan",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "point",
+          "at": {
+            "word": "hoy"
+          }
+        }
+      ],
+      "pauseBeforeMs": 300
+    },
+    {
+      "id": "b5",
+      "speaker": "mitch",
+      "line": "Cinco minutos de porno y se me va el día.",
+      "expression": "embarrassed",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "facepalm",
+          "at": {
+            "word": "día"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": {
+            "ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "speaker": "ollie",
+      "line": "Lo dejé. Y volvió mi energía.",
+      "expression": "smug",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "hands-on-hips",
+          "at": {
+            "word": "energía"
+          }
+        }
+      ],
+      "holdAfterMs": 200
+    },
+    {
+      "id": "giro",
+      "silent": true,
+      "durationMs": 900,
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "expression",
+          "expression": "shocked",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "mitch",
+          "do": "symbol",
+          "symbol": "question",
+          "at": {
+            "ms": 80
+          },
+          "durationMs": 1100
+        }
+      ],
+      "sfx": [
+        {
+          "id": "record-scratch",
+          "at": {
+            "ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "speaker": "mitch",
+      "line": "Espera. ¿Tú cómo sabes todo esto?",
+      "expression": "skeptical",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "point",
+          "at": {
+            "word": "sabes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "speaker": "ollie",
+      "line": "Porque yo era tú. Hace un año.",
+      "expression": "neutral",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "hold-chest",
+          "at": {
+            "word": "era"
+          }
+        }
+      ],
+      "pauseBeforeMs": 500,
+      "holdAfterMs": 400,
+      "text": [
+        {
+          "type": "slam",
+          "value": "UN AÑO",
+          "at": {
+            "word": "año"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "speaker": "mitch",
+      "line": "Vale, pro. ¿Y el dinero?",
+      "expression": "thinking",
+      "actions": [],
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": {
+            "ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "speaker": "ollie",
+      "line": "Primero me pago a mí. Luego gasto.",
+      "expression": "neutral",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "point",
+          "at": {
+            "word": "mí"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "coins",
+          "at": {
+            "word": "pago"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "speaker": "mitch",
+      "line": "Yo ya invertí. En zapatillas para correr.",
+      "expression": "smug",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "thumbs-up",
+          "at": {
+            "word": "zapatillas"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "speaker": "ollie",
+      "line": "¿Y has corrido?",
+      "expression": "skeptical",
+      "actions": [],
+      "pauseBeforeMs": 300
+    },
+    {
+      "id": "b14",
+      "speaker": "mitch",
+      "line": "Sí. A comprarlas.",
+      "expression": "happy",
+      "actions": [],
+      "punchline": true,
+      "pauseBeforeMs": 500,
+      "holdAfterMs": 300
+    }
+  ]
+}

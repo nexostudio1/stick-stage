@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "b1",
+      "speaker": "mitch",
+      "text": "Hoy no tengo motivación.",
+      "audio": "voice/b1.mp3",
+      "durationMs": 1560,
+      "words": [
+        {
+          "text": "Hoy",
+          "startMs": 0,
+          "endMs": 232
+        },
+        {
+          "text": "no",
+          "startMs": 267,
+          "endMs": 337
+        },
+        {
+          "text": "tengo",
+          "startMs": 383,
+          "endMs": 569
+        },
+        {
+          "text": "motivación.",
+          "startMs": 615,
+          "endMs": 1440
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "speaker": "ollie",
+      "text": "Yo tampoco. Entreno igual.",
+      "audio": "voice/b2.mp3",
+      "durationMs": 1978,
+      "words": [
+        {
+          "text": "Yo",
+          "startMs": 0,
+          "endMs": 186
+        },
+        {
+          "text": "tampoco.",
+          "startMs": 232,
+          "endMs": 720
+        },
+        {
+          "text": "Entreno",
+          "startMs": 778,
+          "endMs": 1265
+        },
+        {
+          "text": "igual.",
+          "startMs": 1312,
+          "endMs": 1858
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "speaker": "mitch",
+      "text": "Empiezo el lunes. En serio.",
+      "audio": "voice/b3.mp3",
+      "durationMs": 1885,
+      "words": [
+        {
+          "text": "Empiezo",
+          "startMs": 0,
+          "endMs": 348
+        },
+        {
+          "text": "el",
+          "startMs": 372,
+          "endMs": 430
+        },
+        {
+          "text": "lunes.",
+          "startMs": 464,
+          "endMs": 871
+        },
+        {
+          "text": "En",
+          "startMs": 1010,
+          "endMs": 1115
+        },
+        {
+          "text": "serio.",
+          "startMs": 1184,
+          "endMs": 1765
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "speaker": "ollie",
+      "text": "El lunes no existe. Existe hoy.",
+      "audio": "voice/b4.mp3",
+      "durationMs": 2442,
+      "words": [
+        {
+          "text": "El",
+          "startMs": 0,
+          "endMs": 163
+        },
+        {
+          "text": "lunes",
+          "startMs": 197,
+          "endMs": 453
+        },
+        {
+          "text": "no",
+          "startMs": 522,
+          "endMs": 592
+        },
+        {
+          "text": "existe.",
+          "startMs": 627,
+          "endMs": 1091
+        },
+        {
+          "text": "Existe",
+          "startMs": 1126,
+          "endMs": 1660
+        },
+        {
+          "text": "hoy.",
+          "startMs": 1695,
+          "endMs": 2322
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "speaker": "mitch",
+      "text": "Cinco minutos de porno y se me va el día.",
+      "audio": "voice/b5.mp3",
+      "durationMs": 2303,
+      "words": [
+        {
+          "text": "Cinco",
+          "startMs": 0,
+          "endMs": 279
+        },
+        {
+          "text": "minutos",
+          "startMs": 325,
+          "endMs": 639
+        },
+        {
+          "text": "de",
+          "startMs": 673,
+          "endMs": 743
+        },
+        {
+          "text": "porno",
+          "startMs": 789,
+          "endMs": 1115
+        },
+        {
+          "text": "y",
+          "startMs": 1196,
+          "endMs": 1265
+        },
+        {
+          "text": "se",
+          "startMs": 1324,
+          "endMs": 1382
+        },
+        {
+          "text": "me",
+          "startMs": 1428,
+          "endMs": 1509
+        },
+        {
+          "text": "va",
+          "startMs": 1544,
+          "endMs": 1602
+        },
+        {
+          "text": "el",
+          "startMs": 1625,
+          "endMs": 1672
+        },
+        {
+          "text": "día.",
+          "startMs": 1741,
+          "endMs": 2183
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "speaker": "ollie",
+      "text": "Lo dejé. Y volvió mi energía.",
+      "audio": "voice/b6.mp3",
+      "durationMs": 2581,
+      "words": [
+        {
+          "text": "Lo",
+          "startMs": 0,
+          "endMs": 163
+        },
+        {
+          "text": "dejé.",
+          "startMs": 209,
+          "endMs": 650
+        },
+        {
+          "text": "Y",
+          "startMs": 1010,
+          "endMs": 1080
+        },
+        {
+          "text": "volvió",
+          "startMs": 1149,
+          "endMs": 1463
+        },
+        {
+          "text": "mi",
+          "startMs": 1509,
+          "endMs": 1579
+        },
+        {
+          "text": "energía.",
+          "startMs": 1614,
+          "endMs": 2461
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "speaker": "mitch",
+      "text": "Espera. ¿Tú cómo sabes todo esto?",
+      "audio": "voice/b8.mp3",
+      "durationMs": 2303,
+      "words": [
+        {
+          "text": "Espera.",
+          "startMs": 0,
+          "endMs": 546
+        },
+        {
+          "text": "¿Tú",
+          "startMs": 685,
+          "endMs": 906
+        },
+        {
+          "text": "cómo",
+          "startMs": 952,
+          "endMs": 1126
+        },
+        {
+          "text": "sabes",
+          "startMs": 1161,
+          "endMs": 1393
+        },
+        {
+          "text": "todo",
+          "startMs": 1440,
+          "endMs": 1614
+        },
+        {
+          "text": "esto?",
+          "startMs": 1660,
+          "endMs": 2183
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "speaker": "ollie",
+      "text": "Porque yo era tú. Hace un año.",
+      "audio": "voice/b9.mp3",
+      "durationMs": 2349,
+      "words": [
+        {
+          "text": "Porque",
+          "startMs": 0,
+          "endMs": 290
+        },
+        {
+          "text": "yo",
+          "startMs": 348,
+          "endMs": 418
+        },
+        {
+          "text": "era",
+          "startMs": 453,
+          "endMs": 580
+        },
+        {
+          "text": "tú.",
+          "startMs": 627,
+          "endMs": 894
+        },
+        {
+          "text": "Hace",
+          "startMs": 1254,
+          "endMs": 1498
+        },
+        {
+          "text": "un",
+          "startMs": 1544,
+          "endMs": 1614
+        },
+        {
+          "text": "año.",
+          "startMs": 1649,
+          "endMs": 2229
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "speaker": "mitch",
+      "text": "Vale, pro. ¿Y el dinero?",
+      "audio": "voice/b10.mp3",
+      "durationMs": 2024,
+      "words": [
+        {
+          "text": "Vale,",
+          "startMs": 0,
+          "endMs": 395
+        },
+        {
+          "text": "pro.",
+          "startMs": 476,
+          "endMs": 813
+        },
+        {
+          "text": "¿Y",
+          "startMs": 975,
+          "endMs": 1126
+        },
+        {
+          "text": "el",
+          "startMs": 1161,
+          "endMs": 1207
+        },
+        {
+          "text": "dinero?",
+          "startMs": 1254,
+          "endMs": 1904
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "speaker": "ollie",
+      "text": "Primero me pago a mí. Luego gasto.",
+      "audio": "voice/b11.mp3",
+      "durationMs": 2256,
+      "words": [
+        {
+          "text": "Primero",
+          "startMs": 0,
+          "endMs": 430
+        },
+        {
+          "text": "me",
+          "startMs": 476,
+          "endMs": 557
+        },
+        {
+          "text": "pago",
+          "startMs": 592,
+          "endMs": 766
+        },
+        {
+          "text": "a",
+          "startMs": 789,
+          "endMs": 813
+        },
+        {
+          "text": "mí.",
+          "startMs": 848,
+          "endMs": 1057
+        },
+        {
+          "text": "Luego",
+          "startMs": 1161,
+          "endMs": 1428
+        },
+        {
+          "text": "gasto.",
+          "startMs": 1474,
+          "endMs": 2136
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "speaker": "mitch",
+      "text": "Yo ya invertí. En zapatillas para correr.",
+      "audio": "voice/b12.mp3",
+      "durationMs": 2488,
+      "words": [
+        {
+          "text": "Yo",
+          "startMs": 0,
+          "endMs": 163
+        },
+        {
+          "text": "ya",
+          "startMs": 209,
+          "endMs": 267
+        },
+        {
+          "text": "invertí.",
+          "startMs": 290,
+          "endMs": 789
+        },
+        {
+          "text": "En",
+          "startMs": 894,
+          "endMs": 998
+        },
+        {
+          "text": "zapatillas",
+          "startMs": 1045,
+          "endMs": 1486
+        },
+        {
+          "text": "para",
+          "startMs": 1533,
+          "endMs": 1695
+        },
+        {
+          "text": "correr.",
+          "startMs": 1730,
+          "endMs": 2368
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "speaker": "ollie",
+      "text": "¿Y has corrido?",
+      "audio": "voice/b13.mp3",
+      "durationMs": 1374,
+      "words": [
+        {
+          "text": "¿Y",
+          "startMs": 0,
+          "endMs": 255
+        },
+        {
+          "text": "has",
+          "startMs": 325,
+          "endMs": 418
+        },
+        {
+          "text": "corrido?",
+          "startMs": 476,
+          "endMs": 1254
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "speaker": "mitch",
+      "text": "Sí. A comprarlas.",
+      "audio": "voice/b14.mp3",
+      "durationMs": 1467,
+      "words": [
+        {
+          "text": "Sí.",
+          "startMs": 0,
+          "endMs": 337
+        },
+        {
+          "text": "A",
+          "startMs": 406,
+          "endMs": 476
+        },
+        {
+          "text": "comprarlas.",
+          "startMs": 534,
+          "endMs": 1347
+        }
+      ]
+    }
+  ]
+}
