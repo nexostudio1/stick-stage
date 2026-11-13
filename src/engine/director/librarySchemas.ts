@@ -27,6 +27,8 @@ export const SfxManifestSchema = z.object({
       loudnessDb: z.number().max(0).optional(),
       /** Sample peak, dBFS (`pnpm sfx:measure`). */
       peakDb: z.number().max(6).optional(),
+      /** True peak, dBFS (`pnpm sfx:measure`): what the reconstruction does between samples. The mix caps on it. */
+      truePeakDb: z.number().max(6).optional(),
       license: z.string().min(1),
       source: z.string().min(1),
       tags: z.array(z.string()).default([]),

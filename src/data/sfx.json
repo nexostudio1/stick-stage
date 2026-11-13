@@ -6,522 +6,606 @@
       "file": "sfx/pop.wav",
       "durationMs": 140,
       "gain": 0.7,
+      "loudnessDb": -18.7,
+      "peakDb": -1.1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "appear",
         "small"
-      ],
-      "loudnessDb": -20.2,
-      "peakDb": -2.6
+      ]
     },
     {
       "id": "boing",
       "file": "sfx/boing.wav",
       "durationMs": 800,
       "gain": 0.75,
+      "loudnessDb": -10.7,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "hop",
         "silly"
-      ],
-      "loudnessDb": -10.7,
-      "peakDb": -1
+      ]
     },
     {
       "id": "whoosh",
       "file": "sfx/whoosh.wav",
       "durationMs": 550,
       "gain": 0.7,
+      "loudnessDb": -15.5,
+      "peakDb": -1.3,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "move",
         "transition"
-      ],
-      "loudnessDb": -15.2,
-      "peakDb": -1
+      ]
     },
     {
       "id": "swish",
       "file": "sfx/swish.wav",
       "durationMs": 220,
       "gain": 0.6,
+      "loudnessDb": -17.5,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "move",
         "gesture"
-      ],
-      "loudnessDb": -17.5,
-      "peakDb": -1
+      ]
     },
     {
       "id": "zip",
       "file": "sfx/zip.wav",
       "durationMs": 260,
       "gain": 0.6,
+      "loudnessDb": -15.7,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "move",
         "slide"
-      ],
-      "loudnessDb": -15.7,
-      "peakDb": -1
+      ]
     },
     {
       "id": "record-scratch",
       "file": "sfx/record-scratch.wav",
       "durationMs": 600,
       "gain": 0.8,
+      "loudnessDb": -9.8,
+      "peakDb": -2.4,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "interrupt",
         "awkward"
-      ],
-      "loudnessDb": -8.4,
-      "peakDb": -1
+      ]
     },
     {
       "id": "boom",
       "file": "sfx/boom.wav",
       "durationMs": 1500,
       "gain": 0.85,
+      "loudnessDb": -3.4,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "hit",
         "dramatic"
-      ],
-      "loudnessDb": -3.4,
-      "peakDb": -1
+      ]
     },
     {
       "id": "ding",
       "file": "sfx/ding.wav",
       "durationMs": 1400,
       "gain": 0.55,
+      "loudnessDb": -11.9,
+      "peakDb": -1.1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "idea",
         "correct"
-      ],
-      "loudnessDb": -11.8,
-      "peakDb": -1
+      ]
     },
     {
       "id": "buzzer",
       "file": "sfx/buzzer.wav",
       "durationMs": 700,
       "gain": 0.5,
+      "loudnessDb": -4.7,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "wrong",
         "fail"
-      ],
-      "loudnessDb": -4.7,
-      "peakDb": -1
+      ]
     },
     {
       "id": "crickets",
       "file": "sfx/crickets.wav",
       "durationMs": 2400,
       "gain": 0.6,
+      "loudnessDb": -15.4,
+      "peakDb": -1.1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "silence",
         "awkward"
-      ],
-      "loudnessDb": -15.3,
-      "peakDb": -1
+      ]
     },
     {
       "id": "rimshot",
       "file": "sfx/rimshot.wav",
       "durationMs": 1400,
       "gain": 0.75,
+      "loudnessDb": -13.7,
+      "peakDb": -1.3,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "joke",
         "punchline"
-      ],
-      "loudnessDb": -13.4,
-      "peakDb": -1
+      ]
     },
     {
       "id": "slide-up",
       "file": "sfx/slide-up.wav",
       "durationMs": 600,
       "gain": 0.55,
+      "loudnessDb": -4.5,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "silly",
         "rise"
-      ],
-      "loudnessDb": -4.5,
-      "peakDb": -1
+      ]
     },
     {
       "id": "slide-down",
       "file": "sfx/slide-down.wav",
       "durationMs": 600,
       "gain": 0.55,
+      "loudnessDb": -4.6,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "silly",
         "fall"
-      ],
-      "loudnessDb": -4.6,
-      "peakDb": -1
+      ]
     },
     {
       "id": "sad-trombone",
       "file": "sfx/sad-trombone.wav",
       "durationMs": 2400,
       "gain": 0.6,
+      "loudnessDb": -6.8,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "fail",
         "sad"
-      ],
-      "loudnessDb": -6.8,
-      "peakDb": -1
+      ]
     },
     {
       "id": "thud",
       "file": "sfx/thud.wav",
       "durationMs": 350,
       "gain": 0.8,
+      "loudnessDb": -14.1,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "fall",
         "hit"
-      ],
-      "loudnessDb": -14.2,
-      "peakDb": -1
+      ]
     },
     {
       "id": "laugh",
       "file": "sfx/laugh.wav",
       "durationMs": 750,
       "gain": 0.55,
+      "loudnessDb": -10.8,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "sitcom",
         "punchline"
-      ],
-      "loudnessDb": -10.8,
-      "peakDb": -1
+      ]
     },
     {
       "id": "sparkle",
       "file": "sfx/sparkle.wav",
       "durationMs": 900,
       "gain": 0.45,
+      "loudnessDb": -11.7,
+      "peakDb": -1.3,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "idea",
         "magic"
-      ],
-      "loudnessDb": -11.4,
-      "peakDb": -1
+      ]
     },
     {
       "id": "ding-idea",
       "file": "sfx/ding-idea.wav",
       "durationMs": 1300,
       "gain": 0.6,
+      "loudnessDb": -12,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "idea",
         "realise",
         "science"
-      ],
-      "loudnessDb": -12,
-      "peakDb": -1
+      ]
     },
     {
       "id": "zap",
       "file": "sfx/zap.wav",
       "durationMs": 350,
       "gain": 0.55,
+      "loudnessDb": -16.8,
+      "peakDb": -4.8,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "spark",
         "electric",
         "science"
-      ],
-      "loudnessDb": -13,
-      "peakDb": -1
+      ]
     },
     {
       "id": "hum",
       "file": "sfx/hum.wav",
       "durationMs": 1500,
       "gain": 0.4,
+      "loudnessDb": -5.9,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "electric",
         "machine",
         "science"
-      ],
-      "loudnessDb": -5.9,
-      "peakDb": -1
+      ]
     },
     {
       "id": "whoosh-warp",
       "file": "sfx/whoosh-warp.wav",
       "durationMs": 1100,
       "gain": 0.65,
+      "loudnessDb": -11.5,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "zoom",
         "transition",
         "science"
-      ],
-      "loudnessDb": -11.5,
-      "peakDb": -1
+      ]
     },
     {
       "id": "chalk-tap",
       "file": "sfx/chalk-tap.wav",
       "durationMs": 300,
       "gain": 0.6,
+      "loudnessDb": -25.5,
+      "peakDb": -1.5,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "board",
         "write",
         "science"
-      ],
-      "loudnessDb": -27.1,
-      "peakDb": -3.1
+      ]
     },
     {
       "id": "blip",
       "file": "sfx/blip.wav",
       "durationMs": 120,
       "gain": 0.55,
+      "loudnessDb": -16.4,
+      "peakDb": -2.9,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "appear",
         "particle",
         "science"
-      ],
-      "loudnessDb": -15,
-      "peakDb": -1.5
+      ]
     },
     {
       "id": "pop-annihilate",
       "file": "sfx/pop-annihilate.wav",
       "durationMs": 900,
       "gain": 0.65,
+      "loudnessDb": -14.4,
+      "peakDb": -1.9,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "flash",
         "particle",
         "science"
-      ],
-      "loudnessDb": -13.6,
-      "peakDb": -1
+      ]
     },
     {
       "id": "clack",
       "file": "sfx/clack.wav",
       "durationMs": 420,
       "gain": 0.7,
+      "loudnessDb": -22.7,
+      "peakDb": -1.3,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "flap",
         "counter",
         "the-catch"
-      ],
-      "loudnessDb": -22.4,
-      "peakDb": -1
+      ]
     },
     {
       "id": "coins",
       "file": "sfx/coins.wav",
       "durationMs": 800,
       "gain": 0.6,
+      "loudnessDb": -13.9,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "money",
         "clink",
         "the-catch"
-      ],
-      "loudnessDb": -13.9,
-      "peakDb": -1
+      ]
     },
     {
       "id": "coin-avalanche",
       "file": "sfx/coin-avalanche.wav",
       "durationMs": 1800,
       "gain": 0.6,
+      "loudnessDb": -12.6,
+      "peakDb": -1.3,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "money",
         "pile",
         "the-catch"
-      ],
-      "loudnessDb": -12.3,
-      "peakDb": -1
+      ]
     },
     {
       "id": "register",
       "file": "sfx/register.wav",
       "durationMs": 1100,
       "gain": 0.7,
+      "loudnessDb": -11.5,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "money",
         "sale",
         "the-catch"
-      ],
-      "loudnessDb": -11.5,
-      "peakDb": -1
+      ]
     },
     {
       "id": "stamp",
       "file": "sfx/stamp.wav",
       "durationMs": 500,
       "gain": 0.9,
+      "loudnessDb": -10.4,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "verdict",
         "slam",
         "the-catch"
-      ],
-      "loudnessDb": -10.5,
-      "peakDb": -1.1
+      ]
     },
     {
       "id": "drawer",
       "file": "sfx/drawer.wav",
       "durationMs": 600,
       "gain": 0.6,
+      "loudnessDb": -18.4,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "slide",
         "wood",
         "the-catch"
-      ],
-      "loudnessDb": -18.4,
-      "peakDb": -1
+      ]
     },
     {
       "id": "rustle",
       "file": "sfx/rustle.wav",
       "durationMs": 450,
       "gain": 0.5,
+      "loudnessDb": -15,
+      "peakDb": -2.1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "paper",
         "note",
         "the-catch"
-      ],
-      "loudnessDb": -13.9,
-      "peakDb": -1
+      ]
     },
     {
       "id": "clock-tick",
       "file": "sfx/clock-tick.wav",
       "durationMs": 2050,
       "gain": 0.5,
+      "loudnessDb": -25.8,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "time",
         "the-catch"
-      ],
-      "loudnessDb": -26.5,
-      "peakDb": -1.7
+      ]
     },
     {
       "id": "neon-on",
       "file": "sfx/neon-on.wav",
       "durationMs": 1200,
       "gain": 0.45,
+      "loudnessDb": -7.5,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "light",
         "neon",
         "the-catch"
-      ],
-      "loudnessDb": -7.5,
-      "peakDb": -1
+      ]
     },
     {
       "id": "pin",
       "file": "sfx/pin.wav",
       "durationMs": 200,
       "gain": 0.6,
+      "loudnessDb": -20.6,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "board",
         "tap",
         "the-catch"
-      ],
-      "loudnessDb": -22.7,
-      "peakDb": -3.1
+      ]
     },
     {
       "id": "click",
       "file": "sfx/click.wav",
       "durationMs": 120,
       "gain": 0.6,
+      "loudnessDb": -24.4,
+      "peakDb": -1.1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "switch",
         "lamp",
         "the-catch"
-      ],
-      "loudnessDb": -27.4,
-      "peakDb": -4
+      ]
     },
     {
       "id": "riser-hit",
       "file": "sfx/riser-hit.wav",
       "durationMs": 2200,
       "gain": 0.8,
+      "loudnessDb": -6.4,
+      "peakDb": -1,
+      "truePeakDb": -1,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
       "tags": [
         "reveal",
         "drop",
         "the-catch"
-      ],
-      "loudnessDb": -6.3,
-      "peakDb": -1
+      ]
+    },
+    {
+      "id": "door-knock",
+      "file": "sfx/door-knock.wav",
+      "durationMs": 620,
+      "gain": 0.75,
+      "loudnessDb": -15.3,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "knock",
+        "entrance",
+        "comedy"
+      ]
+    },
+    {
+      "id": "applause",
+      "file": "sfx/applause.wav",
+      "durationMs": 1700,
+      "gain": 0.6,
+      "loudnessDb": -13.8,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "crowd",
+        "approval",
+        "comedy"
+      ]
+    },
+    {
+      "id": "camera-shutter",
+      "file": "sfx/camera-shutter.wav",
+      "durationMs": 340,
+      "gain": 0.7,
+      "loudnessDb": -26.4,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "camera",
+        "snap",
+        "comedy"
+      ]
     }
   ]
 }

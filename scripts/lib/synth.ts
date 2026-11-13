@@ -1,5 +1,6 @@
 /** Tiny deterministic DSP kit for `scripts/sfx-gen.ts`: oscillators, noise, biquads, WAV out. */
 import fs from "node:fs";
+import { truePeak } from "./loudness";
 
 export const SR = 44100;
 export type Sig = Float32Array;
@@ -83,16 +84,23 @@ export const saturate = (s: Sig, drive: number): Sig => s.map((v) => Math.tanh(v
 /** Exponential decay envelope with a short linear attack. */
 export const perc = (attack: number, decay: number) => (t: number) => (t < attack ? t / attack : Math.exp(-(t - attack) * decay));
 
-/** Normalize to a peak, fade the edges (no clicks), write 16-bit mono PCM. Returns duration in ms. */
+/**
+ * Normalize so the TRUE peak lands on `peak` (linear; 0.89 is about -1.0 dBTP), fade the edges (no
+ * clicks), write 16-bit mono PCM. Returns duration in ms.
+ *
+ * Normalising on the sample peak is what put `zap.wav` 3.1 dB over 0 dBTP: the sample peak cannot
+ * see what the reconstruction does between samples. The edge fade is applied before the scale is
+ * measured, and the measured signal is what gets written, so the number is the delivered file's.
+ */
 export const writeWav = (file: string, s: Sig, peak = 0.89): number => {
   const fade = Math.round(0.004 * SR);
-  let max = 0;
-  for (const v of s) max = Math.max(max, Math.abs(v));
-  const k = max > 0 ? peak / max : 1;
+  const faded = new Float32Array(s.length);
+  for (let i = 0; i < s.length; i++) faded[i] = s[i]! * Math.min(1, i / fade, (s.length - 1 - i) / fade);
+  const tp = truePeak(faded);
+  const k = tp > 0 ? peak / tp : 1;
   const data = Buffer.alloc(s.length * 2);
   for (let i = 0; i < s.length; i++) {
-    const edge = Math.min(1, i / fade, (s.length - 1 - i) / fade);
-    data.writeInt16LE(Math.round(Math.max(-1, Math.min(1, s[i]! * k * edge)) * 32767), i * 2);
+    data.writeInt16LE(Math.round(Math.max(-1, Math.min(1, faded[i]! * k)) * 32767), i * 2);
   }
   const h = Buffer.alloc(44);
   h.write("RIFF", 0);

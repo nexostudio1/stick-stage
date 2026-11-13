@@ -5,21 +5,21 @@
  * differs by more than 20 dB: a sustained tone (`slide-up`, `buzzer`, `boom`) played as loud as the
  * dialog while a click barely registered. A flat trim cannot fix that (the 2026-11-04 SFX_MASTER
  * trim left `boom` level with the dialog), so each sound records its own loudness in `sfx.json`
- * (`loudnessDb`: the loudest 400 ms RMS window, dBFS; `peakDb`: sample peak; `pnpm sfx:measure`)
+ * (`loudnessDb`: the loudest 400 ms RMS window, dBFS; `peakDb`: sample peak; `truePeakDb`: true peak; `pnpm sfx:measure`)
  * and `sfxVolume` levels it to SFX_REF_DB before the sound's `gain` applies.
  *
  * Calibration (2026-11-08): dialog (MAI TTS lines) peaks at about -15.7 dB on the same measure,
  * so SFX_REF_DB = -24 puts a gain-0.7 effect about 11 dB under the dialog, and SFX_DUCK takes it
- * another 6 dB down while a line is spoken. SFX_PEAK_DBFS caps transients (clicks, stamps) so
+ * another 6 dB down while a line is spoken. SFX_PEAK_DBFS caps transients (clicks, stamps) on the true peak, so
  * levelling a quiet sound up can never make it spike.
  */
 import type { SfxManifest } from "../director/librarySchemas";
 
-type Sound = Pick<SfxManifest["sounds"][number], "gain" | "loudnessDb" | "peakDb">;
+type Sound = Pick<SfxManifest["sounds"][number], "gain" | "loudnessDb" | "peakDb" | "truePeakDb">;
 
 /** Loudest-window RMS a gain-1 effect is levelled to (dBFS). */
 export const SFX_REF_DB = -24;
-/** No effect's sample peak may land above this after levelling (dBFS). */
+/** No effect's true peak may land above this after levelling (dBFS). */
 export const SFX_PEAK_DBFS = -10;
 /** Assumed for a sound with no measurement: as hot as the hottest library sound, so it stays quiet. */
 export const SFX_UNMEASURED_DB = -3;
@@ -35,7 +35,8 @@ export const SFX_CEILING = db(SFX_PEAK_DBFS + 1);
 export const sfxVolume = (sound: Sound, cueVolume = 1): number => {
   const cue = Math.max(0, Math.min(1, cueVolume));
   const levelled = cue * sound.gain * db(SFX_REF_DB - (sound.loudnessDb ?? SFX_UNMEASURED_DB));
-  const peakCap = db(SFX_PEAK_DBFS - (sound.peakDb ?? -1));
+  // Cap on the true peak where the file has one: a sample peak understates what a resampler hands the DAC.
+  const peakCap = db(SFX_PEAK_DBFS - (sound.truePeakDb ?? sound.peakDb ?? -1));
   return Math.min(levelled, peakCap, SFX_CEILING);
 };
 
