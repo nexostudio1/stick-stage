@@ -2,61 +2,120 @@
   "schemaVersion": 1,
   "lines": [
     {
-      "id": "n1",
+      "id": "n0",
       "speaker": "narrator",
-      "text": "Pone la alarma a las tres y cincuenta y dos.",
-      "audio": "voice/n1.mp3",
-      "durationMs": 2052,
+      "text": "Madrugar no te va a hacer millonario.",
+      "audio": "voice/n0.mp3",
+      "durationMs": 1983,
       "words": [
         {
-          "text": "Pone",
+          "text": "Madrugar",
           "startMs": 0,
-          "endMs": 209
+          "endMs": 417
         },
         {
-          "text": "la",
-          "startMs": 232,
-          "endMs": 278
+          "text": "no",
+          "startMs": 533,
+          "endMs": 765
         },
         {
-          "text": "alarma",
-          "startMs": 324,
-          "endMs": 626
+          "text": "te",
+          "startMs": 811,
+          "endMs": 904
+        },
+        {
+          "text": "va",
+          "startMs": 928,
+          "endMs": 974
         },
         {
           "text": "a",
-          "startMs": 661,
-          "endMs": 696
-        },
-        {
-          "text": "las",
-          "startMs": 730,
-          "endMs": 835
-        },
-        {
-          "text": "tres",
-          "startMs": 877,
+          "startMs": 1009,
           "endMs": 1043
         },
         {
-          "text": "y",
-          "startMs": 1113,
+          "text": "hacer",
+          "startMs": 1067,
           "endMs": 1183
         },
         {
-          "text": "cincuenta",
-          "startMs": 1217,
-          "endMs": 1530
+          "text": "millonario.",
+          "startMs": 1224,
+          "endMs": 1878
+        }
+      ]
+    },
+    {
+      "id": "n1",
+      "speaker": "narrator",
+      "text": "Pero el novato pone la alarma a las tres y cincuenta y dos.",
+      "audio": "voice/n1.mp3",
+      "durationMs": 2748,
+      "words": [
+        {
+          "text": "Pero",
+          "startMs": 0,
+          "endMs": 139
+        },
+        {
+          "text": "el",
+          "startMs": 163,
+          "endMs": 209
+        },
+        {
+          "text": "novato",
+          "startMs": 261,
+          "endMs": 626
+        },
+        {
+          "text": "pone",
+          "startMs": 696,
+          "endMs": 904
+        },
+        {
+          "text": "la",
+          "startMs": 928,
+          "endMs": 974
+        },
+        {
+          "text": "alarma",
+          "startMs": 997,
+          "endMs": 1252
+        },
+        {
+          "text": "a",
+          "startMs": 1287,
+          "endMs": 1322
+        },
+        {
+          "text": "las",
+          "startMs": 1339,
+          "endMs": 1391
+        },
+        {
+          "text": "tres",
+          "startMs": 1447,
+          "endMs": 1670
         },
         {
           "text": "y",
-          "startMs": 1565,
-          "endMs": 1600
+          "startMs": 1704,
+          "endMs": 1739
+        },
+        {
+          "text": "cincuenta",
+          "startMs": 1774,
+          "endMs": 2157
+        },
+        {
+          "text": "y",
+          "startMs": 2191,
+          "endMs": 2226
         },
         {
           "text": "dos.",
-          "startMs": 1652,
-          "endMs": 1948
+          "startMs": 2278,
+          "endMs": 2643
         }
       ]
     },
@@ -380,9 +439,9 @@
     {
       "id": "p3",
       "speaker": "narrator",
-      "text": "Todos los días. A la misma hora.",
+      "text": "Todos los días. A la misma hora. Eso sí funciona.",
       "audio": "voice/p3.mp3",
-      "durationMs": 1913,
+      "durationMs": 3026,
       "words": [
         {
           "text": "Todos",
@@ -396,28 +455,43 @@
         },
         {
           "text": "días.",
-          "startMs": 431,
-          "endMs": 904
+          "startMs": 417,
+          "endMs": 835
         },
         {
           "text": "A",
-          "startMs": 974,
-          "endMs": 1043
+          "startMs": 870,
+          "endMs": 904
         },
         {
           "text": "la",
-          "startMs": 1067,
-          "endMs": 1113
+          "startMs": 950,
+          "endMs": 1043
         },
         {
           "text": "misma",
-          "startMs": 1159,
-          "endMs": 1391
+          "startMs": 1090,
+          "endMs": 1322
         },
         {
           "text": "hora.",
-          "startMs": 1461,
-          "endMs": 1809
+          "startMs": 1363,
+          "endMs": 1739
+        },
+        {
+          "text": "Eso",
+          "startMs": 1774,
+          "endMs": 2017
+        },
+        {
+          "text": "sí",
+          "startMs": 2133,
+          "endMs": 2365
+        },
+        {
+          "text": "funciona.",
+          "startMs": 2419,
+          "endMs": 2922
         }
       ]
     },

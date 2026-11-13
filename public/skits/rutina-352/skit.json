@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "meta": {
-    "title": "Se levanta a las 3:52 para ser millonario",
+    "title": "Madrugar no te hará millonario (esto sí)",
     "aspect": "9:16",
     "language": "es",
     "description": "La rutina de las 3:52 a.m.: novato vs pro.",
@@ -275,9 +275,53 @@
       ],
       "beats": [
         {
+          "id": "n0",
+          "speaker": "narrator",
+          "line": "Madrugar no te va a hacer millonario.",
+          "focus": "mitch",
+          "pauseBeforeMs": 0,
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "expression",
+              "expression": "shocked",
+              "at": {
+                "word": "millonario"
+              }
+            }
+          ],
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "riser-hit",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "record-scratch",
+              "at": {
+                "word": "millonario"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NO",
+              "at": {
+                "word": "no"
+              }
+            }
+          ]
+        },
+        {
           "id": "n1",
           "speaker": "narrator",
-          "line": "Pone la alarma a las tres y cincuenta y dos.",
+          "line": "Pero el novato pone la alarma a las tres y cincuenta y dos.",
           "focus": "mitch",
           "actions": [
             {
@@ -315,7 +359,7 @@
             {
               "id": "buzzer",
               "at": {
-                "ms": 0
+                "word": "alarma"
               }
             },
             {
@@ -360,7 +404,7 @@
           ],
           "pauseBeforeMs": 0,
           "shot": {
-            "framing": "close",
+            "framing": "medium",
             "on": "mitch"
           },
           "sfx": [
@@ -793,7 +837,7 @@
         {
           "id": "p3",
           "speaker": "narrator",
-          "line": "Todos los días. A la misma hora.",
+          "line": "Todos los días. A la misma hora. Eso sí funciona.",
           "focus": "ollie",
           "actions": [
             {
