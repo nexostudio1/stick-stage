@@ -4,287 +4,276 @@
     {
       "id": "a1",
       "speaker": "mitch",
-      "text": "¿Las seis? Cinco minutitos más…",
+      "text": "Cinco minutitos…",
       "audio": "voice/a1.mp3",
-      "durationMs": 2680,
+      "durationMs": 1033,
       "words": [
         {
-          "text": "¿Las",
-          "startMs": 0,
-          "endMs": 160
-        },
-        {
-          "text": "seis?",
-          "startMs": 240,
-          "endMs": 640
-        },
-        {
           "text": "Cinco",
-          "startMs": 820,
-          "endMs": 1440
+          "startMs": 0,
+          "endMs": 200
         },
         {
-          "text": "minutitos",
-          "startMs": 1493,
-          "endMs": 2000
-        },
-        {
-          "text": "más…",
-          "startMs": 2100,
-          "endMs": 2560
+          "text": "minutitos…",
+          "startMs": 244,
+          "endMs": 933
         }
       ]
     },
     {
       "id": "a2",
-      "speaker": "ollie",
-      "text": "Seis en punto. Al lío.",
+      "speaker": "mitch",
+      "text": "¡¿Las doce?!",
       "audio": "voice/a2.mp3",
-      "durationMs": 1880,
+      "durationMs": 833,
       "words": [
         {
-          "text": "Seis",
+          "text": "¡¿Las",
           "startMs": 0,
-          "endMs": 160
+          "endMs": 267
         },
         {
-          "text": "en",
-          "startMs": 213,
-          "endMs": 320
-        },
-        {
-          "text": "punto.",
-          "startMs": 387,
-          "endMs": 1120
-        },
-        {
-          "text": "Al",
-          "startMs": 1173,
-          "endMs": 1280
-        },
-        {
-          "text": "lío.",
-          "startMs": 1360,
-          "endMs": 1760
+          "text": "doce?!",
+          "startMs": 311,
+          "endMs": 733
         }
       ]
     },
     {
       "id": "a3",
-      "speaker": "mitch",
-      "text": "Solo miro una cosa…",
+      "speaker": "ollie",
+      "text": "Seis en punto. Ducha fría.",
       "audio": "voice/a3.mp3",
-      "durationMs": 1800,
+      "durationMs": 1767,
       "words": [
         {
-          "text": "Solo",
+          "text": "Seis",
           "startMs": 0,
-          "endMs": 320
+          "endMs": 200
         },
         {
-          "text": "miro",
-          "startMs": 360,
-          "endMs": 720
+          "text": "en",
+          "startMs": 244,
+          "endMs": 333
         },
         {
-          "text": "una",
-          "startMs": 820,
-          "endMs": 1120
+          "text": "punto.",
+          "startMs": 389,
+          "endMs": 1067
         },
         {
-          "text": "cosa…",
-          "startMs": 1200,
-          "endMs": 1680
+          "text": "Ducha",
+          "startMs": 1100,
+          "endMs": 1267
+        },
+        {
+          "text": "fría.",
+          "startMs": 1311,
+          "endMs": 1667
         }
       ]
     },
     {
       "id": "a4",
       "speaker": "mitch",
-      "text": "¿¡Ya es la una!?",
+      "text": "Un vídeo motivacional y empiezo.",
       "audio": "voice/a4.mp3",
-      "durationMs": 920,
+      "durationMs": 1900,
       "words": [
         {
-          "text": "¿¡Ya",
+          "text": "Un",
           "startMs": 0,
-          "endMs": 80
+          "endMs": 67
         },
         {
-          "text": "es",
-          "startMs": 107,
-          "endMs": 160
+          "text": "vídeo",
+          "startMs": 100,
+          "endMs": 267
         },
         {
-          "text": "la",
-          "startMs": 213,
-          "endMs": 320
+          "text": "motivacional",
+          "startMs": 311,
+          "endMs": 933
         },
         {
-          "text": "una!?",
-          "startMs": 400,
-          "endMs": 800
+          "text": "y",
+          "startMs": 1067,
+          "endMs": 1200
+        },
+        {
+          "text": "empiezo.",
+          "startMs": 1250,
+          "endMs": 1800
         }
       ]
     },
     {
       "id": "a5",
-      "speaker": "ollie",
-      "text": "Móvil al cajón. Primero, lo difícil.",
+      "speaker": "mitch",
+      "text": "¡Vídeo cuarenta y siete!",
       "audio": "voice/a5.mp3",
-      "durationMs": 2520,
+      "durationMs": 1633,
       "words": [
         {
-          "text": "Móvil",
+          "text": "¡Vídeo",
           "startMs": 0,
-          "endMs": 320
-        },
-        {
-          "text": "al",
-          "startMs": 347,
           "endMs": 400
         },
         {
-          "text": "cajón.",
-          "startMs": 440,
-          "endMs": 1080
+          "text": "cuarenta",
+          "startMs": 467,
+          "endMs": 933
         },
         {
-          "text": "Primero,",
-          "startMs": 1120,
-          "endMs": 1600
+          "text": "y",
+          "startMs": 967,
+          "endMs": 1000
         },
         {
-          "text": "lo",
-          "startMs": 1653,
-          "endMs": 1760
-        },
-        {
-          "text": "difícil.",
-          "startMs": 1830,
-          "endMs": 2400
+          "text": "siete!",
+          "startMs": 1033,
+          "endMs": 1533
         }
       ]
     },
     {
       "id": "a6",
       "speaker": "ollie",
-      "text": "¿Un donut? Sí. Uno.",
+      "text": "¿Motivación? No hace falta.",
       "audio": "voice/a6.mp3",
-      "durationMs": 2040,
+      "durationMs": 1567,
       "words": [
         {
-          "text": "¿Un",
+          "text": "¿Motivación?",
           "startMs": 0,
-          "endMs": 160
+          "endMs": 700
         },
         {
-          "text": "donut?",
-          "startMs": 220,
-          "endMs": 640
+          "text": "No",
+          "startMs": 756,
+          "endMs": 867
         },
         {
-          "text": "Sí.",
-          "startMs": 840,
-          "endMs": 1520
+          "text": "hace",
+          "startMs": 893,
+          "endMs": 1000
         },
         {
-          "text": "Uno.",
-          "startMs": 1600,
-          "endMs": 1920
+          "text": "falta.",
+          "startMs": 1056,
+          "endMs": 1467
         }
       ]
     },
     {
       "id": "a7",
-      "speaker": "mitch",
-      "text": "Ya rompí la dieta… ¡pues me como seis!",
+      "speaker": "ollie",
+      "text": "Un donut. Sin drama.",
       "audio": "voice/a7.mp3",
-      "durationMs": 3320,
+      "durationMs": 1700,
       "words": [
         {
-          "text": "Ya",
+          "text": "Un",
           "startMs": 0,
-          "endMs": 80
+          "endMs": 67
         },
         {
-          "text": "rompí",
-          "startMs": 160,
-          "endMs": 560
+          "text": "donut.",
+          "startMs": 133,
+          "endMs": 533
         },
         {
-          "text": "la",
-          "startMs": 587,
-          "endMs": 640
+          "text": "Sin",
+          "startMs": 667,
+          "endMs": 1067
         },
         {
-          "text": "dieta…",
-          "startMs": 707,
-          "endMs": 1120
-        },
-        {
-          "text": "¡pues",
-          "startMs": 1400,
-          "endMs": 1840
-        },
-        {
-          "text": "me",
-          "startMs": 1893,
-          "endMs": 2000
-        },
-        {
-          "text": "como",
-          "startMs": 2064,
-          "endMs": 2320
-        },
-        {
-          "text": "seis!",
-          "startMs": 2448,
-          "endMs": 3200
+          "text": "drama.",
+          "startMs": 1123,
+          "endMs": 1600
         }
       ]
     },
     {
       "id": "a8",
       "speaker": "mitch",
-      "text": "Mañana empiezo de verdad. ¡A las seis!",
+      "text": "¡Ya la lié! ¡Pues me como la caja!",
       "audio": "voice/a8.mp3",
-      "durationMs": 2760,
+      "durationMs": 1900,
+      "words": [
+        {
+          "text": "¡Ya",
+          "startMs": 0,
+          "endMs": 200
+        },
+        {
+          "text": "la",
+          "startMs": 223,
+          "endMs": 267
+        },
+        {
+          "text": "lié!",
+          "startMs": 333,
+          "endMs": 600
+        },
+        {
+          "text": "¡Pues",
+          "startMs": 700,
+          "endMs": 933
+        },
+        {
+          "text": "me",
+          "startMs": 978,
+          "endMs": 1067
+        },
+        {
+          "text": "como",
+          "startMs": 1107,
+          "endMs": 1267
+        },
+        {
+          "text": "la",
+          "startMs": 1289,
+          "endMs": 1333
+        },
+        {
+          "text": "caja!",
+          "startMs": 1400,
+          "endMs": 1800
+        }
+      ]
+    },
+    {
+      "id": "a9",
+      "speaker": "mitch",
+      "text": "Mañana sí. ¡A las seis!",
+      "audio": "voice/a9.mp3",
+      "durationMs": 1700,
       "words": [
         {
           "text": "Mañana",
           "startMs": 0,
-          "endMs": 320
+          "endMs": 333
         },
         {
-          "text": "empiezo",
-          "startMs": 360,
-          "endMs": 720
-        },
-        {
-          "text": "de",
-          "startMs": 747,
-          "endMs": 800
-        },
-        {
-          "text": "verdad.",
-          "startMs": 857,
-          "endMs": 1280
+          "text": "sí.",
+          "startMs": 400,
+          "endMs": 600
         },
         {
           "text": "¡A",
-          "startMs": 1480,
-          "endMs": 1800
+          "startMs": 700,
+          "endMs": 867
         },
         {
           "text": "las",
-          "startMs": 1830,
-          "endMs": 1920
+          "startMs": 900,
+          "endMs": 1000
         },
         {
           "text": "seis!",
-          "startMs": 2016,
-          "endMs": 2640
+          "startMs": 1107,
+          "endMs": 1600
         }
       ]
     }

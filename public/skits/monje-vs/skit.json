@@ -254,7 +254,6 @@
     {
       "id": "n1",
       "set": "bedroom-1",
-      "pov": "NOVATO · 6:00",
       "cast": [
         {
           "id": "mitch",
@@ -269,7 +268,7 @@
         {
           "id": "a1",
           "speaker": "mitch",
-          "line": "¿Las seis? Cinco minutitos más…",
+          "line": "Cinco minutitos…",
           "expression": "sad",
           "actions": [
             {
@@ -290,7 +289,7 @@
               }
             }
           ],
-          "pauseBeforeMs": 350,
+          "pauseBeforeMs": 150,
           "shot": {
             "framing": "medium",
             "on": "mitch"
@@ -305,7 +304,7 @@
             {
               "id": "slide-down",
               "at": {
-                "word": "más"
+                "word": "minutitos"
               }
             }
           ],
@@ -318,13 +317,50 @@
               }
             }
           ]
+        },
+        {
+          "id": "a2",
+          "speaker": "mitch",
+          "line": "¡¿Las doce?!",
+          "expression": "shocked",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "recoil",
+              "at": {
+                "word": "doce"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "record-scratch",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "12:00",
+              "at": {
+                "word": "doce"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "p1",
       "set": "bedroom-1",
-      "pov": "PRO · 6:00",
       "cast": [
         {
           "id": "ollie",
@@ -337,34 +373,34 @@
       ],
       "transition": {
         "type": "whip",
-        "durationMs": 300
+        "durationMs": 200
       },
       "beats": [
         {
-          "id": "a2",
+          "id": "a3",
           "speaker": "ollie",
-          "line": "Seis en punto. Al lío.",
+          "line": "Seis en punto. Ducha fría.",
           "expression": "smug",
           "actions": [
             {
               "who": "ollie",
-              "do": "hold",
-              "prop": "dumbbell",
-              "hand": "R",
+              "do": "pose",
+              "pose": "hands-on-hips",
               "at": {
-                "ms": 0
+                "word": "fría"
               }
             },
             {
               "who": "ollie",
-              "do": "pose",
-              "pose": "hold-up",
+              "do": "symbol",
+              "symbol": "sweat",
               "at": {
-                "word": "lío"
-              }
+                "word": "fría"
+              },
+              "durationMs": 800
             }
           ],
-          "pauseBeforeMs": 350,
+          "pauseBeforeMs": 150,
           "shot": {
             "framing": "medium",
             "on": "ollie"
@@ -377,9 +413,9 @@
               }
             },
             {
-              "id": "thud",
+              "id": "zap",
               "at": {
-                "word": "lío"
+                "word": "fría"
               }
             }
           ],
@@ -393,9 +429,9 @@
             },
             {
               "type": "slam",
-              "value": "AL LÍO",
+              "value": "DUCHA FRÍA",
               "at": {
-                "word": "lío"
+                "word": "fría"
               }
             }
           ]
@@ -405,7 +441,6 @@
     {
       "id": "n2",
       "set": "living-2",
-      "pov": "NOVATO · 9:00",
       "cast": [
         {
           "id": "mitch",
@@ -418,13 +453,13 @@
       ],
       "transition": {
         "type": "whip",
-        "durationMs": 300
+        "durationMs": 200
       },
       "beats": [
         {
-          "id": "a3",
+          "id": "a4",
           "speaker": "mitch",
-          "line": "Solo miro una cosa…",
+          "line": "Un vídeo motivacional y empiezo.",
           "expression": "happy",
           "actions": [
             {
@@ -445,7 +480,7 @@
               }
             }
           ],
-          "pauseBeforeMs": 350,
+          "pauseBeforeMs": 150,
           "shot": {
             "framing": "medium",
             "on": "mitch"
@@ -454,7 +489,7 @@
             {
               "id": "pop",
               "at": {
-                "word": "miro"
+                "word": "vídeo"
               }
             }
           ],
@@ -469,21 +504,22 @@
           ]
         },
         {
-          "id": "a4",
+          "id": "a5",
           "speaker": "mitch",
-          "line": "¿¡Ya es la una!?",
-          "expression": "shocked",
+          "line": "¡Vídeo cuarenta y siete!",
+          "expression": "crying",
           "actions": [
             {
               "who": "mitch",
-              "do": "pose",
-              "pose": "recoil",
+              "do": "symbol",
+              "symbol": "tears",
               "at": {
-                "word": "una"
-              }
+                "word": "siete"
+              },
+              "durationMs": 800
             }
           ],
-          "pauseBeforeMs": 150,
+          "pauseBeforeMs": 0,
           "shot": {
             "framing": "close",
             "on": "mitch"
@@ -496,18 +532,18 @@
               }
             },
             {
-              "id": "record-scratch",
+              "id": "sad-trombone",
               "at": {
-                "word": "una"
+                "word": "siete"
               }
             }
           ],
           "text": [
             {
               "type": "slam",
-              "value": "13:00",
+              "value": "VÍDEO 47",
               "at": {
-                "word": "una"
+                "word": "siete"
               }
             }
           ]
@@ -517,7 +553,6 @@
     {
       "id": "p2",
       "set": "living-2",
-      "pov": "PRO · 9:00",
       "cast": [
         {
           "id": "ollie",
@@ -530,19 +565,19 @@
       ],
       "transition": {
         "type": "whip",
-        "durationMs": 300
+        "durationMs": 200
       },
       "beats": [
         {
-          "id": "a5",
+          "id": "a6",
           "speaker": "ollie",
-          "line": "Móvil al cajón. Primero, lo difícil.",
+          "line": "¿Motivación? No hace falta.",
           "expression": "deadpan",
           "actions": [
             {
               "who": "ollie",
               "do": "hold",
-              "prop": "book",
+              "prop": "dumbbell",
               "hand": "R",
               "at": {
                 "ms": 0
@@ -553,26 +588,26 @@
               "do": "pose",
               "pose": "hold-up",
               "at": {
-                "word": "difícil"
+                "word": "falta"
               }
             }
           ],
-          "pauseBeforeMs": 350,
+          "pauseBeforeMs": 150,
           "shot": {
             "framing": "medium",
             "on": "ollie"
           },
           "sfx": [
             {
-              "id": "drawer",
+              "id": "whoosh",
               "at": {
-                "word": "cajón"
+                "word": "Motivación"
               }
             },
             {
-              "id": "whoosh",
+              "id": "thud",
               "at": {
-                "word": "difícil"
+                "word": "falta"
               }
             }
           ],
@@ -591,7 +626,6 @@
     {
       "id": "p3",
       "set": "kitchen-1",
-      "pov": "PRO · 18:00",
       "cast": [
         {
           "id": "ollie",
@@ -604,13 +638,13 @@
       ],
       "transition": {
         "type": "whip",
-        "durationMs": 300
+        "durationMs": 200
       },
       "beats": [
         {
-          "id": "a6",
+          "id": "a7",
           "speaker": "ollie",
-          "line": "¿Un donut? Sí. Uno.",
+          "line": "Un donut. Sin drama.",
           "expression": "smug",
           "actions": [
             {
@@ -627,11 +661,11 @@
               "do": "pose",
               "pose": "hold-up",
               "at": {
-                "word": "Uno"
+                "word": "donut"
               }
             }
           ],
-          "pauseBeforeMs": 350,
+          "pauseBeforeMs": 150,
           "shot": {
             "framing": "medium",
             "on": "ollie"
@@ -640,13 +674,13 @@
             {
               "id": "riser-hit",
               "at": {
-                "word": "Sí"
+                "word": "donut"
               }
             },
             {
               "id": "ding-idea",
               "at": {
-                "word": "Uno"
+                "word": "drama"
               }
             }
           ],
@@ -662,7 +696,7 @@
               "type": "slam",
               "value": "UNO",
               "at": {
-                "word": "Uno"
+                "word": "donut"
               }
             }
           ]
@@ -672,7 +706,6 @@
     {
       "id": "n3",
       "set": "kitchen-1",
-      "pov": "NOVATO · 18:00",
       "cast": [
         {
           "id": "mitch",
@@ -685,13 +718,13 @@
       ],
       "transition": {
         "type": "whip",
-        "durationMs": 300
+        "durationMs": 200
       },
       "beats": [
         {
-          "id": "a7",
+          "id": "a8",
           "speaker": "mitch",
-          "line": "Ya rompí la dieta… ¡pues me como seis!",
+          "line": "¡Ya la lié! ¡Pues me como la caja!",
           "expression": "laughing",
           "actions": [
             {
@@ -708,11 +741,11 @@
               "do": "pose",
               "pose": "arms-up",
               "at": {
-                "word": "seis"
+                "word": "caja"
               }
             }
           ],
-          "pauseBeforeMs": 350,
+          "pauseBeforeMs": 150,
           "shot": {
             "framing": "medium",
             "on": "mitch"
@@ -721,13 +754,13 @@
             {
               "id": "boing",
               "at": {
-                "word": "dieta"
+                "word": "lié"
               }
             },
             {
               "id": "coin-avalanche",
               "at": {
-                "word": "seis"
+                "word": "caja"
               }
             }
           ],
@@ -741,9 +774,9 @@
             },
             {
               "type": "slam",
-              "value": "SEIS",
+              "value": "LA CAJA",
               "at": {
-                "word": "seis"
+                "word": "caja"
               }
             }
           ]
@@ -753,7 +786,6 @@
     {
       "id": "n4",
       "set": "bedroom-1",
-      "pov": "NOVATO · 23:59",
       "cast": [
         {
           "id": "mitch",
@@ -766,13 +798,13 @@
       ],
       "transition": {
         "type": "whip",
-        "durationMs": 300
+        "durationMs": 200
       },
       "beats": [
         {
-          "id": "a8",
+          "id": "a9",
           "speaker": "mitch",
-          "line": "Mañana empiezo de verdad. ¡A las seis!",
+          "line": "Mañana sí. ¡A las seis!",
           "expression": "happy",
           "actions": [
             {
@@ -780,11 +812,11 @@
               "do": "pose",
               "pose": "thumbs-up",
               "at": {
-                "word": "verdad"
+                "word": "seis"
               }
             }
           ],
-          "pauseBeforeMs": 350,
+          "pauseBeforeMs": 150,
           "punchline": true,
           "holdAfterMs": 0,
           "shot": {
@@ -810,6 +842,12 @@
               }
             }
           ]
+        },
+        {
+          "id": "fin",
+          "silent": true,
+          "durationMs": 250,
+          "actions": []
         }
       ]
     }
