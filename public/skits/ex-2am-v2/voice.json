@@ -2,31 +2,79 @@
   "schemaVersion": 1,
   "lines": [
     {
-      "id": "b1",
+      "id": "c1",
       "speaker": "mitch",
-      "text": "Mi ex: «¿Estás despierto?»",
-      "audio": "voice/b1.mp3",
-      "durationMs": 1931,
+      "text": "¿Tu ex también?",
+      "audio": "voice/c1.mp3",
+      "durationMs": 1142,
       "words": [
         {
-          "text": "Mi",
+          "text": "¿Tu",
+          "startMs": 0,
+          "endMs": 186
+        },
+        {
+          "text": "ex",
+          "startMs": 267,
+          "endMs": 372
+        },
+        {
+          "text": "también?",
+          "startMs": 406,
+          "endMs": 1022
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "speaker": "ollie",
+      "text": "No. La tuya.",
+      "audio": "voice/c2.mp3",
+      "durationMs": 1235,
+      "words": [
+        {
+          "text": "No.",
           "startMs": 0,
           "endMs": 302
         },
         {
+          "text": "La",
+          "startMs": 418,
+          "endMs": 534
+        },
+        {
+          "text": "tuya.",
+          "startMs": 569,
+          "endMs": 1115
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "speaker": "mitch",
+      "text": "Mi ex: «¿Estás despierto?»",
+      "audio": "voice/b1.mp3",
+      "durationMs": 1653,
+      "words": [
+        {
+          "text": "Mi",
+          "startMs": 0,
+          "endMs": 151
+        },
+        {
           "text": "ex:",
-          "startMs": 348,
-          "endMs": 604
+          "startMs": 197,
+          "endMs": 441
         },
         {
           "text": "«¿Estás",
-          "startMs": 685,
-          "endMs": 1045
+          "startMs": 476,
+          "endMs": 882
         },
         {
           "text": "despierto?»",
-          "startMs": 1080,
-          "endMs": 1811
+          "startMs": 917,
+          "endMs": 1533
         }
       ]
     },
@@ -35,37 +83,37 @@
       "speaker": "ollie",
       "text": "Son las dos. Eres su cargador.",
       "audio": "voice/b2.mp3",
-      "durationMs": 2303,
+      "durationMs": 2070,
       "words": [
         {
           "text": "Son",
           "startMs": 0,
-          "endMs": 221
+          "endMs": 174
         },
         {
           "text": "las",
-          "startMs": 279,
-          "endMs": 418
+          "startMs": 221,
+          "endMs": 325
         },
         {
           "text": "dos.",
-          "startMs": 464,
-          "endMs": 720
+          "startMs": 372,
+          "endMs": 627
         },
         {
           "text": "Eres",
-          "startMs": 871,
-          "endMs": 1149
+          "startMs": 778,
+          "endMs": 1033
         },
         {
           "text": "su",
-          "startMs": 1184,
-          "endMs": 1300
+          "startMs": 1057,
+          "endMs": 1149
         },
         {
           "text": "cargador.",
-          "startMs": 1358,
-          "endMs": 2183
+          "startMs": 1196,
+          "endMs": 1950
         }
       ]
     },
@@ -74,32 +122,32 @@
       "speaker": "mitch",
       "text": "Pues la dejo en visto.",
       "audio": "voice/b3.mp3",
-      "durationMs": 1235,
+      "durationMs": 1188,
       "words": [
         {
           "text": "Pues",
           "startMs": 0,
-          "endMs": 209
+          "endMs": 174
         },
         {
           "text": "la",
-          "startMs": 232,
-          "endMs": 302
+          "startMs": 197,
+          "endMs": 255
         },
         {
           "text": "dejo",
-          "startMs": 337,
-          "endMs": 488
+          "startMs": 302,
+          "endMs": 464
         },
         {
           "text": "en",
-          "startMs": 511,
-          "endMs": 557
+          "startMs": 488,
+          "endMs": 534
         },
         {
           "text": "visto.",
-          "startMs": 592,
-          "endMs": 1115
+          "startMs": 580,
+          "endMs": 1068
         }
       ]
     },
@@ -108,22 +156,22 @@
       "speaker": "ollie",
       "text": "Error de novato.",
       "audio": "voice/b4.mp3",
-      "durationMs": 1374,
+      "durationMs": 1281,
       "words": [
         {
           "text": "Error",
           "startMs": 0,
-          "endMs": 395
+          "endMs": 337
         },
         {
           "text": "de",
-          "startMs": 453,
-          "endMs": 522
+          "startMs": 395,
+          "endMs": 464
         },
         {
           "text": "novato.",
-          "startMs": 569,
-          "endMs": 1254
+          "startMs": 499,
+          "endMs": 1161
         }
       ]
     },
@@ -132,22 +180,22 @@
       "speaker": "mitch",
       "text": "¿Cómo que error?",
       "audio": "voice/b5.mp3",
-      "durationMs": 1095,
+      "durationMs": 1002,
       "words": [
         {
           "text": "¿Cómo",
           "startMs": 0,
-          "endMs": 325
+          "endMs": 279
         },
         {
           "text": "que",
-          "startMs": 360,
-          "endMs": 441
+          "startMs": 313,
+          "endMs": 383
         },
         {
           "text": "error?",
-          "startMs": 464,
-          "endMs": 975
+          "startMs": 406,
+          "endMs": 882
         }
       ]
     },
@@ -156,37 +204,37 @@
       "speaker": "ollie",
       "text": "El pro ni abre el chat.",
       "audio": "voice/b6.mp3",
-      "durationMs": 1560,
+      "durationMs": 1374,
       "words": [
         {
           "text": "El",
           "startMs": 0,
-          "endMs": 151
+          "endMs": 186
         },
         {
           "text": "pro",
-          "startMs": 197,
-          "endMs": 372
+          "startMs": 232,
+          "endMs": 360
         },
         {
           "text": "ni",
-          "startMs": 476,
-          "endMs": 580
+          "startMs": 406,
+          "endMs": 499
         },
         {
           "text": "abre",
-          "startMs": 615,
-          "endMs": 755
+          "startMs": 546,
+          "endMs": 720
         },
         {
           "text": "el",
-          "startMs": 778,
-          "endMs": 836
+          "startMs": 743,
+          "endMs": 813
         },
         {
           "text": "chat.",
-          "startMs": 906,
-          "endMs": 1440
+          "startMs": 871,
+          "endMs": 1254
         }
       ]
     },
@@ -200,21 +248,21 @@
         {
           "text": "¿Y",
           "startMs": 0,
-          "endMs": 232
+          "endMs": 255
         },
         {
           "text": "tú",
           "startMs": 302,
-          "endMs": 383
+          "endMs": 372
         },
         {
           "text": "qué",
-          "startMs": 418,
-          "endMs": 511
+          "startMs": 406,
+          "endMs": 488
         },
         {
           "text": "haces?",
-          "startMs": 546,
+          "startMs": 522,
           "endMs": 1068
         }
       ]
@@ -222,53 +270,19 @@
     {
       "id": "b8",
       "speaker": "mitch",
-      "text": "Espera. ¿Tu ex también?",
+      "text": "Espera, espera…",
       "audio": "voice/b8.mp3",
-      "durationMs": 1513,
+      "durationMs": 1142,
       "words": [
         {
-          "text": "Espera.",
+          "text": "Espera,",
           "startMs": 0,
-          "endMs": 488
+          "endMs": 453
         },
         {
-          "text": "¿Tu",
-          "startMs": 604,
-          "endMs": 731
-        },
-        {
-          "text": "ex",
-          "startMs": 766,
-          "endMs": 848
-        },
-        {
-          "text": "también?",
-          "startMs": 882,
-          "endMs": 1393
-        }
-      ]
-    },
-    {
-      "id": "b9",
-      "speaker": "ollie",
-      "text": "No. La tuya.",
-      "audio": "voice/b9.mp3",
-      "durationMs": 1513,
-      "words": [
-        {
-          "text": "No.",
-          "startMs": 0,
-          "endMs": 279
-        },
-        {
-          "text": "La",
-          "startMs": 615,
-          "endMs": 731
-        },
-        {
-          "text": "tuya.",
-          "startMs": 766,
-          "endMs": 1393
+          "text": "espera…",
+          "startMs": 476,
+          "endMs": 1022
         }
       ]
     }

@@ -248,17 +248,120 @@
   "set": "street-night-1",
   "music": "build",
   "overlay": {
-    "pov": "2:00 a.m. Su ex escribe. Solo uno gana.",
+    "pov": "2:00 a.m. Su ex escribe.",
     "subtitles": true
   },
   "coldOpen": "none",
   "beats": [
+    {
+      "id": "c1",
+      "speaker": "mitch",
+      "line": "¿Tu ex también?",
+      "expression": "skeptical",
+      "pauseBeforeMs": 0,
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "hold",
+          "prop": "phone",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "hold-phone",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "mitch",
+          "do": "symbol",
+          "symbol": "exclaim",
+          "at": {
+            "word": "también"
+          },
+          "durationMs": 800
+        }
+      ],
+      "shot": {
+        "framing": "two"
+      }
+    },
+    {
+      "id": "c2",
+      "speaker": "ollie",
+      "line": "No. La tuya.",
+      "expression": "smug",
+      "actions": [],
+      "punchline": true,
+      "pauseBeforeMs": 400,
+      "holdAfterMs": 150,
+      "text": [
+        {
+          "type": "slam",
+          "value": "LA TUYA",
+          "at": {
+            "word": "tuya"
+          }
+        }
+      ],
+      "shot": {
+        "framing": "close",
+        "on": "ollie"
+      }
+    },
+    {
+      "id": "c-reac",
+      "silent": true,
+      "durationMs": 600,
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "expression",
+          "expression": "shocked",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "recoil",
+          "at": {
+            "ms": 0
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "thud",
+          "at": {
+            "ms": 0
+          }
+        }
+      ],
+      "shot": {
+        "framing": "close",
+        "on": "mitch"
+      }
+    },
     {
       "id": "b1",
       "speaker": "mitch",
       "line": "Mi ex: «¿Estás despierto?»",
       "expression": "worried",
       "actions": [
+        {
+          "who": "ollie",
+          "do": "putAway",
+          "at": {
+            "ms": 0
+          }
+        },
         {
           "who": "mitch",
           "do": "hold",
@@ -277,7 +380,7 @@
           }
         }
       ],
-      "pauseBeforeMs": 0,
+      "pauseBeforeMs": 150,
       "shot": {
         "framing": "medium",
         "on": "mitch"
@@ -307,8 +410,7 @@
         }
       ],
       "shot": {
-        "framing": "medium",
-        "on": "ollie"
+        "framing": "two"
       },
       "sfx": [
         {
@@ -523,76 +625,20 @@
     {
       "id": "b8",
       "speaker": "mitch",
-      "line": "Espera. ¿Tu ex también?",
-      "expression": "skeptical",
+      "line": "Espera, espera…",
+      "expression": "shocked",
       "actions": [
-        {
-          "who": "mitch",
-          "do": "symbol",
-          "symbol": "exclaim",
-          "at": {
-            "word": "también"
-          },
-          "durationMs": 900
-        }
-      ],
-      "shot": {
-        "framing": "medium",
-        "on": "mitch"
-      }
-    },
-    {
-      "id": "b9",
-      "speaker": "ollie",
-      "line": "No. La tuya.",
-      "expression": "smug",
-      "actions": [],
-      "punchline": true,
-      "pauseBeforeMs": 400,
-      "holdAfterMs": 150,
-      "text": [
-        {
-          "type": "slam",
-          "value": "LA TUYA",
-          "at": {
-            "word": "tuya"
-          }
-        }
-      ]
-    },
-    {
-      "id": "reaccion",
-      "silent": true,
-      "durationMs": 600,
-      "actions": [
-        {
-          "who": "mitch",
-          "do": "expression",
-          "expression": "shocked",
-          "at": {
-            "ms": 0
-          }
-        },
         {
           "who": "mitch",
           "do": "pose",
           "pose": "recoil",
           "at": {
-            "ms": 0
-          }
-        }
-      ],
-      "sfx": [
-        {
-          "id": "thud",
-          "at": {
-            "ms": 0
+            "word": "Espera"
           }
         }
       ],
       "shot": {
-        "framing": "close",
-        "on": "mitch"
+        "framing": "two"
       }
     }
   ]
