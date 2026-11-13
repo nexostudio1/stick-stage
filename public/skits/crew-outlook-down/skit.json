@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Outlook went down. Ollie printed his inbox.",
+    "description": "Every office has someone who prints their inbox the moment email goes down. Which one are you? Tag your Ollie.",
+    "hashtags": [
+      "relatable",
+      "stickfigure",
+      "officelife",
+      "outlook",
+      "friends"
+    ],
+    "series": {
+      "id": "crew",
+      "season": 1,
+      "episode": 4
+    }
+  },
+  "set": "crew-meeting-room",
+  "style": "snappy",
+  "coldOpen": "pov",
+  "cast": [
+    {
+      "id": "mitch",
+      "character": "crew-mitch",
+      "mark": "center",
+      "seated": true
+    },
+    {
+      "id": "ollie",
+      "character": "crew-ollie",
+      "mark": "left",
+      "seated": true,
+      "facing": "right"
+    },
+    {
+      "id": "maya",
+      "character": "crew-maya",
+      "mark": "right",
+      "seated": true,
+      "facing": "left"
+    }
+  ],
+  "overlay": {
+    "pov": "POV: the office when Outlook goes down",
+    "subtitles": true
+  },
+  "scenes": [
+    {
+      "id": "outage",
+      "beats": [
+        {
+          "id": "l1",
+          "speaker": "ollie",
+          "line": "Outlook's down. We're cut off.",
+          "expression": "worried",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l2",
+          "speaker": "maya",
+          "line": "We're in the same room.",
+          "expression": "deadpan",
+          "shot": {
+            "framing": "medium",
+            "on": "maya"
+          }
+        },
+        {
+          "id": "l3",
+          "speaker": "mitch",
+          "line": "Legend. Long lunch, mate.",
+          "expression": "happy",
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l5",
+          "speaker": "ollie",
+          "line": "IT says walk over and talk to people.",
+          "expression": "worried",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l6",
+          "speaker": "mitch",
+          "line": "Talk? Like, with my mouth?",
+          "expression": "shocked",
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l7",
+          "speaker": "ollie",
+          "line": "I printed my inbox. Just in case.",
+          "expression": "smug",
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          }
+        },
+        {
+          "id": "l8",
+          "speaker": "mitch",
+          "line": "Mate, it's forty pages of \"per my last email.\"",
+          "expression": "happy",
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          }
+        },
+        {
+          "id": "l9",
+          "speaker": "ollie",
+          "line": "We need an emergency meeting. Maya, back me up.",
+          "expression": "worried",
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "l10",
+          "speaker": "maya",
+          "line": "Great. Send an invite.",
+          "expression": "deadpan",
+          "shot": {
+            "framing": "close",
+            "on": "maya"
+          },
+          "pauseBeforeMs": 300,
+          "punchline": true
+        },
+        {
+          "id": "l11",
+          "speaker": "maya",
+          "line": "No email all morning. Somehow, everything got done.",
+          "expression": "neutral",
+          "shot": {
+            "framing": "wide"
+          },
+          "pauseBeforeMs": 300,
+          "punchline": false
+        }
+      ]
+    }
+  ],
+  "timing": {
+    "leadInMs": 200,
+    "gapMs": 120,
+    "tailMs": 1400
+  }
+}
