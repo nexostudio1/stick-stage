@@ -386,6 +386,50 @@
       ],
       "beats": [
         {
+          "id": "a0",
+          "speaker": "mitch",
+          "line": "Usé psicología oscura en una cita. Salió fatal.",
+          "expression": "worried",
+          "pauseBeforeMs": 0,
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "facepalm",
+              "at": {
+                "word": "fatal"
+              }
+            }
+          ],
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "riser-hit",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "sad-trombone",
+              "at": {
+                "word": "fatal"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "FATAL",
+              "at": {
+                "word": "fatal"
+              }
+            }
+          ]
+        },
+        {
           "id": "a1",
           "speaker": "mitch",
           "line": "Truco uno: silencio incómodo.",
@@ -400,7 +444,7 @@
               }
             }
           ],
-          "pauseBeforeMs": 150,
+          "pauseBeforeMs": 100,
           "shot": {
             "framing": "medium",
             "on": "mitch"

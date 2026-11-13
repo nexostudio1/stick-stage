@@ -2,6 +2,55 @@
   "schemaVersion": 1,
   "lines": [
     {
+      "id": "a0",
+      "speaker": "mitch",
+      "text": "Usé psicología oscura en una cita. Salió fatal.",
+      "audio": "voice/a0.mp3",
+      "durationMs": 3033,
+      "words": [
+        {
+          "text": "Usé",
+          "startMs": 0,
+          "endMs": 200
+        },
+        {
+          "text": "psicología",
+          "startMs": 223,
+          "endMs": 667
+        },
+        {
+          "text": "oscura",
+          "startMs": 733,
+          "endMs": 1067
+        },
+        {
+          "text": "en",
+          "startMs": 1089,
+          "endMs": 1133
+        },
+        {
+          "text": "una",
+          "startMs": 1167,
+          "endMs": 1267
+        },
+        {
+          "text": "cita.",
+          "startMs": 1333,
+          "endMs": 1867
+        },
+        {
+          "text": "Salió",
+          "startMs": 1900,
+          "endMs": 2267
+        },
+        {
+          "text": "fatal.",
+          "startMs": 2367,
+          "endMs": 2933
+        }
+      ]
+    },
+    {
       "id": "a1",
       "speaker": "mitch",
       "text": "Truco uno: silencio incómodo.",
