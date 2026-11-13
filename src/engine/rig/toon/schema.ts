@@ -22,6 +22,7 @@ export const TOON_DETAILS = [
   "headphones",
   "star-earring",
   "freckles",
+  "stubble",
 ] as const;
 
 export const ToonSchema = z.object({
@@ -59,7 +60,12 @@ export const ToonSchema = z.object({
       jaw: frac(0.8, 1.1).default(1),
     })
     .default({ jaw: 1 }),
-  eyes: z.object({ iris: hex, lashes: z.boolean().default(false) }),
+  eyes: z.object({
+    iris: hex,
+    lashes: z.boolean().default(false),
+    /** Eye size, × the default. Smaller eyes read older. */
+    size: frac(0.6, 1.2).default(1),
+  }),
   brows: z.object({
     color: hex,
     /** Line width in toon units. */
@@ -73,7 +79,7 @@ export const ToonSchema = z.object({
   cheeks: z.object({ color: hex, opacity: frac(0, 1) }).default({ color: "#e8737a", opacity: 0.22 }),
   nails: hex.optional(),
   hair: z.object({
-    kind: z.enum(["long-streak", "curly-mop"]),
+    kind: z.enum(["long-streak", "curly-mop", "short-crop"]),
     fill: hex,
     shade: hex.optional(),
     /** A contrasting lock (long-streak). */

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { f2 } from "../../lib/math";
 import { detailColor } from "./clothes";
 import { shadeOf, Star, type Pen } from "./kit";
@@ -21,10 +21,28 @@ const Union: React.FC<{ shapes: readonly React.ReactElement[]; fill: string; pen
   </g>
 );
 
-export const HeadShape: React.FC<{ R: number; pen: Pen }> = ({ R, pen }) => {
-  const jaw = pen.t.head.jaw;
-  const d = `M0,${-R * 1.02} C${R * 0.62},${-R * 1.02} ${R * 1.04},${-R * 0.6} ${R * 1.02},${R * 0.05} C${R * 1.0},${R * 0.6} ${R * 0.62 * jaw},${R * 1.05} ${R * 0.08},${R * 1.05} C${-R * 0.6},${R * 1.04} ${-R * 0.98},${R * 0.6} ${-R * 0.98},${R * 0.02} C${-R * 0.98},${-R * 0.6} ${-R * 0.6},${-R * 1.02} 0,${-R * 1.02} Z`;
-  return <path d={d} fill={pen.t.skin} stroke={pen.ink} strokeWidth={pen.t.outline} />;
+const headPath = (R: number, jaw: number) =>
+  `M0,${-R * 1.02} C${R * 0.62},${-R * 1.02} ${R * 1.04},${-R * 0.6} ${R * 1.02},${R * 0.05} C${R * 1.0},${R * 0.6} ${R * 0.62 * jaw},${R * 1.05} ${R * 0.08},${R * 1.05} C${-R * 0.6},${R * 1.04} ${-R * 0.98},${R * 0.6} ${-R * 0.98},${R * 0.02} C${-R * 0.98},${-R * 0.6} ${-R * 0.6},${-R * 1.02} 0,${-R * 1.02} Z`;
+
+export const HeadShape: React.FC<{ R: number; pen: Pen }> = ({ R, pen }) => (
+  <path d={headPath(R, pen.t.head.jaw)} fill={pen.t.skin} stroke={pen.ink} strokeWidth={pen.t.outline} />
+);
+
+/** Stubble: a soft shadow over the jaw, chin and upper lip, clipped to the head. */
+const Stubble: React.FC<{ R: number; pen: Pen; color: string }> = ({ R, pen, color }) => {
+  const clipId = "stb" + useId().replace(/[^a-zA-Z0-9]/g, "");
+  const { fx } = faceLayout(R);
+  return (
+    <g>
+      <clipPath id={clipId}>
+        <path d={headPath(R, pen.t.head.jaw)} />
+      </clipPath>
+      <g clipPath={`url(#${clipId})`} fill={color} opacity={0.28}>
+        <ellipse cx={fx + R * 0.12} cy={R * 0.88} rx={R * 0.78} ry={R * 0.4} />
+        <ellipse cx={-R * 0.42} cy={R * 0.55} rx={R * 0.2} ry={R * 0.42} />
+      </g>
+    </g>
+  );
 };
 
 /** Hair behind the head and body (long hair). */
@@ -45,6 +63,15 @@ export const HairBack: React.FC<{ R: number; pen: Pen }> = ({ R, pen }) => {
 export const HairFront: React.FC<{ R: number; pen: Pen }> = ({ R, pen }) => {
   const h = pen.t.hair;
   const shade = shadeOf(h);
+  if (h.kind === "short-crop") {
+    const d = `M${-R * 1.0},${R * 0.05} C${-R * 1.08},${-R * 0.85} ${-R * 0.35},${-R * 1.22} ${R * 0.38},${-R * 1.16} C${R * 0.9},${-R * 1.1} ${R * 1.1},${-R * 0.72} ${R * 0.98},${-R * 0.42} Q${R * 0.55},${-R * 0.66} ${R * 0.12},${-R * 0.6} Q${-R * 0.38},${-R * 0.54} ${-R * 0.58},${-R * 0.08} L${-R * 0.7},${R * 0.3} Z`;
+    return (
+      <g>
+        <Union shapes={[<path d={d} />]} fill={h.fill} pen={pen} />
+        <path d={`M${f2(-R * 0.2)},${f2(-R * 0.98)} Q${f2(R * 0.3)},${f2(-R * 1.06)} ${f2(R * 0.7)},${f2(-R * 0.86)}`} fill="none" stroke={shade} strokeWidth={6} strokeLinecap="round" />
+      </g>
+    );
+  }
   if (h.kind === "curly-mop") {
     const blobs: [number, number, number][] = [
       [-0.75, -0.55, 0.38], [-0.5, -0.88, 0.4], [-0.1, -1.05, 0.42], [0.32, -0.98, 0.4], [0.68, -0.8, 0.32], [0.9, -0.5, 0.22],
@@ -123,8 +150,10 @@ export const Cheeks: React.FC<{ R: number; pen: Pen }> = ({ R, pen }) => {
   const { fx, gap } = faceLayout(R);
   const c = pen.t.cheeks;
   const freckles = detailColor(pen, "freckles");
+  const stubble = detailColor(pen, "stubble");
   return (
     <g>
+      {stubble ? <Stubble R={R} pen={pen} color={stubble} /> : null}
       <ellipse cx={fx - gap * 0.8} cy={R * 0.44} rx={14} ry={8} fill={c.color} opacity={c.opacity} />
       <ellipse cx={fx + gap * 1.05} cy={R * 0.44} rx={11} ry={7} fill={c.color} opacity={c.opacity} />
       {freckles

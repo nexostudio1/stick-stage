@@ -12,6 +12,7 @@ const DETAIL_COLORS: Record<ToonDetail, string> = {
   headphones: "#2bb3b1",
   "star-earring": "#f6c445",
   freckles: "#8a533a",
+  stubble: "#3a2a20",
 };
 const PEN_RED = "#e4573a";
 

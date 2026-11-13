@@ -33,13 +33,14 @@ const ToonEye: React.FC<EyeProps> = ({ x, y, side, face, blink, pen }) => {
   }
 
   const wide = shape === "shock";
-  const rx = 11.5 * (wide ? 1.15 : 1) * (side === "L" ? 0.94 : 1);
-  const ry = 14.5 * (wide ? 1.2 : 1);
+  const k = t.eyes.size;
+  const rx = k * 11.5 * (wide ? 1.15 : 1) * (side === "L" ? 0.94 : 1);
+  const ry = k * 14.5 * (wide ? 1.2 : 1);
   const squint = shape === "squint";
   const lid = clamp(Math.max(face.lid, blink, squint ? 0.55 : 0), 0, 1);
   const lower = Math.max(face.lower, squint ? 0.35 : 0);
   const tilt = face.lidTilt * (side === "L" ? 1 : -1) * -1;
-  const irisR = (wide ? 6 : 8) * face.pupil;
+  const irisR = k * (wide ? 6 : 8) * face.pupil;
   const px = x + face.gaze.x * 5;
   const py = y + 2 + face.gaze.y * 6;
   const lidY = y - ry + lid * 2 * ry;
@@ -54,7 +55,7 @@ const ToonEye: React.FC<EyeProps> = ({ x, y, side, face, blink, pen }) => {
         {shape === "teary" ? <ellipse cx={x} cy={y + ry * 0.95} rx={rx * 1.1} ry={ry * 0.45} fill={WATER} /> : null}
         <circle cx={px} cy={py} r={irisR} fill={t.eyes.iris} />
         <circle cx={px} cy={py} r={irisR * 0.58} fill={ink} />
-        <circle cx={px + 3} cy={py - 4} r={2.4} fill={SCLERA} />
+        <circle cx={px + 3} cy={py - 4} r={2.4 * k} fill={SCLERA} />
         {lid > 0.02 ? (
           <>
             <polygon points={lidPolygon(x, y, rx, ry, lid, tilt, "top")} fill={t.skin} />
