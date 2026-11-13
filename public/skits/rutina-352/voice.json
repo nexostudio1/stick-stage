@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "n1",
+      "speaker": "narrator",
+      "text": "Pone la alarma a las tres y cincuenta y dos.",
+      "audio": "voice/n1.mp3",
+      "durationMs": 2052,
+      "words": [
+        {
+          "text": "Pone",
+          "startMs": 0,
+          "endMs": 209
+        },
+        {
+          "text": "la",
+          "startMs": 232,
+          "endMs": 278
+        },
+        {
+          "text": "alarma",
+          "startMs": 324,
+          "endMs": 626
+        },
+        {
+          "text": "a",
+          "startMs": 661,
+          "endMs": 696
+        },
+        {
+          "text": "las",
+          "startMs": 730,
+          "endMs": 835
+        },
+        {
+          "text": "tres",
+          "startMs": 877,
+          "endMs": 1043
+        },
+        {
+          "text": "y",
+          "startMs": 1113,
+          "endMs": 1183
+        },
+        {
+          "text": "cincuenta",
+          "startMs": 1217,
+          "endMs": 1530
+        },
+        {
+          "text": "y",
+          "startMs": 1565,
+          "endMs": 1600
+        },
+        {
+          "text": "dos.",
+          "startMs": 1652,
+          "endMs": 1948
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "speaker": "narrator",
+      "text": "Para ser millonario.",
+      "audio": "voice/n2.mp3",
+      "durationMs": 1148,
+      "words": [
+        {
+          "text": "Para",
+          "startMs": 0,
+          "endMs": 139
+        },
+        {
+          "text": "ser",
+          "startMs": 174,
+          "endMs": 278
+        },
+        {
+          "text": "millonario.",
+          "startMs": 320,
+          "endMs": 1043
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "speaker": "narrator",
+      "text": "Novato contra pro: la rutina de la mañana.",
+      "audio": "voice/n3.mp3",
+      "durationMs": 2261,
+      "words": [
+        {
+          "text": "Novato",
+          "startMs": 0,
+          "endMs": 348
+        },
+        {
+          "text": "contra",
+          "startMs": 377,
+          "endMs": 557
+        },
+        {
+          "text": "pro:",
+          "startMs": 626,
+          "endMs": 1043
+        },
+        {
+          "text": "la",
+          "startMs": 1067,
+          "endMs": 1113
+        },
+        {
+          "text": "rutina",
+          "startMs": 1183,
+          "endMs": 1530
+        },
+        {
+          "text": "de",
+          "startMs": 1554,
+          "endMs": 1600
+        },
+        {
+          "text": "la",
+          "startMs": 1623,
+          "endMs": 1670
+        },
+        {
+          "text": "mañana.",
+          "startMs": 1730,
+          "endMs": 2157
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "speaker": "narrator",
+      "text": "El novato copia la rutina de un famoso.",
+      "audio": "voice/n4.mp3",
+      "durationMs": 1983,
+      "words": [
+        {
+          "text": "El",
+          "startMs": 0,
+          "endMs": 70
+        },
+        {
+          "text": "novato",
+          "startMs": 104,
+          "endMs": 417
+        },
+        {
+          "text": "copia",
+          "startMs": 452,
+          "endMs": 626
+        },
+        {
+          "text": "la",
+          "startMs": 672,
+          "endMs": 765
+        },
+        {
+          "text": "rutina",
+          "startMs": 800,
+          "endMs": 1043
+        },
+        {
+          "text": "de",
+          "startMs": 1090,
+          "endMs": 1183
+        },
+        {
+          "text": "un",
+          "startMs": 1229,
+          "endMs": 1322
+        },
+        {
+          "text": "famoso.",
+          "startMs": 1357,
+          "endMs": 1878
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "speaker": "narrator",
+      "text": "Ducha helada. Diario. Batido de plátano.",
+      "audio": "voice/n5.mp3",
+      "durationMs": 2609,
+      "words": [
+        {
+          "text": "Ducha",
+          "startMs": 0,
+          "endMs": 209
+        },
+        {
+          "text": "helada.",
+          "startMs": 261,
+          "endMs": 835
+        },
+        {
+          "text": "Diario.",
+          "startMs": 904,
+          "endMs": 1530
+        },
+        {
+          "text": "Batido",
+          "startMs": 1583,
+          "endMs": 1878
+        },
+        {
+          "text": "de",
+          "startMs": 1902,
+          "endMs": 1948
+        },
+        {
+          "text": "plátano.",
+          "startMs": 1994,
+          "endMs": 2504
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "speaker": "narrator",
+      "text": "A las diez, ya está muerto.",
+      "audio": "voice/n6.mp3",
+      "durationMs": 1496,
+      "words": [
+        {
+          "text": "A",
+          "startMs": 0,
+          "endMs": 70
+        },
+        {
+          "text": "las",
+          "startMs": 104,
+          "endMs": 209
+        },
+        {
+          "text": "diez,",
+          "startMs": 261,
+          "endMs": 626
+        },
+        {
+          "text": "ya",
+          "startMs": 672,
+          "endMs": 765
+        },
+        {
+          "text": "está",
+          "startMs": 807,
+          "endMs": 974
+        },
+        {
+          "text": "muerto.",
+          "startMs": 997,
+          "endMs": 1391
+        }
+      ]
+    },
+    {
+      "id": "n7",
+      "speaker": "narrator",
+      "text": "Y se duerme en la reunión.",
+      "audio": "voice/n7.mp3",
+      "durationMs": 1426,
+      "words": [
+        {
+          "text": "Y",
+          "startMs": 0,
+          "endMs": 70
+        },
+        {
+          "text": "se",
+          "startMs": 139,
+          "endMs": 278
+        },
+        {
+          "text": "duerme",
+          "startMs": 324,
+          "endMs": 557
+        },
+        {
+          "text": "en",
+          "startMs": 580,
+          "endMs": 626
+        },
+        {
+          "text": "la",
+          "startMs": 672,
+          "endMs": 765
+        },
+        {
+          "text": "reunión.",
+          "startMs": 807,
+          "endMs": 1322
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "speaker": "narrator",
+      "text": "El pro hace algo aburridísimo.",
+      "audio": "voice/p1.mp3",
+      "durationMs": 1635,
+      "words": [
+        {
+          "text": "El",
+          "startMs": 0,
+          "endMs": 70
+        },
+        {
+          "text": "pro",
+          "startMs": 122,
+          "endMs": 278
+        },
+        {
+          "text": "hace",
+          "startMs": 320,
+          "endMs": 487
+        },
+        {
+          "text": "algo",
+          "startMs": 529,
+          "endMs": 696
+        },
+        {
+          "text": "aburridísimo.",
+          "startMs": 742,
+          "endMs": 1530
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "speaker": "narrator",
+      "text": "Se levanta a las siete y media.",
+      "audio": "voice/p2.mp3",
+      "durationMs": 1217,
+      "words": [
+        {
+          "text": "Se",
+          "startMs": 0,
+          "endMs": 70
+        },
+        {
+          "text": "levanta",
+          "startMs": 104,
+          "endMs": 348
+        },
+        {
+          "text": "a",
+          "startMs": 383,
+          "endMs": 417
+        },
+        {
+          "text": "las",
+          "startMs": 435,
+          "endMs": 487
+        },
+        {
+          "text": "siete",
+          "startMs": 522,
+          "endMs": 626
+        },
+        {
+          "text": "y",
+          "startMs": 661,
+          "endMs": 696
+        },
+        {
+          "text": "media.",
+          "startMs": 754,
+          "endMs": 1113
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "speaker": "narrator",
+      "text": "Todos los días. A la misma hora.",
+      "audio": "voice/p3.mp3",
+      "durationMs": 1913,
+      "words": [
+        {
+          "text": "Todos",
+          "startMs": 0,
+          "endMs": 209
+        },
+        {
+          "text": "los",
+          "startMs": 243,
+          "endMs": 348
+        },
+        {
+          "text": "días.",
+          "startMs": 431,
+          "endMs": 904
+        },
+        {
+          "text": "A",
+          "startMs": 974,
+          "endMs": 1043
+        },
+        {
+          "text": "la",
+          "startMs": 1067,
+          "endMs": 1113
+        },
+        {
+          "text": "misma",
+          "startMs": 1159,
+          "endMs": 1391
+        },
+        {
+          "text": "hora.",
+          "startMs": 1461,
+          "endMs": 1809
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "speaker": "narrator",
+      "text": "Sesenta mil personas lo demuestran: la regularidad importa más que madrugar.",
+      "audio": "voice/p4.mp3",
+      "durationMs": 3861,
+      "words": [
+        {
+          "text": "Sesenta",
+          "startMs": 0,
+          "endMs": 278
+        },
+        {
+          "text": "mil",
+          "startMs": 313,
+          "endMs": 417
+        },
+        {
+          "text": "personas",
+          "startMs": 471,
+          "endMs": 904
+        },
+        {
+          "text": "lo",
+          "startMs": 928,
+          "endMs": 974
+        },
+        {
+          "text": "demuestran:",
+          "startMs": 1026,
+          "endMs": 1670
+        },
+        {
+          "text": "la",
+          "startMs": 1716,
+          "endMs": 1809
+        },
+        {
+          "text": "regularidad",
+          "startMs": 1852,
+          "endMs": 2365
+        },
+        {
+          "text": "importa",
+          "startMs": 2415,
+          "endMs": 2852
+        },
+        {
+          "text": "más",
+          "startMs": 2887,
+          "endMs": 2991
+        },
+        {
+          "text": "que",
+          "startMs": 3026,
+          "endMs": 3130
+        },
+        {
+          "text": "madrugar.",
+          "startMs": 3165,
+          "endMs": 3757
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "speaker": "narrator",
+      "text": "Y aun así, rinde el doble.",
+      "audio": "voice/p5.mp3",
+      "durationMs": 1704,
+      "words": [
+        {
+          "text": "Y",
+          "startMs": 0,
+          "endMs": 70
+        },
+        {
+          "text": "aun",
+          "startMs": 104,
+          "endMs": 209
+        },
+        {
+          "text": "así,",
+          "startMs": 278,
+          "endMs": 696
+        },
+        {
+          "text": "rinde",
+          "startMs": 765,
+          "endMs": 1043
+        },
+        {
+          "text": "el",
+          "startMs": 1067,
+          "endMs": 1113
+        },
+        {
+          "text": "doble.",
+          "startMs": 1159,
+          "endMs": 1600
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "speaker": "narrator",
+      "text": "Mientras, el novato pone la alarma… a las dos.",
+      "audio": "voice/f1.mp3",
+      "durationMs": 2539,
+      "words": [
+        {
+          "text": "Mientras,",
+          "startMs": 0,
+          "endMs": 417
+        },
+        {
+          "text": "el",
+          "startMs": 441,
+          "endMs": 487
+        },
+        {
+          "text": "novato",
+          "startMs": 522,
+          "endMs": 835
+        },
+        {
+          "text": "pone",
+          "startMs": 887,
+          "endMs": 1043
+        },
+        {
+          "text": "la",
+          "startMs": 1067,
+          "endMs": 1113
+        },
+        {
+          "text": "alarma…",
+          "startMs": 1137,
+          "endMs": 1878
+        },
+        {
+          "text": "a",
+          "startMs": 1913,
+          "endMs": 1948
+        },
+        {
+          "text": "las",
+          "startMs": 1983,
+          "endMs": 2087
+        },
+        {
+          "text": "dos.",
+          "startMs": 2157,
+          "endMs": 2435
+        }
+      ]
+    }
+  ]
+}
