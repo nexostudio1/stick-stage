@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "ollie",
+      "text": "Outlook's down. We've lost all communication.",
+      "audio": "voice/l1.wav",
+      "durationMs": 2952,
+      "loudnessDb": -16.5,
+      "peakDb": -2.1
+    },
+    {
+      "id": "l2",
+      "speaker": "maya",
+      "text": "We're in the same room.",
+      "audio": "voice/l2.wav",
+      "durationMs": 1202,
+      "loudnessDb": -13.9,
+      "peakDb": -3.8
+    },
+    {
+      "id": "l3",
+      "speaker": "mitch",
+      "text": "Legend. No email, no work. Long lunch, mate.",
+      "audio": "voice/l3.wav",
+      "durationMs": 5086,
+      "loudnessDb": -17.6,
+      "peakDb": -7
+    },
+    {
+      "id": "l4",
+      "speaker": "ollie",
+      "text": "What if someone replied-all and we missed it?",
+      "audio": "voice/l4.wav",
+      "durationMs": 2289,
+      "loudnessDb": -15.9,
+      "peakDb": -1.2
+    },
+    {
+      "id": "l5",
+      "speaker": "ollie",
+      "text": "IT says walk over and talk to people.",
+      "audio": "voice/l5.wav",
+      "durationMs": 2397,
+      "loudnessDb": -16.6,
+      "peakDb": -4.4
+    },
+    {
+      "id": "l6",
+      "speaker": "mitch",
+      "text": "Talk? Like, with my mouth?",
+      "audio": "voice/l6.wav",
+      "durationMs": 2791,
+      "loudnessDb": -18.7,
+      "peakDb": -6.7
+    },
+    {
+      "id": "l7",
+      "speaker": "ollie",
+      "text": "I printed my inbox. Just in case.",
+      "audio": "voice/l7.wav",
+      "durationMs": 2710,
+      "loudnessDb": -17.9,
+      "peakDb": -1.4
+    },
+    {
+      "id": "l8",
+      "speaker": "mitch",
+      "text": "Mate, it's forty pages of \"per my last email.\"",
+      "audio": "voice/l8.wav",
+      "durationMs": 3786,
+      "loudnessDb": -18.7,
+      "peakDb": -7.6
+    },
+    {
+      "id": "l9",
+      "speaker": "ollie",
+      "text": "We need an emergency meeting. Maya, back me up.",
+      "audio": "voice/l9.wav",
+      "durationMs": 3079,
+      "loudnessDb": -16.8,
+      "peakDb": -3.1
+    },
+    {
+      "id": "l10",
+      "speaker": "maya",
+      "text": "Great. Send an invite.",
+      "audio": "voice/l10.wav",
+      "durationMs": 1717,
+      "loudnessDb": -16,
+      "peakDb": -3.6
+    },
+    {
+      "id": "l11",
+      "speaker": "maya",
+      "text": "No email all morning. Somehow, everything got done.",
+      "audio": "voice/l11.wav",
+      "durationMs": 3531,
+      "loudnessDb": -13.7,
+      "peakDb": -3.3
+    }
+  ]
+}

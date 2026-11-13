@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "ollie",
+      "text": "After Nvidia, we've got spy training.",
+      "audio": "voice/l1.wav",
+      "durationMs": 2573,
+      "loudnessDb": -17,
+      "peakDb": -1.8
+    },
+    {
+      "id": "l2",
+      "speaker": "maya",
+      "text": "Spy training.",
+      "audio": "voice/l2.wav",
+      "durationMs": 910,
+      "loudnessDb": -15.9,
+      "peakDb": -3.8
+    },
+    {
+      "id": "l3",
+      "speaker": "mitch",
+      "text": "What, how to be one?",
+      "audio": "voice/l3.wav",
+      "durationMs": 1696,
+      "loudnessDb": -18.3,
+      "peakDb": -7.4
+    },
+    {
+      "id": "l4",
+      "speaker": "ollie",
+      "text": "No. How not to get played.",
+      "audio": "voice/l4.wav",
+      "durationMs": 1952,
+      "loudnessDb": -16.9,
+      "peakDb": -2.7
+    },
+    {
+      "id": "l5",
+      "speaker": "ollie",
+      "text": "Gorgeous stranger buys you a drink? Red flag.",
+      "audio": "voice/l5.wav",
+      "durationMs": 2917,
+      "loudnessDb": -16.2,
+      "peakDb": -1.5
+    },
+    {
+      "id": "l6",
+      "speaker": "mitch",
+      "text": "That's not a red flag, mate. That's Friday.",
+      "audio": "voice/l6.wav",
+      "durationMs": 3373,
+      "loudnessDb": -18.9,
+      "peakDb": -7.4
+    },
+    {
+      "id": "l7",
+      "speaker": "ollie",
+      "text": "And if they're really into your work...",
+      "audio": "voice/l7.wav",
+      "durationMs": 1849,
+      "loudnessDb": -15,
+      "peakDb": -3.5
+    },
+    {
+      "id": "l8",
+      "speaker": "mitch",
+      "text": "My own mum's not into my work.",
+      "audio": "voice/l8.wav",
+      "durationMs": 2033,
+      "loudnessDb": -18.5,
+      "peakDb": -8.3
+    },
+    {
+      "id": "l9",
+      "speaker": "ollie",
+      "text": "It's serious! Maya, back me up.",
+      "audio": "voice/l9.wav",
+      "durationMs": 2372,
+      "loudnessDb": -17.2,
+      "peakDb": -3.2
+    },
+    {
+      "id": "l10",
+      "speaker": "maya",
+      "text": "Huh. That conference guy did love my spreadsheets.",
+      "audio": "voice/l10.wav",
+      "durationMs": 3081,
+      "loudnessDb": -15.8,
+      "peakDb": -4.2
+    }
+  ]
+}
