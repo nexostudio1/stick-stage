@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "b1",
+      "speaker": "mitch",
+      "text": "Me escribió mi ex. ¿Contesto?",
+      "audio": "voice/b1.mp3",
+      "durationMs": 2024,
+      "words": [
+        {
+          "text": "Me",
+          "startMs": 0,
+          "endMs": 139
+        },
+        {
+          "text": "escribió",
+          "startMs": 163,
+          "endMs": 488
+        },
+        {
+          "text": "mi",
+          "startMs": 522,
+          "endMs": 615
+        },
+        {
+          "text": "ex.",
+          "startMs": 673,
+          "endMs": 894
+        },
+        {
+          "text": "¿Contesto?",
+          "startMs": 1033,
+          "endMs": 1904
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "speaker": "ollie",
+      "text": "¿Te escribió a ti, o a tu soledad?",
+      "audio": "voice/b2.mp3",
+      "durationMs": 2674,
+      "words": [
+        {
+          "text": "¿Te",
+          "startMs": 0,
+          "endMs": 221
+        },
+        {
+          "text": "escribió",
+          "startMs": 255,
+          "endMs": 824
+        },
+        {
+          "text": "a",
+          "startMs": 894,
+          "endMs": 929
+        },
+        {
+          "text": "ti,",
+          "startMs": 998,
+          "endMs": 1265
+        },
+        {
+          "text": "o",
+          "startMs": 1370,
+          "endMs": 1474
+        },
+        {
+          "text": "a",
+          "startMs": 1544,
+          "endMs": 1579
+        },
+        {
+          "text": "tu",
+          "startMs": 1637,
+          "endMs": 1730
+        },
+        {
+          "text": "soledad?",
+          "startMs": 1776,
+          "endMs": 2554
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "speaker": "mitch",
+      "text": "Ayer me rechazaron. Otra vez.",
+      "audio": "voice/b3.mp3",
+      "durationMs": 2070,
+      "words": [
+        {
+          "text": "Ayer",
+          "startMs": 0,
+          "endMs": 244
+        },
+        {
+          "text": "me",
+          "startMs": 302,
+          "endMs": 360
+        },
+        {
+          "text": "rechazaron.",
+          "startMs": 418,
+          "endMs": 1022
+        },
+        {
+          "text": "Otra",
+          "startMs": 1184,
+          "endMs": 1440
+        },
+        {
+          "text": "vez.",
+          "startMs": 1486,
+          "endMs": 1950
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "speaker": "ollie",
+      "text": "A mí, cien veces. Ya no duele.",
+      "audio": "voice/b4.mp3",
+      "durationMs": 2767,
+      "words": [
+        {
+          "text": "A",
+          "startMs": 0,
+          "endMs": 81
+        },
+        {
+          "text": "mí,",
+          "startMs": 186,
+          "endMs": 453
+        },
+        {
+          "text": "cien",
+          "startMs": 557,
+          "endMs": 836
+        },
+        {
+          "text": "veces.",
+          "startMs": 906,
+          "endMs": 1428
+        },
+        {
+          "text": "Ya",
+          "startMs": 1683,
+          "endMs": 1823
+        },
+        {
+          "text": "no",
+          "startMs": 1881,
+          "endMs": 1974
+        },
+        {
+          "text": "duele.",
+          "startMs": 2009,
+          "endMs": 2647
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "speaker": "mitch",
+      "text": "Llevo tres horas en el móvil.",
+      "audio": "voice/b5.mp3",
+      "durationMs": 1699,
+      "words": [
+        {
+          "text": "Llevo",
+          "startMs": 0,
+          "endMs": 302
+        },
+        {
+          "text": "tres",
+          "startMs": 337,
+          "endMs": 499
+        },
+        {
+          "text": "horas",
+          "startMs": 534,
+          "endMs": 731
+        },
+        {
+          "text": "en",
+          "startMs": 789,
+          "endMs": 836
+        },
+        {
+          "text": "el",
+          "startMs": 894,
+          "endMs": 940
+        },
+        {
+          "text": "móvil.",
+          "startMs": 975,
+          "endMs": 1579
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "speaker": "ollie",
+      "text": "No usas el móvil. El móvil te usa.",
+      "audio": "voice/b6.mp3",
+      "durationMs": 3185,
+      "words": [
+        {
+          "text": "No",
+          "startMs": 0,
+          "endMs": 244
+        },
+        {
+          "text": "usas",
+          "startMs": 313,
+          "endMs": 627
+        },
+        {
+          "text": "el",
+          "startMs": 685,
+          "endMs": 755
+        },
+        {
+          "text": "móvil.",
+          "startMs": 813,
+          "endMs": 1265
+        },
+        {
+          "text": "El",
+          "startMs": 1521,
+          "endMs": 1707
+        },
+        {
+          "text": "móvil",
+          "startMs": 1776,
+          "endMs": 2113
+        },
+        {
+          "text": "te",
+          "startMs": 2183,
+          "endMs": 2299
+        },
+        {
+          "text": "usa.",
+          "startMs": 2368,
+          "endMs": 3065
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "speaker": "mitch",
+      "text": "¿Quién es?",
+      "audio": "voice/b8.mp3",
+      "durationMs": 1049,
+      "words": [
+        {
+          "text": "¿Quién",
+          "startMs": 0,
+          "endMs": 418
+        },
+        {
+          "text": "es?",
+          "startMs": 476,
+          "endMs": 929
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "speaker": "ollie",
+      "text": "Mi ex.",
+      "audio": "voice/b9.mp3",
+      "durationMs": 863,
+      "words": [
+        {
+          "text": "Mi",
+          "startMs": 0,
+          "endMs": 163
+        },
+        {
+          "text": "ex.",
+          "startMs": 221,
+          "endMs": 743
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "speaker": "mitch",
+      "text": "¿Y qué hace un pro?",
+      "audio": "voice/b10.mp3",
+      "durationMs": 1374,
+      "words": [
+        {
+          "text": "¿Y",
+          "startMs": 0,
+          "endMs": 290
+        },
+        {
+          "text": "qué",
+          "startMs": 348,
+          "endMs": 418
+        },
+        {
+          "text": "hace",
+          "startMs": 441,
+          "endMs": 580
+        },
+        {
+          "text": "un",
+          "startMs": 627,
+          "endMs": 685
+        },
+        {
+          "text": "pro?",
+          "startMs": 743,
+          "endMs": 1254
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "speaker": "ollie",
+      "text": "Silencio. Bloqueo. Gimnasio.",
+      "audio": "voice/b11.mp3",
+      "durationMs": 2349,
+      "words": [
+        {
+          "text": "Silencio.",
+          "startMs": 0,
+          "endMs": 650
+        },
+        {
+          "text": "Bloqueo.",
+          "startMs": 685,
+          "endMs": 1242
+        },
+        {
+          "text": "Gimnasio.",
+          "startMs": 1277,
+          "endMs": 2229
+        }
+      ]
+    },
+    {
+      "id": "b12",
+      "speaker": "mitch",
+      "text": "Vale. Le digo que estoy en el gimnasio.",
+      "audio": "voice/b12.mp3",
+      "durationMs": 2303,
+      "words": [
+        {
+          "text": "Vale.",
+          "startMs": 0,
+          "endMs": 383
+        },
+        {
+          "text": "Le",
+          "startMs": 522,
+          "endMs": 627
+        },
+        {
+          "text": "digo",
+          "startMs": 673,
+          "endMs": 871
+        },
+        {
+          "text": "que",
+          "startMs": 917,
+          "endMs": 987
+        },
+        {
+          "text": "estoy",
+          "startMs": 1010,
+          "endMs": 1231
+        },
+        {
+          "text": "en",
+          "startMs": 1254,
+          "endMs": 1300
+        },
+        {
+          "text": "el",
+          "startMs": 1358,
+          "endMs": 1405
+        },
+        {
+          "text": "gimnasio.",
+          "startMs": 1428,
+          "endMs": 2183
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "speaker": "ollie",
+      "text": "¿Estás?",
+      "audio": "voice/b13.mp3",
+      "durationMs": 909,
+      "words": [
+        {
+          "text": "¿Estás?",
+          "startMs": 0,
+          "endMs": 789
+        }
+      ]
+    },
+    {
+      "id": "b14",
+      "speaker": "mitch",
+      "text": "Estaré. Algún día.",
+      "audio": "voice/b14.mp3",
+      "durationMs": 1560,
+      "words": [
+        {
+          "text": "Estaré.",
+          "startMs": 0,
+          "endMs": 511
+        },
+        {
+          "text": "Algún",
+          "startMs": 580,
+          "endMs": 882
+        },
+        {
+          "text": "día.",
+          "startMs": 929,
+          "endMs": 1440
+        }
+      ]
+    }
+  ]
+}

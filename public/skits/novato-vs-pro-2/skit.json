@@ -1,0 +1,595 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Novato vs Pro: la ex",
+    "aspect": "9:16",
+    "language": "es",
+    "description": "Novato vs pro: la ex, el rechazo y el móvil.",
+    "hashtags": [
+      "psicologiamasculina",
+      "mentalidad",
+      "novatovspro",
+      "autocontrol"
+    ]
+  },
+  "set": "street-night-1",
+  "characters": [
+    {
+      "schemaVersion": 1,
+      "id": "rookie",
+      "displayName": "Novato",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#7d8590",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 0.98,
+          "headRadius": 0.132,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#e0ac86",
+        "skinShade": "#c48d68",
+        "body": {
+          "shoulders": 116,
+          "hips": 86,
+          "arm": 25,
+          "neck": 26
+        },
+        "eyes": {
+          "iris": "#3b2a1a"
+        },
+        "brows": {
+          "color": "#1a110c",
+          "thickness": 8,
+          "gap": 0.36
+        },
+        "lip": "#4a2419",
+        "nose": "button",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0.12
+        },
+        "hair": {
+          "kind": "curly-mop",
+          "fill": "#3a2a1e",
+          "shade": "#57402f"
+        },
+        "top": {
+          "kind": "tee",
+          "fill": "#7d8590"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3d5a86",
+          "shade": "#304a70",
+          "cuff": "#7d9fd0"
+        },
+        "shoes": {
+          "kind": "sneaker",
+          "fill": "#f2f0ea",
+          "accent": "#7d8590",
+          "lace": "#d8d6cf",
+          "sole": "#d8d6cf"
+        },
+        "details": []
+      },
+      "energy": 0.55,
+      "personality": "the rookie: talks big, starts Monday, means well."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pro",
+      "displayName": "Pro",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#1f2024",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 1.04,
+          "headRadius": 0.124,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#8d5a3c",
+        "skinShade": "#74472e",
+        "body": {
+          "shoulders": 128,
+          "hips": 86,
+          "arm": 27,
+          "neck": 28
+        },
+        "eyes": {
+          "iris": "#2a1a10"
+        },
+        "brows": {
+          "color": "#120c08",
+          "thickness": 10,
+          "gap": 0.34
+        },
+        "lip": "#4a2419",
+        "nose": "hook",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0
+        },
+        "hair": {
+          "kind": "curly-mop",
+          "fill": "#141010",
+          "shade": "#2a2220"
+        },
+        "top": {
+          "kind": "turtleneck",
+          "fill": "#1f2024"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3a3d44",
+          "shade": "#2e3036",
+          "cuff": "#3a3d44"
+        },
+        "shoes": {
+          "kind": "boot",
+          "fill": "#5a3a26",
+          "sole": "#2a1c14"
+        },
+        "details": []
+      },
+      "energy": 0.3,
+      "personality": "the pro: calm, few words, been there."
+    }
+  ],
+  "cast": [
+    {
+      "id": "mitch",
+      "character": "rookie",
+      "mark": "left"
+    },
+    {
+      "id": "ollie",
+      "character": "pro",
+      "mark": "right"
+    }
+  ],
+  "overlay": {
+    "pov": "Les escribe su ex. Solo uno cae.",
+    "subtitles": true
+  },
+  "beats": [
+    {
+      "id": "b1",
+      "speaker": "mitch",
+      "line": "Me escribió mi ex. ¿Contesto?",
+      "expression": "worried",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "hold",
+          "prop": "phone",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "hold-phone",
+          "at": {
+            "ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "speaker": "ollie",
+      "line": "¿Te escribió a ti, o a tu soledad?",
+      "expression": "deadpan",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "arms-crossed",
+          "at": {
+            "word": "soledad"
+          }
+        }
+      ],
+      "holdAfterMs": 250,
+      "shot": {
+        "framing": "medium",
+        "on": "ollie"
+      }
+    },
+    {
+      "id": "b3",
+      "speaker": "mitch",
+      "line": "Ayer me rechazaron. Otra vez.",
+      "expression": "sad",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "putAway",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "slump",
+          "at": {
+            "word": "Otra"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": {
+            "ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "speaker": "ollie",
+      "line": "A mí, cien veces. Ya no duele.",
+      "expression": "smug",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "shrug",
+          "at": {
+            "word": "duele"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "speaker": "mitch",
+      "line": "Llevo tres horas en el móvil.",
+      "expression": "embarrassed",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "facepalm",
+          "at": {
+            "word": "horas"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": {
+            "ms": 0
+          }
+        }
+      ],
+      "shot": {
+        "framing": "medium",
+        "on": "mitch"
+      }
+    },
+    {
+      "id": "b6",
+      "speaker": "ollie",
+      "line": "No usas el móvil. El móvil te usa.",
+      "expression": "deadpan",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "hands-on-hips",
+          "at": {
+            "word": "usa"
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "thud",
+          "at": {
+            "word": "usa"
+          }
+        }
+      ],
+      "holdAfterMs": 200
+    },
+    {
+      "id": "giro",
+      "silent": true,
+      "durationMs": 1000,
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "hold",
+          "prop": "phone",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "ollie",
+          "do": "expression",
+          "expression": "worried",
+          "at": {
+            "ms": 100
+          }
+        },
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "hold-phone",
+          "at": {
+            "ms": 0
+          }
+        }
+      ],
+      "sfx": [
+        {
+          "id": "ding",
+          "at": {
+            "ms": 0
+          }
+        }
+      ],
+      "shot": {
+        "framing": "close",
+        "on": "ollie"
+      }
+    },
+    {
+      "id": "b8",
+      "speaker": "mitch",
+      "line": "¿Quién es?",
+      "expression": "confused",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "symbol",
+          "symbol": "question",
+          "at": {
+            "word": "Quién"
+          },
+          "durationMs": 1000
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "speaker": "ollie",
+      "line": "Mi ex.",
+      "expression": "worried",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "symbol",
+          "symbol": "sweat",
+          "at": {
+            "word": "ex"
+          },
+          "durationMs": 1000
+        }
+      ],
+      "pauseBeforeMs": 500,
+      "holdAfterMs": 300,
+      "sfx": [
+        {
+          "id": "record-scratch",
+          "at": {
+            "word": "ex"
+          }
+        }
+      ],
+      "shot": {
+        "framing": "close",
+        "on": "ollie"
+      }
+    },
+    {
+      "id": "b10",
+      "speaker": "mitch",
+      "line": "¿Y qué hace un pro?",
+      "expression": "smug",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "lean-in",
+          "at": {
+            "word": "pro"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "speaker": "ollie",
+      "line": "Silencio. Bloqueo. Gimnasio.",
+      "expression": "deadpan",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "putAway",
+          "at": {
+            "word": "Bloqueo"
+          }
+        }
+      ],
+      "pauseBeforeMs": 300,
+      "sfx": [
+        {
+          "id": "thud",
+          "at": {
+            "word": "Gimnasio"
+          }
+        }
+      ],
+      "text": [
+        {
+          "type": "slam",
+          "value": "GIMNASIO",
+          "at": {
+            "word": "Gimnasio"
+          }
+        }
+      ],
+      "holdAfterMs": 300,
+      "shot": {
+        "framing": "medium",
+        "on": "ollie"
+      }
+    },
+    {
+      "id": "b12",
+      "speaker": "mitch",
+      "line": "Vale. Le digo que estoy en el gimnasio.",
+      "expression": "happy",
+      "actions": [
+        {
+          "who": "mitch",
+          "do": "hold",
+          "prop": "phone",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "who": "mitch",
+          "do": "pose",
+          "pose": "hold-phone",
+          "at": {
+            "word": "digo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b13",
+      "speaker": "ollie",
+      "line": "¿Estás?",
+      "expression": "skeptical",
+      "actions": [
+        {
+          "who": "ollie",
+          "do": "pose",
+          "pose": "arms-crossed",
+          "at": {
+            "word": "Estás"
+          }
+        }
+      ],
+      "pauseBeforeMs": 300
+    },
+    {
+      "id": "b14",
+      "speaker": "mitch",
+      "line": "Estaré. Algún día.",
+      "expression": "happy",
+      "actions": [],
+      "punchline": true,
+      "pauseBeforeMs": 500,
+      "holdAfterMs": 300,
+      "text": [
+        {
+          "type": "slam",
+          "value": "ALGÚN DÍA",
+          "at": {
+            "word": "Algún"
+          }
+        }
+      ]
+    }
+  ]
+}
