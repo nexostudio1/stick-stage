@@ -1,0 +1,817 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Modo monje: novato vs pro",
+    "aspect": "9:16",
+    "language": "es",
+    "description": "Así hace el modo monje un novato… y así un pro.",
+    "hashtags": [
+      "modomonje",
+      "novatovspro",
+      "disciplina",
+      "psicologiamasculina"
+    ]
+  },
+  "characters": [
+    {
+      "schemaVersion": 1,
+      "id": "rookie",
+      "displayName": "Novato",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#7d8590",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 0.98,
+          "headRadius": 0.132,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#f1c9a9",
+        "skinShade": "#d9a885",
+        "body": {
+          "shoulders": 116,
+          "hips": 86,
+          "arm": 25,
+          "neck": 26
+        },
+        "eyes": {
+          "iris": "#4a3420",
+          "size": 0.82
+        },
+        "brows": {
+          "color": "#3a2a1e",
+          "thickness": 8,
+          "gap": 0.4
+        },
+        "lip": "#4a2419",
+        "nose": "button",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0.1
+        },
+        "hair": {
+          "kind": "curly-mop",
+          "fill": "#3a2a1e",
+          "shade": "#57402f"
+        },
+        "top": {
+          "kind": "tee",
+          "fill": "#7d8590"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3d5a86",
+          "shade": "#304a70",
+          "cuff": "#7d9fd0"
+        },
+        "shoes": {
+          "kind": "sneaker",
+          "fill": "#f2f0ea",
+          "accent": "#7d8590",
+          "lace": "#d8d6cf",
+          "sole": "#d8d6cf"
+        },
+        "details": [],
+        "head": {
+          "jaw": 0.96
+        }
+      },
+      "energy": 0.55,
+      "personality": "the rookie: talks big, starts Monday, means well."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pro",
+      "displayName": "Pro",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#1f2024",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 1.04,
+          "headRadius": 0.124,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#e2ae88",
+        "skinShade": "#c8916c",
+        "body": {
+          "shoulders": 128,
+          "hips": 86,
+          "arm": 27,
+          "neck": 28
+        },
+        "eyes": {
+          "iris": "#3a5a6a",
+          "size": 0.74
+        },
+        "brows": {
+          "color": "#2a1d14",
+          "thickness": 11,
+          "gap": 0.3
+        },
+        "lip": "#8a4a3a",
+        "nose": "hook",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0
+        },
+        "hair": {
+          "kind": "short-crop",
+          "fill": "#2a1d14",
+          "shade": "#4a3626"
+        },
+        "top": {
+          "kind": "turtleneck",
+          "fill": "#1f2024"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3a3d44",
+          "shade": "#2e3036",
+          "cuff": "#3a3d44"
+        },
+        "shoes": {
+          "kind": "boot",
+          "fill": "#5a3a26",
+          "sole": "#2a1c14"
+        },
+        "details": [
+          {
+            "id": "stubble",
+            "color": "#3a2a20"
+          }
+        ],
+        "head": {
+          "jaw": 1.08
+        }
+      },
+      "energy": 0.3,
+      "personality": "the pro: calm, few words, been there."
+    }
+  ],
+  "cast": [
+    {
+      "id": "mitch",
+      "character": "rookie",
+      "mark": "left"
+    },
+    {
+      "id": "ollie",
+      "character": "pro",
+      "mark": "right"
+    }
+  ],
+  "music": "build",
+  "overlay": {
+    "subtitles": true
+  },
+  "coldOpen": "none",
+  "scenes": [
+    {
+      "id": "n1",
+      "set": "bedroom-1",
+      "pov": "NOVATO · 6:00",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "center"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "a1",
+          "speaker": "mitch",
+          "line": "¿Las seis? Cinco minutitos más…",
+          "expression": "sad",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "hold",
+              "prop": "alarm-clock",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "slump",
+              "at": {
+                "word": "minutitos"
+              }
+            }
+          ],
+          "pauseBeforeMs": 350,
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "buzzer",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "slide-down",
+              "at": {
+                "word": "más"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NOVATO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "set": "bedroom-1",
+      "pov": "PRO · 6:00",
+      "cast": [
+        {
+          "id": "ollie",
+          "mark": "center"
+        },
+        {
+          "id": "mitch",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 300
+      },
+      "beats": [
+        {
+          "id": "a2",
+          "speaker": "ollie",
+          "line": "Seis en punto. Al lío.",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "hold",
+              "prop": "dumbbell",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "hold-up",
+              "at": {
+                "word": "lío"
+              }
+            }
+          ],
+          "pauseBeforeMs": 350,
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          },
+          "sfx": [
+            {
+              "id": "ding",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "thud",
+              "at": {
+                "word": "lío"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "PRO",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "type": "slam",
+              "value": "AL LÍO",
+              "at": {
+                "word": "lío"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "set": "living-2",
+      "pov": "NOVATO · 9:00",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "center"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 300
+      },
+      "beats": [
+        {
+          "id": "a3",
+          "speaker": "mitch",
+          "line": "Solo miro una cosa…",
+          "expression": "happy",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "hold",
+              "prop": "phone",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "hold-phone",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "pauseBeforeMs": 350,
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "pop",
+              "at": {
+                "word": "miro"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NOVATO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "a4",
+          "speaker": "mitch",
+          "line": "¿¡Ya es la una!?",
+          "expression": "shocked",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "recoil",
+              "at": {
+                "word": "una"
+              }
+            }
+          ],
+          "pauseBeforeMs": 150,
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "clock-tick",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "record-scratch",
+              "at": {
+                "word": "una"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "13:00",
+              "at": {
+                "word": "una"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "set": "living-2",
+      "pov": "PRO · 9:00",
+      "cast": [
+        {
+          "id": "ollie",
+          "mark": "center"
+        },
+        {
+          "id": "mitch",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 300
+      },
+      "beats": [
+        {
+          "id": "a5",
+          "speaker": "ollie",
+          "line": "Móvil al cajón. Primero, lo difícil.",
+          "expression": "deadpan",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "hold",
+              "prop": "book",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "hold-up",
+              "at": {
+                "word": "difícil"
+              }
+            }
+          ],
+          "pauseBeforeMs": 350,
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          },
+          "sfx": [
+            {
+              "id": "drawer",
+              "at": {
+                "word": "cajón"
+              }
+            },
+            {
+              "id": "whoosh",
+              "at": {
+                "word": "difícil"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "PRO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "set": "kitchen-1",
+      "pov": "PRO · 18:00",
+      "cast": [
+        {
+          "id": "ollie",
+          "mark": "center"
+        },
+        {
+          "id": "mitch",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 300
+      },
+      "beats": [
+        {
+          "id": "a6",
+          "speaker": "ollie",
+          "line": "¿Un donut? Sí. Uno.",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "hold",
+              "prop": "donut",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "hold-up",
+              "at": {
+                "word": "Uno"
+              }
+            }
+          ],
+          "pauseBeforeMs": 350,
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          },
+          "sfx": [
+            {
+              "id": "riser-hit",
+              "at": {
+                "word": "Sí"
+              }
+            },
+            {
+              "id": "ding-idea",
+              "at": {
+                "word": "Uno"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "PRO",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "type": "slam",
+              "value": "UNO",
+              "at": {
+                "word": "Uno"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "set": "kitchen-1",
+      "pov": "NOVATO · 18:00",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "center"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 300
+      },
+      "beats": [
+        {
+          "id": "a7",
+          "speaker": "mitch",
+          "line": "Ya rompí la dieta… ¡pues me como seis!",
+          "expression": "laughing",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "hold",
+              "prop": "donut",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "arms-up",
+              "at": {
+                "word": "seis"
+              }
+            }
+          ],
+          "pauseBeforeMs": 350,
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "boing",
+              "at": {
+                "word": "dieta"
+              }
+            },
+            {
+              "id": "coin-avalanche",
+              "at": {
+                "word": "seis"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NOVATO",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "type": "slam",
+              "value": "SEIS",
+              "at": {
+                "word": "seis"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "set": "bedroom-1",
+      "pov": "NOVATO · 23:59",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "center"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 300
+      },
+      "beats": [
+        {
+          "id": "a8",
+          "speaker": "mitch",
+          "line": "Mañana empiezo de verdad. ¡A las seis!",
+          "expression": "happy",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "thumbs-up",
+              "at": {
+                "word": "verdad"
+              }
+            }
+          ],
+          "pauseBeforeMs": 350,
+          "punchline": true,
+          "holdAfterMs": 0,
+          "shot": {
+            "framing": "wide",
+            "punchIn": {
+              "on": "mitch"
+            }
+          },
+          "sfx": [
+            {
+              "id": "sparkle",
+              "at": {
+                "word": "seis"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NOVATO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "a1",
+      "speaker": "mitch",
+      "text": "¿Las seis? Cinco minutitos más…",
+      "audio": "voice/a1.mp3",
+      "durationMs": 2600,
+      "words": [
+        {
+          "text": "¿Las",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "seis?",
+          "startMs": 240,
+          "endMs": 640
+        },
+        {
+          "text": "Cinco",
+          "startMs": 820,
+          "endMs": 1440
+        },
+        {
+          "text": "minutitos",
+          "startMs": 1493,
+          "endMs": 2000
+        },
+        {
+          "text": "más…",
+          "startMs": 2080,
+          "endMs": 2480
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "speaker": "ollie",
+      "text": "Seis en punto. Al lío.",
+      "audio": "voice/a2.mp3",
+      "durationMs": 1880,
+      "words": [
+        {
+          "text": "Seis",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "en",
+          "startMs": 213,
+          "endMs": 320
+        },
+        {
+          "text": "punto.",
+          "startMs": 387,
+          "endMs": 1120
+        },
+        {
+          "text": "Al",
+          "startMs": 1173,
+          "endMs": 1280
+        },
+        {
+          "text": "lío.",
+          "startMs": 1360,
+          "endMs": 1760
+        }
+      ]
+    },
+    {
+      "id": "a3",
+      "speaker": "mitch",
+      "text": "Solo miro una cosa…",
+      "audio": "voice/a3.mp3",
+      "durationMs": 1160,
+      "words": [
+        {
+          "text": "Solo",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "text": "miro",
+          "startMs": 280,
+          "endMs": 400
+        },
+        {
+          "text": "una",
+          "startMs": 440,
+          "endMs": 560
+        },
+        {
+          "text": "cosa…",
+          "startMs": 640,
+          "endMs": 1040
+        }
+      ]
+    },
+    {
+      "id": "a4",
+      "speaker": "mitch",
+      "text": "¿¡Ya es la una!?",
+      "audio": "voice/a4.mp3",
+      "durationMs": 1160,
+      "words": [
+        {
+          "text": "¿¡Ya",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "text": "es",
+          "startMs": 267,
+          "endMs": 320
+        },
+        {
+          "text": "la",
+          "startMs": 373,
+          "endMs": 480
+        },
+        {
+          "text": "una!?",
+          "startMs": 580,
+          "endMs": 1040
+        }
+      ]
+    },
+    {
+      "id": "a5",
+      "speaker": "ollie",
+      "text": "Móvil al cajón. Primero, lo difícil.",
+      "audio": "voice/a5.mp3",
+      "durationMs": 2520,
+      "words": [
+        {
+          "text": "Móvil",
+          "startMs": 0,
+          "endMs": 320
+        },
+        {
+          "text": "al",
+          "startMs": 347,
+          "endMs": 400
+        },
+        {
+          "text": "cajón.",
+          "startMs": 440,
+          "endMs": 1080
+        },
+        {
+          "text": "Primero,",
+          "startMs": 1120,
+          "endMs": 1600
+        },
+        {
+          "text": "lo",
+          "startMs": 1653,
+          "endMs": 1760
+        },
+        {
+          "text": "difícil.",
+          "startMs": 1830,
+          "endMs": 2400
+        }
+      ]
+    },
+    {
+      "id": "a6",
+      "speaker": "ollie",
+      "text": "¿Un donut? Sí. Uno.",
+      "audio": "voice/a6.mp3",
+      "durationMs": 2040,
+      "words": [
+        {
+          "text": "¿Un",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "donut?",
+          "startMs": 220,
+          "endMs": 640
+        },
+        {
+          "text": "Sí.",
+          "startMs": 840,
+          "endMs": 1520
+        },
+        {
+          "text": "Uno.",
+          "startMs": 1600,
+          "endMs": 1920
+        }
+      ]
+    },
+    {
+      "id": "a7",
+      "speaker": "mitch",
+      "text": "Ya rompí la dieta… ¡pues me como seis!",
+      "audio": "voice/a7.mp3",
+      "durationMs": 2520,
+      "words": [
+        {
+          "text": "Ya",
+          "startMs": 0,
+          "endMs": 80
+        },
+        {
+          "text": "rompí",
+          "startMs": 140,
+          "endMs": 400
+        },
+        {
+          "text": "la",
+          "startMs": 453,
+          "endMs": 560
+        },
+        {
+          "text": "dieta…",
+          "startMs": 627,
+          "endMs": 1200
+        },
+        {
+          "text": "¡pues",
+          "startMs": 1220,
+          "endMs": 1360
+        },
+        {
+          "text": "me",
+          "startMs": 1413,
+          "endMs": 1520
+        },
+        {
+          "text": "como",
+          "startMs": 1568,
+          "endMs": 1760
+        },
+        {
+          "text": "seis!",
+          "startMs": 1856,
+          "endMs": 2400
+        }
+      ]
+    },
+    {
+      "id": "a8",
+      "speaker": "mitch",
+      "text": "Mañana empiezo de verdad. ¡A las seis!",
+      "audio": "voice/a8.mp3",
+      "durationMs": 2360,
+      "words": [
+        {
+          "text": "Mañana",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "text": "empiezo",
+          "startMs": 280,
+          "endMs": 640
+        },
+        {
+          "text": "de",
+          "startMs": 693,
+          "endMs": 800
+        },
+        {
+          "text": "verdad.",
+          "startMs": 823,
+          "endMs": 1360
+        },
+        {
+          "text": "¡A",
+          "startMs": 1380,
+          "endMs": 1440
+        },
+        {
+          "text": "las",
+          "startMs": 1480,
+          "endMs": 1600
+        },
+        {
+          "text": "seis!",
+          "startMs": 1696,
+          "endMs": 2240
+        }
+      ]
+    }
+  ]
+}
