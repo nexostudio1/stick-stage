@@ -16,12 +16,12 @@
   "cast": [
     {
       "id": "mitch",
-      "character": "crew-mitch",
+      "character": "rookie",
       "mark": "left"
     },
     {
       "id": "ollie",
-      "character": "crew-ollie",
+      "character": "pro",
       "mark": "right"
     }
   ],
@@ -105,7 +105,7 @@
         {
           "who": "ollie",
           "do": "pose",
-          "pose": "point",
+          "pose": "arms-crossed",
           "at": {
             "word": "hoy"
           }
@@ -195,7 +195,7 @@
         {
           "who": "mitch",
           "do": "pose",
-          "pose": "point",
+          "pose": "lean-in",
           "at": {
             "word": "sabes"
           }
@@ -207,16 +207,7 @@
       "speaker": "ollie",
       "line": "Porque yo era tú. Hace un año.",
       "expression": "neutral",
-      "actions": [
-        {
-          "who": "ollie",
-          "do": "pose",
-          "pose": "hold-chest",
-          "at": {
-            "word": "era"
-          }
-        }
-      ],
+      "actions": [],
       "pauseBeforeMs": 500,
       "holdAfterMs": 400,
       "text": [
@@ -253,7 +244,7 @@
         {
           "who": "ollie",
           "do": "pose",
-          "pose": "point",
+          "pose": "hold-chest",
           "at": {
             "word": "mí"
           }
@@ -301,6 +292,214 @@
       "punchline": true,
       "pauseBeforeMs": 500,
       "holdAfterMs": 300
+    }
+  ],
+  "characters": [
+    {
+      "schemaVersion": 1,
+      "id": "rookie",
+      "displayName": "Novato",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#7d8590",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 0.98,
+          "headRadius": 0.132,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#e0ac86",
+        "skinShade": "#c48d68",
+        "body": {
+          "shoulders": 116,
+          "hips": 86,
+          "arm": 25,
+          "neck": 26
+        },
+        "eyes": {
+          "iris": "#3b2a1a"
+        },
+        "brows": {
+          "color": "#1a110c",
+          "thickness": 8,
+          "gap": 0.36
+        },
+        "lip": "#4a2419",
+        "nose": "button",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0.12
+        },
+        "hair": {
+          "kind": "curly-mop",
+          "fill": "#3a2a1e",
+          "shade": "#57402f"
+        },
+        "top": {
+          "kind": "tee",
+          "fill": "#7d8590"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3d5a86",
+          "shade": "#304a70",
+          "cuff": "#7d9fd0"
+        },
+        "shoes": {
+          "kind": "sneaker",
+          "fill": "#f2f0ea",
+          "accent": "#7d8590",
+          "lace": "#d8d6cf",
+          "sole": "#d8d6cf"
+        },
+        "details": []
+      },
+      "energy": 0.55,
+      "personality": "the rookie: talks big, starts Monday, means well."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pro",
+      "displayName": "Pro",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#1f2024",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 1.04,
+          "headRadius": 0.124,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#8d5a3c",
+        "skinShade": "#74472e",
+        "body": {
+          "shoulders": 128,
+          "hips": 86,
+          "arm": 27,
+          "neck": 28
+        },
+        "eyes": {
+          "iris": "#2a1a10"
+        },
+        "brows": {
+          "color": "#120c08",
+          "thickness": 10,
+          "gap": 0.34
+        },
+        "lip": "#4a2419",
+        "nose": "hook",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0
+        },
+        "hair": {
+          "kind": "curly-mop",
+          "fill": "#141010",
+          "shade": "#2a2220"
+        },
+        "top": {
+          "kind": "turtleneck",
+          "fill": "#1f2024"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3a3d44",
+          "shade": "#2e3036",
+          "cuff": "#3a3d44"
+        },
+        "shoes": {
+          "kind": "boot",
+          "fill": "#5a3a26",
+          "sole": "#2a1c14"
+        },
+        "details": []
+      },
+      "energy": 0.3,
+      "personality": "the pro: calm, few words, been there."
     }
   ]
 }
