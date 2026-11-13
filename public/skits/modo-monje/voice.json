@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "b1",
+      "speaker": "mitch",
+      "text": "¡Modo monje! Treinta días. Sin móvil, sin azúcar, sin chicas.",
+      "audio": "voice/b1.mp3",
+      "durationMs": 4200,
+      "words": [
+        {
+          "text": "¡Modo",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "text": "monje!",
+          "startMs": 300,
+          "endMs": 880
+        },
+        {
+          "text": "Treinta",
+          "startMs": 920,
+          "endMs": 1200
+        },
+        {
+          "text": "días.",
+          "startMs": 1264,
+          "endMs": 1760
+        },
+        {
+          "text": "Sin",
+          "startMs": 1800,
+          "endMs": 1920
+        },
+        {
+          "text": "móvil,",
+          "startMs": 2000,
+          "endMs": 2400
+        },
+        {
+          "text": "sin",
+          "startMs": 2440,
+          "endMs": 2560
+        },
+        {
+          "text": "azúcar,",
+          "startMs": 2613,
+          "endMs": 3200
+        },
+        {
+          "text": "sin",
+          "startMs": 3240,
+          "endMs": 3360
+        },
+        {
+          "text": "chicas.",
+          "startMs": 3417,
+          "endMs": 4080
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "speaker": "ollie",
+      "text": "¿Y quién lo sabe?",
+      "audio": "voice/b2.mp3",
+      "durationMs": 1160,
+      "words": [
+        {
+          "text": "¿Y",
+          "startMs": 0,
+          "endMs": 80
+        },
+        {
+          "text": "quién",
+          "startMs": 140,
+          "endMs": 400
+        },
+        {
+          "text": "lo",
+          "startMs": 453,
+          "endMs": 560
+        },
+        {
+          "text": "sabe?",
+          "startMs": 624,
+          "endMs": 1040
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "speaker": "mitch",
+      "text": "¡Todo el mundo! Lo subí a historias.",
+      "audio": "voice/b3.mp3",
+      "durationMs": 2840,
+      "words": [
+        {
+          "text": "¡Todo",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "text": "el",
+          "startMs": 293,
+          "endMs": 400
+        },
+        {
+          "text": "mundo!",
+          "startMs": 467,
+          "endMs": 880
+        },
+        {
+          "text": "Lo",
+          "startMs": 1120,
+          "endMs": 1600
+        },
+        {
+          "text": "subí",
+          "startMs": 1660,
+          "endMs": 1920
+        },
+        {
+          "text": "a",
+          "startMs": 2000,
+          "endMs": 2080
+        },
+        {
+          "text": "historias.",
+          "startMs": 2103,
+          "endMs": 2720
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "speaker": "ollie",
+      "text": "Error de novato.",
+      "audio": "voice/b4.mp3",
+      "durationMs": 1160,
+      "words": [
+        {
+          "text": "Error",
+          "startMs": 0,
+          "endMs": 320
+        },
+        {
+          "text": "de",
+          "startMs": 347,
+          "endMs": 400
+        },
+        {
+          "text": "novato.",
+          "startMs": 440,
+          "endMs": 1040
+        }
+      ]
+    },
+    {
+      "id": "b5",
+      "speaker": "mitch",
+      "text": "¿Por qué?",
+      "audio": "voice/b5.mp3",
+      "durationMs": 520,
+      "words": [
+        {
+          "text": "¿Por",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "qué?",
+          "startMs": 200,
+          "endMs": 400
+        }
+      ]
+    },
+    {
+      "id": "b6",
+      "speaker": "ollie",
+      "text": "El monje no lo anuncia. Desaparece.",
+      "audio": "voice/b6.mp3",
+      "durationMs": 2680,
+      "words": [
+        {
+          "text": "El",
+          "startMs": 0,
+          "endMs": 80
+        },
+        {
+          "text": "monje",
+          "startMs": 140,
+          "endMs": 480
+        },
+        {
+          "text": "no",
+          "startMs": 533,
+          "endMs": 640
+        },
+        {
+          "text": "lo",
+          "startMs": 667,
+          "endMs": 720
+        },
+        {
+          "text": "anuncia.",
+          "startMs": 773,
+          "endMs": 1760
+        },
+        {
+          "text": "Desaparece.",
+          "startMs": 1800,
+          "endMs": 2560
+        }
+      ]
+    },
+    {
+      "id": "b7",
+      "speaker": "mitch",
+      "text": "Vale… ¿y tú cuándo empezaste?",
+      "audio": "voice/b7.mp3",
+      "durationMs": 2360,
+      "words": [
+        {
+          "text": "Vale…",
+          "startMs": 0,
+          "endMs": 640
+        },
+        {
+          "text": "¿y",
+          "startMs": 660,
+          "endMs": 720
+        },
+        {
+          "text": "tú",
+          "startMs": 827,
+          "endMs": 1040
+        },
+        {
+          "text": "cuándo",
+          "startMs": 1173,
+          "endMs": 1600
+        },
+        {
+          "text": "empezaste?",
+          "startMs": 1640,
+          "endMs": 2240
+        }
+      ]
+    },
+    {
+      "id": "b8",
+      "speaker": "ollie",
+      "text": "Hace seis meses.",
+      "audio": "voice/b8.mp3",
+      "durationMs": 1320,
+      "words": [
+        {
+          "text": "Hace",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "text": "seis",
+          "startMs": 304,
+          "endMs": 560
+        },
+        {
+          "text": "meses.",
+          "startMs": 653,
+          "endMs": 1200
+        }
+      ]
+    },
+    {
+      "id": "b9",
+      "speaker": "mitch",
+      "text": "¡¿Y por qué no me dijiste nada?!",
+      "audio": "voice/b9.mp3",
+      "durationMs": 1720,
+      "words": [
+        {
+          "text": "¡¿Y",
+          "startMs": 0,
+          "endMs": 80
+        },
+        {
+          "text": "por",
+          "startMs": 120,
+          "endMs": 240
+        },
+        {
+          "text": "qué",
+          "startMs": 280,
+          "endMs": 400
+        },
+        {
+          "text": "no",
+          "startMs": 427,
+          "endMs": 480
+        },
+        {
+          "text": "me",
+          "startMs": 507,
+          "endMs": 560
+        },
+        {
+          "text": "dijiste",
+          "startMs": 620,
+          "endMs": 960
+        },
+        {
+          "text": "nada?!",
+          "startMs": 1040,
+          "endMs": 1600
+        }
+      ]
+    },
+    {
+      "id": "b10",
+      "speaker": "ollie",
+      "text": "Por eso.",
+      "audio": "voice/b10.mp3",
+      "durationMs": 760,
+      "words": [
+        {
+          "text": "Por",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "eso.",
+          "startMs": 240,
+          "endMs": 640
+        }
+      ]
+    },
+    {
+      "id": "b11",
+      "speaker": "mitch",
+      "text": "¡Pues lo anuncio otra vez!",
+      "audio": "voice/b11.mp3",
+      "durationMs": 1800,
+      "words": [
+        {
+          "text": "¡Pues",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "lo",
+          "startMs": 187,
+          "endMs": 240
+        },
+        {
+          "text": "anuncio",
+          "startMs": 293,
+          "endMs": 720
+        },
+        {
+          "text": "otra",
+          "startMs": 816,
+          "endMs": 1200
+        },
+        {
+          "text": "vez!",
+          "startMs": 1280,
+          "endMs": 1680
+        }
+      ]
+    }
+  ]
+}
