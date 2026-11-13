@@ -262,7 +262,7 @@
   "scenes": [
     {
       "id": "n-cama",
-      "set": "bedroom-1",
+      "set": "bedroom-night",
       "cast": [
         {
           "id": "mitch",
@@ -608,7 +608,7 @@
     },
     {
       "id": "n-oficina",
-      "set": "office-1",
+      "set": "office-night",
       "cast": [
         {
           "id": "mitch",
@@ -719,7 +719,7 @@
     },
     {
       "id": "p-cama",
-      "set": "bedroom-1",
+      "set": "bedroom-night",
       "cast": [
         {
           "id": "ollie",
@@ -971,7 +971,7 @@
     },
     {
       "id": "fin",
-      "set": "bedroom-1",
+      "set": "bedroom-night",
       "cast": [
         {
           "id": "mitch",

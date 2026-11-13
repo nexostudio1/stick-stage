@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "bedroom-night",
+  "kit": "interior",
+  "palette": "night-shift",
+  "description": "A bedroom at night: bed, window, floor lamp, in the dark night-shift palette.",
+  "tags": [
+    "home",
+    "bedroom",
+    "sleep",
+    "night",
+    "late",
+    "morning",
+    "alarm",
+    "siblings",
+    "couple",
+    "phone",
+    "scrolling",
+    "dark"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "wall",
+      "pattern": "halftone"
+    },
+    {
+      "part": "floor"
+    },
+    {
+      "part": "window",
+      "x": 0.78,
+      "y": 0.16
+    },
+    {
+      "part": "frame",
+      "x": 0.24,
+      "y": 0.22,
+      "seed": 4
+    },
+    {
+      "part": "floor-lamp",
+      "x": 0.07
+    },
+    {
+      "part": "bed",
+      "x": 0.5,
+      "seatFor": [
+        "left",
+        "right"
+      ]
+    }
+  ],
+  "marks": {
+    "left": 0.3,
+    "center": 0.5,
+    "right": 0.7
+  }
+}
