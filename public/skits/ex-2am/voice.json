@@ -418,6 +418,59 @@
           "endMs": 1718
         }
       ]
+    },
+    {
+      "id": "t12",
+      "speaker": "mitch",
+      "text": "Espera. ¿Tu ex también?",
+      "audio": "voice/b12.mp3",
+      "durationMs": 1745,
+      "words": [
+        {
+          "text": "Espera.",
+          "startMs": 0,
+          "endMs": 534
+        },
+        {
+          "text": "¿Tu",
+          "startMs": 604,
+          "endMs": 789
+        },
+        {
+          "text": "ex",
+          "startMs": 836,
+          "endMs": 940
+        },
+        {
+          "text": "también?",
+          "startMs": 987,
+          "endMs": 1625
+        }
+      ]
+    },
+    {
+      "id": "t13",
+      "speaker": "ollie",
+      "text": "No. La tuya.",
+      "audio": "voice/b13.mp3",
+      "durationMs": 1838,
+      "words": [
+        {
+          "text": "No.",
+          "startMs": 0,
+          "endMs": 372
+        },
+        {
+          "text": "La",
+          "startMs": 778,
+          "endMs": 917
+        },
+        {
+          "text": "tuya.",
+          "startMs": 987,
+          "endMs": 1718
+        }
+      ]
     }
   ]
 }
