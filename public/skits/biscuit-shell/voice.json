@@ -6,91 +6,117 @@
       "speaker": "narrator",
       "text": "Biscuit was digging at the beach, as usual.",
       "audio": "voice/n1.wav",
-      "durationMs": 3155
+      "durationMs": 3155,
+      "loudnessDb": -18.9,
+      "peakDb": -3.5
     },
     {
       "id": "n2",
       "speaker": "narrator",
       "text": "And then he found something shiny.",
       "audio": "voice/n2.wav",
-      "durationMs": 1757
+      "durationMs": 1757,
+      "loudnessDb": -20.3,
+      "peakDb": -4.9
     },
     {
       "id": "b1",
       "speaker": "biscuit",
       "text": "A shell! A real one! It's mine!",
       "audio": "voice/b1.wav",
-      "durationMs": 3294
+      "durationMs": 3294,
+      "loudnessDb": -20.6,
+      "peakDb": -7.5
     },
     {
       "id": "p1",
       "speaker": "pim",
       "text": "Ooh, can I hold it? Just for a second?",
       "audio": "voice/p1.wav",
-      "durationMs": 3516
+      "durationMs": 3516,
+      "loudnessDb": -15.7,
+      "peakDb": -2.3
     },
     {
       "id": "b2",
       "speaker": "biscuit",
       "text": "No. It's my shell.",
       "audio": "voice/b2.wav",
-      "durationMs": 2019
+      "durationMs": 2019,
+      "loudnessDb": -21.1,
+      "peakDb": -9
     },
     {
       "id": "n3",
       "speaker": "narrator",
       "text": "Pim's beak drooped all the way down.",
       "audio": "voice/n3.wav",
-      "durationMs": 2103
+      "durationMs": 2103,
+      "loudnessDb": -18.8,
+      "peakDb": -4.7
     },
     {
       "id": "m1",
       "speaker": "mabel",
       "text": "That's a lovely shell. Does it sing?",
       "audio": "voice/m1.wav",
-      "durationMs": 2757
+      "durationMs": 2757,
+      "loudnessDb": -13.2,
+      "peakDb": -0.4
     },
     {
       "id": "b3",
       "speaker": "biscuit",
       "text": "I don't know. Nobody's listened to it with me.",
       "audio": "voice/b3.wav",
-      "durationMs": 3709
+      "durationMs": 3709,
+      "loudnessDb": -18.6,
+      "peakDb": -7.9
     },
     {
       "id": "m2",
       "speaker": "mabel",
       "text": "Shells sound better when you share them.",
       "audio": "voice/m2.wav",
-      "durationMs": 1830
+      "durationMs": 1830,
+      "loudnessDb": -13.9,
+      "peakDb": -1.9
     },
     {
       "id": "n4",
       "speaker": "narrator",
       "text": "So the next day, Biscuit took his shell back to the beach.",
       "audio": "voice/n4.wav",
-      "durationMs": 3479
+      "durationMs": 3479,
+      "loudnessDb": -18.1,
+      "peakDb": -3.4
     },
     {
       "id": "b4",
       "speaker": "biscuit",
       "text": "Pim! Want to listen to the sea?",
       "audio": "voice/b4.wav",
-      "durationMs": 2433
+      "durationMs": 2433,
+      "loudnessDb": -19.4,
+      "peakDb": -6
     },
     {
       "id": "p2",
       "speaker": "pim",
       "text": "Really? Oh, Biscuit! I can hear it!",
       "audio": "voice/p2.wav",
-      "durationMs": 3839
+      "durationMs": 3839,
+      "loudnessDb": -15.9,
+      "peakDb": -2.5
     },
     {
       "id": "n5",
       "speaker": "narrator",
       "text": "And the shell sounded better than ever.",
       "audio": "voice/n5.wav",
-      "durationMs": 1939
+      "durationMs": 1939,
+      "loudnessDb": -20,
+      "peakDb": -7.1
     }
   ]
 }

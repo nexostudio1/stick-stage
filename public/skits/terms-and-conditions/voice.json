@@ -6,70 +6,90 @@
       "speaker": "milo",
       "text": "You clicked I agree in under one second!",
       "audio": "voice/l1.wav",
-      "durationMs": 2197
+      "durationMs": 2197,
+      "loudnessDb": -16.7,
+      "peakDb": -2.2
     },
     {
       "id": "l2",
       "speaker": "june",
       "text": "Personal best.",
       "audio": "voice/l2.wav",
-      "durationMs": 927
+      "durationMs": 927,
+      "loudnessDb": -15.1,
+      "peakDb": -3.5
     },
     {
       "id": "l3",
       "speaker": "milo",
       "text": "That's forty pages. You didn't read one word.",
       "audio": "voice/l3.wav",
-      "durationMs": 2972
+      "durationMs": 2972,
+      "loudnessDb": -17.4,
+      "peakDb": -2.7
     },
     {
       "id": "l4",
       "speaker": "june",
       "text": "Reading every privacy policy you accept takes seventy-six work days a year.",
       "audio": "voice/l4.wav",
-      "durationMs": 4338
+      "durationMs": 4338,
+      "loudnessDb": -13.2,
+      "peakDb": -2.5
     },
     {
       "id": "l5",
       "speaker": "milo",
       "text": "Fine. I'll read it. Clause nine: they can rename your dog.",
       "audio": "voice/l5.wav",
-      "durationMs": 4131
+      "durationMs": 4131,
+      "loudnessDb": -16.9,
+      "peakDb": -2.6
     },
     {
       "id": "l6",
       "speaker": "june",
       "text": "He never liked Biscuit.",
       "audio": "voice/l6.wav",
-      "durationMs": 1238
+      "durationMs": 1238,
+      "loudnessDb": -13.5,
+      "peakDb": -2.5
     },
     {
       "id": "l7",
       "speaker": "milo",
       "text": "Clause forty-seven: they get your firstborn child!",
       "audio": "voice/l7.wav",
-      "durationMs": 3251
+      "durationMs": 3251,
+      "loudnessDb": -16.9,
+      "peakDb": -3.5
     },
     {
       "id": "l8",
       "speaker": "june",
       "text": "Only on weekends. Read the fine print.",
       "audio": "voice/l8.wav",
-      "durationMs": 2466
+      "durationMs": 2466,
+      "loudnessDb": -12.9,
+      "peakDb": -2.1
     },
     {
       "id": "l9",
       "speaker": "milo",
       "text": "Wait. How do you know the fine print without reading it?",
       "audio": "voice/l9.wav",
-      "durationMs": 3149
+      "durationMs": 3149,
+      "loudnessDb": -15.9,
+      "peakDb": -1.9
     },
     {
       "id": "l10",
       "speaker": "june",
       "text": "I wrote it.",
       "audio": "voice/l10.wav",
-      "durationMs": 577
+      "durationMs": 577,
+      "loudnessDb": -14.8,
+      "peakDb": -2.9
     }
   ]
 }

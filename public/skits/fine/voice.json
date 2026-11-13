@@ -6,21 +6,27 @@
       "speaker": "milo",
       "text": "Hey. You okay?",
       "audio": "voice/b1.wav",
-      "durationMs": 1377
+      "durationMs": 1377,
+      "loudnessDb": -18.2,
+      "peakDb": -5.4
     },
     {
       "id": "b2",
       "speaker": "june",
       "text": "I'm fine. Totally fine.",
       "audio": "voice/b2.wav",
-      "durationMs": 1900
+      "durationMs": 1900,
+      "loudnessDb": -13.9,
+      "peakDb": -2.1
     },
     {
       "id": "b4",
       "speaker": "milo",
       "text": "Right. Sure.",
       "audio": "voice/b4.wav",
-      "durationMs": 1222
+      "durationMs": 1222,
+      "loudnessDb": -20.4,
+      "peakDb": -3.4
     }
   ]
 }

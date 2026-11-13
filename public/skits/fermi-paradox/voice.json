@@ -6,21 +6,27 @@
       "speaker": "gus",
       "text": "Space is huge. Aliens must be everywhere.",
       "audio": "voice/l1.wav",
-      "durationMs": 3478
+      "durationMs": 3478,
+      "loudnessDb": -17.8,
+      "peakDb": -7.5
     },
     {
       "id": "l2",
       "speaker": "vera",
       "text": "Maybe. But then, where is everybody?",
       "audio": "voice/l2.wav",
-      "durationMs": 2580
+      "durationMs": 2580,
+      "loudnessDb": -14.3,
+      "peakDb": -3.8
     },
     {
       "id": "l3",
       "speaker": "gus",
       "text": "If they're out there, we'd hear them easily.",
       "audio": "voice/l3.wav",
-      "durationMs": 2474
+      "durationMs": 2474,
+      "loudnessDb": -18.6,
+      "peakDb": -7.8
     },
     {
       "id": "l4",
@@ -28,49 +34,63 @@
       "text": "We've listened since 1960. Not one clear signal.",
       "spoken": "We've listened since nineteen sixty. Not one clear signal.",
       "audio": "voice/l4.wav",
-      "durationMs": 3525
+      "durationMs": 3525,
+      "loudnessDb": -14.6,
+      "peakDb": -3.4
     },
     {
       "id": "l5",
       "speaker": "gus",
       "text": "...huh.",
       "audio": "voice/l5.wav",
-      "durationMs": 748
+      "durationMs": 748,
+      "loudnessDb": -20.8,
+      "peakDb": -9
     },
     {
       "id": "l6",
       "speaker": "vera",
       "text": "Our galaxy has billions of stars, and most have planets.",
       "audio": "voice/l6.wav",
-      "durationMs": 3496
+      "durationMs": 3496,
+      "loudnessDb": -14.2,
+      "peakDb": -2.9
     },
     {
       "id": "l7",
       "speaker": "vera",
       "text": "And it's billions of years older than Earth.",
       "audio": "voice/l7.wav",
-      "durationMs": 1998
+      "durationMs": 1998,
+      "loudnessDb": -14.1,
+      "peakDb": -3.4
     },
     {
       "id": "l8",
       "speaker": "vera",
       "text": "Big numbers feel like proof. Without evidence, they're just a guess.",
       "audio": "voice/l8.wav",
-      "durationMs": 4075
+      "durationMs": 4075,
+      "loudnessDb": -14.4,
+      "peakDb": -2.4
     },
     {
       "id": "l9",
       "speaker": "vera",
       "text": "So many stars, and total silence. That's the Fermi paradox.",
       "audio": "voice/l9.wav",
-      "durationMs": 4335
+      "durationMs": 4335,
+      "loudnessDb": -13.1,
+      "peakDb": -2.9
     },
     {
       "id": "l10",
       "speaker": "gus",
       "text": "Unless they heard us. And they're hiding.",
       "audio": "voice/l10.wav",
-      "durationMs": 2683
+      "durationMs": 2683,
+      "loudnessDb": -19.1,
+      "peakDb": -7.9
     }
   ]
 }

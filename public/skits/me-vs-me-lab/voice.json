@@ -6,21 +6,27 @@
       "speaker": "me",
       "text": "What I want to do.",
       "audio": "voice/l1.wav",
-      "durationMs": 1163
+      "durationMs": 1163,
+      "loudnessDb": -17.1,
+      "peakDb": -2.9
     },
     {
       "id": "l2",
       "speaker": "brain",
       "text": "What the other me says.",
       "audio": "voice/l2.wav",
-      "durationMs": 1279
+      "durationMs": 1279,
+      "loudnessDb": -16.5,
+      "peakDb": -2.3
     },
     {
       "id": "l3",
       "speaker": "me",
       "text": "Punchline.",
       "audio": "voice/l3.wav",
-      "durationMs": 796
+      "durationMs": 796,
+      "loudnessDb": -19.9,
+      "peakDb": -1.7
     }
   ]
 }

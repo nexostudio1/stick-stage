@@ -6,56 +6,72 @@
       "speaker": "gus",
       "text": "Five heads in a row. Tails is due.",
       "audio": "voice/l1.wav",
-      "durationMs": 2967
+      "durationMs": 2967,
+      "loudnessDb": -18,
+      "peakDb": -7.5
     },
     {
       "id": "l2",
       "speaker": "vera",
       "text": "Due? The coin doesn't remember.",
       "audio": "voice/l2.wav",
-      "durationMs": 1961
+      "durationMs": 1961,
+      "loudnessDb": -13.8,
+      "peakDb": -3.6
     },
     {
       "id": "l3",
       "speaker": "gus",
       "text": "It has to even out. Tails, for sure.",
       "audio": "voice/l3.wav",
-      "durationMs": 3682
+      "durationMs": 3682,
+      "loudnessDb": -18.4,
+      "peakDb": -7.4
     },
     {
       "id": "l4",
       "speaker": "vera",
       "text": "Next flip? Still a coin toss.",
       "audio": "voice/l4.wav",
-      "durationMs": 2301
+      "durationMs": 2301,
+      "loudnessDb": -15.5,
+      "peakDb": -4.3
     },
     {
       "id": "l5",
       "speaker": "gus",
       "text": "…huh.",
       "audio": "voice/l5.wav",
-      "durationMs": 390
+      "durationMs": 390,
+      "loudnessDb": -21.2,
+      "peakDb": -9
     },
     {
       "id": "l6",
       "speaker": "vera",
       "text": "Each flip starts fresh. The last five heads change nothing.",
       "audio": "voice/l6.wav",
-      "durationMs": 3695
+      "durationMs": 3695,
+      "loudnessDb": -14.3,
+      "peakDb": -2.3
     },
     {
       "id": "l7",
       "speaker": "vera",
       "text": "Over thousands of flips it does even out. The streak gets buried, not fixed.",
       "audio": "voice/l7.wav",
-      "durationMs": 4783
+      "durationMs": 4783,
+      "loudnessDb": -14.5,
+      "peakDb": -3.4
     },
     {
       "id": "l8",
       "speaker": "vera",
       "text": "Coins don't remember. Streaks just happen.",
       "audio": "voice/l8.wav",
-      "durationMs": 2747
+      "durationMs": 2747,
+      "loudnessDb": -14.1,
+      "peakDb": -3.3
     }
   ]
 }

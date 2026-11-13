@@ -6,35 +6,45 @@
       "speaker": "gus",
       "text": "That's what the Pillars of Creation look like right now.",
       "audio": "voice/l1.wav",
-      "durationMs": 3269
+      "durationMs": 3269,
+      "loudnessDb": -19.2,
+      "peakDb": -6.8
     },
     {
       "id": "l2",
       "speaker": "vera",
       "text": "Right now? That light is ancient.",
       "audio": "voice/l2.wav",
-      "durationMs": 2092
+      "durationMs": 2092,
+      "loudnessDb": -14.6,
+      "peakDb": -2.7
     },
     {
       "id": "l3",
       "speaker": "gus",
       "text": "Light is instant. I see it, it's there.",
       "audio": "voice/l3.wav",
-      "durationMs": 3357
+      "durationMs": 3357,
+      "loudnessDb": -19.1,
+      "peakDb": -7.8
     },
     {
       "id": "l4",
       "speaker": "vera",
       "text": "Moon: about a second. Sun: eight minutes. The Pillars?",
       "audio": "voice/l4.wav",
-      "durationMs": 3984
+      "durationMs": 3984,
+      "loudnessDb": -14,
+      "peakDb": -2
     },
     {
       "id": "l5",
       "speaker": "gus",
       "text": "Wait. Years?",
       "audio": "voice/l5.wav",
-      "durationMs": 1685
+      "durationMs": 1685,
+      "loudnessDb": -17.7,
+      "peakDb": -7.5
     },
     {
       "id": "l6",
@@ -42,21 +52,27 @@
       "text": "They're 6,500 light-years away. That's 6,500 years of travel.",
       "spoken": "They're six and a half thousand light-years away. That's six and a half thousand years of travel.",
       "audio": "voice/l6.wav",
-      "durationMs": 5112
+      "durationMs": 5112,
+      "loudnessDb": -13.7,
+      "peakDb": -2.2
     },
     {
       "id": "l7",
       "speaker": "vera",
       "text": "Everything near you is a split second away, so light feels instant.",
       "audio": "voice/l7.wav",
-      "durationMs": 3931
+      "durationMs": 3931,
+      "loudnessDb": -13,
+      "peakDb": -2.5
     },
     {
       "id": "l8",
       "speaker": "vera",
       "text": "Look far away, and you're looking back in time.",
       "audio": "voice/l8.wav",
-      "durationMs": 2765
+      "durationMs": 2765,
+      "loudnessDb": -13.9,
+      "peakDb": -3.2
     }
   ]
 }

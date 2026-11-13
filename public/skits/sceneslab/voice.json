@@ -6,21 +6,27 @@
       "speaker": "june",
       "text": "Lunch at noon?",
       "audio": "voice/s1a.wav",
-      "durationMs": 840
+      "durationMs": 840,
+      "loudnessDb": -13.8,
+      "peakDb": -2
     },
     {
       "id": "s1b",
       "speaker": "milo",
       "text": "Sure. Noon.",
       "audio": "voice/s1b.wav",
-      "durationMs": 1220
+      "durationMs": 1220,
+      "loudnessDb": -20.5,
+      "peakDb": -7.5
     },
     {
       "id": "s2b",
       "speaker": "milo",
       "text": "It is four p.m.",
       "audio": "voice/s2b.wav",
-      "durationMs": 1187
+      "durationMs": 1187,
+      "loudnessDb": -17.8,
+      "peakDb": -3.4
     }
   ]
 }
