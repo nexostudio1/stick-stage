@@ -1,0 +1,983 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Probé la psicología oscura en una cita",
+    "aspect": "9:16",
+    "language": "es",
+    "description": "Psicología oscura en una cita: novato vs pro.",
+    "hashtags": [
+      "psicologiaoscura",
+      "novatovspro",
+      "citas",
+      "psicologiamasculina"
+    ]
+  },
+  "characters": [
+    {
+      "schemaVersion": 1,
+      "id": "rookie",
+      "displayName": "Novato",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#7d8590",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 0.98,
+          "headRadius": 0.132,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#f1c9a9",
+        "skinShade": "#d9a885",
+        "body": {
+          "shoulders": 116,
+          "hips": 86,
+          "arm": 25,
+          "neck": 26
+        },
+        "eyes": {
+          "iris": "#4a3420",
+          "size": 0.82
+        },
+        "brows": {
+          "color": "#3a2a1e",
+          "thickness": 8,
+          "gap": 0.4
+        },
+        "lip": "#4a2419",
+        "nose": "button",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0.1
+        },
+        "hair": {
+          "kind": "curly-mop",
+          "fill": "#3a2a1e",
+          "shade": "#57402f"
+        },
+        "top": {
+          "kind": "tee",
+          "fill": "#7d8590"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3d5a86",
+          "shade": "#304a70",
+          "cuff": "#7d9fd0"
+        },
+        "shoes": {
+          "kind": "sneaker",
+          "fill": "#f2f0ea",
+          "accent": "#7d8590",
+          "lace": "#d8d6cf",
+          "sole": "#d8d6cf"
+        },
+        "details": [],
+        "head": {
+          "jaw": 0.96
+        }
+      },
+      "energy": 0.55,
+      "personality": "the rookie: talks big, starts Monday, means well."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "pro",
+      "displayName": "Pro",
+      "proportions": {
+        "height": 0.98,
+        "headRadius": 0.18,
+        "neck": 0.02,
+        "torso": 0.27,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.16,
+        "shin": 0.16
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#1f2024",
+          "width": 0.15
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#5a4636",
+        "headShape": {
+          "sx": 1.06,
+          "sy": 0.96,
+          "dx": 0.04
+        }
+      },
+      "face": {
+        "eyes": "big-pupil",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.16,
+        "eyeSpacing": 0.46,
+        "eyeY": -0.02,
+        "mouthY": 0.46
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 1.04,
+          "headRadius": 0.124,
+          "neck": 0.008,
+          "torso": 0.317,
+          "upperArm": 0.175,
+          "forearm": 0.162,
+          "thigh": 0.205,
+          "shin": 0.198
+        },
+        "skin": "#e2ae88",
+        "skinShade": "#c8916c",
+        "body": {
+          "shoulders": 128,
+          "hips": 86,
+          "arm": 27,
+          "neck": 28
+        },
+        "eyes": {
+          "iris": "#3a5a6a",
+          "size": 0.74
+        },
+        "brows": {
+          "color": "#2a1d14",
+          "thickness": 11,
+          "gap": 0.3
+        },
+        "lip": "#8a4a3a",
+        "nose": "hook",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0
+        },
+        "hair": {
+          "kind": "short-crop",
+          "fill": "#2a1d14",
+          "shade": "#4a3626"
+        },
+        "top": {
+          "kind": "turtleneck",
+          "fill": "#1f2024"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#3a3d44",
+          "shade": "#2e3036",
+          "cuff": "#3a3d44"
+        },
+        "shoes": {
+          "kind": "boot",
+          "fill": "#5a3a26",
+          "sole": "#2a1c14"
+        },
+        "details": [
+          {
+            "id": "stubble",
+            "color": "#3a2a20"
+          }
+        ],
+        "head": {
+          "jaw": 1.08
+        }
+      },
+      "energy": 0.3,
+      "personality": "the pro: calm, few words, been there."
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cita",
+      "displayName": "Lucía",
+      "proportions": {
+        "height": 1.06,
+        "headRadius": 0.165,
+        "neck": 0.025,
+        "torso": 0.28,
+        "upperArm": 0.15,
+        "forearm": 0.14,
+        "thigh": 0.18,
+        "shin": 0.18
+      },
+      "style": {
+        "build": "toon",
+        "stroke": "#1b1b1f",
+        "strokeWidth": 12,
+        "headFill": "#ffffff",
+        "torso": {
+          "style": "bean",
+          "fill": "#e8d7c3",
+          "width": 0.12
+        },
+        "limbCurve": 0.3,
+        "hands": "nub",
+        "feet": "oval",
+        "footFill": "#1b1b1f"
+      },
+      "face": {
+        "eyes": "dot",
+        "brows": true,
+        "mouthSet": "default",
+        "offsetX": 0.14,
+        "eyeSpacing": 0.44,
+        "eyeY": -0.02,
+        "mouthY": 0.44
+      },
+      "accessories": [],
+      "toon": {
+        "proportions": {
+          "height": 1.06,
+          "headRadius": 0.116,
+          "neck": 0.019,
+          "torso": 0.31,
+          "upperArm": 0.175,
+          "forearm": 0.163,
+          "thigh": 0.219,
+          "shin": 0.209
+        },
+        "skin": "#eebd98",
+        "skinShade": "#d9a37e",
+        "body": {
+          "shoulders": 84,
+          "waist": 58,
+          "hips": 74,
+          "arm": 25,
+          "neck": 22
+        },
+        "head": {
+          "jaw": 0.92
+        },
+        "eyes": {
+          "iris": "#5a3a22",
+          "lashes": true,
+          "size": 0.85
+        },
+        "brows": {
+          "color": "#2a1a12",
+          "thickness": 6,
+          "gap": 0.5
+        },
+        "lip": "#c0455e",
+        "nose": "hook",
+        "cheeks": {
+          "color": "#e8737a",
+          "opacity": 0.28
+        },
+        "nails": "#e4573a",
+        "hair": {
+          "kind": "long-streak",
+          "fill": "#2a1a12",
+          "shade": "#3e2a1e",
+          "streak": "#4a3222"
+        },
+        "top": {
+          "kind": "turtleneck",
+          "fill": "#e8d7c3",
+          "shade": "#d4c0aa"
+        },
+        "bottom": {
+          "kind": "jeans",
+          "fill": "#2f4c7a",
+          "shade": "#253d63",
+          "cuff": "#2f4c7a"
+        },
+        "shoes": {
+          "kind": "boot",
+          "fill": "#3a2a20",
+          "sole": "#1e1612"
+        },
+        "details": [
+          {
+            "id": "star-earring",
+            "color": "#d9b15a"
+          }
+        ]
+      },
+      "energy": 0.6,
+      "personality": "the host: warm, quick and sure without being smug. Says the true thing in one clear line, then shows it."
+    }
+  ],
+  "cast": [
+    {
+      "id": "mitch",
+      "character": "rookie",
+      "mark": "left"
+    },
+    {
+      "id": "ollie",
+      "character": "pro",
+      "mark": "right"
+    },
+    {
+      "id": "cita",
+      "character": "cita",
+      "mark": "right"
+    }
+  ],
+  "music": "build",
+  "overlay": {
+    "subtitles": true
+  },
+  "coldOpen": "none",
+  "scenes": [
+    {
+      "id": "n1",
+      "set": "cafe-1",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "left"
+        },
+        {
+          "id": "cita",
+          "mark": "right"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "a1",
+          "speaker": "mitch",
+          "line": "Truco uno: silencio incómodo.",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "arms-crossed",
+              "at": {
+                "word": "silencio"
+              }
+            }
+          ],
+          "pauseBeforeMs": 150,
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "riser-hit",
+              "at": {
+                "word": "uno"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NOVATO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "grillos",
+          "silent": true,
+          "durationMs": 700,
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "expression",
+              "expression": "deadpan",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "cita",
+              "do": "expression",
+              "expression": "confused",
+              "at": {
+                "ms": 100
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "crickets",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "shot": {
+            "framing": "two"
+          }
+        },
+        {
+          "id": "a2",
+          "speaker": "cita",
+          "line": "¿Estás bien?",
+          "expression": "worried",
+          "actions": [
+            {
+              "who": "cita",
+              "do": "symbol",
+              "symbol": "question",
+              "at": {
+                "word": "bien"
+              },
+              "durationMs": 900
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "medium",
+            "on": "cita"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "set": "cafe-1",
+      "cast": [
+        {
+          "id": "ollie",
+          "mark": "left"
+        },
+        {
+          "id": "cita",
+          "mark": "right"
+        },
+        {
+          "id": "mitch",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "beats": [
+        {
+          "id": "a4",
+          "speaker": "ollie",
+          "line": "¿Sí? ¿Y qué pides siempre?",
+          "expression": "happy",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "lean-in",
+              "at": {
+                "word": "pides"
+              }
+            }
+          ],
+          "pauseBeforeMs": 150,
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          },
+          "sfx": [
+            {
+              "id": "ding",
+              "at": {
+                "word": "siempre"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "PRO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "set": "cafe-1",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "left"
+        },
+        {
+          "id": "cita",
+          "mark": "right"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "beats": [
+        {
+          "id": "a5",
+          "speaker": "mitch",
+          "line": "Truco dos: mirada fija.",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "cita",
+              "do": "expression",
+              "expression": "neutral",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "pauseBeforeMs": 150,
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "zap",
+              "at": {
+                "word": "fija"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NOVATO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "a6",
+          "speaker": "cita",
+          "line": "Me estás asustando.",
+          "expression": "shocked",
+          "actions": [
+            {
+              "who": "cita",
+              "do": "pose",
+              "pose": "recoil",
+              "at": {
+                "word": "asustando"
+              }
+            },
+            {
+              "who": "cita",
+              "do": "symbol",
+              "symbol": "sweat",
+              "at": {
+                "word": "asustando"
+              },
+              "durationMs": 900
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "medium",
+            "on": "cita"
+          },
+          "sfx": [
+            {
+              "id": "boing",
+              "at": {
+                "word": "asustando"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "set": "cafe-1",
+      "cast": [
+        {
+          "id": "ollie",
+          "mark": "left"
+        },
+        {
+          "id": "cita",
+          "mark": "right"
+        },
+        {
+          "id": "mitch",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "beats": [
+        {
+          "id": "a8",
+          "speaker": "ollie",
+          "line": "¡No puede ser! ¿Y qué hiciste?",
+          "expression": "laughing",
+          "actions": [
+            {
+              "who": "ollie",
+              "do": "pose",
+              "pose": "hold-chest",
+              "at": {
+                "word": "puede"
+              }
+            }
+          ],
+          "pauseBeforeMs": 150,
+          "shot": {
+            "framing": "medium",
+            "on": "ollie"
+          },
+          "sfx": [
+            {
+              "id": "laugh",
+              "at": {
+                "word": "ser"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "PRO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "a9",
+          "speaker": "cita",
+          "line": "Me encanta hablar contigo.",
+          "expression": "happy",
+          "actions": [
+            {
+              "who": "cita",
+              "do": "symbol",
+              "symbol": "blush",
+              "at": {
+                "word": "contigo"
+              },
+              "durationMs": 900
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "two"
+          },
+          "sfx": [
+            {
+              "id": "sparkle",
+              "at": {
+                "word": "contigo"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "set": "cafe-1",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "left"
+        },
+        {
+          "id": "cita",
+          "mark": "right"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "beats": [
+        {
+          "id": "a10",
+          "speaker": "mitch",
+          "line": "Truco tres: hacerme el interesante.",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "shrug",
+              "at": {
+                "word": "interesante"
+              }
+            }
+          ],
+          "pauseBeforeMs": 150,
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "whoosh",
+              "at": {
+                "word": "interesante"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "NOVATO",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "a11",
+          "speaker": "cita",
+          "line": "Espera. ¿Tú también viste el vídeo?",
+          "expression": "skeptical",
+          "actions": [
+            {
+              "who": "cita",
+              "do": "hold",
+              "prop": "phone",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "cita",
+              "do": "pose",
+              "pose": "hold-phone",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "two"
+          },
+          "sfx": [
+            {
+              "id": "record-scratch",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "a12",
+          "speaker": "mitch",
+          "line": "¿¡Tú también!?",
+          "expression": "shocked",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "recoil",
+              "at": {
+                "word": "también"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "close",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "thud",
+              "at": {
+                "word": "también"
+              }
+            }
+          ]
+        },
+        {
+          "id": "a13",
+          "speaker": "cita",
+          "line": "Truco cuatro: irme primero.",
+          "expression": "smug",
+          "actions": [
+            {
+              "who": "cita",
+              "do": "walkTo",
+              "mark": "off-right",
+              "speed": "run",
+              "at": {
+                "word": "irme"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "punchline": true,
+          "shot": {
+            "framing": "wide",
+            "punchIn": {
+              "on": "cita"
+            }
+          },
+          "sfx": [
+            {
+              "id": "register",
+              "at": {
+                "word": "cuatro"
+              }
+            },
+            {
+              "id": "whoosh",
+              "at": {
+                "word": "primero"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "TRUCO 4",
+              "at": {
+                "word": "cuatro"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "set": "cafe-1",
+      "cast": [
+        {
+          "id": "mitch",
+          "mark": "center"
+        },
+        {
+          "id": "ollie",
+          "mark": "off-right"
+        },
+        {
+          "id": "cita",
+          "mark": "off-left"
+        }
+      ],
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "beats": [
+        {
+          "id": "a14",
+          "speaker": "mitch",
+          "line": "Psicología oscura… parte dos.",
+          "expression": "thinking",
+          "actions": [
+            {
+              "who": "mitch",
+              "do": "hold",
+              "prop": "phone",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "mitch",
+              "do": "pose",
+              "pose": "hold-phone",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "holdAfterMs": 0,
+          "shot": {
+            "framing": "medium",
+            "on": "mitch"
+          },
+          "sfx": [
+            {
+              "id": "pop",
+              "at": {
+                "word": "dos"
+              }
+            }
+          ]
+        },
+        {
+          "id": "fin",
+          "silent": true,
+          "durationMs": 200,
+          "actions": []
+        }
+      ]
+    }
+  ]
+}

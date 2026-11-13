@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "a1",
+      "speaker": "mitch",
+      "text": "Truco uno: silencio incómodo.",
+      "audio": "voice/a1.mp3",
+      "durationMs": 1900,
+      "words": [
+        {
+          "text": "Truco",
+          "startMs": 0,
+          "endMs": 267
+        },
+        {
+          "text": "uno:",
+          "startMs": 317,
+          "endMs": 867
+        },
+        {
+          "text": "silencio",
+          "startMs": 917,
+          "endMs": 1267
+        },
+        {
+          "text": "incómodo.",
+          "startMs": 1317,
+          "endMs": 1800
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "speaker": "cita",
+      "text": "¿Estás bien?",
+      "audio": "voice/a2.mp3",
+      "durationMs": 767,
+      "words": [
+        {
+          "text": "¿Estás",
+          "startMs": 0,
+          "endMs": 333
+        },
+        {
+          "text": "bien?",
+          "startMs": 387,
+          "endMs": 667
+        }
+      ]
+    },
+    {
+      "id": "a4",
+      "speaker": "ollie",
+      "text": "¿Sí? ¿Y qué pides siempre?",
+      "audio": "voice/a4.mp3",
+      "durationMs": 1433,
+      "words": [
+        {
+          "text": "¿Sí?",
+          "startMs": 0,
+          "endMs": 333
+        },
+        {
+          "text": "¿Y",
+          "startMs": 400,
+          "endMs": 533
+        },
+        {
+          "text": "qué",
+          "startMs": 550,
+          "endMs": 600
+        },
+        {
+          "text": "pides",
+          "startMs": 633,
+          "endMs": 867
+        },
+        {
+          "text": "siempre?",
+          "startMs": 908,
+          "endMs": 1333
+        }
+      ]
+    },
+    {
+      "id": "a5",
+      "speaker": "mitch",
+      "text": "Truco dos: mirada fija.",
+      "audio": "voice/a5.mp3",
+      "durationMs": 1767,
+      "words": [
+        {
+          "text": "Truco",
+          "startMs": 0,
+          "endMs": 267
+        },
+        {
+          "text": "dos:",
+          "startMs": 333,
+          "endMs": 600
+        },
+        {
+          "text": "mirada",
+          "startMs": 717,
+          "endMs": 1200
+        },
+        {
+          "text": "fija.",
+          "startMs": 1267,
+          "endMs": 1667
+        }
+      ]
+    },
+    {
+      "id": "a6",
+      "speaker": "cita",
+      "text": "Me estás asustando.",
+      "audio": "voice/a6.mp3",
+      "durationMs": 1167,
+      "words": [
+        {
+          "text": "Me",
+          "startMs": 0,
+          "endMs": 67
+        },
+        {
+          "text": "estás",
+          "startMs": 83,
+          "endMs": 267
+        },
+        {
+          "text": "asustando.",
+          "startMs": 311,
+          "endMs": 1067
+        }
+      ]
+    },
+    {
+      "id": "a8",
+      "speaker": "ollie",
+      "text": "¡No puede ser! ¿Y qué hiciste?",
+      "audio": "voice/a8.mp3",
+      "durationMs": 1767,
+      "words": [
+        {
+          "text": "¡No",
+          "startMs": 0,
+          "endMs": 200
+        },
+        {
+          "text": "puede",
+          "startMs": 256,
+          "endMs": 533
+        },
+        {
+          "text": "ser!",
+          "startMs": 600,
+          "endMs": 867
+        },
+        {
+          "text": "¿Y",
+          "startMs": 933,
+          "endMs": 1067
+        },
+        {
+          "text": "qué",
+          "startMs": 1100,
+          "endMs": 1200
+        },
+        {
+          "text": "hiciste?",
+          "startMs": 1233,
+          "endMs": 1667
+        }
+      ]
+    },
+    {
+      "id": "a9",
+      "speaker": "cita",
+      "text": "Me encanta hablar contigo.",
+      "audio": "voice/a9.mp3",
+      "durationMs": 1300,
+      "words": [
+        {
+          "text": "Me",
+          "startMs": 0,
+          "endMs": 67
+        },
+        {
+          "text": "encanta",
+          "startMs": 117,
+          "endMs": 467
+        },
+        {
+          "text": "hablar",
+          "startMs": 505,
+          "endMs": 733
+        },
+        {
+          "text": "contigo.",
+          "startMs": 773,
+          "endMs": 1200
+        }
+      ]
+    },
+    {
+      "id": "a10",
+      "speaker": "mitch",
+      "text": "Truco tres: hacerme el interesante.",
+      "audio": "voice/a10.mp3",
+      "durationMs": 2167,
+      "words": [
+        {
+          "text": "Truco",
+          "startMs": 0,
+          "endMs": 267
+        },
+        {
+          "text": "tres:",
+          "startMs": 320,
+          "endMs": 667
+        },
+        {
+          "text": "hacerme",
+          "startMs": 767,
+          "endMs": 1333
+        },
+        {
+          "text": "el",
+          "startMs": 1356,
+          "endMs": 1400
+        },
+        {
+          "text": "interesante.",
+          "startMs": 1442,
+          "endMs": 2067
+        }
+      ]
+    },
+    {
+      "id": "a11",
+      "speaker": "cita",
+      "text": "Espera. ¿Tú también viste el vídeo?",
+      "audio": "voice/a11.mp3",
+      "durationMs": 2233,
+      "words": [
+        {
+          "text": "Espera.",
+          "startMs": 0,
+          "endMs": 467
+        },
+        {
+          "text": "¿Tú",
+          "startMs": 733,
+          "endMs": 1233
+        },
+        {
+          "text": "también",
+          "startMs": 1254,
+          "endMs": 1400
+        },
+        {
+          "text": "viste",
+          "startMs": 1433,
+          "endMs": 1667
+        },
+        {
+          "text": "el",
+          "startMs": 1689,
+          "endMs": 1733
+        },
+        {
+          "text": "vídeo?",
+          "startMs": 1789,
+          "endMs": 2133
+        }
+      ]
+    },
+    {
+      "id": "a12",
+      "speaker": "mitch",
+      "text": "¿¡Tú también!?",
+      "audio": "voice/a12.mp3",
+      "durationMs": 833,
+      "words": [
+        {
+          "text": "¿¡Tú",
+          "startMs": 0,
+          "endMs": 333
+        },
+        {
+          "text": "también!?",
+          "startMs": 367,
+          "endMs": 733
+        }
+      ]
+    },
+    {
+      "id": "a13",
+      "speaker": "cita",
+      "text": "Truco cuatro: irme primero.",
+      "audio": "voice/a13.mp3",
+      "durationMs": 2300,
+      "words": [
+        {
+          "text": "Truco",
+          "startMs": 0,
+          "endMs": 267
+        },
+        {
+          "text": "cuatro:",
+          "startMs": 314,
+          "endMs": 667
+        },
+        {
+          "text": "irme",
+          "startMs": 956,
+          "endMs": 1667
+        },
+        {
+          "text": "primero.",
+          "startMs": 1725,
+          "endMs": 2200
+        }
+      ]
+    },
+    {
+      "id": "a14",
+      "speaker": "mitch",
+      "text": "Psicología oscura… parte dos.",
+      "audio": "voice/a14.mp3",
+      "durationMs": 2500,
+      "words": [
+        {
+          "text": "Psicología",
+          "startMs": 0,
+          "endMs": 533
+        },
+        {
+          "text": "oscura…",
+          "startMs": 600,
+          "endMs": 1600
+        },
+        {
+          "text": "parte",
+          "startMs": 1656,
+          "endMs": 1933
+        },
+        {
+          "text": "dos.",
+          "startMs": 2017,
+          "endMs": 2400
+        }
+      ]
+    }
+  ]
+}
