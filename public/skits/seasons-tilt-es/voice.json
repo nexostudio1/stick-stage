@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "gus",
+      "text": "El verano da calor porque estamos más cerca del Sol.",
+      "audio": "voice/l1.wav",
+      "durationMs": 3019
+    },
+    {
+      "id": "l2",
+      "speaker": "vera",
+      "text": "Estamos más cerca en enero.",
+      "audio": "voice/l2.wav",
+      "durationMs": 1428
+    },
+    {
+      "id": "l3",
+      "speaker": "gus",
+      "text": "¿Enero? Eso es invierno. Buen intento.",
+      "audio": "voice/l3.wav",
+      "durationMs": 3483
+    },
+    {
+      "id": "l4",
+      "speaker": "vera",
+      "text": "Mira la órbita real. Casi un círculo.",
+      "audio": "voice/l4.wav",
+      "durationMs": 2148
+    },
+    {
+      "id": "l5",
+      "speaker": "gus",
+      "text": "…vaya.",
+      "audio": "voice/l5.wav",
+      "durationMs": 813
+    },
+    {
+      "id": "l6",
+      "speaker": "vera",
+      "text": "Es la inclinación. La mitad que mira hacia el Sol tiene verano.",
+      "audio": "voice/l6.wav",
+      "durationMs": 3379
+    },
+    {
+      "id": "l7",
+      "speaker": "vera",
+      "text": "Cerca del fuego hace más calor. Pero en Australia es verano en diciembre.",
+      "audio": "voice/l7.wav",
+      "durationMs": 3878
+    },
+    {
+      "id": "l8",
+      "speaker": "vera",
+      "text": "Las estaciones vienen de la inclinación, no de la distancia.",
+      "audio": "voice/l8.wav",
+      "durationMs": 3274
+    }
+  ]
+}
