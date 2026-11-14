@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "template": "myth-flip",
+  "title": "Earth is closest to the Sun in January",
+  "logline": "Gus is sure summer means we're closer to the Sun. Vera shows him the orbit, then the tilt.",
+  "description": "Earth is nearest the Sun in early January, in the middle of northern winter. Seasons come from the tilt of Earth's axis. Sources and simplifications in the pinned comment.",
+  "hashtags": [
+    "astronomy",
+    "space",
+    "science",
+    "mythbusting"
+  ],
+  "set": "space-2",
+  "cast": [
+    {
+      "id": "gus",
+      "character": "gus"
+    },
+    {
+      "id": "vera",
+      "character": "vera"
+    }
+  ],
+  "claims": [
+    {
+      "text": "Earth reaches perihelion, its closest point to the Sun, in early January (around January 2 to 5) and aphelion, its farthest, in early July.",
+      "source": "NASA Science, 'What Causes the Seasons?' (spaceplace.nasa.gov/seasons); US Naval Observatory, Earth's Seasons and Apsides table (aa.usno.navy.mil/data/EarthSeasons)",
+      "checkedBy": null,
+      "beats": [
+        "l2",
+        "l3"
+      ]
+    },
+    {
+      "text": "Earth's orbit is nearly circular (eccentricity about 0.017); its distance from the Sun changes by only about 3% over the year.",
+      "source": "NASA Goddard, Earth Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html): perihelion 147.1 million km, aphelion 152.1 million km, eccentricity 0.0167",
+      "checkedBy": null,
+      "beats": [
+        "l4"
+      ]
+    },
+    {
+      "text": "Seasons are caused by the tilt of Earth's axis (about 23.4°): the hemisphere tilted toward the Sun gets more direct sunlight and longer days, so it has summer.",
+      "source": "NASA Science, 'What Causes the Seasons?' (spaceplace.nasa.gov/seasons); OpenStax, Astronomy 2e, §4.2 The Seasons",
+      "checkedBy": null,
+      "beats": [
+        "l6",
+        "l8"
+      ]
+    },
+    {
+      "text": "The Southern Hemisphere (e.g. Australia) has summer in December to February, when the Northern Hemisphere has winter.",
+      "source": "OpenStax, Astronomy 2e, §4.2 The Seasons",
+      "checkedBy": null,
+      "beats": [
+        "l7"
+      ]
+    }
+  ],
+  "simplifications": [
+    "The 'myth' orbit on screen is drawn far too oval on purpose; the real orbit (the second state) is nearly a circle.",
+    "The two globes are lit from screen angles to show which hemisphere leans toward the Sun; the Sun, sizes and distances are not to scale.",
+    "Distance has a small effect on sunlight (about 7% more in January than July), but the tilt wins by far."
+  ],
+  "figures": [
+    {
+      "id": "orbit",
+      "kind": "orbit",
+      "at": {
+        "x": 0.5,
+        "y": 0.25,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "params": {
+        "e": 0.6,
+        "period": 8,
+        "trail": false,
+        "planetColor": "a2"
+      },
+      "state": "myth",
+      "states": {
+        "myth": {
+          "label": "Closer = summer?",
+          "e": 0.6
+        },
+        "truth": {
+          "label": "Real orbit: nearly a circle",
+          "e": 0.0167
+        }
+      }
+    },
+    {
+      "id": "june",
+      "kind": "globe",
+      "hidden": true,
+      "reveal": "pop",
+      "label": "June",
+      "at": {
+        "x": 0.27,
+        "y": 0.25,
+        "w": 0.42,
+        "h": 0.2
+      },
+      "params": {
+        "lat": 0,
+        "light": -35,
+        "night": 0.75,
+        "spin": 20,
+        "grid": true
+      }
+    },
+    {
+      "id": "december",
+      "kind": "globe",
+      "hidden": true,
+      "reveal": "pop",
+      "label": "December",
+      "at": {
+        "x": 0.73,
+        "y": 0.25,
+        "w": 0.42,
+        "h": 0.2
+      },
+      "params": {
+        "lat": 0,
+        "light": 35,
+        "night": 0.75,
+        "spin": 20,
+        "grid": true
+      }
+    }
+  ],
+  "lines": [
+    {
+      "who": "gus",
+      "role": "myth",
+      "text": "Summer's hot because we're closer to the Sun."
+    },
+    {
+      "who": "vera",
+      "role": "pushback",
+      "text": "We're closest in January.",
+      "prop": "telescope"
+    },
+    {
+      "who": "gus",
+      "role": "prediction",
+      "text": "January? That's winter. Nice try."
+    },
+    {
+      "who": "vera",
+      "role": "demo",
+      "text": "Here's the real orbit. Almost a circle.",
+      "figures": [
+        {
+          "do": "state",
+          "id": "orbit",
+          "state": "truth",
+          "style": "morph",
+          "at": {
+            "word": "real"
+          }
+        }
+      ]
+    },
+    {
+      "who": "gus",
+      "role": "reaction",
+      "text": "…huh."
+    },
+    {
+      "who": "vera",
+      "role": "why",
+      "text": "It's the tilt. Whichever half leans toward the Sun gets summer.",
+      "figures": [
+        {
+          "do": "hide",
+          "id": "orbit",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "do": "show",
+          "id": "june",
+          "at": {
+            "word": "tilt"
+          }
+        },
+        {
+          "do": "show",
+          "id": "december",
+          "at": {
+            "word": "summer"
+          }
+        }
+      ]
+    },
+    {
+      "who": "vera",
+      "role": "why-it-felt-true",
+      "text": "Closer to a fire feels warmer. But Australia has summer in December."
+    },
+    {
+      "who": "vera",
+      "role": "takeaway",
+      "text": "Seasons come from the tilt, not the distance.",
+      "slam": "TILT"
+    }
+  ]
+}

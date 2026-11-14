@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "l1",
+      "speaker": "gus",
+      "text": "Summer's hot because we're closer to the Sun.",
+      "audio": "voice/l1.wav",
+      "durationMs": 2303
+    },
+    {
+      "id": "l2",
+      "speaker": "vera",
+      "text": "We're closest in January.",
+      "audio": "voice/l2.wav",
+      "durationMs": 1782
+    },
+    {
+      "id": "l3",
+      "speaker": "gus",
+      "text": "January? That's winter. Nice try.",
+      "audio": "voice/l3.wav",
+      "durationMs": 3218
+    },
+    {
+      "id": "l4",
+      "speaker": "vera",
+      "text": "Here's the real orbit. Almost a circle.",
+      "audio": "voice/l4.wav",
+      "durationMs": 3081
+    },
+    {
+      "id": "l5",
+      "speaker": "gus",
+      "text": "…huh.",
+      "audio": "voice/l5.wav",
+      "durationMs": 539
+    },
+    {
+      "id": "l6",
+      "speaker": "vera",
+      "text": "It's the tilt. Whichever half leans toward the Sun gets summer.",
+      "audio": "voice/l6.wav",
+      "durationMs": 4059
+    },
+    {
+      "id": "l7",
+      "speaker": "vera",
+      "text": "Closer to a fire feels warmer. But Australia has summer in December.",
+      "audio": "voice/l7.wav",
+      "durationMs": 4650
+    },
+    {
+      "id": "l8",
+      "speaker": "vera",
+      "text": "Seasons come from the tilt, not the distance.",
+      "audio": "voice/l8.wav",
+      "durationMs": 3045
+    }
+  ]
+}
