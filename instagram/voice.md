@@ -1,67 +1,27 @@
 # voice.md
 
-Copy this to `~/.claude/instagram/voice.md` and fill it in. Every skill in the
-pack reads it. Ten minutes here is the difference between scripts you shoot and
-scripts you rewrite.
+Rellenado en la primera sesión de /ig-plan (2026-11-14). Borrador: el dueño de la cuenta lo corrige.
 
-If you would rather not fill it in by hand, send Claude three of your own reels
-or captions and say "write my voice.md from these". That works better than
-guessing at the answers.
+## Quién soy
+- **Qué hago, en una frase:** historias animadas cortas, narradas en español, con un reparto de animalitos de formas planas (Tofu, Bobo, Pim, Mabel, Otto, Fennel, Biscuit, Wren, Blip).
+- **A quién le hablo:** adultos jóvenes hispanohablantes (18–35) que ven reels por la noche y se ríen de lo cotidiano contado como cuento infantil; de rebote, padres que se lo ponen a sus hijos.
+- **Qué vendo:** nada por ahora. La meta es crecer seguidores y que guarden/compartan.
 
-This file matters more on Instagram than anywhere else, because you have to say
-the words out loud. A line you would never say is not a draft, it is a retake.
+## Cómo sueno
+- **En cámara soy:** narrador tranquilo, tono de cuento, con remate seco al final.
+- **Palabras que uso:** "Había una vez…", frases cortas, español neutro.
+- **Nunca diría:** jerga de marketing, "no te lo vas a creer", emojis en la voz.
+- **Tacos:** no.
+- **Emoji en el texto:** uno, rara vez.
+- **Cara en cámara:** sin cara (animación).
+- **Voz:** narrador en off + líneas cortas de los personajes.
+- **Ritmo:** ~160 palabras por minuto.
 
----
+## Mis posturas
+1. Un cuento infantil es el mejor formato para contar verdades de adulto.
+2. Los finales felices aburren; el final con giro se comparte.
+3. 30 segundos bastan para una historia completa: inicio, problema, giro.
 
-## Who I am
-
-- **Name:**
-- **Handle:**
-- **What I do, in one sentence:**
-- **Who I am talking to:** (be specific: "photographers charging under $2,000",
-  not "creatives")
-- **What I sell:**
-
-## What I sound like
-
-- **Three of my own reels or captions that sound most like me:** (paste them)
-- **On camera I am:** (fast and loud / dry / calm / funny / deadpan)
-- **Words I actually use:**
-- **Words I would never say out loud:**
-- **Do I swear:** (yes / mild / no)
-- **Emoji in captions:** (never / one, rarely / freely)
-- **Face on camera:** (always / sometimes / faceless)
-- **Voiceover or to-camera:**
-- **Pace:** (words per minute, if you have timed yourself reading a script.
-  `beats.py --wpm` uses this. Most people are between 150 and 200.)
-
-## My positions
-
-Three to five things I believe that some of my audience does not. These are
-where the good reels come from.
-
-1.
-2.
-3.
-
-## Off limits
-
-- **Topics I do not post about:**
-- **Clients, numbers or names I cannot say publicly:**
-- **Claims I am not allowed to make:** (regulated industry, employer policy, NDA)
-
-## Proof I can use
-
-Real numbers, outcomes and stories I am happy to put my name on. The skills will
-never invent one, so if this section is empty, every draft comes back with
-`{{your number}}` in it.
-
--
--
--
-
-## The ask
-
-- **My keyword CTA, if I use one:** (one word, sayable, no spaces)
-- **What the keyword sends them:**
-- **Where my link goes:**
+## Fuera de límites
+- Política, religión, tragedias reales.
+- Personajes o marcas de otros (solo reparto original).
