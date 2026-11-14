@@ -14,6 +14,8 @@ export const SEAT_HEIGHT = {
   "crew-office-chair": 0.2,
   "crew-office-chair-front": 0.2,
   "crew-camp-chair": 0.17,
+  /** The medieval kit's horse: a rider sits on its back. */
+  horse: 0.62,
 } as const;
 
 /** Set part id → seat kind. */
@@ -29,4 +31,8 @@ export const SEAT_PARTS: Record<string, keyof typeof SEAT_HEIGHT> = {
   "crew-office-chair": "crew-office-chair",
   "crew-office-chair-front": "crew-office-chair-front",
   "crew-camp-chair": "crew-camp-chair",
+  horse: "horse",
 };
+
+/** Seats too high for planted feet: the rider's feet hang (the hip still rests on the seat). */
+export const HIGH_SEATS: ReadonlySet<string> = new Set(["horse"]);

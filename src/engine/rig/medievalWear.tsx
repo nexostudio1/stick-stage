@@ -61,6 +61,38 @@ export const MEDIEVAL_WEAR: Record<string, AccessoryDef> = {
       },
     },
   },
+  /** A conical helmet with a nose guard: the face stays readable (knights, men-at-arms). */
+  "nasal-helm": {
+    slot: "headwear",
+    layers: {
+      front: ({ R, stroke, sw, color }) => {
+        const a = onHead(R, -88, 1.04);
+        const b = onHead(R, 80, 1.04);
+        const cone = `M ${f2(a.x)} ${f2(a.y + R * 0.1)} Q ${f2(-R * 0.7)} ${f2(-R * 1.2)} ${f2(R * 0.05)} ${f2(-R * 1.5)} Q ${f2(R * 0.8)} ${f2(-R * 1.15)} ${f2(b.x)} ${f2(b.y + R * 0.1)} Z`;
+        const fx = R * 0.32;
+        return (
+          <g strokeLinejoin="round">
+            <path d={cone} fill={color} stroke={stroke} strokeWidth={sw} />
+            <rect x={a.x} y={a.y - R * 0.02} width={b.x - a.x} height={R * 0.2} fill={darken(color, 0.15)} stroke={stroke} strokeWidth={sw * 0.7} />
+            <rect x={fx - R * 0.07} y={a.y + R * 0.1} width={R * 0.14} height={R * 0.62} rx={R * 0.04} fill={darken(color, 0.1)} stroke={stroke} strokeWidth={sw * 0.6} />
+            <path d={`M ${f2(-R * 0.35)} ${f2(-R * 1.15)} Q ${f2(-R * 0.1)} ${f2(-R * 1.38)} ${f2(R * 0.05)} ${f2(-R * 1.42)}`} stroke={lighten(color, 0.35)} strokeWidth={sw * 0.45} fill="none" strokeLinecap="round" />
+          </g>
+        );
+      },
+    },
+  },
+  /** A long monk's habit to the ankles, with a rope belt. */
+  "robe-01": {
+    slot: "body",
+    layers: {
+      belly: onTorso(({ T, w, stroke, sw, color }) => (
+        <g strokeLinejoin="round">
+          <polygon points={pts([[-w * 0.65, -T * 0.98], [w * 0.65, -T * 0.98], [w * 1.25, T * 1.55], [-w * 1.25, T * 1.55]])} fill={color} stroke={stroke} strokeWidth={sw} />
+          <path d={`M ${f2(-w * 0.75)} ${f2(-T * 0.1)} H ${f2(w * 0.75)} M ${f2(w * 0.2)} ${f2(-T * 0.1)} L ${f2(w * 0.3)} ${f2(T * 0.5)}`} stroke="#d8c79a" strokeWidth={sw * 0.6} fill="none" strokeLinecap="round" />
+        </g>
+      ), 0.11),
+    },
+  },
   /** A cloth hood with the face open: back of the head covered, a rim around the face. */
   "hood-01": {
     slot: "headwear",

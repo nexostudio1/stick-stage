@@ -57,6 +57,11 @@ import heavy_ball from "./maths/heavy-ball.json";
 import number_card from "./maths/number-card.json";
 import pointer_stick from "./maths/pointer-stick.json";
 import protractor from "./maths/protractor.json";
+import arrow from "./medieval/arrow.json";
+import bow from "./medieval/bow.json";
+import shield from "./medieval/shield.json";
+import staff from "./medieval/staff.json";
+import sword from "./medieval/sword.json";
 import mic from "./mic.json";
 import cash from "./money/cash.json";
 import credit_card from "./money/credit-card.json";
@@ -184,6 +189,11 @@ export const PROP_DOCS = [
   number_card,
   pointer_stick,
   protractor,
+  arrow,
+  bow,
+  shield,
+  staff,
+  sword,
   mic,
   cash,
   credit_card,
@@ -253,4 +263,4 @@ export const PROP_DOCS = [
   ticket,
 ];
 
-export const PROP_IDS = ["cup", "baby-bottle", "bubble-tea", "energy-drink", "juice-box", "milkshake", "soda-can", "takeaway-coffee", "thermos", "water-bottle", "water-glass", "apple", "banana", "burger", "carrot", "chicken-drumstick", "chocolate-bar", "cookie", "croissant", "cupcake", "donut", "fries", "hot-dog", "ice-cream-cone", "noodle-bowl", "pizza-slice", "popcorn", "sandwich", "taco", "alarm-clock", "broom", "hairdryer", "hand-mirror", "keys", "mop", "pillow", "potted-plant", "spray-bottle", "toilet-roll", "toothbrush", "umbrella", "fork", "frying-pan", "oven-mitt", "plate", "rolling-pin", "spatula", "spoon", "whisk", "laptop", "ball", "chalk", "coin", "dice", "heavy-ball", "number-card", "pointer-stick", "protractor", "mic", "cash", "credit-card", "gift-box", "piggy-bank", "receipt", "shopping-bag", "shopping-basket", "wallet", "book-open", "book", "calculator", "clipboard", "envelope", "folder", "id-badge", "notebook", "pen", "pencil", "pill-bottle", "ruler", "stapler", "balloon", "flower-bouquet", "megaphone", "party-popper", "rose", "small-flag", "sparkler", "phone", "bar-magnet", "battery", "beaker", "flask", "horseshoe-magnet", "laser-pointer", "light-bulb", "magnifying-glass", "prism", "telescope", "test-tube", "sign", "basketball", "dumbbell", "soccer-ball", "stopwatch", "tennis-racket", "trophy", "whistle", "yoga-mat", "camera", "charger", "computer-mouse", "game-controller", "headphones", "power-bank", "selfie-stick", "tablet", "thermometer", "tv-remote", "binoculars", "fishing-rod", "flashlight", "paper-map", "passport", "suitcase", "ticket"] as const;
+export const PROP_IDS = ["cup", "baby-bottle", "bubble-tea", "energy-drink", "juice-box", "milkshake", "soda-can", "takeaway-coffee", "thermos", "water-bottle", "water-glass", "apple", "banana", "burger", "carrot", "chicken-drumstick", "chocolate-bar", "cookie", "croissant", "cupcake", "donut", "fries", "hot-dog", "ice-cream-cone", "noodle-bowl", "pizza-slice", "popcorn", "sandwich", "taco", "alarm-clock", "broom", "hairdryer", "hand-mirror", "keys", "mop", "pillow", "potted-plant", "spray-bottle", "toilet-roll", "toothbrush", "umbrella", "fork", "frying-pan", "oven-mitt", "plate", "rolling-pin", "spatula", "spoon", "whisk", "laptop", "ball", "chalk", "coin", "dice", "heavy-ball", "number-card", "pointer-stick", "protractor", "arrow", "bow", "shield", "staff", "sword", "mic", "cash", "credit-card", "gift-box", "piggy-bank", "receipt", "shopping-bag", "shopping-basket", "wallet", "book-open", "book", "calculator", "clipboard", "envelope", "folder", "id-badge", "notebook", "pen", "pencil", "pill-bottle", "ruler", "stapler", "balloon", "flower-bouquet", "megaphone", "party-popper", "rose", "small-flag", "sparkler", "phone", "bar-magnet", "battery", "beaker", "flask", "horseshoe-magnet", "laser-pointer", "light-bulb", "magnifying-glass", "prism", "telescope", "test-tube", "sign", "basketball", "dumbbell", "soccer-ball", "stopwatch", "tennis-racket", "trophy", "whistle", "yoga-mat", "camera", "charger", "computer-mouse", "game-controller", "headphones", "power-bank", "selfie-stick", "tablet", "thermometer", "tv-remote", "binoculars", "fishing-rod", "flashlight", "paper-map", "passport", "suitcase", "ticket"] as const;

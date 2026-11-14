@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "road-rider",
+  "kit": "medieval",
+  "palette": "road-evening",
+  "description": "A rider on a galloping horse along a country road, tracked from the side (the rider sits on the horse at mark center).",
+  "tags": [
+    "medieval",
+    "horse",
+    "ride",
+    "gallop",
+    "travel",
+    "road"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "medieval-road",
+      "variant": "travel"
+    },
+    {
+      "part": "horse",
+      "mark": "center",
+      "dx": 0.06,
+      "variant": "gallop",
+      "seatFor": [
+        "center"
+      ],
+      "size": 1.3
+    }
+  ],
+  "foreground": [],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

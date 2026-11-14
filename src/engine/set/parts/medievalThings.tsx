@@ -58,16 +58,17 @@ export const Cart: PartComponent = ({ part, palette: pal, W, H, groundY, fig, ma
   );
 };
 
-/** A draught horse in profile, facing +x. Variants: `walk` (leg cycle, head nod), `stand`, `strain` (leaning into the harness, head low). */
+/** A horse in profile (also a seat: `seatFor` a mark puts a rider on its back, `SEAT_HEIGHT.horse`), facing +x. Variants: `walk` (leg cycle, head nod), `gallop` (fast cycle, body lift), `stand`, `strain` (leaning into the harness, head low). */
 export const Horse: PartComponent = ({ part, palette: pal, W, H, groundY, fig, marks, frame = 0 }) => {
   const x = partX(part, W, marks, 0.7);
   const base = partBase(part, H, groundY);
   const s = part.size * fig;
-  const coat = darken(mix(pal.floor, pal.accent, 0.3), 0.05);
+  const coat = darken(mix(pal.accent, pal.shade, 0.45), 0.08);
   const v = part.variant ?? "walk";
-  const k = v === "walk" ? frame / 5 : v === "strain" ? frame / 3 : 0;
+  const k = v === "walk" ? frame / 5 : v === "strain" ? frame / 3 : v === "gallop" ? frame / 2.2 : 0;
+  const lift = v === "gallop" ? Math.abs(Math.sin(k)) * s * 0.03 : 0;
   const leg = (lx: number, ph: number, front: boolean) => {
-    const a = Math.sin(k + ph) * (v === "stand" ? 0 : 18);
+    const a = Math.sin(k + ph) * (v === "stand" ? 0 : v === "gallop" ? 34 : 18);
     return (
       <g key={`${lx}${ph}`} transform={`translate(${f2(lx)} ${f2(-s * 0.42)}) rotate(${f2(a)})`}>
         <rect x={-s * 0.03} y={0} width={s * 0.06} height={s * 0.42} rx={s * 0.03} fill={front ? coat : darken(coat, 0.15)} stroke={edge(coat, 0.3)} strokeWidth={SET_LINE} />
@@ -77,7 +78,7 @@ export const Horse: PartComponent = ({ part, palette: pal, W, H, groundY, fig, m
   };
   const nod = Math.sin(k * 2) * (v === "stand" ? 1 : 4) + (v === "strain" ? 14 : 0);
   return (
-    <g transform={`translate(${f2(x)} ${f2(base)}) ${flipAt(part.flip, 0) ?? ""}`}>
+    <g transform={`translate(${f2(x)} ${f2(base - lift)}) ${flipAt(part.flip, 0) ?? ""}`}>
       {leg(-s * 0.28, Math.PI, false)}
       {leg(s * 0.2, 0, false)}
       <ellipse cx={0} cy={f2(-s * 0.5)} rx={f2(s * 0.36)} ry={f2(s * 0.15)} fill={coat} stroke={edge(coat, 0.3)} strokeWidth={SET_LINE} />

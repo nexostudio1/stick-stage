@@ -36,6 +36,9 @@ export const KOKORO_VOICES: Readonly<Record<string, string>> = {
   "med-rey": "bm_george",
   "med-soldado": "am_michael",
   "med-carretero": "am_adam",
+  "med-caballero": "am_eric",
+  "med-monje": "bm_lewis",
+  "med-arquero": "am_liam",
 };
 export const KOKORO_NARRATOR = "am_michael";
 export const KOKORO_DEFAULT = "af_heart";

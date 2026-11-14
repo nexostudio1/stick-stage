@@ -32,12 +32,16 @@ one checked MP4 out, plus the script, sources, titles, description and tags. The
 
 ## 3. Stage it (`docs/skits.md`, skit-director rules)
 - Cast (catalog, reuse and vary with accessories/colours via workspace `characters`): `med-rey`,
-  `med-soldado`, `med-carretero`. Wear: `crown-01`, `kettle-hat`, `hood-01`, `tunic-01`, `mail-01`,
-  `cape-01` (`src/engine/rig/medievalWear.tsx`). New roles (knight, monk, merchant, archer): add an
+  `med-soldado`, `med-carretero`, `med-caballero`, `med-monje`, `med-arquero` (max 4 per skit). Wear: `crown-01`, `kettle-hat`, `hood-01`, `tunic-01`, `mail-01`,
+  `cape-01`, `nasal-helm`, `robe-01` (`src/engine/rig/medievalWear.tsx`). Props (category `medieval`): `sword`, `shield`,
+  `bow`, `arrow`, `staff`. Poses: `sword-raise`, `sword-slash`, `guard`, `block`, `draw-bow`, `pray`, `ride`.
+  Fights: both hold `sword` (R) + `shield` (L), alternate raise → slash / block with `sword-clang`.
+  Riding: a rider `seated: true` on a mark the set's `horse` part lists in `seatFor` (`road-rider`
+  gallop tracking, `castle-horse`); size the horse ~1.3; riders without a long cape read best. New roles (knight, monk, merchant, archer): add an
   accessory there and a character + bible in `src/data/characters/`.
 - Sets (kit `medieval`): `fen-1`, `fen-convoy` (side tracking), `fen-sinking` (cold-open hook),
   `fen-flood` (water in front of the cast), `medieval-road-1` (tracking), `castle-hall-1`,
-  `crown-dark` (insert), `medieval-black` (end cards). Parts: `fen`, `flood-water`, `medieval-road`,
+  `crown-dark` (insert), `medieval-black` (end cards), `road-rider`, `castle-horse`. Parts: `fen`, `flood-water`, `medieval-road`,
   `castle-hall`, `crown-relic`, `cart`, `horse`. A new place = a new part in
   `src/engine/set/parts/medieval*.tsx` + `PART_INFO` + a set JSON; check it in SetLab
   (`--props='{"kits":["medieval"]}'`). No fantasy in historical episodes unless it is the legend.

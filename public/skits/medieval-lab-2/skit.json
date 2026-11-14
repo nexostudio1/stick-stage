@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Medieval lab 2",
+    "aspect": "9:16",
+    "language": "es"
+  },
+  "cast": [
+    {
+      "id": "m",
+      "character": "med-monje",
+      "mark": "left"
+    },
+    {
+      "id": "a",
+      "character": "med-arquero",
+      "mark": "right"
+    }
+  ],
+  "overlay": {
+    "subtitles": false
+  },
+  "coldOpen": "none",
+  "scenes": [
+    {
+      "id": "monje",
+      "set": "fen-1",
+      "cast": [
+        {
+          "id": "m",
+          "mark": "left"
+        },
+        {
+          "id": "a",
+          "mark": "right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "m1",
+          "silent": true,
+          "durationMs": 3200,
+          "actions": [
+            {
+              "who": "m",
+              "do": "hold",
+              "prop": "staff",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "m",
+              "do": "pose",
+              "pose": "pray",
+              "at": {
+                "ms": 300
+              }
+            },
+            {
+              "who": "m",
+              "do": "expression",
+              "expression": "neutral",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "a",
+              "do": "hold",
+              "prop": "bow",
+              "hand": "L",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "a",
+              "do": "hold",
+              "prop": "arrow",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "a",
+              "do": "pose",
+              "pose": "draw-bow",
+              "at": {
+                "ms": 600
+              }
+            },
+            {
+              "who": "a",
+              "do": "expression",
+              "expression": "smug",
+              "at": {
+                "ms": 600
+              }
+            },
+            {
+              "who": "m",
+              "do": "putAway",
+              "hand": "R",
+              "at": {
+                "ms": 250
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "creak",
+              "at": {
+                "ms": 700
+              }
+            },
+            {
+              "id": "whoosh",
+              "at": {
+                "ms": 2400
+              }
+            }
+          ],
+          "shot": {
+            "framing": "wide"
+          }
+        }
+      ]
+    }
+  ]
+}

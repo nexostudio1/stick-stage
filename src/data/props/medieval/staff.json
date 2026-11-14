@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"staff","kind":"drawn","name":"Staff","category":"medieval","rank":5,"tags":["monk","pilgrim","walk","old"],"aliases":["walking stick","crosier"],"align":"upright","size":1,"colors":{"body":"#6b4a2b"},"parts":[{"shape":"rect","x":-0.008,"y":-0.3,"w":0.016,"h":0.5,"rx":0.006,"fill":"body"},{"shape":"circle","x":0,"y":-0.3,"r":0.016,"fill":"body-dark"}]}

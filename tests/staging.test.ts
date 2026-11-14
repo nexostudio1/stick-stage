@@ -10,6 +10,7 @@ import {
   propUnit,
   rigMetrics,
   supportBottom,
+  HIGH_SEATS,
   SEAT_HEIGHT,
   seatContact,
   seatHeightAt,
@@ -64,7 +65,7 @@ describe("seating", () => {
         // Never through the floor. Milo and June were proportioned to plant on every seat.
         // Shorter characters (kids, Moss) dangle when the seat is too high; seat.ts allows that.
         expect(feet).toBeLessThan(0.5);
-        if (c === "milo" || c === "june") expect(Math.abs(feet)).toBeLessThan(0.5);
+        if ((c === "milo" || c === "june") && !HIGH_SEATS.has(kind)) expect(Math.abs(feet)).toBeLessThan(0.5);
         // Upper-body pose still applies (sit pose), feet in front of the hip.
         expect(s.joints.footR.x).toBeGreaterThan(s.joints.hip.x);
       });

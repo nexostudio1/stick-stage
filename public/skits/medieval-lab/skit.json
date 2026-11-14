@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Medieval lab",
+    "aspect": "9:16",
+    "language": "es"
+  },
+  "cast": [
+    {
+      "id": "k",
+      "character": "med-caballero",
+      "mark": "left"
+    },
+    {
+      "id": "s",
+      "character": "med-soldado",
+      "mark": "right"
+    },
+    {
+      "id": "r",
+      "character": "med-rey",
+      "mark": "center"
+    }
+  ],
+  "overlay": {
+    "subtitles": false
+  },
+  "coldOpen": "none",
+  "scenes": [
+    {
+      "id": "duelo",
+      "set": "castle-hall-1",
+      "cast": [
+        {
+          "id": "k",
+          "mark": "left"
+        },
+        {
+          "id": "s",
+          "mark": "right",
+          "facing": "left"
+        },
+        {
+          "id": "r",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "d1",
+          "silent": true,
+          "durationMs": 4200,
+          "actions": [
+            {
+              "who": "k",
+              "do": "hold",
+              "prop": "sword",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "k",
+              "do": "hold",
+              "prop": "shield",
+              "hand": "L",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "s",
+              "do": "hold",
+              "prop": "shield",
+              "hand": "L",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "s",
+              "do": "hold",
+              "prop": "sword",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "k",
+              "do": "pose",
+              "pose": "guard",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "s",
+              "do": "pose",
+              "pose": "guard",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "k",
+              "do": "expression",
+              "expression": "angry",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "k",
+              "do": "pose",
+              "pose": "sword-raise",
+              "at": {
+                "ms": 700
+              }
+            },
+            {
+              "who": "s",
+              "do": "pose",
+              "pose": "block",
+              "at": {
+                "ms": 900
+              }
+            },
+            {
+              "who": "k",
+              "do": "pose",
+              "pose": "sword-slash",
+              "at": {
+                "ms": 1300
+              }
+            },
+            {
+              "who": "s",
+              "do": "expression",
+              "expression": "shocked",
+              "at": {
+                "ms": 1300
+              }
+            },
+            {
+              "who": "s",
+              "do": "pose",
+              "pose": "sword-raise",
+              "at": {
+                "ms": 2200
+              }
+            },
+            {
+              "who": "k",
+              "do": "pose",
+              "pose": "block",
+              "at": {
+                "ms": 2400
+              }
+            },
+            {
+              "who": "s",
+              "do": "pose",
+              "pose": "sword-slash",
+              "at": {
+                "ms": 2800
+              }
+            },
+            {
+              "who": "k",
+              "do": "pose",
+              "pose": "guard",
+              "at": {
+                "ms": 3500
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "swish",
+              "at": {
+                "ms": 1250
+              }
+            },
+            {
+              "id": "sword-clang",
+              "at": {
+                "ms": 1350
+              }
+            },
+            {
+              "id": "sword-clang",
+              "at": {
+                "ms": 2850
+              }
+            }
+          ],
+          "shot": {
+            "framing": "wide"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jinete",
+      "set": "road-rider",
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "cast": [
+        {
+          "id": "k",
+          "mark": "center",
+          "seated": true
+        },
+        {
+          "id": "s",
+          "mark": "off-right"
+        },
+        {
+          "id": "r",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "j1",
+          "silent": true,
+          "durationMs": 3000,
+          "actions": [
+            {
+              "who": "k",
+              "do": "hold",
+              "prop": "sword",
+              "hand": "R",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "k",
+              "do": "pose",
+              "pose": "sword-raise",
+              "at": {
+                "ms": 800
+              }
+            },
+            {
+              "who": "k",
+              "do": "expression",
+              "expression": "angry",
+              "at": {
+                "ms": 800
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "hooves",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "hooves",
+              "at": {
+                "ms": 1500
+              }
+            }
+          ],
+          "shot": {
+            "framing": "wide"
+          }
+        }
+      ]
+    }
+  ]
+}

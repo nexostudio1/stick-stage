@@ -26,10 +26,20 @@ import crewMitch from "./characters/crew-mitch.json";
 import medRey from "./characters/med-rey.json";
 import medSoldado from "./characters/med-soldado.json";
 import medCarretero from "./characters/med-carretero.json";
+import medCaballero from "./characters/med-caballero.json";
+import medMonje from "./characters/med-monje.json";
+import medArquero from "./characters/med-arquero.json";
 import crewOllie from "./characters/crew-ollie.json";
 import crewMaya from "./characters/crew-maya.json";
 
 import idle from "./poses/idle.json";
+import swordRaise from "./poses/sword-raise.json";
+import swordSlash from "./poses/sword-slash.json";
+import guardPose from "./poses/guard.json";
+import blockPose from "./poses/block.json";
+import drawBow from "./poses/draw-bow.json";
+import prayPose from "./poses/pray.json";
+import ridePose from "./poses/ride.json";
 import point from "./poses/point.json";
 import shrug from "./poses/shrug.json";
 import facepalm from "./poses/facepalm.json";
@@ -113,6 +123,8 @@ import castleHall1 from "./sets/castle-hall-1.json";
 import crownDark from "./sets/crown-dark.json";
 import fenSinking from "./sets/fen-sinking.json";
 import medievalBlack from "./sets/medieval-black.json";
+import roadRider from "./sets/road-rider.json";
+import castleHorse from "./sets/castle-horse.json";
 import cardVault from "./sets/card-vault.json";
 import ledgerRoom from "./sets/ledger-room.json";
 import cafeNight from "./sets/cafe-night.json";
@@ -160,8 +172,8 @@ export const EXPRESSION_IDS = ["neutral", "happy", "smug", "sarcastic", "annoyed
 export const EXTRA_EXPRESSION_IDS = ["skeptical", "worried", "embarrassed", "thinking", "laughing"];
 
 export const library: Library = createLibrary({
-  characters: [milo, june, lila, theo, moss, dash, reed, nell, pip, vera, gus, tofu, bobo, pim, mabel, otto, fennel, biscuit, wren, blip, bram, tess, crewMitch, crewOllie, crewMaya, medRey, medSoldado, medCarretero],
-  poses: [idle, point, shrug, facepalm, armsUp, armsCrossed, think, leanIn, recoil, slump, handsOnHips, holdPhone, sit, holdOut, holdChest, holdUp, highFive, shove, faintPose, wavePose, thumbsUp, crewPole],
+  characters: [milo, june, lila, theo, moss, dash, reed, nell, pip, vera, gus, tofu, bobo, pim, mabel, otto, fennel, biscuit, wren, blip, bram, tess, crewMitch, crewOllie, crewMaya, medRey, medSoldado, medCarretero, medCaballero, medMonje, medArquero],
+  poses: [idle, point, shrug, facepalm, armsUp, armsCrossed, think, leanIn, recoil, slump, handsOnHips, holdPhone, sit, holdOut, holdChest, holdUp, highFive, shove, faintPose, wavePose, thumbsUp, crewPole, swordRaise, swordSlash, guardPose, blockPose, drawBow, prayPose, ridePose],
   expressions: [neutral, happy, smug, sarcastic, annoyed, angry, shocked, sad, crying, cringe, confused, deadpan, skeptical, worried, embarrassed, thinking, laughing],
   props: PROP_DOCS,
 });
@@ -178,7 +190,7 @@ export const sets: Record<string, SetDef> = createSets([
   plain1, living1, lounge1, office1, park1, street1, kitchen1, bedroom1, cafe1, classroom1, meeting1, living2, park2, streetNight1, beach1, stage1,
   widePlain, wideLiving, wideLounge, wideOffice, widePark, wideStreet, wideCafe, wideClassroom,
   explainerPaper, explainerNight, explainerGrid, explainerDrafting, explainerDraftingIndigo,
-  kitchenNight, bedroomNight, officeNight, fen1, fenConvoy, fenFlood, medievalRoad1, castleHall1, crownDark, fenSinking, medievalBlack, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
+  kitchenNight, bedroomNight, officeNight, fen1, fenConvoy, fenFlood, medievalRoad1, castleHall1, crownDark, fenSinking, medievalBlack, roadRider, castleHorse, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
   void1, blueprint1, space1, space2, lab1,
   scienceDawn, scienceTide, scienceCosmos, scienceLab,
   explainerDawn, explainerTide, explainerCosmos, explainerLab,

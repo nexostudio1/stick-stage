@@ -49,7 +49,7 @@ export * from "./catalog";
 export * from "./draft";
 export { SetLayers } from "./set/Set";
 export { PARTS, PART_INFO, KITS, KIT_BACKDROP, type Kit, type PartInfo } from "./set/parts/registry";
-export { SEAT_HEIGHT, SEAT_PARTS } from "./set/parts/seats";
+export { HIGH_SEATS, SEAT_HEIGHT, SEAT_PARTS } from "./set/parts/seats";
 export { Stage, FULL_FRAME, type Camera, type StageActor } from "./shots/Stage";
 export * from "./shots/framing";
 export * from "./director/schema";
