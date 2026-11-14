@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "n1",
+      "speaker": "narrator",
+      "text": "Deja de intentar volar. Eres un pingüino.",
+      "audio": "voice/n1.wav",
+      "durationMs": 3007
+    },
+    {
+      "id": "n2",
+      "speaker": "narrator",
+      "text": "Pim no lo sabía, y ya llevaba trescientos intentos.",
+      "audio": "voice/n2.wav",
+      "durationMs": 3053
+    },
+    {
+      "id": "w1",
+      "speaker": "wren",
+      "text": "¡Aletea más fuerte, Pim!",
+      "audio": "voice/w1.wav",
+      "durationMs": 1335
+    },
+    {
+      "id": "p1",
+      "speaker": "pim",
+      "text": "¡Estoy aleteando a tope!",
+      "audio": "voice/p1.wav",
+      "durationMs": 1599
+    },
+    {
+      "id": "n3",
+      "speaker": "narrator",
+      "text": "Intento trescientos uno: el acantilado.",
+      "audio": "voice/n3.wav",
+      "durationMs": 2694
+    },
+    {
+      "id": "p2",
+      "speaker": "pim",
+      "text": "¡Esta vez sí, Wren!",
+      "audio": "voice/p2.wav",
+      "durationMs": 1789
+    },
+    {
+      "id": "n4",
+      "speaker": "narrator",
+      "text": "Cayó al mar. Plof.",
+      "audio": "voice/n4.wav",
+      "durationMs": 1788
+    },
+    {
+      "id": "n5",
+      "speaker": "narrator",
+      "text": "Y bajo el agua, Pim salió disparado, más rápido que cualquier pájaro.",
+      "audio": "voice/n5.wav",
+      "durationMs": 4191
+    },
+    {
+      "id": "w2",
+      "speaker": "wren",
+      "text": "¿Cómo haces eso?",
+      "audio": "voice/w2.wav",
+      "durationMs": 850
+    },
+    {
+      "id": "p3",
+      "speaker": "pim",
+      "text": "¿Esto? Pero si es facilísimo.",
+      "audio": "voice/p3.wav",
+      "durationMs": 1971
+    },
+    {
+      "id": "n6",
+      "speaker": "narrator",
+      "text": "No eras malo. Estabas en el cielo equivocado.",
+      "audio": "voice/n6.wav",
+      "durationMs": 3065
+    },
+    {
+      "id": "n7",
+      "speaker": "narrator",
+      "text": "Guárdalo para la próxima vez que intentes volar.",
+      "audio": "voice/n7.wav",
+      "durationMs": 2601
+    }
+  ]
+}

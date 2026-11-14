@@ -16,9 +16,6 @@
   },
   "captionStyle": "italic"
  },
- "overlay": {
-  "hook": "Deja de intentar volar."
- },
  "cast": [
   {
    "id": "pim",
@@ -47,7 +44,7 @@
     },
     {
      "id": "wren",
-     "mark": "right"
+     "mark": "center"
     }
    ],
    "beats": [
@@ -67,7 +64,16 @@
       },
       {
        "who": "pim",
-       "do": "fall",
+       "do": "pose",
+       "pose": "recoil",
+       "at": {
+        "word": "pingüino."
+       }
+      },
+      {
+       "who": "pim",
+       "do": "symbol",
+       "symbol": "sweat",
        "at": {
         "word": "pingüino."
        }
@@ -80,7 +86,19 @@
         "word": "pingüino."
        }
       }
-     ]
+     ],
+     "text": [
+      {
+       "type": "slam",
+       "value": "DEJA DE INTENTAR VOLAR",
+       "at": {
+        "word": "Deja"
+       }
+      }
+     ],
+     "shot": {
+      "framing": "two"
+     }
     },
     {
      "id": "n2",
@@ -90,12 +108,16 @@
      "actions": [
       {
        "who": "pim",
-       "do": "stand",
+       "do": "pose",
+       "pose": "slump",
        "at": {
-        "word": "sabía,"
+        "word": "trescientos"
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "two"
+     }
     },
     {
      "id": "w1",
@@ -111,7 +133,11 @@
         "word": "¡Aletea"
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "medium",
+      "on": "wren"
+     }
     },
     {
      "id": "p1",
@@ -142,7 +168,11 @@
         "word": "aleteando"
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "medium",
+      "on": "pim"
+     }
     }
    ]
   },
@@ -167,7 +197,7 @@
     },
     {
      "id": "wren",
-     "mark": "right"
+     "mark": "center"
     }
    ],
    "beats": [
@@ -184,7 +214,10 @@
         "word": "trescientos"
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "two"
+     }
     },
     {
      "id": "p2",
@@ -209,7 +242,11 @@
         "word": "sí,"
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "medium",
+      "on": "pim"
+     }
     },
     {
      "id": "n4",
@@ -239,7 +276,10 @@
         "word": "Plof."
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "two"
+     }
     }
    ]
   },
@@ -276,7 +316,7 @@
       {
        "who": "pim",
        "do": "walkTo",
-       "mark": "right",
+       "mark": "center",
        "speed": "run",
        "at": {
         "word": "disparado,"
@@ -298,13 +338,20 @@
         "word": "disparado,"
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "two"
+     }
     },
     {
      "id": "w2",
      "speaker": "wren",
      "line": "¿Cómo haces eso?",
-     "expression": "shocked"
+     "expression": "shocked",
+     "shot": {
+      "framing": "medium",
+      "on": "wren"
+     }
     },
     {
      "id": "p3",
@@ -320,7 +367,11 @@
         "word": "¿Esto?"
        }
       }
-     ]
+     ],
+     "shot": {
+      "framing": "medium",
+      "on": "pim"
+     }
     },
     {
      "id": "n6",
@@ -335,12 +386,24 @@
         "word": "cielo"
        }
       }
+     ],
+     "text": [
+      {
+       "type": "slam",
+       "value": "EL CIELO EQUIVOCADO",
+       "at": {
+        "word": "cielo"
+       }
+      }
      ]
     },
     {
      "id": "n7",
      "speaker": "narrator",
-     "line": "Guárdalo para la próxima vez que intentes volar."
+     "line": "Guárdalo para la próxima vez que intentes volar.",
+     "shot": {
+      "framing": "two"
+     }
     }
    ]
   }
@@ -416,5 +479,10 @@
     "say": "Samantha"
    }
   }
- ]
+ ],
+ "overlay": {
+  "captions": {
+   "fontSize": 60
+  }
+ }
 }
