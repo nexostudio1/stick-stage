@@ -44,6 +44,13 @@ Comedy-skit and science-short engine on Remotion. Open source (MIT); Tamtree use
 - `whos-wrong` (`skills/whos-wrong/SKILL.md`): a "Who's Wrong?" episode: a petty two-sided argument with Bram and Tess, the verdict meter, the `argument` style's fast pace; the team writes the twist.
 - `crew-episode` (`skills/crew-episode/SKILL.md`): an episode of the relatable three-person channel (Mitch, Ollie, Maya on the train): 2-second hook, laugh, Maya's closing thought as the train stops, packaging and multi-part rules; the team approves the jokes.
 
+## Instagram / Shorts skills (`.claude/skills/ig-*`)
+Thirteen third-party skills (MIT, Jake Schincariol, github.com/Jakeschincariol/instagram-agent-skill, copied unmodified) for hooks, scripts, retention and viral research: `/ig-reel`, `/ig-viral`, `/ig-plan`, `/ig-audit`, `/ig-caption`, `/ig-carousel`, `/ig-story`, `/ig-profile`, `/ig-comment`, `/ig-reply`, `/ig-dm`, `/ig-repurpose`, `/ig-human`. Rules for this repo:
+- **Their memory lives in `instagram/` at the repo root, not `~/.claude/instagram/`** (cloud sessions are ephemeral). Wherever a skill says `~/.claude/instagram/<file>` (voice.md, swipe.md, plan.md, log.md), read and write `instagram/<file>` instead, and commit it.
+- Never publish, post, comment or DM automatically, never log into Instagram or any account, never ask for passwords.
+- Do not run external tools they mention (`yt-dlp`, browsers, computer use) without the user's go-ahead in that turn. Their own `.py` helpers are stdlib-only and local; running them is fine.
+- For StickStage Shorts, use their hook scoring and beat sheets on our scripts before staging (`skills/medieval-short`, `topic-to-video`); our skills still own staging and rendering.
+
 Path-scoped rules live in `.claude/rules/` (`toon-rig.md` for the rig, characters and poses; `shape-rig.md` for the shape tier, story kit and places; `science-skits.md` for skits, figures and approval).
 
 ## Voice
