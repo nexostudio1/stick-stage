@@ -1,0 +1,788 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "El rey que perdió su tesoro en el barro",
+    "aspect": "9:16",
+    "language": "es",
+    "description": "1216: el equipaje del rey Juan de Inglaterra se lo tragó la marea. ¿Y las joyas de la Corona?",
+    "hashtags": [
+      "historia",
+      "edadmedia",
+      "reyjuan",
+      "shorts"
+    ]
+  },
+  "characters": [],
+  "cast": [
+    {
+      "id": "rey",
+      "character": "med-rey",
+      "mark": "right"
+    },
+    {
+      "id": "soldado",
+      "character": "med-soldado",
+      "mark": "left"
+    },
+    {
+      "id": "carretero",
+      "character": "med-carretero",
+      "mark": "right"
+    }
+  ],
+  "narrator": {
+    "id": "narrator",
+    "name": "Narrador",
+    "voice": {
+      "provider": "elevenlabs",
+      "voiceId": "qUPtETgSYRhCRb2pfOla"
+    },
+    "captionStyle": "boxed"
+  },
+  "music": "medieval",
+  "overlay": {
+    "subtitles": true
+  },
+  "coldOpen": "none",
+  "scenes": [
+    {
+      "id": "gancho",
+      "set": "fen-sinking",
+      "cast": [
+        {
+          "id": "carretero",
+          "mark": "left"
+        },
+        {
+          "id": "soldado",
+          "mark": "right"
+        },
+        {
+          "id": "rey",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "h1",
+          "speaker": "narrator",
+          "line": "Este rey perdió su tesoro… por elegir mal el camino.",
+          "focus": "carretero",
+          "actions": [
+            {
+              "who": "carretero",
+              "do": "expression",
+              "expression": "worried",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "carretero",
+              "do": "pose",
+              "pose": "recoil",
+              "at": {
+                "word": "tesoro"
+              }
+            },
+            {
+              "who": "carretero",
+              "do": "expression",
+              "expression": "shocked",
+              "at": {
+                "word": "tesoro"
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "expression",
+              "expression": "shocked",
+              "at": {
+                "word": "camino"
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "pose",
+              "pose": "arms-up",
+              "at": {
+                "word": "camino"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "wide"
+          },
+          "sfx": [
+            {
+              "id": "splash",
+              "at": {
+                "ms": 150
+              }
+            },
+            {
+              "id": "creak",
+              "at": {
+                "word": "tesoro"
+              }
+            },
+            {
+              "id": "war-drum",
+              "at": {
+                "word": "camino"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contexto",
+      "set": "fen-convoy",
+      "pov": "Inglaterra, 1216",
+      "transition": {
+        "type": "whip",
+        "durationMs": 250
+      },
+      "cast": [
+        {
+          "id": "soldado",
+          "mark": "off-left"
+        },
+        {
+          "id": "carretero",
+          "mark": "off-right"
+        },
+        {
+          "id": "rey",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "c1",
+          "speaker": "narrator",
+          "line": "Inglaterra, 1216. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
+          "focus": "soldado",
+          "actions": [
+            {
+              "who": "soldado",
+              "do": "walkTo",
+              "mark": "left",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "expression",
+              "expression": "neutral",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "expression",
+              "expression": "worried",
+              "at": {
+                "word": "peligrosas"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "spoken": "Inglaterra, mil doscientos dieciséis. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
+          "shot": {
+            "framing": "wide"
+          },
+          "sfx": [
+            {
+              "id": "hooves",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "id": "creak",
+              "at": {
+                "word": "marismas"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alarma",
+      "set": "fen-convoy",
+      "music": "medieval-tense",
+      "cast": [
+        {
+          "id": "soldado",
+          "mark": "left"
+        },
+        {
+          "id": "carretero",
+          "mark": "right"
+        },
+        {
+          "id": "rey",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "a1",
+          "speaker": "soldado",
+          "line": "¡La marea está subiendo!",
+          "expression": "shocked",
+          "actions": [
+            {
+              "who": "soldado",
+              "do": "pose",
+              "pose": "point",
+              "at": {
+                "word": "marea"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "medium",
+            "on": "soldado"
+          },
+          "sfx": [
+            {
+              "id": "water-rush",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "speaker": "carretero",
+          "line": "¡Arre!",
+          "expression": "angry",
+          "actions": [
+            {
+              "who": "carretero",
+              "do": "pose",
+              "pose": "arms-up",
+              "at": {
+                "word": "Arre"
+              }
+            }
+          ],
+          "pauseBeforeMs": 150,
+          "shot": {
+            "framing": "medium",
+            "on": "carretero"
+          },
+          "sfx": [
+            {
+              "id": "hooves",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atrapados",
+      "set": "fen-flood",
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "cast": [
+        {
+          "id": "soldado",
+          "mark": "left"
+        },
+        {
+          "id": "carretero",
+          "mark": "right"
+        },
+        {
+          "id": "rey",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "t1",
+          "speaker": "narrator",
+          "line": "Los carros quedaron atrapados.",
+          "focus": "soldado",
+          "actions": [
+            {
+              "who": "soldado",
+              "do": "pose",
+              "pose": "shove",
+              "at": {
+                "word": "carros"
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "expression",
+              "expression": "angry",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "carretero",
+              "do": "pose",
+              "pose": "lean-in",
+              "at": {
+                "word": "atrapados"
+              }
+            },
+            {
+              "who": "carretero",
+              "do": "expression",
+              "expression": "worried",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "wide"
+          },
+          "sfx": [
+            {
+              "id": "creak",
+              "at": {
+                "word": "carros"
+              }
+            },
+            {
+              "id": "splash",
+              "at": {
+                "word": "atrapados"
+              }
+            }
+          ]
+        },
+        {
+          "id": "t2",
+          "speaker": "narrator",
+          "line": "Y el agua empezó a cubrirlo todo.",
+          "focus": "carretero",
+          "actions": [
+            {
+              "who": "carretero",
+              "do": "expression",
+              "expression": "shocked",
+              "at": {
+                "word": "agua"
+              }
+            },
+            {
+              "who": "carretero",
+              "do": "symbol",
+              "symbol": "sweat",
+              "at": {
+                "word": "agua"
+              },
+              "durationMs": 1200
+            },
+            {
+              "who": "soldado",
+              "do": "expression",
+              "expression": "crying",
+              "at": {
+                "word": "todo"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "two"
+          },
+          "sfx": [
+            {
+              "id": "water-rush",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rey",
+      "set": "medieval-road-1",
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "music": "medieval",
+      "cast": [
+        {
+          "id": "rey",
+          "mark": "off-left"
+        },
+        {
+          "id": "soldado",
+          "mark": "off-right"
+        },
+        {
+          "id": "carretero",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "k1",
+          "speaker": "narrator",
+          "line": "El rey iba por otro camino. A salvo.",
+          "focus": "rey",
+          "actions": [
+            {
+              "who": "rey",
+              "do": "walkTo",
+              "mark": "center",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "rey",
+              "do": "expression",
+              "expression": "smug",
+              "at": {
+                "word": "salvo"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "wide"
+          },
+          "sfx": [
+            {
+              "id": "hooves",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perdida",
+      "set": "fen-flood",
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "cast": [
+        {
+          "id": "soldado",
+          "mark": "left"
+        },
+        {
+          "id": "carretero",
+          "mark": "right"
+        },
+        {
+          "id": "rey",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "k2",
+          "speaker": "narrator",
+          "line": "Pero su comitiva perdió carros, caballos y objetos de valor.",
+          "focus": "carretero",
+          "actions": [
+            {
+              "who": "soldado",
+              "do": "expression",
+              "expression": "sad",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "pose",
+              "pose": "slump",
+              "at": {
+                "word": "carros"
+              }
+            },
+            {
+              "who": "carretero",
+              "do": "expression",
+              "expression": "crying",
+              "at": {
+                "word": "valor"
+              }
+            },
+            {
+              "who": "carretero",
+              "do": "pose",
+              "pose": "facepalm",
+              "at": {
+                "word": "valor"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "wide"
+          },
+          "sfx": [
+            {
+              "id": "splash",
+              "at": {
+                "word": "carros"
+              }
+            },
+            {
+              "id": "water-rush",
+              "at": {
+                "word": "valor"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corona",
+      "set": "crown-dark",
+      "transition": {
+        "type": "fade",
+        "durationMs": 300
+      },
+      "cast": [
+        {
+          "id": "rey",
+          "mark": "off-right"
+        },
+        {
+          "id": "soldado",
+          "mark": "off-right"
+        },
+        {
+          "id": "carretero",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "r1",
+          "speaker": "narrator",
+          "line": "¿Perdió también la corona? Eso no está demostrado.",
+          "actions": [],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "wide"
+          },
+          "sfx": [
+            {
+              "id": "war-drum",
+              "at": {
+                "word": "corona"
+              }
+            },
+            {
+              "id": "record-scratch",
+              "at": {
+                "word": "no"
+              }
+            }
+          ],
+          "text": [
+            {
+              "type": "slam",
+              "value": "¿LA CORONA?",
+              "at": {
+                "word": "corona"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "set": "castle-hall-1",
+      "transition": {
+        "type": "whip",
+        "durationMs": 200
+      },
+      "cast": [
+        {
+          "id": "soldado",
+          "mark": "off-left"
+        },
+        {
+          "id": "rey",
+          "mark": "right"
+        },
+        {
+          "id": "carretero",
+          "mark": "off-right"
+        }
+      ],
+      "beats": [
+        {
+          "id": "entra",
+          "silent": true,
+          "durationMs": 900,
+          "actions": [
+            {
+              "who": "soldado",
+              "do": "walkTo",
+              "mark": "left",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "expression",
+              "expression": "sad",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "soldado",
+              "do": "symbol",
+              "symbol": "sweat",
+              "at": {
+                "ms": 100
+              },
+              "durationMs": 1800
+            },
+            {
+              "who": "rey",
+              "do": "expression",
+              "expression": "neutral",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "sfx": [
+            {
+              "id": "splash",
+              "at": {
+                "ms": 0
+              }
+            }
+          ],
+          "shot": {
+            "framing": "wide"
+          }
+        },
+        {
+          "id": "e1",
+          "speaker": "soldado",
+          "line": "Majestad… tenemos un pequeño problema con el equipaje.",
+          "expression": "worried",
+          "actions": [
+            {
+              "who": "soldado",
+              "do": "pose",
+              "pose": "shrug",
+              "at": {
+                "word": "problema"
+              }
+            }
+          ],
+          "pauseBeforeMs": 0,
+          "shot": {
+            "framing": "two"
+          }
+        },
+        {
+          "id": "mirada",
+          "silent": true,
+          "durationMs": 1500,
+          "actions": [
+            {
+              "who": "rey",
+              "do": "expression",
+              "expression": "deadpan",
+              "at": {
+                "ms": 0
+              }
+            },
+            {
+              "who": "rey",
+              "do": "pose",
+              "pose": "arms-crossed",
+              "at": {
+                "ms": 200
+              }
+            }
+          ],
+          "shot": {
+            "framing": "close",
+            "on": "rey"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cartel",
+      "set": "medieval-black",
+      "transition": {
+        "type": "cut"
+      },
+      "cast": [
+        {
+          "id": "rey",
+          "mark": "off-right"
+        },
+        {
+          "id": "soldado",
+          "mark": "off-right"
+        },
+        {
+          "id": "carretero",
+          "mark": "off-right"
+        }
+      ],
+      "card": {
+        "title": "EL PEOR VIAJE\nDE NEGOCIOS\nDE 1216",
+        "at": {
+          "ms": 0
+        }
+      },
+      "beats": [
+        {
+          "id": "fin",
+          "silent": true,
+          "durationMs": 2200,
+          "actions": [],
+          "sfx": [
+            {
+              "id": "war-drum",
+              "at": {
+                "ms": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

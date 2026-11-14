@@ -606,6 +606,108 @@
         "snap",
         "comedy"
       ]
+    },
+    {
+      "id": "splash",
+      "file": "sfx/splash.wav",
+      "durationMs": 1100,
+      "gain": 0.75,
+      "loudnessDb": -14.3,
+      "peakDb": -1.1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "water",
+        "fall",
+        "medieval"
+      ]
+    },
+    {
+      "id": "water-rush",
+      "file": "sfx/water-rush.wav",
+      "durationMs": 2400,
+      "gain": 0.55,
+      "loudnessDb": -12.1,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "water",
+        "tide",
+        "ambience",
+        "medieval"
+      ]
+    },
+    {
+      "id": "creak",
+      "file": "sfx/creak.wav",
+      "durationMs": 900,
+      "gain": 0.6,
+      "loudnessDb": -12.2,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "wood",
+        "cart",
+        "door",
+        "strain",
+        "medieval"
+      ]
+    },
+    {
+      "id": "hooves",
+      "file": "sfx/hooves.wav",
+      "durationMs": 1600,
+      "gain": 0.65,
+      "loudnessDb": -18.3,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "horse",
+        "walk",
+        "travel",
+        "medieval"
+      ]
+    },
+    {
+      "id": "sword-clang",
+      "file": "sfx/sword-clang.wav",
+      "durationMs": 1200,
+      "gain": 0.6,
+      "loudnessDb": -16.7,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "sword",
+        "steel",
+        "fight",
+        "medieval"
+      ]
+    },
+    {
+      "id": "war-drum",
+      "file": "sfx/war-drum.wav",
+      "durationMs": 1200,
+      "gain": 0.8,
+      "loudnessDb": -10.5,
+      "peakDb": -1,
+      "truePeakDb": -1,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/sfx-gen.ts (StickStage, original)",
+      "tags": [
+        "drum",
+        "impact",
+        "reveal",
+        "medieval"
+      ]
     }
   ]
 }

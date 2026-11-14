@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-flood",
+  "kit": "medieval",
+  "palette": "fen-dusk",
+  "description": "The tide over a fen track: two loaded carts sunk to the axles, a horse straining, water in front of the cast.",
+  "tags": [
+    "medieval",
+    "marsh",
+    "flood",
+    "tide",
+    "disaster",
+    "cart"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "fen",
+      "variant": "flood"
+    },
+    {
+      "part": "cart",
+      "x": 0.3,
+      "variant": "stuck"
+    },
+    {
+      "part": "cart",
+      "x": 0.78,
+      "variant": "stuck",
+      "flip": true,
+      "size": 0.85
+    },
+    {
+      "part": "horse",
+      "x": 1.02,
+      "variant": "strain",
+      "size": 0.85
+    }
+  ],
+  "foreground": [
+    {
+      "part": "flood-water",
+      "y": 0.74
+    }
+  ],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

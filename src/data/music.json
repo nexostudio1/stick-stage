@@ -45,6 +45,24 @@
       "ducked": 0.08,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
+    },
+    {
+      "id": "medieval",
+      "file": "music/medieval.wav",
+      "durationMs": 12000,
+      "gain": 0.22,
+      "ducked": 0.07,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
+    },
+    {
+      "id": "medieval-tense",
+      "file": "music/medieval-tense.wav",
+      "durationMs": 12000,
+      "gain": 0.24,
+      "ducked": 0.08,
+      "license": "CC0-1.0",
+      "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
     }
   ]
 }

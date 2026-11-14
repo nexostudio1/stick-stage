@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "medieval-black",
+  "kit": "medieval",
+  "palette": "castle-torch",
+  "description": "Near-black ground for end cards and cuts to black.",
+  "tags": [
+    "medieval",
+    "black",
+    "card",
+    "end"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "crown-relic",
+      "variant": "empty"
+    }
+  ],
+  "foreground": [],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

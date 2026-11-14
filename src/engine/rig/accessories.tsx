@@ -4,6 +4,7 @@ import { onHead, type AccessoryDef, type AccessoryLayer, type BodyAnchor } from 
 import { ANIMAL_PARTS } from "./animalParts";
 import { SCIENCE_WEAR } from "./scienceWear";
 import { CREW_WEAR } from "./crewWear";
+import { MEDIEVAL_WEAR } from "./medievalWear";
 import type { Character } from "./schema";
 
 export type { AccessoryLayer, BodyAnchor } from "./accessoryKit";
@@ -154,6 +155,7 @@ const REGISTRY: Record<string, AccessoryDef> = {
   ...ANIMAL_PARTS,
   ...SCIENCE_WEAR,
   ...CREW_WEAR,
+  ...MEDIEVAL_WEAR,
 };
 
 export const accessoryIds = (): string[] => Object.keys(REGISTRY);

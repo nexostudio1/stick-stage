@@ -1,6 +1,7 @@
 import { darken, lighten, mix } from "../lib/color";
 import { STORY_PALETTES } from "./storyPalettes";
 import { CREW_PALETTES } from "./crewPalettes";
+import { MEDIEVAL_PALETTES } from "./medievalPalettes";
 
 export type Palette = {
   wallA: string;
@@ -295,6 +296,7 @@ export const PALETTES: Record<string, Palette> = {
 Object.assign(PALETTES, STORY_PALETTES);
 /** The relatable three-person channel (`crew` kit): saturated, high-contrast places. */
 Object.assign(PALETTES, CREW_PALETTES);
+Object.assign(PALETTES, MEDIEVAL_PALETTES);
 
 /** Tones every part may use, derived from the seven tokens (still no raw hex in parts). */
 export const derived = (p: Palette) => ({

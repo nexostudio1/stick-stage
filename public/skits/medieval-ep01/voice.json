@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "lines": [
+    {
+      "id": "h1",
+      "speaker": "narrator",
+      "text": "Este rey perdió su tesoro… por elegir mal el camino.",
+      "audio": "voice/h1.mp3",
+      "durationMs": 3320,
+      "words": [
+        {
+          "text": "Este",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "text": "rey",
+          "startMs": 293,
+          "endMs": 480
+        },
+        {
+          "text": "perdió",
+          "startMs": 520,
+          "endMs": 800
+        },
+        {
+          "text": "su",
+          "startMs": 827,
+          "endMs": 880
+        },
+        {
+          "text": "tesoro…",
+          "startMs": 960,
+          "endMs": 1760
+        },
+        {
+          "text": "por",
+          "startMs": 1780,
+          "endMs": 1840
+        },
+        {
+          "text": "elegir",
+          "startMs": 1904,
+          "endMs": 2240
+        },
+        {
+          "text": "mal",
+          "startMs": 2320,
+          "endMs": 2560
+        },
+        {
+          "text": "el",
+          "startMs": 2613,
+          "endMs": 2720
+        },
+        {
+          "text": "camino.",
+          "startMs": 2777,
+          "endMs": 3200
+        }
+      ]
+    },
+    {
+      "id": "c1",
+      "speaker": "narrator",
+      "text": "Inglaterra, 1216. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
+      "spoken": "Inglaterra, mil doscientos dieciséis. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
+      "audio": "voice/c1.mp3",
+      "durationMs": 6040,
+      "words": [
+        {
+          "text": "Inglaterra,",
+          "startMs": 0,
+          "endMs": 960
+        },
+        {
+          "text": "mil",
+          "startMs": 1020,
+          "endMs": 1200
+        },
+        {
+          "text": "doscientos",
+          "startMs": 1260,
+          "endMs": 1760
+        },
+        {
+          "text": "dieciséis.",
+          "startMs": 1800,
+          "endMs": 2800
+        },
+        {
+          "text": "El",
+          "startMs": 2853,
+          "endMs": 2960
+        },
+        {
+          "text": "equipaje",
+          "startMs": 3013,
+          "endMs": 3360
+        },
+        {
+          "text": "del",
+          "startMs": 3400,
+          "endMs": 3520
+        },
+        {
+          "text": "rey",
+          "startMs": 3573,
+          "endMs": 3760
+        },
+        {
+          "text": "Juan",
+          "startMs": 3808,
+          "endMs": 4000
+        },
+        {
+          "text": "cruzaba",
+          "startMs": 4048,
+          "endMs": 4400
+        },
+        {
+          "text": "unas",
+          "startMs": 4448,
+          "endMs": 4640
+        },
+        {
+          "text": "marismas",
+          "startMs": 4680,
+          "endMs": 5120
+        },
+        {
+          "text": "peligrosas.",
+          "startMs": 5140,
+          "endMs": 5920
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "speaker": "soldado",
+      "text": "¡La marea está subiendo!",
+      "audio": "voice/a1.mp3",
+      "durationMs": 1560,
+      "words": [
+        {
+          "text": "¡La",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "marea",
+          "startMs": 200,
+          "endMs": 400
+        },
+        {
+          "text": "está",
+          "startMs": 448,
+          "endMs": 640
+        },
+        {
+          "text": "subiendo!",
+          "startMs": 700,
+          "endMs": 1440
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "speaker": "carretero",
+      "text": "¡Arre!",
+      "audio": "voice/a2.mp3",
+      "durationMs": 760,
+      "words": [
+        {
+          "text": "¡Arre!",
+          "startMs": 0,
+          "endMs": 640
+        }
+      ]
+    },
+    {
+      "id": "t1",
+      "speaker": "narrator",
+      "text": "Los carros quedaron atrapados.",
+      "audio": "voice/t1.mp3",
+      "durationMs": 1720,
+      "words": [
+        {
+          "text": "Los",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "carros",
+          "startMs": 220,
+          "endMs": 560
+        },
+        {
+          "text": "quedaron",
+          "startMs": 592,
+          "endMs": 960
+        },
+        {
+          "text": "atrapados.",
+          "startMs": 1000,
+          "endMs": 1600
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "speaker": "narrator",
+      "text": "Y el agua empezó a cubrirlo todo.",
+      "audio": "voice/t2.mp3",
+      "durationMs": 2120,
+      "words": [
+        {
+          "text": "Y",
+          "startMs": 0,
+          "endMs": 80
+        },
+        {
+          "text": "el",
+          "startMs": 107,
+          "endMs": 160
+        },
+        {
+          "text": "agua",
+          "startMs": 224,
+          "endMs": 480
+        },
+        {
+          "text": "empezó",
+          "startMs": 533,
+          "endMs": 880
+        },
+        {
+          "text": "a",
+          "startMs": 920,
+          "endMs": 960
+        },
+        {
+          "text": "cubrirlo",
+          "startMs": 1000,
+          "endMs": 1600
+        },
+        {
+          "text": "todo.",
+          "startMs": 1648,
+          "endMs": 2000
+        }
+      ]
+    },
+    {
+      "id": "k1",
+      "speaker": "narrator",
+      "text": "El rey iba por otro camino. A salvo.",
+      "audio": "voice/k1.mp3",
+      "durationMs": 2840,
+      "words": [
+        {
+          "text": "El",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "rey",
+          "startMs": 240,
+          "endMs": 480
+        },
+        {
+          "text": "iba",
+          "startMs": 533,
+          "endMs": 760
+        },
+        {
+          "text": "por",
+          "startMs": 790,
+          "endMs": 880
+        },
+        {
+          "text": "otro",
+          "startMs": 912,
+          "endMs": 1040
+        },
+        {
+          "text": "camino.",
+          "startMs": 1120,
+          "endMs": 1880
+        },
+        {
+          "text": "A",
+          "startMs": 2020,
+          "endMs": 2160
+        },
+        {
+          "text": "salvo.",
+          "startMs": 2220,
+          "endMs": 2720
+        }
+      ]
+    },
+    {
+      "id": "k2",
+      "speaker": "narrator",
+      "text": "Pero su comitiva perdió carros, caballos y objetos de valor.",
+      "audio": "voice/k2.mp3",
+      "durationMs": 3480,
+      "words": [
+        {
+          "text": "Pero",
+          "startMs": 0,
+          "endMs": 160
+        },
+        {
+          "text": "su",
+          "startMs": 213,
+          "endMs": 320
+        },
+        {
+          "text": "comitiva",
+          "startMs": 360,
+          "endMs": 720
+        },
+        {
+          "text": "perdió",
+          "startMs": 760,
+          "endMs": 1120
+        },
+        {
+          "text": "carros,",
+          "startMs": 1180,
+          "endMs": 1680
+        },
+        {
+          "text": "caballos",
+          "startMs": 1740,
+          "endMs": 2240
+        },
+        {
+          "text": "y",
+          "startMs": 2320,
+          "endMs": 2400
+        },
+        {
+          "text": "objetos",
+          "startMs": 2460,
+          "endMs": 2880
+        },
+        {
+          "text": "de",
+          "startMs": 2907,
+          "endMs": 2960
+        },
+        {
+          "text": "valor.",
+          "startMs": 3013,
+          "endMs": 3360
+        }
+      ]
+    },
+    {
+      "id": "r1",
+      "speaker": "narrator",
+      "text": "¿Perdió también la corona? Eso no está demostrado.",
+      "audio": "voice/r1.mp3",
+      "durationMs": 3000,
+      "words": [
+        {
+          "text": "¿Perdió",
+          "startMs": 0,
+          "endMs": 400
+        },
+        {
+          "text": "también",
+          "startMs": 440,
+          "endMs": 720
+        },
+        {
+          "text": "la",
+          "startMs": 747,
+          "endMs": 800
+        },
+        {
+          "text": "corona?",
+          "startMs": 860,
+          "endMs": 1280
+        },
+        {
+          "text": "Eso",
+          "startMs": 1480,
+          "endMs": 1840
+        },
+        {
+          "text": "no",
+          "startMs": 1867,
+          "endMs": 1920
+        },
+        {
+          "text": "está",
+          "startMs": 1968,
+          "endMs": 2160
+        },
+        {
+          "text": "demostrado.",
+          "startMs": 2208,
+          "endMs": 2880
+        }
+      ]
+    },
+    {
+      "id": "e1",
+      "speaker": "soldado",
+      "text": "Majestad… tenemos un pequeño problema con el equipaje.",
+      "audio": "voice/e1.mp3",
+      "durationMs": 3400,
+      "words": [
+        {
+          "text": "Majestad…",
+          "startMs": 0,
+          "endMs": 960
+        },
+        {
+          "text": "tenemos",
+          "startMs": 1010,
+          "endMs": 1360
+        },
+        {
+          "text": "un",
+          "startMs": 1413,
+          "endMs": 1520
+        },
+        {
+          "text": "pequeño",
+          "startMs": 1560,
+          "endMs": 1840
+        },
+        {
+          "text": "problema",
+          "startMs": 1893,
+          "endMs": 2320
+        },
+        {
+          "text": "con",
+          "startMs": 2360,
+          "endMs": 2480
+        },
+        {
+          "text": "el",
+          "startMs": 2533,
+          "endMs": 2640
+        },
+        {
+          "text": "equipaje.",
+          "startMs": 2693,
+          "endMs": 3280
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "castle-hall-1",
+  "kit": "medieval",
+  "palette": "castle-torch",
+  "description": "A stone hall by torchlight: block walls, arched windows, red banners. Standing.",
+  "tags": [
+    "medieval",
+    "castle",
+    "hall",
+    "king",
+    "court",
+    "indoor",
+    "night"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "castle-hall"
+    }
+  ],
+  "foreground": [],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

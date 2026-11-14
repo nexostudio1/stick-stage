@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-1",
+  "kit": "medieval",
+  "palette": "fen-dusk",
+  "description": "A fen at the edge of an estuary under a heavy sky: open water, a mud track, reeds. Standing.",
+  "tags": [
+    "medieval",
+    "marsh",
+    "coast",
+    "estuary",
+    "outdoor"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "fen"
+    }
+  ],
+  "foreground": [],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

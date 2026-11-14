@@ -26,6 +26,7 @@ Comedy-skit and science-short engine on Remotion. Open source (MIT); Tamtree use
 - `pnpm sfx`: regenerate the synthesized SFX library (`public/sfx/`, `src/data/sfx.json`); `pnpm render SfxLab out/SfxLab.mp4` plays them all
 - `pnpm still SetLab out/SetLab.png [--props='{"kits":["park"],"tileWidth":200}']`: every set part × 3 palettes × 3 seeds
 - `pnpm voice:say <skitId>`: dev stand-in for the tamtree harness TTS; macOS `say` → `public/skits/<id>/voice/` + `voice.json`
+- `pnpm voice:eleven <skitId> [--model=…] [--force]`: ElevenLabs voices with word timings (dev/standalone; key via `ELEVENLABS_API_KEY` or an injecting proxy)
 - `pnpm voice:tts <skitId>`: the same with Kokoro in-process (or `LOCAL_TTS_BASE_URL`); voice map in `scripts/lib/kokoro-voices.ts`
 - `pnpm approve <skitId> --by=<owner> [--check]`: science skits: list claims, then pin the owner's sign-off to the content hash; `pnpm render <skit> --post` and final service renders refuse an unapproved or changed skit
 - `pnpm viz:lab` then `pnpm render VizLab out/VizLab.mp4`: every figure kind with its cues (typesets the lab's equations first); `--props='{"wide":true}'` shows the explainer kinds at 16:9
@@ -42,6 +43,7 @@ Comedy-skit and science-short engine on Remotion. Open source (MIT); Tamtree use
 - `the-catch-story` (`skills/the-catch-story/SKILL.md`): a "The Catch" case script: a human, relatable, useful money story (topic test, five acts, fast-voice lines, sourced numbers).
 - `the-catch-staging` (`skills/the-catch-staging/SKILL.md`): a The Catch script → storyboard and explainer skit in the night-shift world with Nickel, data as objects, SFX and music cues.
 - `whos-wrong` (`skills/whos-wrong/SKILL.md`): a "Who's Wrong?" episode: a petty two-sided argument with Bram and Tess, the verdict meter, the `argument` style's fast pace; the team writes the twist.
+- `medieval-short` (`skills/medieval-short/SKILL.md`): a medieval topic → a researched, narrated ~30 s Spanish short with the stick cast on the medieval sets (ElevenLabs voices, Rhubarb lip-sync, sources and titles).
 - `crew-episode` (`skills/crew-episode/SKILL.md`): an episode of the relatable three-person channel (Mitch, Ollie, Maya on the train): 2-second hook, laugh, Maya's closing thought as the train stops, packaging and multi-part rules; the team approves the jokes.
 
 Path-scoped rules live in `.claude/rules/` (`toon-rig.md` for the rig, characters and poses; `shape-rig.md` for the shape tier, story kit and places; `science-skits.md` for skits, figures and approval).

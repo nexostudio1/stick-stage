@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-sinking",
+  "kit": "medieval",
+  "palette": "fen-dusk",
+  "description": "A loaded cart sinking into a fen track as the tide comes in (it sinks over the first 4 s of the video: a cold-open hook).",
+  "tags": [
+    "medieval",
+    "marsh",
+    "tide",
+    "sinking",
+    "cart",
+    "hook"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "fen",
+      "variant": "flood"
+    },
+    {
+      "part": "cart",
+      "x": 0.5,
+      "variant": "sinking",
+      "size": 1.15
+    },
+    {
+      "part": "horse",
+      "x": 0.95,
+      "variant": "strain",
+      "size": 0.9
+    }
+  ],
+  "foreground": [
+    {
+      "part": "flood-water",
+      "y": 0.76
+    }
+  ],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

@@ -23,6 +23,9 @@ import blip from "./characters/blip.json";
 import bram from "./characters/bram.json";
 import tess from "./characters/tess.json";
 import crewMitch from "./characters/crew-mitch.json";
+import medRey from "./characters/med-rey.json";
+import medSoldado from "./characters/med-soldado.json";
+import medCarretero from "./characters/med-carretero.json";
 import crewOllie from "./characters/crew-ollie.json";
 import crewMaya from "./characters/crew-maya.json";
 
@@ -102,6 +105,14 @@ import explainerNight from "./sets/explainer-night.json";
 import kitchenNight from "./sets/kitchen-night.json";
 import bedroomNight from "./sets/bedroom-night.json";
 import officeNight from "./sets/office-night.json";
+import fen1 from "./sets/fen-1.json";
+import fenConvoy from "./sets/fen-convoy.json";
+import fenFlood from "./sets/fen-flood.json";
+import medievalRoad1 from "./sets/medieval-road-1.json";
+import castleHall1 from "./sets/castle-hall-1.json";
+import crownDark from "./sets/crown-dark.json";
+import fenSinking from "./sets/fen-sinking.json";
+import medievalBlack from "./sets/medieval-black.json";
 import cardVault from "./sets/card-vault.json";
 import ledgerRoom from "./sets/ledger-room.json";
 import cafeNight from "./sets/cafe-night.json";
@@ -149,7 +160,7 @@ export const EXPRESSION_IDS = ["neutral", "happy", "smug", "sarcastic", "annoyed
 export const EXTRA_EXPRESSION_IDS = ["skeptical", "worried", "embarrassed", "thinking", "laughing"];
 
 export const library: Library = createLibrary({
-  characters: [milo, june, lila, theo, moss, dash, reed, nell, pip, vera, gus, tofu, bobo, pim, mabel, otto, fennel, biscuit, wren, blip, bram, tess, crewMitch, crewOllie, crewMaya],
+  characters: [milo, june, lila, theo, moss, dash, reed, nell, pip, vera, gus, tofu, bobo, pim, mabel, otto, fennel, biscuit, wren, blip, bram, tess, crewMitch, crewOllie, crewMaya, medRey, medSoldado, medCarretero],
   poses: [idle, point, shrug, facepalm, armsUp, armsCrossed, think, leanIn, recoil, slump, handsOnHips, holdPhone, sit, holdOut, holdChest, holdUp, highFive, shove, faintPose, wavePose, thumbsUp, crewPole],
   expressions: [neutral, happy, smug, sarcastic, annoyed, angry, shocked, sad, crying, cringe, confused, deadpan, skeptical, worried, embarrassed, thinking, laughing],
   props: PROP_DOCS,
@@ -167,7 +178,7 @@ export const sets: Record<string, SetDef> = createSets([
   plain1, living1, lounge1, office1, park1, street1, kitchen1, bedroom1, cafe1, classroom1, meeting1, living2, park2, streetNight1, beach1, stage1,
   widePlain, wideLiving, wideLounge, wideOffice, widePark, wideStreet, wideCafe, wideClassroom,
   explainerPaper, explainerNight, explainerGrid, explainerDrafting, explainerDraftingIndigo,
-  kitchenNight, bedroomNight, officeNight, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
+  kitchenNight, bedroomNight, officeNight, fen1, fenConvoy, fenFlood, medievalRoad1, castleHall1, crownDark, fenSinking, medievalBlack, cardVault, ledgerRoom, cafeNight, lostAndFound, evidenceBoard, bookshopMorning,
   void1, blueprint1, space1, space2, lab1,
   scienceDawn, scienceTide, scienceCosmos, scienceLab,
   explainerDawn, explainerTide, explainerCosmos, explainerLab,

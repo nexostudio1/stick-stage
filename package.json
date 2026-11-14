@@ -50,7 +50,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "viz:lab": "tsx scripts/viz-lab.ts",
-    "approve": "tsx scripts/approve.ts"
+    "approve": "tsx scripts/approve.ts",
+    "voice:eleven": "NODE_USE_ENV_PROXY=1 tsx scripts/voice-elevenlabs.ts"
   },
   "engines": {
     "node": ">=22"

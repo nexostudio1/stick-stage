@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "crown-dark",
+  "kit": "medieval",
+  "palette": "castle-torch",
+  "description": "A crown alone on a dark ground with a pale halo: insert shots about royal treasure.",
+  "tags": [
+    "medieval",
+    "crown",
+    "treasure",
+    "insert"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "crown-relic"
+    }
+  ],
+  "foreground": [],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

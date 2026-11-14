@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "fen-convoy",
+  "kit": "medieval",
+  "palette": "fen-dusk",
+  "description": "A baggage convoy crossing a fen, tracked from the side: a horse pulling a loaded cart, the layers drift past.",
+  "tags": [
+    "medieval",
+    "marsh",
+    "convoy",
+    "travel",
+    "cart",
+    "horse"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "fen",
+      "variant": "travel"
+    },
+    {
+      "part": "cart",
+      "x": 0.42,
+      "variant": "moving"
+    },
+    {
+      "part": "horse",
+      "x": 0.8,
+      "variant": "walk",
+      "size": 0.9
+    }
+  ],
+  "foreground": [],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

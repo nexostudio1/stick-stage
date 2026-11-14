@@ -15,6 +15,7 @@ import { measureWav } from "./lib/loudness";
 import { SCIENCE_SOUNDS } from "./lib/sfx-science";
 import { NIGHT_SOUNDS } from "./lib/sfx-night";
 import { COMEDY_SOUNDS } from "./lib/sfx-comedy";
+import { MEDIEVAL_SOUNDS } from "./lib/sfx-medieval";
 
 const SOURCE = "synthesized in code by scripts/sfx-gen.ts (StickStage, original)";
 const LICENSE = "CC0-1.0";
@@ -207,6 +208,7 @@ const SOUNDS: Sound[] = [
   ...SCIENCE_SOUNDS,
   ...NIGHT_SOUNDS,
   ...COMEDY_SOUNDS,
+  ...MEDIEVAL_SOUNDS,
 ];
 
 const outDir = path.join(ROOT, "public/sfx");

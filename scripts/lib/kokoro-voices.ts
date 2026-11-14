@@ -32,6 +32,10 @@ export const KOKORO_VOICES: Readonly<Record<string, string>> = {
   "crew-mitch": "am_fenrir",
   "crew-ollie": "bm_fable",
   "crew-maya": "af_river",
+  // Medieval channel: placeholders only (this kokoro-js has English voices); the channel voices with voice:eleven.
+  "med-rey": "bm_george",
+  "med-soldado": "am_michael",
+  "med-carretero": "am_adam",
 };
 export const KOKORO_NARRATOR = "am_michael";
 export const KOKORO_DEFAULT = "af_heart";

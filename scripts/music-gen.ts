@@ -9,6 +9,7 @@ import path from "node:path";
 import { MusicManifestSchema, type MusicManifest } from "../src/engine";
 import { env, mix, osc, writeWav, type Sig } from "./lib/synth";
 import { NIGHT_BEDS } from "./lib/music-night";
+import { MEDIEVAL_BEDS } from "./lib/music-medieval";
 import { ROOT } from "./lib/tools";
 
 const SOURCE = "synthesized in code by scripts/music-gen.ts (StickStage, original)";
@@ -32,6 +33,8 @@ const BEDS: { id: string; make: () => Sig; gain: number; ducked: number }[] = [
   { id: "build", make: NIGHT_BEDS.build, gain: 0.24, ducked: 0.09 },
   { id: "drop", make: NIGHT_BEDS.drop, gain: 0.3, ducked: 0.1 },
   { id: "resolve", make: NIGHT_BEDS.resolve, gain: 0.22, ducked: 0.08 },
+  { id: "medieval", make: MEDIEVAL_BEDS.medieval, gain: 0.22, ducked: 0.07 },
+  { id: "medieval-tense", make: MEDIEVAL_BEDS.medievalTense, gain: 0.24, ducked: 0.08 },
 ];
 
 const outDir = path.join(ROOT, "public/music");

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "med-soldado",
+  "displayName": "Soldado",
+  "proportions": {
+    "height": 1.05,
+    "headRadius": 0.165,
+    "neck": 0.02,
+    "torso": 0.28,
+    "upperArm": 0.15,
+    "forearm": 0.14,
+    "thigh": 0.17,
+    "shin": 0.18
+  },
+  "style": {
+    "stroke": "#1b1b1f",
+    "strokeWidth": 12,
+    "headFill": "#ffffff",
+    "torso": {
+      "style": "bean",
+      "fill": "#7a2e2e",
+      "width": 0.15
+    },
+    "limbCurve": 0.3,
+    "hands": "nub",
+    "feet": "oval",
+    "footFill": "#1b1b1f"
+  },
+  "face": {
+    "eyes": "big-pupil",
+    "brows": true,
+    "mouthSet": "default",
+    "offsetX": 0.14,
+    "eyeSpacing": 0.46,
+    "eyeY": -0.02,
+    "mouthY": 0.44
+  },
+  "accessories": [
+    {
+      "slot": "body",
+      "id": "mail-01",
+      "color": "#7a2e2e"
+    },
+    {
+      "slot": "headwear",
+      "id": "kettle-hat",
+      "color": "#8c96a0"
+    }
+  ],
+  "voice": {
+    "provider": "elevenlabs",
+    "voiceId": "hvjsm0LgwcoD1EyrNAJI",
+    "say": "Fred"
+  },
+  "energy": 0.6
+}

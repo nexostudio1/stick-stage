@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "medieval-road-1",
+  "kit": "medieval",
+  "palette": "road-evening",
+  "description": "A country road through low hills at evening, tracked from the side. Standing or riding past.",
+  "tags": [
+    "medieval",
+    "road",
+    "travel",
+    "countryside",
+    "outdoor"
+  ],
+  "groundY": 1480,
+  "figureHeightPx": 720,
+  "layers": [
+    {
+      "part": "medieval-road",
+      "variant": "travel"
+    }
+  ],
+  "foreground": [],
+  "marks": {
+    "left": 0.27,
+    "center": 0.5,
+    "right": 0.73
+  }
+}

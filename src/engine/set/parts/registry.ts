@@ -1,3 +1,5 @@
+import { Fen, FloodWater, MedievalRoad } from "./medievalLand";
+import { Cart, CastleHall, CrownRelic, Horse } from "./medievalThings";
 import type { SetDef } from "../schema";
 import { Floor, PlainWall, Wall } from "./room";
 import { Plant, PictureFrame, Shelf, Window } from "./decor";
@@ -20,7 +22,7 @@ import { CrewMeetingRoom, CrewMeetingTable, CrewOfficeChair, CrewOfficeChairFron
 import { CrewBackyard, CrewBbqGrill, CrewBbqNear, CrewCampChair, CrewEsky } from "./crewBbq";
 import { Blueprint, DraftingTable, FumeHood, GridFloor, LabBench, Nebula, Planet, Starfield, VoidBackdrop, WallChart } from "./science";
 
-export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "crew"] as const;
+export const KITS = ["plain", "interior", "office", "park", "street", "beach", "abstract", "space", "lab", "story", "night", "crew", "medieval"] as const;
 export type Kit = (typeof KITS)[number];
 
 export type PartInfo = {
@@ -87,6 +89,13 @@ export const PART_INFO: Record<string, PartInfo> = {
   "wall-chart": { draw: WallChart, kits: ["lab"] },
   // The night kit (The Catch): whole-frame rooms with a light cone and ambient motion.
   "night-kitchen": { draw: NightKitchen, kits: ["night"], backdrop: true },
+  fen: { draw: Fen, kits: ["medieval"], backdrop: true },
+  "medieval-road": { draw: MedievalRoad, kits: ["medieval"], backdrop: true },
+  "castle-hall": { draw: CastleHall, kits: ["medieval"], backdrop: true },
+  "crown-relic": { draw: CrownRelic, kits: ["medieval"], backdrop: true },
+  "flood-water": { draw: FloodWater, kits: ["medieval"], foreground: true },
+  cart: { draw: Cart, kits: ["medieval"] },
+  horse: { draw: Horse, kits: ["medieval"] },
   "night-cafe": { draw: NightCafe, kits: ["night"], backdrop: true },
   "day-bookshop": { draw: DayBookshop, kits: ["night"], backdrop: true },
   "card-vault": { draw: CardVault, kits: ["night"], backdrop: true },
@@ -152,6 +161,7 @@ export const KIT_BACKDROP: Record<Kit, SetDef["layers"]> = {
   story: [part("story-sky"), part("story-hills"), part("story-ground")],
   night: [part("night-kitchen")],
   crew: [part("crew-train-bay")],
+  medieval: [part("fen")],
 };
 
 function part(id: string, extra: Partial<SetDef["layers"][number]> = {}): SetDef["layers"][number] {
