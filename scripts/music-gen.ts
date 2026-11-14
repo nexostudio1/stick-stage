@@ -40,13 +40,14 @@ const BEDS: { id: string; make: () => Sig; gain: number; ducked: number }[] = [
 const outDir = path.join(ROOT, "public/music");
 const manifestPath = path.join(ROOT, "src/data/music.json");
 fs.mkdirSync(outDir, { recursive: true });
-const manifest: MusicManifest = {
-  schemaVersion: 1,
-  beds: BEDS.map((b) => {
+/** Beds this script didn't make (licensed tracks added by hand, e.g. from Pixabay) are kept. */
+const old: MusicManifest = fs.existsSync(manifestPath) ? MusicManifestSchema.parse(JSON.parse(fs.readFileSync(manifestPath, "utf8"))) : { schemaVersion: 1, beds: [] };
+const made = BEDS.map((b) => {
     const file = `music/${b.id}.wav`;
     const durationMs = writeWav(path.join(ROOT, "public", file), b.make());
     console.log(`music: ${b.id} ${durationMs} ms → public/${file}`);
     return { id: b.id, file, durationMs, gain: b.gain, ducked: b.ducked, license: LICENSE, source: SOURCE };
-  }),
-};
+});
+const kept = old.beds.filter((b) => b.source !== SOURCE && !made.some((m) => m.id === b.id));
+const manifest: MusicManifest = { schemaVersion: 1, beds: [...made, ...kept] };
 fs.writeFileSync(manifestPath, JSON.stringify(MusicManifestSchema.parse(manifest), null, 2) + "\n");
