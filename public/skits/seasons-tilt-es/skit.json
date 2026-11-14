@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "La Tierra está más cerca del Sol en enero",
+    "aspect": "9:16",
+    "description": "La Tierra está más cerca del Sol a principios de enero, en pleno invierno del hemisferio norte. Las estaciones vienen de la inclinación del eje terrestre. Fuentes y simplificaciones en el comentario fijado.",
+    "hashtags": [
+      "astronomía",
+      "espacio",
+      "ciencia",
+      "mitos"
+    ]
+  },
+  "set": "space-2",
+  "cast": [
+    {
+      "id": "gus",
+      "character": "gus",
+      "mark": "left",
+      "pose": "arms-crossed"
+    },
+    {
+      "id": "vera",
+      "character": "vera",
+      "mark": "right"
+    }
+  ],
+  "overlay": {
+    "hook": "Más cerca del Sol: en enero",
+    "subtitles": true
+  },
+  "figures": [
+    {
+      "id": "orbit",
+      "kind": "orbit",
+      "at": {
+        "x": 0.5,
+        "y": 0.25,
+        "w": 0.84,
+        "h": 0.22
+      },
+      "layer": "back",
+      "params": {
+        "e": 0.6,
+        "period": 8,
+        "trail": false,
+        "planetColor": "a2"
+      },
+      "states": {
+        "myth": {
+          "label": "¿Más cerca = verano?",
+          "e": 0.6
+        },
+        "truth": {
+          "label": "Órbita real: casi un círculo",
+          "e": 0.0167
+        }
+      },
+      "state": "myth",
+      "hidden": true,
+      "reveal": "fade",
+      "panel": false,
+      "tag": "no a escala"
+    },
+    {
+      "id": "june",
+      "kind": "globe",
+      "at": {
+        "x": 0.27,
+        "y": 0.25,
+        "w": 0.42,
+        "h": 0.2
+      },
+      "layer": "back",
+      "params": {
+        "lat": 0,
+        "light": -50,
+        "night": 0.85,
+        "spin": 8,
+        "grid": true
+      },
+      "hidden": true,
+      "reveal": "pop",
+      "label": "Junio",
+      "panel": false
+    },
+    {
+      "id": "december",
+      "kind": "globe",
+      "at": {
+        "x": 0.73,
+        "y": 0.25,
+        "w": 0.42,
+        "h": 0.2
+      },
+      "layer": "back",
+      "params": {
+        "lat": 0,
+        "light": 50,
+        "night": 0.85,
+        "spin": 8,
+        "grid": true
+      },
+      "hidden": true,
+      "reveal": "pop",
+      "label": "Diciembre",
+      "panel": false
+    },
+    {
+      "id": "sun-june",
+      "kind": "label",
+      "hidden": true,
+      "reveal": "pop",
+      "layer": "back",
+      "at": {
+        "x": 0.47,
+        "y": 0.15,
+        "w": 0.12,
+        "h": 0.04
+      },
+      "params": {
+        "text": "Sol",
+        "color": "highlight",
+        "pill": true
+      }
+    },
+    {
+      "id": "sun-dec",
+      "kind": "label",
+      "hidden": true,
+      "reveal": "pop",
+      "layer": "back",
+      "at": {
+        "x": 0.88,
+        "y": 0.355,
+        "w": 0.12,
+        "h": 0.04
+      },
+      "params": {
+        "text": "Sol",
+        "color": "highlight",
+        "pill": true
+      }
+    }
+  ],
+  "template": "myth-flip",
+  "claims": [
+    {
+      "text": "La Tierra pasa por el perihelio, su punto más cercano al Sol, a principios de enero (hacia el 2-5 de enero), y por el afelio, el más lejano, a principios de julio.",
+      "source": "NASA Science, 'What Causes the Seasons?' (spaceplace.nasa.gov/seasons); US Naval Observatory, Earth's Seasons and Apsides table (aa.usno.navy.mil/data/EarthSeasons)",
+      "checkedBy": null,
+      "beats": [
+        "l2",
+        "l3"
+      ]
+    },
+    {
+      "text": "La órbita de la Tierra es casi circular (excentricidad de unos 0,017); su distancia al Sol cambia solo un 3 % aproximadamente a lo largo del año.",
+      "source": "NASA Goddard, Earth Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html): perihelion 147.1 million km, aphelion 152.1 million km, eccentricity 0.0167",
+      "checkedBy": null,
+      "beats": [
+        "l4"
+      ]
+    },
+    {
+      "text": "Las estaciones se deben a la inclinación del eje terrestre (unos 23,4°): el hemisferio inclinado hacia el Sol recibe luz más directa y días más largos, y tiene verano.",
+      "source": "NASA Science, 'What Causes the Seasons?' (spaceplace.nasa.gov/seasons); OpenStax, Astronomy 2e, §4.2 The Seasons",
+      "checkedBy": null,
+      "beats": [
+        "l6",
+        "l8"
+      ]
+    },
+    {
+      "text": "El hemisferio sur (p. ej., Australia) tiene verano de diciembre a febrero, cuando el hemisferio norte tiene invierno.",
+      "source": "OpenStax, Astronomy 2e, §4.2 The Seasons",
+      "checkedBy": null,
+      "beats": [
+        "l7"
+      ]
+    }
+  ],
+  "simplifications": [
+    "La órbita del «mito» está dibujada mucho más ovalada a propósito; la órbita real (el segundo estado) es casi un círculo.",
+    "Los dos globos se iluminan desde ángulos de pantalla para mostrar qué hemisferio mira hacia el Sol; el Sol, los tamaños y las distancias no están a escala.",
+    "La distancia influye un poco (en enero llega cerca de un 7 % más de luz solar que en julio), pero la inclinación pesa mucho más."
+  ],
+  "beats": [
+    {
+      "id": "l1",
+      "speaker": "gus",
+      "line": "El verano da calor porque estamos más cerca del Sol.",
+      "actions": [],
+      "expression": "smug",
+      "role": "myth"
+    },
+    {
+      "id": "l2",
+      "speaker": "vera",
+      "line": "Estamos más cerca en enero.",
+      "actions": [
+        {
+          "who": "vera",
+          "do": "hold",
+          "prop": "telescope",
+          "hand": "R",
+          "at": {
+            "ms": 0
+          }
+        }
+      ],
+      "expression": "happy",
+      "role": "pushback",
+      "figures": [
+        {
+          "do": "show",
+          "id": "orbit",
+          "at": {
+            "ms": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "l3",
+      "speaker": "gus",
+      "line": "¿Enero? Eso es invierno. Buen intento.",
+      "actions": [
+        {
+          "who": "gus",
+          "do": "pose",
+          "pose": "arms-crossed",
+          "at": {
+            "fraction": 0.1
+          }
+        }
+      ],
+      "expression": "smug",
+      "role": "prediction"
+    },
+    {
+      "id": "l4",
+      "speaker": "vera",
+      "line": "Mira la órbita real. Casi un círculo.",
+      "actions": [
+        {
+          "who": "vera",
+          "do": "pose",
+          "pose": "point",
+          "at": {
+            "fraction": 0.1
+          }
+        },
+        {
+          "who": "vera",
+          "do": "look",
+          "to": "figure:orbit",
+          "at": {
+            "fraction": 0.1
+          }
+        }
+      ],
+      "expression": "happy",
+      "figures": [
+        {
+          "do": "state",
+          "id": "orbit",
+          "at": {
+            "word": "real",
+            "occurrence": 1
+          },
+          "state": "truth",
+          "style": "morph"
+        }
+      ],
+      "role": "demo"
+    },
+    {
+      "id": "l5",
+      "speaker": "gus",
+      "line": "…vaya.",
+      "actions": [
+        {
+          "who": "gus",
+          "do": "gag",
+          "gag": "concede",
+          "at": {
+            "ms": 0
+          }
+        }
+      ],
+      "expression": "shocked",
+      "role": "reaction"
+    },
+    {
+      "id": "l6",
+      "speaker": "vera",
+      "line": "Es la inclinación. La mitad que mira hacia el Sol tiene verano.",
+      "actions": [
+        {
+          "who": "vera",
+          "do": "pose",
+          "pose": "point",
+          "at": {
+            "fraction": 0.1
+          }
+        },
+        {
+          "who": "vera",
+          "do": "look",
+          "to": "figure:orbit",
+          "at": {
+            "fraction": 0.1
+          }
+        }
+      ],
+      "expression": "neutral",
+      "figures": [
+        {
+          "do": "hide",
+          "id": "orbit",
+          "at": {
+            "ms": 0
+          }
+        },
+        {
+          "do": "show",
+          "id": "june",
+          "at": {
+            "word": "inclinación",
+            "occurrence": 1
+          }
+        },
+        {
+          "do": "show",
+          "id": "december",
+          "at": {
+            "word": "verano",
+            "occurrence": 1
+          }
+        },
+        {
+          "do": "show",
+          "id": "sun-june",
+          "at": {
+            "word": "inclinación",
+            "occurrence": 1
+          }
+        },
+        {
+          "do": "show",
+          "id": "sun-dec",
+          "at": {
+            "word": "verano",
+            "occurrence": 1
+          }
+        }
+      ],
+      "role": "why"
+    },
+    {
+      "id": "l7",
+      "speaker": "vera",
+      "line": "Cerca del fuego hace más calor. Pero en Australia es verano en diciembre.",
+      "actions": [
+        {
+          "who": "vera",
+          "do": "pose",
+          "pose": "shrug",
+          "at": {
+            "fraction": 0.2
+          }
+        }
+      ],
+      "expression": "neutral",
+      "role": "why-it-felt-true"
+    },
+    {
+      "id": "l8",
+      "speaker": "vera",
+      "line": "Las estaciones vienen de la inclinación, no de la distancia.",
+      "actions": [],
+      "expression": "happy",
+      "role": "takeaway",
+      "text": [
+        {
+          "type": "slam",
+          "value": "INCLINACIÓN",
+          "at": {
+            "word": "distancia",
+            "occurrence": 1
+          }
+        }
+      ],
+      "punchline": true,
+      "pauseBeforeMs": 350,
+      "holdAfterMs": 400,
+      "reaction": "happy"
+    }
+  ]
+}
