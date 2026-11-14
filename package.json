@@ -19,6 +19,7 @@
     "voice:say": "tsx scripts/voice-say.ts",
     "voice:tts": "tsx scripts/voice-tts.ts",
     "voice:openrouter": "tsx scripts/voice-openrouter.ts",
+    "voice:elevenlabs": "tsx scripts/voice-elevenlabs.ts",
     "prep": "tsx scripts/prep.ts",
     "compile": "tsx scripts/compile.ts",
     "check": "tsx scripts/check.ts",

@@ -1,0 +1,420 @@
+{
+ "$schema": "../../../schemas/skit.schema.json",
+ "schemaVersion": 2,
+ "meta": {
+  "title": "Pim quiere volar",
+  "aspect": "9:16",
+  "language": "es",
+  "description": "Reel de Instagram: Pim el pingüino lleva 300 intentos de volar; en el agua es más rápido que cualquier pájaro."
+ },
+ "style": "story",
+ "narrator": {
+  "id": "narrator",
+  "name": "Narrador",
+  "voice": {
+   "say": "Jorge"
+  },
+  "captionStyle": "italic"
+ },
+ "overlay": {
+  "hook": "Deja de intentar volar."
+ },
+ "cast": [
+  {
+   "id": "pim",
+   "character": "pim-v",
+   "mark": "center"
+  },
+  {
+   "id": "wren",
+   "character": "wren-v",
+   "mark": "right"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "orilla",
+   "place": {
+    "setting": "beach",
+    "features": [
+     "rock"
+    ]
+   },
+   "cast": [
+    {
+     "id": "pim",
+     "mark": "left"
+    },
+    {
+     "id": "wren",
+     "mark": "right"
+    }
+   ],
+   "beats": [
+    {
+     "id": "n1",
+     "speaker": "narrator",
+     "line": "Deja de intentar volar. Eres un pingüino.",
+     "focus": "pim",
+     "actions": [
+      {
+       "who": "pim",
+       "do": "hop",
+       "height": 0.3,
+       "at": {
+        "word": "volar."
+       }
+      },
+      {
+       "who": "pim",
+       "do": "fall",
+       "at": {
+        "word": "pingüino."
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "thud",
+       "at": {
+        "word": "pingüino."
+       }
+      }
+     ]
+    },
+    {
+     "id": "n2",
+     "speaker": "narrator",
+     "line": "Pim no lo sabía, y ya llevaba trescientos intentos.",
+     "focus": "pim",
+     "actions": [
+      {
+       "who": "pim",
+       "do": "stand",
+       "at": {
+        "word": "sabía,"
+       }
+      }
+     ]
+    },
+    {
+     "id": "w1",
+     "speaker": "wren",
+     "line": "¡Aletea más fuerte, Pim!",
+     "expression": "happy",
+     "actions": [
+      {
+       "who": "wren",
+       "do": "pose",
+       "pose": "arms-up",
+       "at": {
+        "word": "¡Aletea"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p1",
+     "speaker": "pim",
+     "line": "¡Estoy aleteando a tope!",
+     "expression": "angry",
+     "actions": [
+      {
+       "who": "pim",
+       "do": "pose",
+       "pose": "arms-up",
+       "at": {
+        "word": "¡Estoy"
+       }
+      },
+      {
+       "who": "pim",
+       "do": "hop",
+       "at": {
+        "word": "tope!"
+       }
+      },
+      {
+       "who": "pim",
+       "do": "symbol",
+       "symbol": "sweat",
+       "at": {
+        "word": "aleteando"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rocas",
+   "place": {
+    "setting": "beach",
+    "time": "sunset",
+    "features": [
+     "rock"
+    ],
+    "seed": 2
+   },
+   "transition": {
+    "type": "slide",
+    "durationMs": 400
+   },
+   "cast": [
+    {
+     "id": "pim",
+     "mark": "left"
+    },
+    {
+     "id": "wren",
+     "mark": "right"
+    }
+   ],
+   "beats": [
+    {
+     "id": "n3",
+     "speaker": "narrator",
+     "line": "Intento trescientos uno: el acantilado.",
+     "focus": "pim",
+     "text": [
+      {
+       "type": "slam",
+       "value": "INTENTO Nº 301",
+       "at": {
+        "word": "trescientos"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "speaker": "pim",
+     "line": "¡Esta vez sí, Wren!",
+     "expression": "happy",
+     "actions": [
+      {
+       "who": "pim",
+       "do": "walkTo",
+       "mark": "off-right",
+       "speed": "run",
+       "at": {
+        "word": "sí,"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "whoosh",
+       "at": {
+        "word": "sí,"
+       }
+      }
+     ]
+    },
+    {
+     "id": "n4",
+     "speaker": "narrator",
+     "line": "Cayó al mar. Plof.",
+     "focus": "wren",
+     "actions": [
+      {
+       "who": "wren",
+       "do": "expression",
+       "expression": "shocked",
+       "at": {
+        "word": "Cayó"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "slide-down",
+       "at": {
+        "word": "Cayó"
+       }
+      },
+      {
+       "id": "pop",
+       "at": {
+        "word": "Plof."
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mar",
+   "place": {
+    "setting": "beach",
+    "features": [
+     "rock"
+    ],
+    "seed": 3
+   },
+   "transition": {
+    "type": "fade",
+    "durationMs": 400
+   },
+   "cast": [
+    {
+     "id": "pim",
+     "mark": "off-left"
+    },
+    {
+     "id": "wren",
+     "mark": "left"
+    }
+   ],
+   "beats": [
+    {
+     "id": "n5",
+     "speaker": "narrator",
+     "line": "Y bajo el agua, Pim salió disparado, más rápido que cualquier pájaro.",
+     "focus": "pim",
+     "actions": [
+      {
+       "who": "pim",
+       "do": "walkTo",
+       "mark": "right",
+       "speed": "run",
+       "at": {
+        "word": "disparado,"
+       }
+      },
+      {
+       "who": "pim",
+       "do": "symbol",
+       "symbol": "speed-lines",
+       "at": {
+        "word": "disparado,"
+       }
+      }
+     ],
+     "sfx": [
+      {
+       "id": "whoosh",
+       "at": {
+        "word": "disparado,"
+       }
+      }
+     ]
+    },
+    {
+     "id": "w2",
+     "speaker": "wren",
+     "line": "¿Cómo haces eso?",
+     "expression": "shocked"
+    },
+    {
+     "id": "p3",
+     "speaker": "pim",
+     "line": "¿Esto? Pero si es facilísimo.",
+     "expression": "happy",
+     "actions": [
+      {
+       "who": "pim",
+       "do": "pose",
+       "pose": "shrug",
+       "at": {
+        "word": "¿Esto?"
+       }
+      }
+     ]
+    },
+    {
+     "id": "n6",
+     "speaker": "narrator",
+     "line": "No eras malo. Estabas en el cielo equivocado.",
+     "focus": "pim",
+     "punchline": true,
+     "sfx": [
+      {
+       "id": "sparkle",
+       "at": {
+        "word": "cielo"
+       }
+      }
+     ]
+    },
+    {
+     "id": "n7",
+     "speaker": "narrator",
+     "line": "Guárdalo para la próxima vez que intentes volar."
+    }
+   ]
+  }
+ ],
+ "characters": [
+  {
+   "schemaVersion": 1,
+   "id": "pim-v",
+   "displayName": "Pim",
+   "style": {
+    "build": "shape"
+   },
+   "shape": {
+    "species": "penguin",
+    "build": "tiny",
+    "color": "navy",
+    "belly": "cream",
+    "muzzle": {
+     "kind": "beak",
+     "color": "orange"
+    },
+    "feet": "orange",
+    "hands": "navy",
+    "eyes": {
+     "kind": "dot",
+     "size": 1.2,
+     "spacing": 1
+    },
+    "details": [
+     {
+      "id": "bow",
+      "color": "coral"
+     }
+    ]
+   },
+   "energy": 0.95,
+   "personality": "Tiny, loud and very sure; a penguin who thinks they can fly.",
+   "voice": {
+    "say": "Junior"
+   }
+  },
+  {
+   "schemaVersion": 1,
+   "id": "wren-v",
+   "displayName": "Wren",
+   "style": {
+    "build": "shape"
+   },
+   "shape": {
+    "species": "bird",
+    "build": "tiny",
+    "color": "sky",
+    "belly": "cream",
+    "arms": "wings",
+    "muzzle": {
+     "kind": "beak",
+     "color": "sunflower"
+    },
+    "feet": "sunflower",
+    "hands": "sky",
+    "tail": {
+     "kind": "stub",
+     "color": "blue"
+    },
+    "hair": {
+     "kind": "tuft",
+     "color": "blue"
+    }
+   },
+   "energy": 0.8,
+   "personality": "A small, quick bird who flies ahead to see what's coming and reports back.",
+   "voice": {
+    "say": "Samantha"
+   }
+  }
+ ]
+}

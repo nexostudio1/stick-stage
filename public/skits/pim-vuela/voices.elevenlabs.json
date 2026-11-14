@@ -1,0 +1,6 @@
+{
+  "model": "eleven_multilingual_v2",
+  "narrator": { "voice": "ELEGIR_ID_NARRADOR", "stability": 0.55, "style": 0.25 },
+  "pim": { "voice": "ELEGIR_ID_PIM", "stability": 0.35, "style": 0.5, "speed": 1.05 },
+  "wren": { "voice": "ELEGIR_ID_WREN", "stability": 0.4, "style": 0.45 }
+}
