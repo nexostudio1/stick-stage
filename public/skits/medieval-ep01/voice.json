@@ -63,75 +63,54 @@
     {
       "id": "c1",
       "speaker": "narrator",
-      "text": "Inglaterra, 1216. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
-      "spoken": "Inglaterra, mil doscientos dieciséis. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
+      "text": "El equipaje del rey Juan cruzaba unas marismas peligrosas.",
       "audio": "voice/c1.mp3",
-      "durationMs": 6040,
+      "durationMs": 3400,
       "words": [
         {
-          "text": "Inglaterra,",
-          "startMs": 0,
-          "endMs": 960
-        },
-        {
-          "text": "mil",
-          "startMs": 1020,
-          "endMs": 1200
-        },
-        {
-          "text": "doscientos",
-          "startMs": 1260,
-          "endMs": 1760
-        },
-        {
-          "text": "dieciséis.",
-          "startMs": 1800,
-          "endMs": 2800
-        },
-        {
           "text": "El",
-          "startMs": 2853,
-          "endMs": 2960
+          "startMs": 0,
+          "endMs": 80
         },
         {
           "text": "equipaje",
-          "startMs": 3013,
-          "endMs": 3360
+          "startMs": 133,
+          "endMs": 560
         },
         {
           "text": "del",
-          "startMs": 3400,
-          "endMs": 3520
+          "startMs": 600,
+          "endMs": 720
         },
         {
           "text": "rey",
-          "startMs": 3573,
-          "endMs": 3760
+          "startMs": 773,
+          "endMs": 1040
         },
         {
           "text": "Juan",
-          "startMs": 3808,
-          "endMs": 4000
+          "startMs": 1072,
+          "endMs": 1200
         },
         {
           "text": "cruzaba",
-          "startMs": 4048,
-          "endMs": 4400
+          "startMs": 1264,
+          "endMs": 1760
         },
         {
           "text": "unas",
-          "startMs": 4448,
-          "endMs": 4640
+          "startMs": 1808,
+          "endMs": 2000
         },
         {
           "text": "marismas",
-          "startMs": 4680,
-          "endMs": 5120
+          "startMs": 2040,
+          "endMs": 2400
         },
         {
           "text": "peligrosas.",
-          "startMs": 5140,
-          "endMs": 5920
+          "startMs": 2440,
+          "endMs": 3280
         }
       ]
     },

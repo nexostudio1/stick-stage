@@ -163,7 +163,7 @@
         {
           "id": "c1",
           "speaker": "narrator",
-          "line": "Inglaterra, 1216. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
+          "line": "El equipaje del rey Juan cruzaba unas marismas peligrosas.",
           "focus": "soldado",
           "actions": [
             {
@@ -192,7 +192,6 @@
             }
           ],
           "pauseBeforeMs": 0,
-          "spoken": "Inglaterra, mil doscientos dieciséis. El equipaje del rey Juan cruzaba unas marismas peligrosas.",
           "shot": {
             "framing": "wide"
           },
@@ -210,34 +209,21 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "alarma",
-      "set": "fen-convoy",
-      "music": "medieval-tense",
-      "cast": [
-        {
-          "id": "soldado",
-          "mark": "left"
         },
-        {
-          "id": "carretero",
-          "mark": "right"
-        },
-        {
-          "id": "rey",
-          "mark": "off-right"
-        }
-      ],
-      "beats": [
         {
           "id": "a1",
           "speaker": "soldado",
           "line": "¡La marea está subiendo!",
           "expression": "shocked",
           "actions": [
+            {
+              "who": "carretero",
+              "do": "walkTo",
+              "mark": "right",
+              "at": {
+                "ms": 0
+              }
+            },
             {
               "who": "soldado",
               "do": "pose",
@@ -417,7 +403,8 @@
             }
           ]
         }
-      ]
+      ],
+      "music": "medieval-tense"
     },
     {
       "id": "rey",
@@ -771,7 +758,7 @@
         {
           "id": "fin",
           "silent": true,
-          "durationMs": 2200,
+          "durationMs": 1700,
           "actions": [],
           "sfx": [
             {
@@ -784,5 +771,10 @@
         }
       ]
     }
-  ]
+  ],
+  "timing": {
+    "leadInMs": 120,
+    "gapMs": 120,
+    "tailMs": 200
+  }
 }
