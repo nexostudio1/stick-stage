@@ -39,7 +39,7 @@
     },
     "captionStyle": "boxed"
   },
-  "music": "medieval",
+  "music": "bards-tale",
   "overlay": {
     "subtitles": true
   },
@@ -413,7 +413,7 @@
         "type": "whip",
         "durationMs": 200
       },
-      "music": "medieval",
+      "music": "bards-tale",
       "cast": [
         {
           "id": "rey",

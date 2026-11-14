@@ -63,6 +63,15 @@
       "ducked": 0.08,
       "license": "CC0-1.0",
       "source": "synthesized in code by scripts/music-gen.ts (StickStage, original)"
+    },
+    {
+      "id": "bards-tale",
+      "file": "music/bards-tale.mp3",
+      "durationMs": 57730,
+      "gain": 0.2,
+      "ducked": 0.06,
+      "license": "CC0-1.0",
+      "source": "\"Medieval: The Bard's Tale\" by RandomMind, OpenGameArt.org (https://opengameart.org/node/80558)"
     }
   ]
 }

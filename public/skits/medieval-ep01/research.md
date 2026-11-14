@@ -23,6 +23,10 @@
 - The History Jar, «King John’s lost treasure»: https://thehistoryjar.com/tag/the-wash/
 - Primarias citadas por las anteriores: Roger de Wendover, *Flores Historiarum*; Matthew Paris, *Chronica Majora*; Ralph de Coggeshall. Estudio clásico: H. Jenkinson (1923).
 
+## Música
+- «Medieval: The Bard's Tale», RandomMind, OpenGameArt.org, CC0: https://opengameart.org/node/80558 (en `public/music/bards-tale.mp3`).
+- Tensión: `medieval-tense` (sintetizada en el repo, CC0).
+
 ## Para publicar
 **Títulos**
 1. El rey que perdió su tesoro en el barro
@@ -31,6 +35,8 @@
 
 **Descripción**
 En octubre de 1216, el equipaje del rey Juan de Inglaterra cruzó las marismas de The Wash… y la marea llegó antes. ¿Se perdieron también las joyas de la Corona? Ninguna fuente de la época lo confirma. Los diálogos son una recreación; los hechos, no.
+
+Música: «Medieval: The Bard's Tale», de RandomMind (OpenGameArt, CC0).
 
 **Etiquetas**
 historia, edad media, rey juan, juan sin tierra, inglaterra 1216, the wash, tesoro perdido, joyas de la corona, historia medieval, curiosidades históricas, shorts
